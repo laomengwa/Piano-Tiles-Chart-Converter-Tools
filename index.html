@@ -5254,7 +5254,14 @@
 	var isChrome = /chrome|crios/.test(agent) && ! /edge|opr\//.test(agent);
 	var isBrave = isChrome && window.navigator.plugins.length === 0 && window.navigator.mimeTypes.length === 0;
 	if (isBrave) {
-		explorer.innerHTML = "Brave";
+		if (!bIsAndroid){
+			explorer.innerHTML = "Brave";
+		}
+	}
+	if (isChrome) {
+		if (bIsAndroid){
+			explorer.innerHTML = "Brave";
+		}
 	}
 	//禁止Windows10以下的系统访问此脚本
 	if (String(navigator.userAgent).indexOf("Win95") > -1 || String(navigator.userAgent).indexOf("Win98") > -1 || String(navigator.userAgent).indexOf("Win 9x 4.90") > -1 || String(navigator.userAgent).indexOf("Windows NT 5") > -1 || String(navigator.userAgent).indexOf("Windows NT 6") > -1) {
