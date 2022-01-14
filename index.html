@@ -7324,8 +7324,8 @@
 	}
 	else detectos.innerHTML = "Unknown Unix";
 	if (String(navigator.userAgent).indexOf("Windows") > -1) detectos.innerHTML = "Microsoft Windows";
-	if (String(navigator.platform).indexOf("Harmony") > -1) detectos.innerHTML = "Huawei Harmony";
-	if (String(navigator.platform).indexOf("Fuchsia") > -1) detectos.innerHTML = "Google Fuchsia";
+	if (String(navigator.userAgent).indexOf("Harmony") > -1) detectos.innerHTML = "Huawei Harmony";
+	if (String(navigator.userAgent).indexOf("Fuchsia") > -1) detectos.innerHTML = "Google Fuchsia";
 	if (String(navigator.userAgent).indexOf("CrOS") > -1) detectos.innerHTML = "Google Chrome Operating System";
 	if (String(navigator.userAgent).indexOf("Solaris") > -1) detectos.innerHTML = "Solaris";
 	if (String(navigator.platform).indexOf("FreeBSD") > -1) detectos.innerHTML = "FreeBSD";
