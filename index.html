@@ -101,7 +101,7 @@
 			</div>
 			<a class="divb" tabindex="-1" id="move12" style="text-align:left;" target="_blank"
 				href="https://github.com/laomengwa/mengwa113">皮肤下载</a>
-			<div class="divb" onclick="view_window();" style="cursor:pointer" tabindex="-1" id="move13">
+			<div class="divb" onclick="help_window();" style="cursor:pointer" tabindex="-1" id="move13">
 				使用指南
 			</div>
 			<br><br><br>
@@ -314,6 +314,74 @@
 				style="text-align: center;width: 50%;border-left: 1px solid #aaa;">保存</div>
 		</div>
 	</div>
+	<div class="box" id='help_window' style="left: 10%; top: 10%;">
+		<div class="mute1">
+			<div class="icon">?</div>
+			<div class="icon1"><b>使用指南</b></div>
+			<div class="boxoff" id="boxoff7" onclick="hidder()" tabindex="-1" title="关闭">×</div>
+		</div>
+		<div class="autowindowsize" style="text-align:left;overflow-y:auto;cursor:default;color:#555;">
+			<br>
+			<b style="font-size:16px;">关于“钢琴块谱面转换”程序</b>
+			<br>
+			<div onclick="about()" style="color: #fb7299;">关于本程序的信息，请点击此文本。</div>
+			制作此程序的期望是以其他的可自定义的音乐游戏（以下简称 “osu!” 与 “Malody”）代替传统的 “钢琴块 2” 程序，以在 osu! 与 Malody 游玩别踩白块儿游戏内的音乐，以及别踩白块儿玩家自定义编写的谱面文件（以下简称“自制谱”）。
+			<br>
+			<br>
+			<b style="font-size:16px;">程序如何使用？</b>
+			<br>
+			首先，你得拥有钢琴块 Android 安装包的 json 歌曲文件<a onclick="window.open('https://www.bilibili.com/read/cv2294882')" style="color:#fb7299" target="_blank">（获取教程请</a><a onclick="window.open('https://www.bilibili.com/video/BV1yq4y177u4')" target="_blank" style="color:#fb7299">点击此文本）</a>，然后用此程序选择好你的钢琴块 json 文件，点击“转换”即可。如果想要求谱面的多样转化，请在菜单与“音符玩法设置”里设置与音符功能有关的选项即可。
+			<br>
+			<br>
+			<b style="font-size:16px;">谱面、BPM、基础节拍、纵连、轨道数量、竞技玩法加速度是什么？</b>
+			<br>
+			谱面是音游界的专用术语之一，是指音符摆放的阵容与位置，音符在什么地方出现、在哪出现都是已经规定好的。
+			BPM 是每分钟节拍数的单位，相当于一分钟有几个长度均等的节拍，本程序以这个数值确定歌曲的速度。不用担心，即使你不知道这个数值，一般情况下 json 里都会记载有关歌曲的节拍速度。<br>
+			基础节拍( baseBeats ),是指游戏可游玩时可能遇到的最短的音符的阈值，一般此程序会以这个数值判定长按方块的最小长度。如果是手动调整这个数值请注意：数值越大则音符降落速度越慢，反之则就越快。<br>
+			纵连是音游界的专用术语之一，指一条轨道上出现两个或以上的音符连续出现。在 别踩白块儿 2 中基本是不会遇见上这样的情况（在最初始的别踩白块儿中是经常出现的），打开此选项你将会看到最初始的别踩白块儿的谱面阵容。<br>
+			轨道数量是固定下落式音乐游戏必须存在的要素，在 别踩白块儿 2 的阵容是以 4x4 的方式展示的，选择其他数量的轨道选项，你将会看到 5x5 、 6x6 甚至更多的谱面阵容。<br>
+			竞技玩法加速度目前还没有制作，暂不说明。
+			<br>
+			<br>
+			<b style="font-size:16px;">文件转化完毕后，导出后的文件应该放到哪里？</b>
+			<br>
+			<b>Malody （狂热旋律）</b>
+			<br>
+			如果你的设备是 Android ，请在 /sdcard/data/malody/beatmap （ sdcard 是你手机目录）创建一个新的文件夹，把文件复制到新创建的文件夹里。<br>
+			如果你的设备是 Windows ，请在你的游戏安装目录里的 beatmap 文件夹（./beatmap）里创建一个新的文件夹，把文件复制到新创建的文件夹里。<br>
+			如果你的设备是 Linux , BSD 或其他操作系统 ，同 Windows，不同的是需要 wine 运行。<br>
+			iOS 和 MacOS 的未知，自行摸索。<br>
+			<b>osu!</b>
+			<br>
+			如果你的设备是 Windows ，请在你的游戏安装目录里的 Songs 文件夹（./Songs）里创建一个新的文件夹，把文件复制到新创建的文件夹里。<br>
+			如果你的设备是 Linux , BSD 或其他操作系统 ，同 Windows，不同的是需要 wine 运行。<br>
+			MacOS 的未知，自行摸索。<br>
+			<br>
+			<b style="font-size:16px;">为什么我玩游戏时没有钢琴块的外观、声音？以及在手机上玩游戏时是横屏不是竖屏？</b>
+			<br>
+			这些问需要下载 “钢琴块” 的皮肤 <a onclick="window.open('https://github.com/laomengwa/mengwa113')" style="color:#fb7299" target="_blank">（下载请点击此文本）</a>。</br>
+			<b>Malody （狂热旋律）</b>
+			<br>
+			如果你的设备是 Android ，请在 /sdcard/data/malody/skin （ sdcard 是你手机目录）创建一个新的文件夹，把压缩包解压到新创建的文件夹里。<br>
+			如果你的设备是 Windows ，请在你的游戏安装目录里的 skin 文件夹（./skin）里创建一个新的文件夹，把压缩包解压到新创建的文件夹里。<br>
+			如果你的设备是 Linux , BSD 或其他操作系统 ，同 Windows，不同的是需要 wine 运行。<br>
+			iOS 和 MacOS 的未知，自行摸索。<br>
+			<b>osu!</b>
+			<br>
+			如果你的设备是 Windows ，请在你的游戏安装目录里的 Songs 文件夹（./Skins）里创建一个新的文件夹，把压缩包解压到新创建的文件夹里。<br>
+			如果你的设备是 Linux , BSD 或其他操作系统 ，同 Windows，不同的是需要 wine 运行。<br>
+			MacOS 的未知，自行摸索。<br>
+			对于声音问题目前还没做。<br>
+			如果你在手机的 Malody 上玩游戏是横屏，请去游戏的设置 -> 系统 里打开“使用竖屏模式”选项。如果是 6key 模式以上的问题请去手机设置里找到开发者选项把最小宽度改为 600dp 以上即可。<br>
+			<br>
+			<b style="font-size:16px;">我可以使用此程序的源代码吗?</b>
+			<br>
+			web 前端代码开源，可以使用原代码，但使用的前提是必须标注<a onclick="window.open('https://space.bilibili.com/46345895')" style="color:#fb7299" target="_blank">原作者</a>的信息！
+			<br>
+			待补充……
+		</div>
+		<div class="button4" id="ok6" onclick="hidder()" tabindex="-1" style="text-align: center;">确定</div>
+	</div>
 	<div class="box" id='box' style="left: 10%; top: 10%;">
 		<div class="mute1">
 			<div class="icon">?</div>
@@ -322,10 +390,8 @@
 		</div>
 		<div class="autowindowsize" style="text-align:left;overflow-y:auto;cursor:default;color:#555;">
 			<p>
-				该脚本可使 Piano Tiles 的音乐曲谱文件转换成其他音乐游戏可以读取的曲谱格式。<br />脚本适用的音乐游戏有： OSU!Mania,Malody<br />感谢 Runoob
-				网站、CSDN
-				网站、W3School 网站以及Mozilla MDN 文档对该脚本的页面布局作为参考。Script Version:
-				0.3.0 (Alpha)<br />Copyright by mengwa.<br />
+				该脚本可使 Piano Tiles 的音乐曲谱文件转换成其他音乐游戏可以读取的曲谱格式。<br />程序使用 HTML5+CSS3+JavaScript 制作。<br />脚本适用的音乐游戏有： OSU!Mania,Malody<br />Script Version:
+				0.3.0 (Alpha)<br />Copyright by mengwa.（萌娃是条咸鱼）<br />
 				<b>用户代理字符串：</b><b id=explore></b>
 			</p>
 			<noscript>
@@ -1169,8 +1235,8 @@
 	var zh_browserLang = '';
 	var zh_langReg_t = /^zh-tw|zh-hk$/i;
 	var zh_langReg_s = /^zh-cn$/i;
-	var zh_s = '确于将号皑蔼碍爱翱袄奥坝罢摆败颁办绊帮绑镑谤剥饱宝报鲍辈贝钡狈备惫绷笔毕毙闭边编贬变辩辫鳖瘪濒滨宾摈饼拨钵铂驳卜补参蚕残惭惨灿苍舱仓沧厕侧册测层诧搀掺蝉馋谗缠铲产阐颤场尝长偿肠厂畅钞车彻尘陈衬撑称惩诚骋痴迟驰耻齿炽冲虫宠畴踌筹绸丑橱厨锄雏础储触处传疮闯创锤纯绰辞词赐聪葱囱从丛凑窜错达带贷担单郸掸胆惮诞弹当挡党荡档捣岛祷导盗灯邓敌涤递缔点垫电淀钓调迭谍叠钉顶锭订东动栋冻斗犊独读赌镀锻断缎兑队对吨顿钝夺鹅额讹恶饿儿尔饵贰罚阀珐矾钒烦范贩饭访纺飞废费纷坟奋愤粪丰枫锋风疯冯缝讽凤肤辐抚辅赋复负讣妇缚该钙盖干赶秆赣冈刚钢纲岗皋镐搁鸽阁铬个给龚宫巩贡钩沟构购够蛊顾剐关观馆惯贯广规硅归龟闺轨诡柜贵刽辊滚锅国过骇韩汉阂鹤贺横轰鸿红后壶护沪户哗华画划话怀坏欢环还缓换唤痪焕涣黄谎挥辉毁贿秽会烩汇讳诲绘荤浑伙获货祸击机积饥讥鸡绩缉极辑级挤几蓟剂济计记际继纪夹荚颊贾钾价驾歼监坚笺间艰缄茧检碱硷拣捡简俭减荐槛鉴践贱见键舰剑饯渐溅涧浆蒋桨奖讲酱胶浇骄娇搅铰矫侥脚饺缴绞轿较秸阶节茎惊经颈静镜径痉竞净纠厩旧驹举据锯惧剧鹃绢杰洁结诫届紧锦仅谨进晋烬尽劲荆觉决诀绝钧军骏开凯颗壳课垦恳抠库裤夸块侩宽矿旷况亏岿窥馈溃扩阔蜡腊莱来赖蓝栏拦篮阑兰澜谰揽览懒缆烂滥捞劳涝乐镭垒类泪篱离里鲤礼丽厉励砾历沥隶俩联莲连镰怜涟帘敛脸链恋炼练粮凉两辆谅疗辽镣猎临邻鳞凛赁龄铃凌灵岭领馏刘龙聋咙笼垄拢陇楼娄搂篓芦卢颅庐炉掳卤虏鲁赂禄录陆驴吕铝侣屡缕虑滤绿峦挛孪滦乱抡轮伦仑沦纶论萝罗逻锣箩骡骆络妈玛码蚂马骂吗买麦卖迈脉瞒馒蛮满谩猫锚铆贸么霉没镁门闷们锰梦谜弥觅绵缅庙灭悯闽鸣铭谬谋亩钠纳难挠脑恼闹馁腻撵捻酿鸟聂啮镊镍柠狞宁拧泞钮纽脓浓农疟诺欧鸥殴呕沤盘庞国爱赔喷鹏骗飘频贫苹凭评泼颇扑铺朴谱脐齐骑岂启气弃讫牵扦钎铅迁签谦钱钳潜浅谴堑枪呛墙蔷强抢锹桥乔侨翘窍窃钦亲轻氢倾顷请庆琼穷趋区躯驱龋颧权劝却鹊让饶扰绕热韧认纫荣绒软锐闰润洒萨鳃赛伞丧骚扫涩杀纱筛晒闪陕赡缮伤赏烧绍赊摄慑设绅审婶肾渗声绳胜圣师狮湿诗尸时蚀实识驶势释饰视试寿兽枢输书赎属术树竖数帅双谁税顺说硕烁丝饲耸怂颂讼诵擞苏诉肃虽绥岁孙损笋缩琐锁獭挞抬摊贪瘫滩坛谭谈叹汤烫涛绦腾誊锑题体屉条贴铁厅听烃铜统头图涂团颓蜕脱鸵驮驼椭洼袜弯湾顽万网韦违围为潍维苇伟伪纬谓卫温闻纹稳问瓮挝蜗涡窝呜钨乌诬无芜吴坞雾务误锡牺袭习铣戏细虾辖峡侠狭厦锨鲜纤咸贤衔闲显险现献县馅羡宪线厢镶乡详响项萧销晓啸蝎协挟携胁谐写泻谢锌衅兴汹锈绣虚嘘须许绪续轩悬选癣绚学勋询寻驯训讯逊压鸦鸭哑亚讶阉烟盐严颜阎艳厌砚彦谚验鸯杨扬疡阳痒养样瑶摇尧遥窑谣药爷页业叶医铱颐遗仪彝蚁艺亿忆义诣议谊译异绎荫阴银饮樱婴鹰应缨莹萤营荧蝇颖哟拥佣痈踊咏涌优忧邮铀犹游诱舆鱼渔娱与屿语吁御狱誉预驭鸳渊辕园员圆缘远愿约跃钥岳粤悦阅云郧匀陨运蕴酝晕韵杂灾载攒暂赞赃脏凿枣灶责择则泽贼赠扎札轧铡闸诈斋债毡盏斩辗崭栈战绽张涨帐账胀赵蛰辙锗这贞针侦诊镇阵挣睁狰帧郑证织职执纸挚掷帜质钟终种肿众诌轴皱昼骤猪诸诛烛瞩嘱贮铸筑驻专砖转赚桩庄装妆壮状锥赘坠缀谆浊兹资渍踪综总纵邹诅组钻致钟么为只凶准启板里雳余链泄';
-	var zh_t = '確於將號皚藹礙愛翺襖奧壩罷擺敗頒辦絆幫綁鎊謗剝飽寶報鮑輩貝鋇狽備憊繃筆畢斃閉邊編貶變辯辮鼈癟瀕濱賓擯餅撥缽鉑駁蔔補參蠶殘慚慘燦蒼艙倉滄廁側冊測層詫攙摻蟬饞讒纏鏟産闡顫場嘗長償腸廠暢鈔車徹塵陳襯撐稱懲誠騁癡遲馳恥齒熾沖蟲寵疇躊籌綢醜櫥廚鋤雛礎儲觸處傳瘡闖創錘純綽辭詞賜聰蔥囪從叢湊竄錯達帶貸擔單鄲撣膽憚誕彈當擋黨蕩檔搗島禱導盜燈鄧敵滌遞締點墊電澱釣調叠諜疊釘頂錠訂東動棟凍鬥犢獨讀賭鍍鍛斷緞兌隊對噸頓鈍奪鵝額訛惡餓兒爾餌貳罰閥琺礬釩煩範販飯訪紡飛廢費紛墳奮憤糞豐楓鋒風瘋馮縫諷鳳膚輻撫輔賦複負訃婦縛該鈣蓋幹趕稈贛岡剛鋼綱崗臯鎬擱鴿閣鉻個給龔宮鞏貢鈎溝構購夠蠱顧剮關觀館慣貫廣規矽歸龜閨軌詭櫃貴劊輥滾鍋國過駭韓漢閡鶴賀橫轟鴻紅後壺護滬戶嘩華畫劃話懷壞歡環還緩換喚瘓煥渙黃謊揮輝毀賄穢會燴彙諱誨繪葷渾夥獲貨禍擊機積饑譏雞績緝極輯級擠幾薊劑濟計記際繼紀夾莢頰賈鉀價駕殲監堅箋間艱緘繭檢堿鹼揀撿簡儉減薦檻鑒踐賤見鍵艦劍餞漸濺澗漿蔣槳獎講醬膠澆驕嬌攪鉸矯僥腳餃繳絞轎較稭階節莖驚經頸靜鏡徑痙競淨糾廄舊駒舉據鋸懼劇鵑絹傑潔結誡屆緊錦僅謹進晉燼盡勁荊覺決訣絕鈞軍駿開凱顆殼課墾懇摳庫褲誇塊儈寬礦曠況虧巋窺饋潰擴闊蠟臘萊來賴藍欄攔籃闌蘭瀾讕攬覽懶纜爛濫撈勞澇樂鐳壘類淚籬離裏鯉禮麗厲勵礫曆瀝隸倆聯蓮連鐮憐漣簾斂臉鏈戀煉練糧涼兩輛諒療遼鐐獵臨鄰鱗凜賃齡鈴淩靈嶺領餾劉龍聾嚨籠壟攏隴樓婁摟簍蘆盧顱廬爐擄鹵虜魯賂祿錄陸驢呂鋁侶屢縷慮濾綠巒攣孿灤亂掄輪倫侖淪綸論蘿羅邏鑼籮騾駱絡媽瑪碼螞馬罵嗎買麥賣邁脈瞞饅蠻滿謾貓錨鉚貿麽黴沒鎂門悶們錳夢謎彌覓綿緬廟滅憫閩鳴銘謬謀畝鈉納難撓腦惱鬧餒膩攆撚釀鳥聶齧鑷鎳檸獰甯擰濘鈕紐膿濃農瘧諾歐鷗毆嘔漚盤龐國愛賠噴鵬騙飄頻貧蘋憑評潑頗撲鋪樸譜臍齊騎豈啓氣棄訖牽扡釺鉛遷簽謙錢鉗潛淺譴塹槍嗆牆薔強搶鍬橋喬僑翹竅竊欽親輕氫傾頃請慶瓊窮趨區軀驅齲顴權勸卻鵲讓饒擾繞熱韌認紉榮絨軟銳閏潤灑薩鰓賽傘喪騷掃澀殺紗篩曬閃陝贍繕傷賞燒紹賒攝懾設紳審嬸腎滲聲繩勝聖師獅濕詩屍時蝕實識駛勢釋飾視試壽獸樞輸書贖屬術樹豎數帥雙誰稅順說碩爍絲飼聳慫頌訟誦擻蘇訴肅雖綏歲孫損筍縮瑣鎖獺撻擡攤貪癱灘壇譚談歎湯燙濤縧騰謄銻題體屜條貼鐵廳聽烴銅統頭圖塗團頹蛻脫鴕馱駝橢窪襪彎灣頑萬網韋違圍為濰維葦偉僞緯謂衛溫聞紋穩問甕撾蝸渦窩嗚鎢烏誣無蕪吳塢霧務誤錫犧襲習銑戲細蝦轄峽俠狹廈鍁鮮纖鹹賢銜閑顯險現獻縣餡羨憲線廂鑲鄉詳響項蕭銷曉嘯蠍協挾攜脅諧寫瀉謝鋅釁興洶鏽繡虛噓須許緒續軒懸選癬絢學勳詢尋馴訓訊遜壓鴉鴨啞亞訝閹煙鹽嚴顔閻豔厭硯彥諺驗鴦楊揚瘍陽癢養樣瑤搖堯遙窯謠藥爺頁業葉醫銥頤遺儀彜蟻藝億憶義詣議誼譯異繹蔭陰銀飲櫻嬰鷹應纓瑩螢營熒蠅穎喲擁傭癰踴詠湧優憂郵鈾猶遊誘輿魚漁娛與嶼語籲禦獄譽預馭鴛淵轅園員圓緣遠願約躍鑰嶽粵悅閱雲鄖勻隕運蘊醞暈韻雜災載攢暫贊贓髒鑿棗竈責擇則澤賊贈紮劄軋鍘閘詐齋債氈盞斬輾嶄棧戰綻張漲帳賬脹趙蟄轍鍺這貞針偵診鎮陣掙睜猙幀鄭證織職執紙摯擲幟質鍾終種腫衆謅軸皺晝驟豬諸誅燭矚囑貯鑄築駐專磚轉賺樁莊裝妝壯狀錐贅墜綴諄濁茲資漬蹤綜總縱鄒詛組鑽緻鐘麼為隻兇準啟闆裡靂餘鍊洩';
+	var zh_s = '“”确于将号皑蔼碍爱翱袄奥坝罢摆败颁办绊帮绑镑谤剥饱宝报鲍辈贝钡狈备惫绷笔毕毙闭边编贬变辩辫鳖瘪濒滨宾摈饼拨钵铂驳卜补参蚕残惭惨灿苍舱仓沧厕侧册测层诧搀掺蝉馋谗缠铲产阐颤场尝长偿肠厂畅钞车彻尘陈衬撑称惩诚骋痴迟驰耻齿炽冲虫宠畴踌筹绸丑橱厨锄雏础储触处传疮闯创锤纯绰辞词赐聪葱囱从丛凑窜错达带贷担单郸掸胆惮诞弹当挡党荡档捣岛祷导盗灯邓敌涤递缔点垫电淀钓调迭谍叠钉顶锭订东动栋冻斗犊独读赌镀锻断缎兑队对吨顿钝夺鹅额讹恶饿儿尔饵贰罚阀珐矾钒烦范贩饭访纺飞废费纷坟奋愤粪丰枫锋风疯冯缝讽凤肤辐抚辅赋复负讣妇缚该钙盖干赶秆赣冈刚钢纲岗皋镐搁鸽阁铬个给龚宫巩贡钩沟构购够蛊顾剐关观馆惯贯广规硅归龟闺轨诡柜贵刽辊滚锅国过骇韩汉阂鹤贺横轰鸿红后壶护沪户哗华画划话怀坏欢环还缓换唤痪焕涣黄谎挥辉毁贿秽会烩汇讳诲绘荤浑伙获货祸击机积饥讥鸡绩缉极辑级挤几蓟剂济计记际继纪夹荚颊贾钾价驾歼监坚笺间艰缄茧检碱硷拣捡简俭减荐槛鉴践贱见键舰剑饯渐溅涧浆蒋桨奖讲酱胶浇骄娇搅铰矫侥脚饺缴绞轿较秸阶节茎惊经颈静镜径痉竞净纠厩旧驹举据锯惧剧鹃绢杰洁结诫届紧锦仅谨进晋烬尽劲荆觉决诀绝钧军骏开凯颗壳课垦恳抠库裤夸块侩宽矿旷况亏岿窥馈溃扩阔蜡腊莱来赖蓝栏拦篮阑兰澜谰揽览懒缆烂滥捞劳涝乐镭垒类泪篱离里鲤礼丽厉励砾历沥隶俩联莲连镰怜涟帘敛脸链恋炼练粮凉两辆谅疗辽镣猎临邻鳞凛赁龄铃凌灵岭领馏刘龙聋咙笼垄拢陇楼娄搂篓芦卢颅庐炉掳卤虏鲁赂禄录陆驴吕铝侣屡缕虑滤绿峦挛孪滦乱抡轮伦仑沦纶论萝罗逻锣箩骡骆络妈玛码蚂马骂吗买麦卖迈脉瞒馒蛮满谩猫锚铆贸么霉没镁门闷们锰梦谜弥觅绵缅庙灭悯闽鸣铭谬谋亩钠纳难挠脑恼闹馁腻撵捻酿鸟聂啮镊镍柠狞宁拧泞钮纽脓浓农疟诺欧鸥殴呕沤盘庞国爱赔喷鹏骗飘频贫苹凭评泼颇扑铺朴谱脐齐骑岂启气弃讫牵扦钎铅迁签谦钱钳潜浅谴堑枪呛墙蔷强抢锹桥乔侨翘窍窃钦亲轻氢倾顷请庆琼穷趋区躯驱龋颧权劝却鹊让饶扰绕热韧认纫荣绒软锐闰润洒萨鳃赛伞丧骚扫涩杀纱筛晒闪陕赡缮伤赏烧绍赊摄慑设绅审婶肾渗声绳胜圣师狮湿诗尸时蚀实识驶势释饰视试寿兽枢输书赎属术树竖数帅双谁税顺说硕烁丝饲耸怂颂讼诵擞苏诉肃虽绥岁孙损笋缩琐锁獭挞抬摊贪瘫滩坛谭谈叹汤烫涛绦腾誊锑题体屉条贴铁厅听烃铜统头图涂团颓蜕脱鸵驮驼椭洼袜弯湾顽万网韦违围为潍维苇伟伪纬谓卫温闻纹稳问瓮挝蜗涡窝呜钨乌诬无芜吴坞雾务误锡牺袭习铣戏细虾辖峡侠狭厦锨鲜纤咸贤衔闲显险现献县馅羡宪线厢镶乡详响项萧销晓啸蝎协挟携胁谐写泻谢锌衅兴汹锈绣虚嘘须许绪续轩悬选癣绚学勋询寻驯训讯逊压鸦鸭哑亚讶阉烟盐严颜阎艳厌砚彦谚验鸯杨扬疡阳痒养样瑶摇尧遥窑谣药爷页业叶医铱颐遗仪彝蚁艺亿忆义诣议谊译异绎荫阴银饮樱婴鹰应缨莹萤营荧蝇颖哟拥佣痈踊咏涌优忧邮铀犹游诱舆鱼渔娱与屿语吁御狱誉预驭鸳渊辕园员圆缘远愿约跃钥岳粤悦阅云郧匀陨运蕴酝晕韵杂灾载攒暂赞赃脏凿枣灶责择则泽贼赠扎札轧铡闸诈斋债毡盏斩辗崭栈战绽张涨帐账胀赵蛰辙锗这贞针侦诊镇阵挣睁狰帧郑证织职执纸挚掷帜质钟终种肿众诌轴皱昼骤猪诸诛烛瞩嘱贮铸筑驻专砖转赚桩庄装妆壮状锥赘坠缀谆浊兹资渍踪综总纵邹诅组钻致钟么为只凶准启板里雳余链泄';
+	var zh_t = '「」確於將號皚藹礙愛翺襖奧壩罷擺敗頒辦絆幫綁鎊謗剝飽寶報鮑輩貝鋇狽備憊繃筆畢斃閉邊編貶變辯辮鼈癟瀕濱賓擯餅撥缽鉑駁蔔補參蠶殘慚慘燦蒼艙倉滄廁側冊測層詫攙摻蟬饞讒纏鏟産闡顫場嘗長償腸廠暢鈔車徹塵陳襯撐稱懲誠騁癡遲馳恥齒熾沖蟲寵疇躊籌綢醜櫥廚鋤雛礎儲觸處傳瘡闖創錘純綽辭詞賜聰蔥囪從叢湊竄錯達帶貸擔單鄲撣膽憚誕彈當擋黨蕩檔搗島禱導盜燈鄧敵滌遞締點墊電澱釣調叠諜疊釘頂錠訂東動棟凍鬥犢獨讀賭鍍鍛斷緞兌隊對噸頓鈍奪鵝額訛惡餓兒爾餌貳罰閥琺礬釩煩範販飯訪紡飛廢費紛墳奮憤糞豐楓鋒風瘋馮縫諷鳳膚輻撫輔賦複負訃婦縛該鈣蓋幹趕稈贛岡剛鋼綱崗臯鎬擱鴿閣鉻個給龔宮鞏貢鈎溝構購夠蠱顧剮關觀館慣貫廣規矽歸龜閨軌詭櫃貴劊輥滾鍋國過駭韓漢閡鶴賀橫轟鴻紅後壺護滬戶嘩華畫劃話懷壞歡環還緩換喚瘓煥渙黃謊揮輝毀賄穢會燴彙諱誨繪葷渾夥獲貨禍擊機積饑譏雞績緝極輯級擠幾薊劑濟計記際繼紀夾莢頰賈鉀價駕殲監堅箋間艱緘繭檢堿鹼揀撿簡儉減薦檻鑒踐賤見鍵艦劍餞漸濺澗漿蔣槳獎講醬膠澆驕嬌攪鉸矯僥腳餃繳絞轎較稭階節莖驚經頸靜鏡徑痙競淨糾廄舊駒舉據鋸懼劇鵑絹傑潔結誡屆緊錦僅謹進晉燼盡勁荊覺決訣絕鈞軍駿開凱顆殼課墾懇摳庫褲誇塊儈寬礦曠況虧巋窺饋潰擴闊蠟臘萊來賴藍欄攔籃闌蘭瀾讕攬覽懶纜爛濫撈勞澇樂鐳壘類淚籬離裏鯉禮麗厲勵礫曆瀝隸倆聯蓮連鐮憐漣簾斂臉鏈戀煉練糧涼兩輛諒療遼鐐獵臨鄰鱗凜賃齡鈴淩靈嶺領餾劉龍聾嚨籠壟攏隴樓婁摟簍蘆盧顱廬爐擄鹵虜魯賂祿錄陸驢呂鋁侶屢縷慮濾綠巒攣孿灤亂掄輪倫侖淪綸論蘿羅邏鑼籮騾駱絡媽瑪碼螞馬罵嗎買麥賣邁脈瞞饅蠻滿謾貓錨鉚貿麽黴沒鎂門悶們錳夢謎彌覓綿緬廟滅憫閩鳴銘謬謀畝鈉納難撓腦惱鬧餒膩攆撚釀鳥聶齧鑷鎳檸獰甯擰濘鈕紐膿濃農瘧諾歐鷗毆嘔漚盤龐國愛賠噴鵬騙飄頻貧蘋憑評潑頗撲鋪樸譜臍齊騎豈啓氣棄訖牽扡釺鉛遷簽謙錢鉗潛淺譴塹槍嗆牆薔強搶鍬橋喬僑翹竅竊欽親輕氫傾頃請慶瓊窮趨區軀驅齲顴權勸卻鵲讓饒擾繞熱韌認紉榮絨軟銳閏潤灑薩鰓賽傘喪騷掃澀殺紗篩曬閃陝贍繕傷賞燒紹賒攝懾設紳審嬸腎滲聲繩勝聖師獅濕詩屍時蝕實識駛勢釋飾視試壽獸樞輸書贖屬術樹豎數帥雙誰稅順說碩爍絲飼聳慫頌訟誦擻蘇訴肅雖綏歲孫損筍縮瑣鎖獺撻擡攤貪癱灘壇譚談歎湯燙濤縧騰謄銻題體屜條貼鐵廳聽烴銅統頭圖塗團頹蛻脫鴕馱駝橢窪襪彎灣頑萬網韋違圍為濰維葦偉僞緯謂衛溫聞紋穩問甕撾蝸渦窩嗚鎢烏誣無蕪吳塢霧務誤錫犧襲習銑戲細蝦轄峽俠狹廈鍁鮮纖鹹賢銜閑顯險現獻縣餡羨憲線廂鑲鄉詳響項蕭銷曉嘯蠍協挾攜脅諧寫瀉謝鋅釁興洶鏽繡虛噓須許緒續軒懸選癬絢學勳詢尋馴訓訊遜壓鴉鴨啞亞訝閹煙鹽嚴顔閻豔厭硯彥諺驗鴦楊揚瘍陽癢養樣瑤搖堯遙窯謠藥爺頁業葉醫銥頤遺儀彜蟻藝億憶義詣議誼譯異繹蔭陰銀飲櫻嬰鷹應纓瑩螢營熒蠅穎喲擁傭癰踴詠湧優憂郵鈾猶遊誘輿魚漁娛與嶼語籲禦獄譽預馭鴛淵轅園員圓緣遠願約躍鑰嶽粵悅閱雲鄖勻隕運蘊醞暈韻雜災載攢暫贊贓髒鑿棗竈責擇則澤賊贈紮劄軋鍘閘詐齋債氈盞斬輾嶄棧戰綻張漲帳賬脹趙蟄轍鍺這貞針偵診鎮陣掙睜猙幀鄭證織職執紙摯擲幟質鍾終種腫衆謅軸皺晝驟豬諸誅燭矚囑貯鑄築駐專磚轉賺樁莊裝妝壯狀錐贅墜綴諄濁茲資漬蹤綜總縱鄒詛組鑽緻鐘麼為隻兇準啟闆裡靂餘鍊洩';
 	String.prototype.tran = function () {
 		var s1, s2;
 		if (zh_choose == 't') {
@@ -1264,6 +1330,7 @@
 	document.getElementById('note').style.display = "none";
 	document.getElementById('select').style.display = "none";
 	document.getElementById('next').style.display = "none";
+	document.getElementById('help_window').style.display = "none";
 	document.getElementById('view_window').style.display = "none";
 	var id2 = 1;
 	if (typeof FileReader === "undefined") {
@@ -1278,6 +1345,15 @@
 		if (timerstart == true) {
 			setTimeout(function () { timer(); clock++; progress2.innerHTML = clock / 10; }, 100);
 		}
+	}
+	//MIDI写入数组
+	function MidiNoteWrite(arr) {
+		MidiNoteWrite_a = 0;
+		while (parseInt(MidiNoteWrite_a[0], 16) > 127) {
+			MidiNoteWrite_a = (MidiNoteWrite_a - 1) * 128 + parseInt(arr.shift(), 16)
+		}
+		MidiNoteWrite_a = MidiNoteWrite_a * 128 + parseInt(arr.shift(), 16);
+		return MidiNoteWrite_a;
 	}
 	//小程序选择框的窗口光标选择器
 	function fl2() {
@@ -1490,12 +1566,19 @@
 			for (file_d_b = 0; file_d_b < file_f[file_d_a].scores.length; file_d_b++) {
 				a = file_f[file_d_a].scores[file_d_b];
 				if (file_f[file_d_a].instruments) {
-					if (file_f[file_d_a].instruments[file_d_b] !== "piano" || file_f[file_d_a].instruments[file_d_b] !== "base" || file_f[file_d_a].instruments[file_d_b] !== "base2" || file_f[file_d_a].instruments[file_d_b] !== "drum") {
+					if (file_f[file_d_a].instruments[file_d_b] !== "piano" || file_f[file_d_a].instruments[file_d_b] !== "bass" || file_f[file_d_a].instruments[file_d_b] !== "bass2" || file_f[file_d_a].instruments[file_d_b] !== "drum") {
 						Fileinstruments = file_f[file_d_a].instruments[file_d_b];
 					} else {
-						Fileinstruments = file_f[file_d_a].alternatives[file_d_b];
+						if (file_f[file_d_a].alternatives) {
+							Fileinstruments = file_f[file_d_a].alternatives[file_d_b];
+						} else {
+							Fileinstruments = "piano";
+						}
 					}
 				} else {
+					Fileinstruments = "piano";
+				}
+				if(Fileinstruments==undefined){
 					Fileinstruments = "piano";
 				}
 				a = a.slice(0, a.length - 1);
@@ -1777,7 +1860,6 @@
 		time = new Array();
 		time_BPM = new Array();
 		var note_length = 0, note_rhythm = 0, note_number = -1;
-		var note_column;
 		switch (document.getElementById("key").value) {
 			case "4k": {
 				note_column = 4;
@@ -1875,7 +1957,7 @@
 								do {
 									x = Math.random() * note_column;
 									x = Math.floor(x);
-								} while (x == column_initial || x == column_initial_double);
+								} while (x == column_initial || x == column_initial_double || x == column_initial - 2 || x == column_initial + 2);
 								column_initial = x;
 								column_initial_double = x;
 							} else {
@@ -1890,7 +1972,7 @@
 								do {
 									x = Math.random() * note_column;
 									x = Math.floor(x);
-								} while (x == column_initial || x == column_initial_double);
+								} while (x == column_initial || x == column_initial_double || x == column_initial - 2 || x == column_initial + 2);
 								column_initial = x;
 								column_initial_double = x;
 							} else {
@@ -1908,7 +1990,7 @@
 							do {
 								x = Math.random() * note_column;
 								x = Math.floor(x);
-							} while (x == column_initial || x == column_initial_double);
+							} while (x == column_initial || x == column_initial_double || x == column_initial - 2 || x == column_initial + 2);
 							column_initial = x;
 							column_initial_double = x;
 						} else {
@@ -1926,7 +2008,7 @@
 							do {
 								x = Math.random() * note_column;
 								x = Math.floor(x);
-							} while (x == column_initial || x == column_initial_double);
+							} while (x == column_initial || x == column_initial_double || x == column_initial - 2 || x == column_initial + 2);
 							column_initial = x;
 							column_initial_double = x;
 						} else {
@@ -1943,7 +2025,7 @@
 							do {
 								x = Math.random() * note_column;
 								x = Math.floor(x);
-							} while (x == column_initial || x == column_initial_double);
+							} while (x == column_initial || x == column_initial_double || x == column_initial - 2 || x == column_initial + 2);
 							column_initial = x;
 							column_initial_double = x;
 						} else {
@@ -1961,7 +2043,7 @@
 							do {
 								x = Math.random() * note_column;
 								x = Math.floor(x);
-							} while (x == column_initial || x == column_initial_double);
+							} while (x == column_initial || x == column_initial_double || x == column_initial - 2 || x == column_initial + 2);
 							column_initial = x;
 							column_initial_double = x;
 						} else {
@@ -1989,7 +2071,7 @@
 							do {
 								x = Math.random() * note_column;
 								x = Math.floor(x);
-							} while (x == column_initial || x == column_initial_double);
+							} while (x == column_initial || x == column_initial_double || x == column_initial - 2 || x == column_initial + 2);
 							column_initial = x;
 						} else {
 							x = Math.random() * note_column;
@@ -2051,7 +2133,7 @@
 							do {
 								x = Math.random() * note_column;
 								x = Math.floor(x);
-							} while (x == column_initial || x == column_initial_double);
+							} while (x == column_initial || x == column_initial_double || x == column_initial - 2 || x == column_initial + 2);
 							column_initial = x;
 							column_initial_double = x;
 						} else {
@@ -2083,7 +2165,7 @@
 							do {
 								x = Math.random() * note_column;
 								x = Math.floor(x);
-							} while (x == column_initial || x == column_initial_double);
+							} while (x == column_initial || x == column_initial_double || x == column_initial - 2 || x == column_initial + 2);
 							column_initial = x;
 						} else {
 							x = Math.random() * note_column;
@@ -2143,7 +2225,7 @@
 									do {
 										x = Math.random() * note_column;
 										x = Math.floor(x);
-									} while (x == column_initial || x == column_initial_double);
+									} while (x == column_initial || x == column_initial_double || x == column_initial - 2 || x == column_initial + 2);
 									column_initial = x;
 									column_initial_double = x;
 								} else {
@@ -2152,7 +2234,7 @@
 								}
 							} else {
 								x = 0;
-								if (x == column_initial || x == column_initial_double) {
+								if (x == column_initial || x == column_initial_double || x == column_initial - 2 || x == column_initial + 2) {
 									x = note_column - 1;
 								}
 								column_initial = x;
@@ -2274,7 +2356,7 @@
 							do {
 								x = Math.random() * note_column;
 								x = Math.floor(x);
-							} while (x == column_initial || x == column_initial_double);
+							} while (x == column_initial || x == column_initial_double || x == column_initial - 2 || x == column_initial + 2);
 							column_initial = x;
 						} else {
 							x = Math.random() * note_column;
@@ -2326,7 +2408,7 @@
 							do {
 								x = Math.random() * note_column;
 								x = Math.floor(x);
-							} while (x == column_initial || x == column_initial_double);
+							} while (x == column_initial || x == column_initial_double || x == column_initial - 2 || x == column_initial + 2);
 							column_initial = x;
 						} else {
 							x = Math.random() * note_column;
@@ -2370,7 +2452,7 @@
 								do {
 									x = Math.random() * note_column;
 									x = Math.floor(x);
-								} while (x == column_initial || x == column_initial_double);
+								} while (x == column_initial || x == column_initial_double || x == column_initial - 2 || x == column_initial + 2);
 								column_initial = x;
 								column_initial_double = x;
 							} else {
@@ -2383,7 +2465,7 @@
 								do {
 									x = Math.random() * note_column;
 									x = Math.floor(x);
-								} while (x == column_initial || x == column_initial_double);
+								} while (x == column_initial || x == column_initial_double || x == column_initial - 2 || x == column_initial + 2);
 								column_initial = x;
 								column_initial_double = x;
 							} else {
@@ -2415,7 +2497,7 @@
 								do {
 									x = Math.random() * note_column;
 									x = Math.floor(x);
-								} while (x == column_initial || x == column_initial_double);
+								} while (x == column_initial || x == column_initial_double || x == column_initial - 2 || x == column_initial + 2);
 								column_initial = x;
 								column_initial_double = x;
 							} else {
@@ -2433,7 +2515,7 @@
 								do {
 									x = Math.random() * note_column;
 									x = Math.floor(x);
-								} while (x == column_initial || x == column_initial_double);
+								} while (x == column_initial || x == column_initial_double || x == column_initial - 2 || x == column_initial + 2);
 								column_initial = x;
 							} else {
 								x = Math.random() * note_column;
@@ -2483,7 +2565,7 @@
 								do {
 									x = Math.random() * note_column;
 									x = Math.floor(x);
-								} while (x == column_initial || x == column_initial_double);
+								} while (x == column_initial || x == column_initial_double || x == column_initial - 2 || x == column_initial + 2);
 								column_initial = x;
 								column_initial_double = x;
 							} else {
@@ -2499,7 +2581,7 @@
 										do {
 											x = Math.random() * note_column;
 											x = Math.floor(x);
-										} while (x == column_initial || x == column_initial_double);
+										} while (x == column_initial || x == column_initial_double || x == column_initial - 2 || x == column_initial + 2);
 										column_initial = x;
 										column_initial_double = x;
 									} else {
@@ -2508,7 +2590,7 @@
 									}
 								} else {
 									x = 0;
-									if (x == column_initial || x == column_initial_double) {
+									if (x == column_initial || x == column_initial_double || x == column_initial - 2 || x == column_initial + 2) {
 										x = note_column - 1;
 									}
 									column_initial = x;
@@ -2621,7 +2703,7 @@
 								do {
 									x = Math.random() * note_column;
 									x = Math.floor(x);
-								} while (x == column_initial || x == column_initial_double);
+								} while (x == column_initial || x == column_initial_double || x == column_initial - 2 || x == column_initial + 2);
 								column_initial = x;
 								column_initial_double = x;
 							} else {
@@ -2652,7 +2734,7 @@
 			filesound = filesound + ",";
 			Function1();
 		}
-		document.getElementById('result').value = JSON.stringify(time);
+		document.getElementById('result').value = '{"meta":{"$ver":0,"creator":"test","background":"","version":"test","preview":0,"id":0,"mode":0,"time":0,"song":{"title":"Test","artist":"Test","id":0},"mode_ext":{"column":' + note_column + ',"bar_begin":12}},"time":' + JSON.stringify(time_BPM) + ',"effect":[],"note":' + JSON.stringify(time) + ',"extra":{"test":{"divide":4,"speed":100,"save":0,"lock":0,"edit_mode":0}}}';
 		/*
 			{
 				a = a.slice(0, a.length - 1)
@@ -2698,18 +2780,546 @@
 				file_a = this.result;
 				file_a = file_a.toString();
 				//midi文件导入
-				if (file_a.indexOf("MThd") > -1 || file_a.indexOf("MTrk") > -1) {
-					document.getElementById("input").value = "MIDI文件转换中……";
+				//midi读写参考lchzh3473的midi转json脚本
+				if (file_a.indexOf("MThd") > -1) {
+					document.getElementById("input").value = "开始！\nMIDI文件转换中……";
 					midifile = document.getElementById("file").files[0];
 					midifile_a = new FileReader();
 					midifile_a.readAsBinaryString(midifile);
 					midifile_a.onload = function () {
+						var midi_MThd = "";
 						midifile_b = this.result;
 						midifile_b = midifile_b.split("");
-						for (i = 0; i < midifile_b.length; i++) {
-							midifile_b[i] = 0 + midifile_b[i].charCodeAt().toString(16)
+						for (i = 0; i < 4; i++) {
+							midi_MThd += midifile_b.shift()
 						}
-						console.log(midifile_b);
+						if (midi_MThd != "MThd") {
+							lock();
+							setTimeout(function () {
+								warning.innerHTML = "<b>你打开的MIDI文件无效，请检查文件能否正常播放。按下菜单键、返回键或点击此消息可解锁焦点。</b>";
+								document.getElementById("input").value = document.getElementById("input").value + "\n失败，无效的MIDI文件！"
+								if (zh_choose == "t") {
+									zh_tran('t');
+								}
+							}, 100);
+						} else {
+							var MidiEventArray = new Array, MidiEventArrayNum = 0;
+							for (i = 0; i < midifile_b.length; i++) {
+								midifile_b[i] = 0 + midifile_b[i].charCodeAt().toString(16)
+							}
+							midifile_b = midifile_b.join();
+							midifile_b = midifile_b.replace(/0+([0-f]{2})/g, "$1");
+							midifile_b = midifile_b.split(",");
+							var midi_format = "";
+							for (i = 0; i < 4; i++) {
+								midi_format += midifile_b.shift()
+							}
+							midi_format_test = parseInt(midi_format, 16);
+							if (midi_format_test != 6) {
+								lock();
+								setTimeout(function () {
+									warning.innerHTML = "<b>MIDI头块数据区无法读取，错误代码：" + midi_format + "。按下菜单键、返回键或点击此消息可解锁焦点。</b>";
+									document.getElementById("input").value = document.getElementById("input").value + "\n失败，不受支持的MIDI！错误代码：" + midi_format;
+									if (zh_choose == "t") {
+										zh_tran('t');
+									}
+								}, 100);
+							} else {
+								//不检测midi报告的音轨数量，以MTrk出现次数检测
+								for (i = 0; i < 4; i++) {
+									midifile_b.shift();
+								}
+								var MidiBeatTest = "";
+								//时间格式(读取节拍的ticks或smpte)
+								for (i = 0; i < midi_format_test - 4; i++) {
+									MidiBeatTest += midifile_b.shift()
+								}
+								MidiBeatTest = parseInt(MidiBeatTest, 16);
+								var midi_MTrk = "";
+								for (i = 0; i < 4; i++) {
+									midi_MTrk += midifile_b.shift();
+								}
+								var MTrkNumberTest = 0;
+								if (midi_MTrk != "4d54726b") {
+									lock();
+									setTimeout(function () {
+										warning.innerHTML = "<b>MIDI音轨内容无法读取,请检查文件是否能正常播放。错误代码：" + MidiMTrk + "。按下菜单键、返回键或点击此消息可解锁焦点。</b>";
+										document.getElementById("input").value = document.getElementById("input").value + "\n失败，MIDI音轨内容无法读取！错误代码：" + MidiMTrk;
+										if (zh_choose == "t") {
+											zh_tran('t');
+										}
+									}, 100);
+								} else {
+									document.getElementById("input").value = document.getElementById("input").value + "\n读取第 " + MTrkNumberTest + " 个音轨数据……";
+									MTrkNumberTest++;
+									//获取音轨字节数量
+									var MidiMTrkLength = "";
+									for (i = 0; i < 4; i++) {
+										MidiMTrkLength += midifile_b.shift();
+									}
+									MidiMTrkLength = parseInt(MidiMTrkLength, 16);
+									//获取MIDI事件
+									MidiEvent = new Array();
+									for (i = 0; i < MidiMTrkLength; i++) {
+										MidiEvent[i] = midifile_b[i].toUpperCase();
+									}
+									midifile_b.splice(0, MidiMTrkLength);
+									let type, MidiEventDex = 0;
+									var MidiEventType, tick;
+									console.log(MidiEvent);
+									/*
+									while (MidiEventDex < MidiEvent.length) {
+										tick = MidiEvent[0];
+										MidiEventType = MidiEvent[1];
+										MidiEventTypeHead = MidiEventType.split("");
+										switch (MidiEventTypeHead[0]) {
+											case "8":
+												//松开音符
+												break;
+											case "9":
+												//按下音符
+												break;
+											case "A":
+												//触后音符
+												break;
+											case "B":
+												//控制器
+												switch (MidiEvent[2]) {
+													case "00":
+														//音色库选择器
+														break;
+													case "01":
+														//颤音粗调
+														break;
+													case "02":
+														//呼吸粗调
+														break;
+													case "04":
+														//踏板粗调
+														break;
+													case "05":
+														//连滑音粗调
+														break;
+													case "06":
+														//高位元组数据输入
+														break;
+													case "07":
+														//主音量粗调
+														MidiVolume = MidiEvent[3];
+														for (i = 0; i < 4; i++) {
+															MidiEvent.shift();
+														}
+														MidiEventArray[MidiEventArrayNum] = { tick: tick, type: "BX07", dexdata: MidiVolume };
+														MidiEventArrayNum++;
+														MidiEventDex +=4;
+														break;
+													case "08":
+														//平衡控制粗调
+														break;
+													case "0A":
+														//声像调整粗调
+														break;
+													case "0B":
+														//情绪控制粗调
+														break;
+													case "10":
+													case "11":
+													case "12":
+													case "13":
+													case "14":
+														//一般控制器(0-4)
+
+														break;
+													case "20":
+														//插口选择
+														break;
+													case "21":
+														//颤音微调
+														break;
+													case "22":
+														//呼吸微调
+														break;
+													case "24":
+														//踏板微调
+														break;
+													case "25":
+														//连滑音微调
+														break;
+													case "26":
+														//低位元组数据输入
+														break;
+													case "27":
+														//主音量微调
+														break;
+													case "28":
+														//平衡控制微调
+														break;
+													case "2A":
+														//声像调整微调
+														break;
+													case "2B":
+														//情绪控制微调
+														break;
+													case "2C":
+														//效果FX控制1
+														break;
+													case "2D":
+														//效果FX控制2
+														break;
+													case "40":
+														//延音踏板1
+														break;
+													case "41":
+														//滑音
+														break;
+													case "42":
+														//持续音
+														break;
+													case "43":
+														//弱音踏板
+														break;
+													case "44":
+														//连滑音踏板控制器
+														break;
+													case "45":
+														//延音踏板2
+														break;
+													case "46":
+														//变调
+														break;
+													case "47":
+														//音色
+														MidiTimbre = MidiEvent[3];
+														for (i = 0; i < 3; i++) {
+															MidiEvent.shift();
+														}
+														MidiEventArray[MidiEventArrayNum] = { tick: tick, type: "BX47", dexdata: MidiTimbre };
+														MidiEventArrayNum++;
+														MidiEventDex += 3;
+														break;
+													case "48":
+														//放音时值
+														for (i = 0; i < 3; i++) {
+															MidiEvent.shift();
+														}
+														MidiEventDex += 3;
+														break;
+													case "49":
+														//起音时值
+														for (i = 0; i < 3; i++) {
+															MidiEvent.shift();
+														}
+														MidiEventDex += 3;
+														break;
+													case "4A":
+														//亮音
+														for (i = 0; i < 3; i++) {
+															MidiEvent.shift();
+														}
+														MidiEventDex += 3;
+														break;
+													case "4B":
+													case "4C":
+													case "4D":
+													case "4E":
+													case "4F":
+														//声音控制
+														for (i = 0; i < 3; i++) {
+															MidiEvent.shift();
+														}
+														MidiEventDex += 3;
+														break;
+													case "50":
+													case "51":
+													case "52":
+													case "53":
+													case "54":
+														//一般控制器(5-8)
+														for (i = 0; i < 3; i++) {
+															MidiEvent.shift();
+														}
+														MidiEventDex += 3;
+														break;
+													case "55":
+														//连滑音控制
+														for (i = 0; i < 3; i++) {
+															MidiEvent.shift();
+														}
+														MidiEventDex += 3;
+														break;
+													case "5B":
+														//混响效果深度
+														for (i = 0; i < 3; i++) {
+															MidiEvent.shift();
+														}
+														MidiEventDex += 3;
+														break;
+													case "5C":
+														//未定义效果深度
+														for (i = 0; i < 3; i++) {
+															MidiEvent.shift();
+														}
+														MidiEventDex += 3;
+														break;
+													case "5D":
+														//合唱效果深度
+														for (i = 0; i < 3; i++) {
+															MidiEvent.shift();
+														}
+														MidiEventDex += 3;
+														break;
+													case "5E":
+														//未定义效果深度
+														for (i = 0; i < 3; i++) {
+															MidiEvent.shift();
+														}
+														MidiEventDex += 3;
+														break;
+													case "5F":
+														//移调器深度
+														break;
+													case "60":
+														//数据累增
+														break;
+													case "61":
+														//数据递减
+														break;
+													case "62":
+														//未登记的低元组数值
+														break;
+													case "63":
+														//未登记的高元组数值
+														break;
+													case "64":
+														//已登记的低元组数值
+														break;
+													case "65":
+														//已登记的高元组数值
+														break;
+													case "78":
+														//关闭所有声音
+														break;
+													case "79":
+														//关闭所有控制器
+														break;
+													case "7A":
+														//本地键盘开关
+														break;
+													case "7B":
+														//关闭所有音符
+														break;
+													case "7C":
+														//Omni模式关闭
+														break;
+													case "7D":
+														//Omni模式开启
+														break;
+													case "7E":
+														//单音模式
+														break;
+													case "7F":
+														//复音模式
+														break;
+													default:
+														for (i = 0; i < 3; i++) {
+															MidiEvent.shift();
+														}
+														MidiEventDex += 3;
+														document.getElementById("input").value = document.getElementById("input").value + "\nMIDI控制器未知，跳过！";
+														return;
+												}
+											case "C":
+												//乐器
+												MidiTimbre = MidiEvent[2];
+												for (i = 0; i < 3; i++) {
+													MidiEvent.shift();
+												}
+												MidiEventArray[MidiEventArrayNum] = { tick: tick, type: "CX", dexdata: MidiTimbre };
+												MidiEventArrayNum++;
+												MidiEventDex += 3;
+												break;
+											case "D":
+											//触后通道
+											case "E":
+												//弯音
+												break;
+											case "F":
+												//其他事件
+												switch (MidiEventTypeHead[1]) {
+													case "0":
+														//系统码（读取跳过）
+														for (i = 0; i < 5; i++) {
+															MidiEvent.shift();
+														}
+														MidiEventDex += 5;
+														break;
+													case "F":
+														//其他事件
+														switch (MidiEvent[2]) {
+															case "00":
+																//设置轨道音序
+																break;
+															case "01":
+																//文字事件
+																MidiTickEvent = MidiEvent[3];
+																MidiTickEvent = parseInt(MidiTickEvent, 16);
+																for (i = 0; i < MidiTickEvent + 4; i++) {
+																	MidiEvent.shift();
+																}
+																MidiEventArrayNum++;
+																MidiEventDex += MidiTickEvent + 4;
+																break;
+															case "02":
+																//MIDI版权公告
+																MidiTickEvent = MidiEvent[3];
+																MidiTickEvent = parseInt(MidiTickEvent, 16);
+																MidiTickEventLength = "";
+																for (i = 0; i < MidiTickEvent; i++) {
+																	MidiTickEventLength += MidiEvent[i + 4];
+																}
+																for (i = 0; i < MidiTickEvent + 4; i++) {
+																	MidiEvent.shift();
+																}
+																MidiEventArray[MidiEventArrayNum] = { tick: tick, type: "FF02", dexdata: MidiTickEventLength };
+																MidiEventArrayNum++;
+																MidiEventDex += MidiTickEvent + 4;
+																break;
+															case "03":
+																//指定歌曲与音轨名称
+																break;
+															case "04":
+																//指定乐器
+																break;
+															case "05":
+																//MIDI歌词
+																MidiTickEvent = MidiEvent[3];
+																MidiTickEvent = parseInt(MidiTickEvent, 16);
+																for (i = 0; i < MidiTickEvent + 4; i++) {
+																	MidiEvent.shift();
+																}
+																MidiEventArrayNum++;
+																MidiEventDex += MidiTickEvent + 4;
+																break;
+															case "06":
+																//MIDI标记
+																MidiTickEvent = MidiEvent[3];
+																MidiTickEvent = parseInt(MidiTickEvent, 16);
+																for (i = 0; i < MidiTickEvent + 4; i++) {
+																	MidiEvent.shift();
+																}
+																MidiEventArrayNum++;
+																MidiEventDex += MidiTickEvent + 4;
+																break;
+															case "07":
+																//MIDI注释
+																MidiTickEvent = MidiEvent[3];
+																MidiTickEvent = parseInt(MidiTickEvent, 16);
+																for (i = 0; i < MidiTickEvent + 4; i++) {
+																	MidiEvent.shift();
+																}
+																MidiEventArrayNum++;
+																MidiEventDex += MidiTickEvent + 4;
+																break;
+															case "08":
+																//未知事件（后续补充注释）
+																MidiTickEvent = MidiEvent[3];
+																MidiTickEvent = parseInt(MidiTickEvent, 16);
+																for (i = 0; i < MidiTickEvent + 4; i++) {
+																	MidiEvent.shift();
+																}
+																MidiEventDex += MidiTickEvent + 4;
+																break;
+															case "2F":
+																//音轨终止
+																break;
+															case "51":
+																//tick所需要的时间（获取BPM）
+																MidiTickEvent = MidiEvent[3];
+																MidiTickEvent = parseInt(MidiTickEvent, 16);
+																MidiTickEventLength = "";
+																for (i = 0; i < MidiTickEvent; i++) {
+																	MidiTickEventLength += MidiEvent[i + 4];
+																}
+																for (i = 0; i < MidiTickEvent + 4; i++) {
+																	MidiEvent.shift();
+																}
+																MidiEventArray[MidiEventArrayNum] = { tick: tick, type: "FF51", dexdata: MidiTickEventLength };
+																MidiEventArrayNum++;
+																MidiEventDex += MidiTickEvent + 4;
+																break;
+															case "58":
+																//指定节拍
+																MidiTickEvent = MidiEvent[3];
+																MidiTickEvent = parseInt(MidiTickEvent, 16);
+																MidiTickEventLength = "";
+																for (i = 0; i < MidiTickEvent; i++) {
+																	MidiTickEventLength += MidiEvent[i + 4];
+																}
+																for (i = 0; i < MidiTickEvent + 4; i++) {
+																	MidiEvent.shift();
+																}
+																MidiEventArray[MidiEventArrayNum] = { tick: tick, type: "FF58", dexdata: MidiTickEventLength };
+																MidiEventArrayNum++;
+																MidiEventDex += MidiTickEvent + 4;
+																break;
+															case "59":
+																//指定调号
+																MidiTickEvent = MidiEvent[3];
+																MidiTickEvent = parseInt(MidiTickEvent, 16);
+																MidiTickEventLength = "";
+																for (i = 0; i < MidiTickEvent; i++) {
+																	MidiTickEventLength += MidiEvent[i + 4];
+																}
+																for (i = 0; i < MidiTickEvent + 4; i++) {
+																	MidiEvent.shift();
+																}
+																MidiEventArray[MidiEventArrayNum] = { tick: tick, type: "FF59", dexdata: MidiTickEventLength };
+																MidiEventArrayNum++;
+																MidiEventDex += MidiTickEvent + 4;
+																break;
+															case "7F":
+																//音序特定信息
+																MidiTickEvent = MidiEvent[3];
+																MidiTickEvent = parseInt(MidiTickEvent, 16);
+																for (i = 0; i < MidiTickEvent + 4; i++) {
+																	MidiEvent.shift();
+																}
+																MidiEventArrayNum++;
+																MidiEventDex += MidiTickEvent + 4;
+																break;
+
+														}
+														break;
+													default:
+														lock();
+														setTimeout(function () {
+															warning.innerHTML = "<b>MIDI事件未知,无法解析。错误代码：" + MidiEventTypeHead[0] + MidiEventTypeHead[1] + "。按下菜单键、返回键或点击此消息可解锁焦点。</b>";
+															document.getElementById("input").value = document.getElementById("input").value + "\n失败，MIDI事件无法解析！错误代码：" + MidiEventTypeHead[0] + MidiEventTypeHead[1];
+															if (zh_choose == "t") {
+																zh_tran('t');
+															}
+														}, 100);
+														return;
+												}
+												MidiEventDex++;
+												break;
+											default:
+												lock();
+												setTimeout(function () {
+													warning.innerHTML = "<b>MIDI发生事件错误,无法解析。错误代码：" + MidiEventTypeHead[0] + MidiEventTypeHead[1] + "。按下菜单键、返回键或点击此消息可解锁焦点。</b>";
+													document.getElementById("input").value = document.getElementById("input").value + "\n失败，MIDI事件无法解析！错误代码：" + MidiEventTypeHead[0] + MidiEventTypeHead[1];
+													if (zh_choose == "t") {
+														zh_tran('t');
+													}
+												}, 100);
+												return;
+										}
+									}
+									*/
+									console.log(MidiEvent, MidiEventArray);
+								}
+							}
+						}
 					}
 				} else {
 					//对钢琴块复制品的json的兼容
@@ -5537,11 +6147,11 @@
 						InstrumentsOutput = "0,0";
 					}
 						break;
-					case "base": {
+					case "bass": {
 						InstrumentsOutput = "0,20";
 					}
 						break;
-					case "base2": {
+					case "bass2": {
 						InstrumentsOutput = "0,23";
 					}
 						break;
@@ -5550,13 +6160,13 @@
 					}
 						break;
 				}
-				if (Fileinstruments !== "piano" && Fileinstruments !== "base" && Fileinstruments !== "base2" && Fileinstruments !== "drum") {
+				if (Fileinstruments !== "piano" && Fileinstruments !== "bass" && Fileinstruments !== "bass2" && Fileinstruments !== "drum") {
 					InstrumentsOutput = Fileinstruments;
 				}
-				a_music_array[c].sound = InstrumentsOutput + "/" + a_music_array[c].sound + ".mp3";
+				a_music_array[c].sound = "../../skin/audio/"+InstrumentsOutput + "/" + a_music_array[c].sound + ".mp3";
 			}
 		}
-		time = time.concat(a_music_array, time);
+		time = time.concat(a_music_array);
 		//osu
 		games_type = games.value;
 		if (games_type == "om") {
@@ -5724,6 +6334,13 @@
 				}
 			}, 100);
 		}
+	}
+	function help_window() {
+		document.getElementById('mask').style.display = "";
+		document.getElementById("help_window").style.display = "";
+		document.getElementById('help_window').style.animation = 'board_3 0.1s';
+		document.getElementById('help_window').style.height = '80%';
+		document.getElementById('help_window').style.width = '80%';
 	}
 	function view_window() {
 		windowsopen = true;
@@ -5921,11 +6538,17 @@
 		document.getElementById('next').style.width = '0%';
 		document.getElementById('next').style.left = "10%";
 		document.getElementById('next').style.top = "10%";
+		document.getElementById('help_window').style.animation = 'board_4 0.1s';
+		document.getElementById('help_window').style.height = '0%';
+		document.getElementById('help_window').style.width = '0%';
+		document.getElementById('help_window').style.left = "10%";
+		document.getElementById('help_window').style.top = "10%";
 		aboutoff();
 		langoff();
 		noteoff();
 		selectoff();
 		nextoff();
+		helpoff();
 		viewoff();
 		function aboutoff() {
 			setTimeout(function () { document.getElementById('box').style.display = "none"; }, 100);
@@ -5938,6 +6561,9 @@
 		}
 		function selectoff() {
 			setTimeout(function () { document.getElementById('select').style.display = "none"; }, 100);
+		}
+		function helpoff() {
+			setTimeout(function () { document.getElementById('help_window').style.display = "none"; }, 100);
 		}
 		function nextoff() {
 			setTimeout(function () { document.getElementById('next').style.display = "none"; }, 100);
@@ -6491,8 +7117,8 @@
 		if (fb1 < 0) {
 			fb1 = 0;
 		}
-		if (fb1 > 13) {
-			fb1 = 13;
+		if (fb1 > 14) {
+			fb1 = 14;
 		}
 		switch (fb1) {
 			case 0:
@@ -6617,6 +7243,15 @@
 				document.getElementById('move12').style.backgroundColor = "#aaddff";
 				document.getElementById('move11').style.backgroundColor = "#66ccff";
 				document.getElementById('move11').style.color = "#000";
+				document.getElementById('move13').style.backgroundColor = "#66ccff";
+				document.getElementById('move13').style.color = "#000";
+				break;
+			case 14:
+				document.getElementById("move13").focus();
+				document.getElementById('move13').style.color = "#FB7299";
+				document.getElementById('move13').style.backgroundColor = "#aaddff";
+				document.getElementById('move12').style.backgroundColor = "#66ccff";
+				document.getElementById('move12').style.color = "#000";
 				break;
 		}
 	}
@@ -6887,6 +7522,9 @@
 			case 12:
 				id0();
 				fg1 = true;
+				break;
+			case 14:
+				help_window();
 				break;
 		}
 	}
@@ -7327,7 +7965,6 @@
 	if (String(navigator.userAgent).indexOf("Harmony") > -1) detectos.innerHTML = "Huawei Harmony";
 	if (String(navigator.userAgent).indexOf("Fuchsia") > -1) detectos.innerHTML = "Google Fuchsia";
 	if (String(navigator.userAgent).indexOf("CrOS") > -1) detectos.innerHTML = "Google Chrome Operating System";
-	if (String(navigator.userAgent).indexOf("Solaris") > -1) detectos.innerHTML = "Solaris";
 	if (String(navigator.platform).indexOf("FreeBSD") > -1) detectos.innerHTML = "FreeBSD";
 	if (String(navigator.platform).indexOf("OpenBSD") > -1) detectos.innerHTML = "OpenBSD";
 	if (String(navigator.platform).indexOf("NetBSD") > -1) detectos.innerHTML = "NetBSD";
@@ -7371,12 +8008,12 @@
 		alert("此程序不支持 Blackberry 操作系统，请使用其他操作平台使用此程序。");
 	}
 	//禁止Android5以下的系统访问此脚本
-	if (String(navigator.userAgent).indexOf("Android 1.") > -1 || String(navigator.userAgent).indexOf("Android 2.") > -1 || String(navigator.userAgent).indexOf("Android 3.") > -1) {
+	if (String(navigator.userAgent).indexOf("Android 1.") > -1 || String(navigator.userAgent).indexOf("Android 2.") > -1 || String(navigator.userAgent).indexOf("Android 3.") > -1 || String(navigator.userAgent).indexOf("Android 4.") > -1) {
 		document.body.innerHTML = '<b style="color:red">警告！请升级你的 Android 操作系统至 Android 5 以上或使用其他设备访问此脚本！</b>';
-		alert("警告！请升级你的 Android 操作系统至 Android 5 以上或使用其他设备访问此脚本！");
+		alert("警告！请升级你的 Android 操作系统至 Android 8 以上或使用其他设备访问此脚本！");
 	}
-	if (String(navigator.userAgent).indexOf("Android 4.") > -1) {
-		alert("建议升级你的 Android 操作系统至 Android 5 以上使用此程序。");
+	if (String(navigator.userAgent).indexOf("Android 5.") > -1 || String(navigator.userAgent).indexOf("Android 6.") > -1 || String(navigator.userAgent).indexOf("Android 7.") > -1) {
+		alert("建议升级你的 Android 操作系统至 Android 8 以上使用此程序。");
 	}
 	//禁止iOS10以下的系统访问此脚本
 	if (String(navigator.userAgent).indexOf("OS 1_") > -1 || String(navigator.userAgent).indexOf("OS 2_") > -1 || String(navigator.userAgent).indexOf("OS 3_") > -1 || String(navigator.userAgent).indexOf("OS 4_") > -1 || String(navigator.userAgent).indexOf("OS 5_") > -1 || String(navigator.userAgent).indexOf("OS 6_") > -1 || String(navigator.userAgent).indexOf("OS 7_") > -1 || String(navigator.userAgent).indexOf("OS 8_") > -1 || String(navigator.userAgent).indexOf("OS 9_") > -1 && String(navigator.userAgent).indexOf("iPhone") > -1 && String(navigator.userAgent).indexOf("iPad") > -1) {
@@ -7492,6 +8129,7 @@
 		document.getElementsByClassName("autowindowsize")[2].style.height = autowindowheight;
 		document.getElementsByClassName("autowindowsize")[3].style.height = autowindowheight;
 		document.getElementsByClassName("autowindowsize")[4].style.height = autowindowheight;
+		document.getElementsByClassName("autowindowsize")[5].style.height = autowindowheight;
 		document.getElementById("songselect").style.height = songselectheight;
 		if (window.screen.height < 500 || window.screen.width < 500) {
 			document.getElementById('bodyid').style.overflowY = "auto";
