@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html oncontextmenu="return false" ; onselectstart="return false" id="esc" ondrop="drop(event)"
 	ondragover="allowDrop(event)">
-<link rel="shortcut icon" href="./favicon.jpeg"> 
+<link rel="shortcut icon" href="./favicon.jpeg">
+
 <head>
 	<meta charset="utf-8" name="viewport"
 		content="width=device-width,initial-scale=1,maximum-scale=1.0,minimum-scale=1,user-scalable=no">
@@ -11,7 +12,8 @@
 </head>
 
 <body style="text-align:center;cursor:default;width:100%;overflow:hidden;" class="container" id="bodyid">
-	<div style="width: 100%;height: 100%;position: absolute;top:0px;left:0px;display:none;" id="menuviewtouchdiv" onclick="menuviewtouch()"></div>
+	<div style="width: 100%;height: 100%;position: absolute;top:0px;left:0px;display:none;" id="menuviewtouchdiv"
+		onclick="menuviewtouch()"></div>
 	<progress class="progress" id="progress" value="0" max="100" onclick="progressoff()"></progress>
 	<b class="progress1" id="progress3" onclick="progressoff()">
 		已完成 <b id="progress1">0</b> %，用时 <b id="progress2">0</b>
@@ -203,7 +205,8 @@
 					<a onclick="window.open('https://space.bilibili.com/46345895')" id="help_menu_view_2">反馈漏洞</a>
 					<a onclick="about();" id="help_menu_view_3">关于</a>
 				</div>
-				<canvas id="viewCanvas" width="250" height="190" style="border:1px solid #d3d3d3;" onclick="menuviewtouch()"></canvas>
+				<canvas id="viewCanvas" width="250" height="190" style="border:1px solid #d3d3d3;"
+					onclick="menuviewtouch()"></canvas>
 			</div>
 		</div>
 	</div>
@@ -1459,8 +1462,8 @@
 	winviewstatemax = false;
 	winviewstate = false;
 	winviewmenustate = false;
-	function menuviewtouch(){
-		document.getElementById("menuviewtouchdiv").style.display="none";
+	function menuviewtouch() {
+		document.getElementById("menuviewtouchdiv").style.display = "none";
 		document.getElementById('menu_play').style.animation = 'window_menu_test_off 0.05s';
 		document.getElementById('menu_help').style.animation = 'window_menu_test_off 0.05s';
 		document.getElementById('menu_file').style.animation = 'window_menu_test_off 0.05s';
@@ -1471,24 +1474,27 @@
 			document.getElementById("menu_play").style.display = "none";
 			document.getElementById("menu_help").style.display = "none";
 			document.getElementById("menu_file").style.display = "none";
-			}, 50);
+		}, 50);
 	}
 	function file_menu_view_fun() {
 		winviewmenustate = true;
 		if (document.getElementById("menu_file").style.display == "none" || document.getElementById("menu_file").style.display == "") {
 			document.getElementById("menu_file").style.display = "block";
-			document.getElementById("menuviewtouchdiv").style.display="";
+			document.getElementById("menuviewtouchdiv").style.display = "";
 			document.getElementById('menu_file').style.animation = 'window_menu_test_on 0.05s';
 			document.getElementById('menu_play').style.animation = 'window_menu_test_off 0.05s';
 			document.getElementById('menu_help').style.animation = 'window_menu_test_off 0.05s';
-			document.getElementById('file_menu_view').onmouseover = function () {
-				file_menu_view_fun();
-			}
-			document.getElementById('play_menu_view').onmouseover = function () {
-				play_menu_view_fun();
-			}
-			document.getElementById('help_menu_view').onmouseover = function () {
-				help_menu_view_fun();
+			if (!/Firefox\/(\S+)/.test(navigator.userAgent) && /Android/.test(navigator.userAgent)||/iPhone/.test(navigator.userAgent)||/iPad/.test(navigator.userAgent)) {
+			} else {
+				document.getElementById('file_menu_view').onmouseover = function () {
+					file_menu_view_fun();
+				}
+				document.getElementById('play_menu_view').onmouseover = function () {
+					play_menu_view_fun();
+				}
+				document.getElementById('help_menu_view').onmouseover = function () {
+					help_menu_view_fun();
+				}
 			}
 			setTimeout(function () {
 				document.getElementById("menu_play").style.display = "none";
@@ -1496,7 +1502,7 @@
 			}, 50);
 		} else {
 			document.getElementById('menu_file').style.animation = 'window_menu_test_off 0.05s';
-			document.getElementById("menuviewtouchdiv").style.display="none";
+			document.getElementById("menuviewtouchdiv").style.display = "none";
 			document.getElementById('file_menu_view').onmouseover = "";
 			document.getElementById('play_menu_view').onmouseover = "";
 			document.getElementById('help_menu_view').onmouseover = "";
@@ -1511,18 +1517,21 @@
 		winviewmenustate = true;
 		if (document.getElementById("menu_play").style.display == "none" || document.getElementById("menu_play").style.display == "") {
 			document.getElementById("menu_play").style.display = "block";
-			document.getElementById("menuviewtouchdiv").style.display="";
+			document.getElementById("menuviewtouchdiv").style.display = "";
 			document.getElementById('menu_play').style.animation = 'window_menu_test_on 0.05s';
 			document.getElementById('menu_file').style.animation = 'window_menu_test_off 0.05s';
 			document.getElementById('menu_help').style.animation = 'window_menu_test_off 0.05s';
-			document.getElementById('file_menu_view').onmouseover = function () {
-				file_menu_view_fun();
-			}
-			document.getElementById('play_menu_view').onmouseover = function () {
-				play_menu_view_fun();
-			}
-			document.getElementById('help_menu_view').onmouseover = function () {
-				help_menu_view_fun();
+			if (!/Firefox\/(\S+)/.test(navigator.userAgent) && /Android/.test(navigator.userAgent)||/iPhone/.test(navigator.userAgent)||/iPad/.test(navigator.userAgent)) {
+			} else {
+				document.getElementById('file_menu_view').onmouseover = function () {
+					file_menu_view_fun();
+				}
+				document.getElementById('play_menu_view').onmouseover = function () {
+					play_menu_view_fun();
+				}
+				document.getElementById('help_menu_view').onmouseover = function () {
+					help_menu_view_fun();
+				}
 			}
 			setTimeout(function () {
 				document.getElementById("menu_file").style.display = "none";
@@ -1530,7 +1539,7 @@
 			}, 50);
 		} else {
 			document.getElementById('menu_play').style.animation = 'window_menu_test_off 0.05s';
-			document.getElementById("menuviewtouchdiv").style.display="none";
+			document.getElementById("menuviewtouchdiv").style.display = "none";
 			document.getElementById('file_menu_view').onmouseover = "";
 			document.getElementById('play_menu_view').onmouseover = "";
 			document.getElementById('help_menu_view').onmouseover = "";
@@ -1544,18 +1553,21 @@
 		winviewmenustate = true;
 		if (document.getElementById("menu_help").style.display == "none" || document.getElementById("menu_help").style.display == "") {
 			document.getElementById("menu_help").style.display = "block";
-			document.getElementById("menuviewtouchdiv").style.display="";
+			document.getElementById("menuviewtouchdiv").style.display = "";
 			document.getElementById('menu_help').style.animation = 'window_menu_test_on 0.05s';
 			document.getElementById('menu_file').style.animation = 'window_menu_test_off 0.05s';
 			document.getElementById('menu_play').style.animation = 'window_menu_test_off 0.05s';
-			document.getElementById('file_menu_view').onmouseover = function () {
-				file_menu_view_fun();
-			}
-			document.getElementById('play_menu_view').onmouseover = function () {
-				play_menu_view_fun();
-			}
-			document.getElementById('help_menu_view').onmouseover = function () {
-				help_menu_view_fun();
+			if (!/Firefox\/(\S+)/.test(navigator.userAgent) && /Android/.test(navigator.userAgent)||/iPhone/.test(navigator.userAgent)||/iPad/.test(navigator.userAgent)) {
+			} else {
+				document.getElementById('file_menu_view').onmouseover = function () {
+					file_menu_view_fun();
+				}
+				document.getElementById('play_menu_view').onmouseover = function () {
+					play_menu_view_fun();
+				}
+				document.getElementById('help_menu_view').onmouseover = function () {
+					help_menu_view_fun();
+				}
 			}
 			setTimeout(function () {
 				document.getElementById("menu_play").style.display = "none";
@@ -1563,7 +1575,7 @@
 			}, 50);
 		} else {
 			document.getElementById('menu_help').style.animation = 'window_menu_test_off 0.05s';
-			document.getElementById("menuviewtouchdiv").style.display="none";
+			document.getElementById("menuviewtouchdiv").style.display = "none";
 			document.getElementById('file_menu_view').onmouseover = "";
 			document.getElementById('play_menu_view').onmouseover = "";
 			document.getElementById('help_menu_view').onmouseover = "";
@@ -1667,6 +1679,7 @@
 		handle = handle || oDrag;
 		handle.style.cursor = "move";
 		handle.onmousedown = function (event) {
+			menuviewtouch();
 			var event = event || window.event;
 			disX = event.clientX - oDrag.offsetLeft;
 			disY = event.clientY - oDrag.offsetTop;
@@ -1714,6 +1727,7 @@
 			return false
 		};
 		handle.ontouchstart = function (event) {
+			menuviewtouch();
 			var event = event || window.event;
 			disX = event.touches[0].clientX - oDrag.offsetLeft;
 			disY = event.touches[0].clientY - oDrag.offsetTop;
@@ -1769,6 +1783,7 @@
 			if (winviewstatemax == true) {
 				windowbutton3();
 			}
+			menuviewtouch();
 			var event = event || window.event;
 			var disX = event.clientX - handle.offsetLeft;
 			var disY = event.clientY - handle.offsetTop;
@@ -1804,6 +1819,7 @@
 			if (winviewstatemax == true) {
 				windowbutton3();
 			}
+			menuviewtouch();
 			var event = event || window.event;
 			var disX = event.touches[0].clientX - handle.offsetLeft;
 			var disY = event.touches[0].clientY - handle.offsetTop;
