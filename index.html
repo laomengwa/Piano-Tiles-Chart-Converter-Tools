@@ -11,6 +11,7 @@
 </head>
 
 <body style="text-align:center;cursor:default;width:100%;overflow:hidden;" class="container" id="bodyid">
+	<div style="width: 100%;height: 100%;position: absolute;top:0px;left:0px;display:none;" id="menuviewtouchdiv" onclick="menuviewtouch()"></div>
 	<progress class="progress" id="progress" value="0" max="100" onclick="progressoff()"></progress>
 	<b class="progress1" id="progress3" onclick="progressoff()">
 		已完成 <b id="progress1">0</b> %，用时 <b id="progress2">0</b>
@@ -20,8 +21,9 @@
 		<button onclick="menu()" id="id16" class="button3" tabindex="-1" title="菜单">
 			☰
 		</button>
-		<b id="title">谱面转换器 0.3.0-Alpha (<b id="detectos"></b>,<b id="explorer"></b>)</b>
-		<button class="button10" onclick="next()" id="id22" tabindex="-1" title="下一步操作">
+		<b id="title">谱面转换器 0.3.1-Alpha (<b id="detectos"></b>,<b id="explorer"></b>)</b>
+		<button class="button10" onclick="if(document.getElementById('result').value==''){Function2();}else{next();}"
+			id="id22" tabindex="-1" title="下一步操作">
 			▶
 		</button>
 	</div>
@@ -123,6 +125,16 @@
 
 	<p>
 	<div class="warning_5"><b id="warning_sound">♮正常</b></div>
+	<div class="warning_6">
+		<div id="winrevertview" class="boxmax" title="还原" style="border-radius: 5px 0px 0px 5px;"
+			onclick="winviewrevert()">
+			<div class="window_min_2"></div>
+			<div class="window_min_1"></div>
+		</div>
+		<div id="winoffview" class="boxoff" style="border-radius: 0px 5px 5px 0px;" title="关闭" onclick="winviewoff()">
+			×
+		</div>
+	</div>
 	<button class="button1" onclick="next()" id="id21" tabindex="-1">下一步操作</button>
 	</p>
 	<noscript>
@@ -130,48 +142,69 @@
 			警告：此浏览器不支持JavaScript，该脚本无法运行！请检查当前浏览器是否启用JavaScript，然后重试！
 		</strong>
 	</noscript>
-	<div class="view_windows_mask" id="view_window_mask" style="display:none"></div>
-	<div class="box" id='view_window' style="left: 20%; top: 25%" ondblclick="window_max();" ;>
-		<div class="icon">⚙</div>
-		<div class="icon1"><b>谱面预览</b></div>
-		<div class="boxmax" id="boxmax2" onclick="window_max();" title="最大化/还原">
-			<div class="window_max">
-			</div>
+	<div class="view_windows_mask" id="view_window_mask"></div>
+	<div id="drag" class="box">
+		<div class="title" ondblclick="view_window_size();">
+			<div class="icon">⚙</div>
+			<div class="icon1" style="text-align: left;"><b>谱面预览</b></div>
 		</div>
-		<div class="boxoff" id="boxoff5" onclick="hidder()" title="关闭">×</div>
-		<div class="mute1"></div>
-		<div class="container1" style="text-align: left;overflow-y:auto;border-radius: 0%;">
-			<ul>
-				<li><a onclick="document.getElementById('menu_file').style.display = 'block'">文件</a></li>
-				<li><a>播放</a></li>
-				<li><a onclick="document.getElementById('menu_help').style.display = 'block'">帮助</a></li>
-			</ul>
-			<div class="window_menu_1" id="menu_file" style="position: absolute;left:0px;top:64px;">
-				<label class="file_open_menu">
-					<input type="file" id="file_menu" tabindex="-1" hidden="hidden"
-						accept=".json,.mid,.midi,.kar,.sty,.krx,.rmi" onclick="file_menu_1()">
-					打开文件
-				</label>
-				<a onclick="outputfile()">保存</a>
-				<a style="border-top: 1px solid #aaa;" onclick="id0()">语言</a>
-				<a style="border-top: 1px solid #aaa;" onclick="window_max();">窗口最大化</a>
-				<a onclick="isFull()">全屏</a>
-				<a style="border-top: 1px solid #aaa;" onclick="hidder()">关闭</a>
+		<div>
+			<a class="boxmin" onclick="windowbutton1()" title="最小化">
+				<div class="window_min_3"></div>
+			</a>
+			<a class="boxmax" id="boxmaxview" onclick="windowbutton2()" title="最大化">
+				<div class="window_max">
+				</div>
+			</a>
+			<a class="boxrevert" id="boxrevertview" onclick="windowbutton3()" title="还原">
+				<div class="window_min_2"></div>
+				<div class="window_min_1"></div>
+			</a>
+			<a class="boxoff" onclick="windowbutton4()" title="关闭">×</a>
+		</div>
+		<div class="resizeL"></div>
+		<div class="resizeT"></div>
+		<div class="resizeR"></div>
+		<div class="resizeB"></div>
+		<div class="resizeLT"></div>
+		<div class="resizeTR"></div>
+		<div class="resizeBR"></div>
+		<div class="resizeLB"></div>
+		<div class="content">
+			<div class="container1" style="text-align: left;overflow-y:auto;border-radius: 0%;">
+				<ul>
+					<li><a onclick="file_menu_view_fun()" id="file_menu_view">文件</a></li>
+					<li><a onclick="play_menu_view_fun()" id="play_menu_view">播放</a></li>
+					<li><a onclick="help_menu_view_fun()" id="help_menu_view">帮助</a></li>
+				</ul>
+				<div class="windowmenumute" id=""></div>
+				<div class="window_menu_1" id="menu_file" style="position: absolute;left:0px;top:64px;">
+					<label class="file_open_menu">
+						<input type="file" id="file_menu" tabindex="-1" hidden="hidden"
+							accept=".json,.mid,.midi,.kar,.sty,.krx,.rmi" onclick="file_menu_1()">
+						打开文件
+					</label>
+					<a onclick="outputfile()" id="file_menu_view_1">保存</a>
+					<a style="border-top: 1px solid #aaa;" onclick="id0()" id="file_menu_view_2">语言</a>
+					<a style="border-top: 1px solid #aaa;" id="menu_max_window" onclick="view_window_size()">窗口还原</a>
+					<a onclick="isFull()" id="file_menu_view_3">全屏</a>
+					<a style="border-top: 1px solid #aaa;" onclick="windowbutton4()" id="file_menu_view_4">关闭</a>
+				</div>
+				<div class="window_menu_1 left:100px" id="menu_play" style="position: absolute;left:46px;top:64px;">
+					<a id="play_menu_view_1">暂停</a>
+					<a id="play_menu_view_2">快放 10 秒</a>
+					<a id="play_menu_view_3">慢放 10 秒</a>
+					<a id="play_menu_view_4">停止播放</a>
+					<a style="border-top: 1px solid #aaa;" id="play_menu_view_5">显示进度条</a>
+					<a id="play_menu_view_6">音量大小</a>
+				</div>
+				<div class="window_menu_1 left:100px" id="menu_help" style="position: absolute;left:95px;top:64px;">
+					<a onclick="help_window();" id="help_menu_view_1">使用指南</a>
+					<a onclick="window.open('https://space.bilibili.com/46345895')" id="help_menu_view_2">反馈漏洞</a>
+					<a onclick="about();" id="help_menu_view_3">关于</a>
+				</div>
+				<canvas id="viewCanvas" width="250" height="190" style="border:1px solid #d3d3d3;" onclick="menuviewtouch()"></canvas>
 			</div>
-			<div class="window_menu_1 left:100px">
-				<a>测试</a>
-				<a>测试</a>
-				<a>测试</a>
-				<a>测试</a>
-			</div>
-			<div class="window_menu_1 left:100px" id="menu_help" style="position: absolute;left:95px;top:64px;">
-				<a>使用指南</a>
-				<a onclick="about()">关于</a>
-			</div>
-			<b>前面的区域，以后再来探索吧。</b>
-			<iframe scrolling="yes" frameborder="1" framespacing="0" allowfullscreen="true"
-				style="width: 256px;height:456px;border:1px solid #555;">
-			</iframe>
 		</div>
 	</div>
 	<div class="mask" id='mask' style="opacity: 0.5;"></div>
@@ -207,6 +240,7 @@
 				<input type="checkbox" id="note7" checked="checked" tabindex="-1"><label for='note7'>橙色块（代号：3）</label>
 			</div>
 			竞技模式加速度（如果可用）
+			<br>
 			<textarea onkeydown="if(event.keyCode==13){return false;}" class="button9" tabindex="-1"
 				id="acc"></textarea>
 			<p>
@@ -271,40 +305,64 @@
 		<div class="autowindowsize" style="text-align: left;overflow-y:auto;border-radius: 0%;">
 			<p style="color:#555"><b>完善谱面信息（可以不用全部填写）：</b></p>
 			<p style="color:#555">
-				歌曲名：<textarea onkeydown="if(event.keyCode==13){return false;}" class="button9" id="notewidth"
+				歌曲名：
+				<br>
+				<textarea onkeydown="if(event.keyCode==13){return false;}" class="button9" id="nextsongname"
 					autofocus="autofocus" placeholder="请输入："></textarea>
 			</p>
 			<p style="color:#555">
-				标题原文：<textarea onkeydown="if(event.keyCode==13){return false;}" class="button9" id="notewidth"
+				歌曲名原文：
+				<br>
+				<textarea onkeydown="if(event.keyCode==13){return false;}" class="button9" id="nexttitlename"
 					autofocus="autofocus" placeholder="请输入："></textarea>
 			</p>
 			<p style="color:#555">
-				艺术家：<textarea onkeydown="if(event.keyCode==13){return false;}" class="button9" id="notewidth"
+				艺术家：
+				<br>
+				<textarea onkeydown="if(event.keyCode==13){return false;}" class="button9" id="nextartistname"
 					autofocus="autofocus" placeholder="请输入："></textarea>
 			</p>
 			<p style="color:#555">
-				艺术家原文：<textarea onkeydown="if(event.keyCode==13){return false;}" class="button9" id="notewidth"
+				艺术家原文：
+				<br>
+				<textarea onkeydown="if(event.keyCode==13){return false;}" class="button9" id="nextartistorg"
 					autofocus="autofocus" placeholder="请输入："></textarea>
 			</p>
 			<p style="color:#555">
-				谱面作者：<textarea onkeydown="if(event.keyCode==13){return false;}" class="button9" id="notewidth"
+				谱面作者：
+				<br>
+				<textarea onkeydown="if(event.keyCode==13){return false;}" class="button9" id="nextcreator"
 					autofocus="autofocus" placeholder="请输入："></textarea>
 			</p>
 			<p style="color:#555">
-				谱面版本/难度：<textarea onkeydown="if(event.keyCode==13){return false;}" class="button9" id="notewidth"
+				谱面版本/难度：
+				<br>
+				<textarea onkeydown="if(event.keyCode==13){return false;}" class="button9" id="nextversion"
 					autofocus="autofocus" placeholder="请输入："></textarea>
 			</p>
 			<p style="color:#555">
-				osu!歌曲标签：<textarea onkeydown="if(event.keyCode==13){return false;}" class="button9" id="notewidth"
+				osu!歌曲标签：
+				<br>
+				<textarea onkeydown="if(event.keyCode==13){return false;}" class="button9" id="nexttag"
 					autofocus="autofocus" placeholder="请输入："></textarea>
 			</p>
 			<p style="color:#555">
-				背景图片：<textarea onkeydown="if(event.keyCode==13){return false;}" class="button9" id="notewidth"
+				背景图片：
+				<br>
+				<textarea onkeydown="if(event.keyCode==13){return false;}" class="button9" id="nextbg"
 					autofocus="autofocus" placeholder="输入图片文件名就行，非必填："></textarea>
 			</p>
 			<p style="color:#555">
-				背景音乐：<textarea onkeydown="if(event.keyCode==13){return false;}" class="button9" id="notewidth"
+				背景音乐：
+				<br>
+				<textarea onkeydown="if(event.keyCode==13){return false;}" class="button9" id="nextbgm"
 					autofocus="autofocus" placeholder="输入音频文件名就行，非必填："></textarea>
+			</p>
+			<p style="color:#555">
+				视频背景：
+				<br>
+				<textarea onkeydown="if(event.keyCode==13){return false;}" class="button9" id="nextvideo"
+					autofocus="autofocus" placeholder="输入视频文件名就行，非必填："></textarea>
 			</p>
 		</div>
 		<div style="display: flex;">
@@ -364,8 +422,8 @@
 			<br>
 			<b style="font-size:16px;">为什么我玩游戏时没有钢琴块的外观、声音？以及在手机上玩游戏时是横屏不是竖屏？</b>
 			<br>
-			没有游戏的外观需要下载 “钢琴块” 的皮肤 <a onclick="window.open('https://github.com/laomengwa/mengwa113')" style="color:#fb7299"
-				target="_blank">（下载请点击此文本）</a>。</br>
+			没有游戏的外观需要下载 “钢琴块” 的皮肤 <a onclick="window.open('https://github.com/laomengwa/mengwa113')"
+				style="color:#fb7299" target="_blank">（下载请点击此文本）</a>。</br>
 			<b>Malody （狂热旋律）</b>
 			<br>
 			如果你的设备是 Android ，请在 /sdcard/data/malody/skin （ sdcard 是你的手机文件目录）创建一个新的文件夹，把压缩包解压到新创建的文件夹里。<br>
@@ -399,8 +457,8 @@
 			<p>
 				该脚本可使 Piano Tiles 的音乐曲谱文件转换成其他音乐游戏可以读取的曲谱格式。<br />程序使用 HTML5+CSS3+JavaScript 制作。<br />脚本适用的音乐游戏有：
 				OSU!Mania,Malody<br />Script Version:
-				0.3.0 (Alpha)<br />Copyright by mengwa.（<a onclick="window.open('https://space.bilibili.com/46345895')"
-				style="color:#fb7299" target="_blank">萌娃是条咸鱼</a>）<br />
+				0.3.1 (Alpha)<br />Copyright by mengwa.（<a onclick="window.open('https://space.bilibili.com/46345895')"
+					style="color:#fb7299" target="_blank">萌娃是条咸鱼</a>）<br />
 				<b>用户代理字符串：</b><b id=explore></b>
 			</p>
 			<noscript>
@@ -417,7 +475,97 @@
 </body>
 
 </html>
+
 <style>
+	#drag {
+		position: absolute;
+		height: 100%;
+		width: 100%;
+		background: #fff;
+		box-shadow: 0 1px 3px 2px #888;
+		touch-action: none;
+	}
+
+	#drag .title {
+		position: relative;
+		height: 31px;
+	}
+
+	#drag .resizeBR {
+		position: absolute;
+		width: 14px;
+		height: 14px;
+		right: 0;
+		bottom: 0;
+		overflow: hidden;
+		cursor: nw-resize;
+	}
+
+	#drag .resizeL,
+	#drag .resizeT,
+	#drag .resizeR,
+	#drag .resizeB,
+	#drag .resizeLT,
+	#drag .resizeTR,
+	#drag .resizeLB {
+		position: absolute;
+		background: #000;
+		overflow: hidden;
+		opacity: 0;
+	}
+
+	#drag .resizeL,
+	#drag .resizeR {
+		top: 0;
+		width: 5px;
+		height: 100%;
+		cursor: w-resize;
+	}
+
+	#drag .resizeR {
+		right: 0;
+	}
+
+	#drag .resizeT,
+	#drag .resizeB {
+		width: 100%;
+		height: 5px;
+		cursor: n-resize;
+	}
+
+	#drag .resizeT {
+		top: 0;
+	}
+
+	#drag .resizeB {
+		bottom: 0;
+	}
+
+	#drag .resizeLT,
+	#drag .resizeTR,
+	#drag .resizeLB {
+		width: 8px;
+		height: 8px;
+	}
+
+	#drag .resizeLT {
+		top: 0;
+		left: 0;
+		cursor: nw-resize;
+	}
+
+	#drag .resizeTR {
+		top: 0;
+		right: 0;
+		cursor: ne-resize;
+	}
+
+	#drag .resizeLB {
+		left: 0;
+		bottom: 0;
+		cursor: ne-resize;
+	}
+
 	.window_menu_1 {
 		width: 100px;
 		background-color: #fff;
@@ -431,11 +579,36 @@
 		text-align: left;
 		text-decoration: none;
 		padding: 5px 10px;
+		transition: all 0.2s ease;
 	}
 
 	.window_menu_1 a:hover {
 		background-color: #fb7299;
 		color: #fff;
+	}
+
+	@keyframes window_menu_test_on {
+		0% {
+			height: 0px;
+			overflow: hidden;
+		}
+
+		100% {
+			height: 180px;
+			overflow: hidden;
+		}
+	}
+
+	@keyframes window_menu_test_off {
+		0% {
+			height: 180px;
+			overflow: hidden;
+		}
+
+		100% {
+			height: 0px;
+			overflow: hidden;
+		}
 	}
 
 	ul {
@@ -458,6 +631,7 @@
 		text-decoration: none;
 		padding: 5px 10px;
 		text-align: left;
+		transition: all 0.2s ease;
 	}
 
 	.file_open_menu:hover {
@@ -471,6 +645,7 @@
 		text-align: center;
 		text-decoration: none;
 		padding: 5px 10px;
+		transition: all 0.2s ease;
 	}
 
 	li a:hover {
@@ -491,8 +666,11 @@
 	}
 
 	.view_windows_mask {
-		width: 0px;
-		height: 0px;
+		width: 100%;
+		height: 100%;
+		left: 0px;
+		top: 0px;
+		display: none;
 		opacity: 0.5;
 		background: #fb7299;
 		position: absolute;
@@ -564,7 +742,7 @@
 
 	.window_max {
 		position: absolute;
-		top: 8px;
+		top: 10px;
 		left: 14px;
 		width: 8px;
 		height: 8px;
@@ -574,24 +752,32 @@
 
 	.window_min_1 {
 		position: absolute;
-		top: 10px;
+		top: 12px;
 		left: 12px;
 		width: 6px;
 		height: 6px;
 		border: 2px solid #555;
-		z-index: 2;
 		background: #fff;
 	}
 
 	.window_min_2 {
 		position: absolute;
-		top: 7px;
+		top: 9px;
 		left: 15px;
 		width: 6px;
 		height: 6px;
 		border: 2px solid #555;
-		z-index: 1;
 		background: #fff;
+	}
+
+	.window_min_3 {
+		position: absolute;
+		top: 17px;
+		left: 15px;
+		width: 8px;
+		height: 0px;
+		border: 1px solid #555;
+		background: #555;
 	}
 
 	.button {
@@ -630,6 +816,7 @@
 		padding: 5px 10px;
 		font-size: 12px;
 		height: 12px;
+		width: 80%;
 		font-family: ubuntu, -apple-system, BlinkMacSystemFont, Helvetica Neue, Helvetica, Arial, PingFang SC, Hiragino Sans GB, Microsoft YaHei, sans-serif;
 	}
 
@@ -705,6 +892,7 @@
 		cursor: pointer;
 		width: 50px;
 		height: 50px;
+		transition: all 0.2s ease;
 		font-family: ubuntu, -apple-system, BlinkMacSystemFont, Helvetica Neue, Helvetica, Arial, PingFang SC, Hiragino Sans GB, Microsoft YaHei, sans-serif;
 	}
 
@@ -727,6 +915,7 @@
 		cursor: pointer;
 		width: 50px;
 		height: 50px;
+		transition: all 0.2s ease;
 		font-family: ubuntu, -apple-system, BlinkMacSystemFont, Helvetica Neue, Helvetica, Arial, PingFang SC, Hiragino Sans GB, Microsoft YaHei, sans-serif;
 	}
 
@@ -755,6 +944,13 @@
 		position: fixed;
 		left: 250px;
 		width: 0px;
+		height: 100%;
+		transition: width 0s;
+	}
+
+	.windowmenumute {
+		position: relative;
+		width: 100%;
 		height: 100%;
 		transition: width 0s;
 	}
@@ -810,6 +1006,7 @@
 		border-bottom: 1px solid #fff;
 		border-top: 1px solid #fff;
 		background-color: #66ccff;
+		transition: all 0.2s ease;
 	}
 
 	.logo {
@@ -917,6 +1114,7 @@
 	}
 
 	.boxoff {
+		text-decoration: none;
 		position: absolute;
 		width: 40px;
 		height: 30px;
@@ -927,9 +1125,26 @@
 		top: 0px;
 		text-align: center;
 		font-size: 25px;
+		transition: all 0.2s ease;
 		cursor: pointer;
 	}
 
+	.boxmin {
+		text-decoration: none;
+		position: absolute;
+		width: 40px;
+		height: 30px;
+		background: #fff;
+		color: #555;
+		right: 80px;
+		top: 0px;
+		text-align: center;
+		font-size: 25px;
+		transition: all 0.2s ease;
+		cursor: pointer;
+	}
+
+	.boxrevert,
 	.boxmax {
 		position: absolute;
 		width: 40px;
@@ -940,14 +1155,8 @@
 		top: 0px;
 		text-align: center;
 		font-size: 25px;
+		transition: all 0.2s ease;
 		cursor: pointer;
-	}
-
-	.boxmax1 {
-		position: absolute;
-		right: 10px;
-		top: -2px;
-		z-index: 0;
 	}
 
 	.button4 {
@@ -960,6 +1169,7 @@
 		font-size: 16px;
 		height: 26px;
 		cursor: pointer;
+		transition: all 0.2s ease;
 		font-family: ubuntu, -apple-system, BlinkMacSystemFont, Helvetica Neue, Helvetica, Arial, PingFang SC, Hiragino Sans GB, Microsoft YaHei, sans-serif;
 	}
 
@@ -978,6 +1188,7 @@
 		font-size: 16px;
 		height: 30px;
 		cursor: pointer;
+		transition: all 0.2s ease;
 		font-family: ubuntu, -apple-system, BlinkMacSystemFont, Helvetica Neue, Helvetica, Arial, PingFang SC, Hiragino Sans GB, Microsoft YaHei, sans-serif;
 	}
 
@@ -991,6 +1202,8 @@
 		color: #fff;
 	}
 
+	.boxmin:hover,
+	.boxrevert:hover,
 	.boxmax:hover {
 		background-color: #00a1d6;
 		color: #fff;
@@ -1106,6 +1319,20 @@
 		right: 50%;
 		margin-right: 50px;
 		height: 16px;
+	}
+
+	.warning_6 {
+		position: absolute;
+		background-color: #fffd;
+		border-radius: 5px;
+		color: #555;
+		padding: 5px 10px;
+		width: 60px;
+		height: 20px;
+		border: 1px solid #aaa;
+		left: 50%;
+		margin-left: 66px;
+		display: none;
 	}
 
 	@keyframes warning_1 {
@@ -1229,6 +1456,433 @@
 </style>
 <script src="https://cdn.bootcdn.net/ajax/libs/vConsole/3.9.0/vconsole.min.js"></script>
 <script>
+	winviewstatemax = false;
+	winviewstate = false;
+	winviewmenustate = false;
+	function menuviewtouch(){
+		document.getElementById("menuviewtouchdiv").style.display="none";
+		document.getElementById('menu_play').style.animation = 'window_menu_test_off 0.05s';
+		document.getElementById('menu_help').style.animation = 'window_menu_test_off 0.05s';
+		document.getElementById('menu_file').style.animation = 'window_menu_test_off 0.05s';
+		document.getElementById('file_menu_view').onmouseover = "";
+		document.getElementById('play_menu_view').onmouseover = "";
+		document.getElementById('help_menu_view').onmouseover = "";
+		setTimeout(function () {
+			document.getElementById("menu_play").style.display = "none";
+			document.getElementById("menu_help").style.display = "none";
+			document.getElementById("menu_file").style.display = "none";
+			}, 50);
+	}
+	function file_menu_view_fun() {
+		winviewmenustate = true;
+		if (document.getElementById("menu_file").style.display == "none" || document.getElementById("menu_file").style.display == "") {
+			document.getElementById("menu_file").style.display = "block";
+			document.getElementById("menuviewtouchdiv").style.display="";
+			document.getElementById('menu_file').style.animation = 'window_menu_test_on 0.05s';
+			document.getElementById('menu_play').style.animation = 'window_menu_test_off 0.05s';
+			document.getElementById('menu_help').style.animation = 'window_menu_test_off 0.05s';
+			document.getElementById('file_menu_view').onmouseover = function () {
+				file_menu_view_fun();
+			}
+			document.getElementById('play_menu_view').onmouseover = function () {
+				play_menu_view_fun();
+			}
+			document.getElementById('help_menu_view').onmouseover = function () {
+				help_menu_view_fun();
+			}
+			setTimeout(function () {
+				document.getElementById("menu_play").style.display = "none";
+				document.getElementById("menu_help").style.display = "none";
+			}, 50);
+		} else {
+			document.getElementById('menu_file').style.animation = 'window_menu_test_off 0.05s';
+			document.getElementById("menuviewtouchdiv").style.display="none";
+			document.getElementById('file_menu_view').onmouseover = "";
+			document.getElementById('play_menu_view').onmouseover = "";
+			document.getElementById('help_menu_view').onmouseover = "";
+			setTimeout(function () {
+				document.getElementById("menu_file").style.display = "none";
+			}, 50);
+			winviewmenustate = false;
+		}
+
+	}
+	function play_menu_view_fun() {
+		winviewmenustate = true;
+		if (document.getElementById("menu_play").style.display == "none" || document.getElementById("menu_play").style.display == "") {
+			document.getElementById("menu_play").style.display = "block";
+			document.getElementById("menuviewtouchdiv").style.display="";
+			document.getElementById('menu_play').style.animation = 'window_menu_test_on 0.05s';
+			document.getElementById('menu_file').style.animation = 'window_menu_test_off 0.05s';
+			document.getElementById('menu_help').style.animation = 'window_menu_test_off 0.05s';
+			document.getElementById('file_menu_view').onmouseover = function () {
+				file_menu_view_fun();
+			}
+			document.getElementById('play_menu_view').onmouseover = function () {
+				play_menu_view_fun();
+			}
+			document.getElementById('help_menu_view').onmouseover = function () {
+				help_menu_view_fun();
+			}
+			setTimeout(function () {
+				document.getElementById("menu_file").style.display = "none";
+				document.getElementById("menu_help").style.display = "none";
+			}, 50);
+		} else {
+			document.getElementById('menu_play').style.animation = 'window_menu_test_off 0.05s';
+			document.getElementById("menuviewtouchdiv").style.display="none";
+			document.getElementById('file_menu_view').onmouseover = "";
+			document.getElementById('play_menu_view').onmouseover = "";
+			document.getElementById('help_menu_view').onmouseover = "";
+			setTimeout(function () {
+				document.getElementById("menu_play").style.display = "none";
+			}, 50);
+			winviewmenustate = false;
+		}
+	}
+	function help_menu_view_fun() {
+		winviewmenustate = true;
+		if (document.getElementById("menu_help").style.display == "none" || document.getElementById("menu_help").style.display == "") {
+			document.getElementById("menu_help").style.display = "block";
+			document.getElementById("menuviewtouchdiv").style.display="";
+			document.getElementById('menu_help').style.animation = 'window_menu_test_on 0.05s';
+			document.getElementById('menu_file').style.animation = 'window_menu_test_off 0.05s';
+			document.getElementById('menu_play').style.animation = 'window_menu_test_off 0.05s';
+			document.getElementById('file_menu_view').onmouseover = function () {
+				file_menu_view_fun();
+			}
+			document.getElementById('play_menu_view').onmouseover = function () {
+				play_menu_view_fun();
+			}
+			document.getElementById('help_menu_view').onmouseover = function () {
+				help_menu_view_fun();
+			}
+			setTimeout(function () {
+				document.getElementById("menu_play").style.display = "none";
+				document.getElementById("menu_file").style.display = "none";
+			}, 50);
+		} else {
+			document.getElementById('menu_help').style.animation = 'window_menu_test_off 0.05s';
+			document.getElementById("menuviewtouchdiv").style.display="none";
+			document.getElementById('file_menu_view').onmouseover = "";
+			document.getElementById('play_menu_view').onmouseover = "";
+			document.getElementById('help_menu_view').onmouseover = "";
+			setTimeout(function () {
+				document.getElementById("menu_help").style.display = "none";
+			}, 50);
+			winviewmenustate = false;
+		}
+	}
+	function view_window_size() {
+		if (winviewstatemax == true) {
+			windowbutton3();
+		} else {
+			windowbutton2();
+		}
+	}
+	//最大化按钮
+	function windowbutton2() {
+		document.getElementById('menu_max_window').innerHTML = "窗口还原";
+		if (zh_choose == "t") {
+			zh_tran('t');
+		}
+		document.getElementById('drag').style.top = document.getElementById('drag').style.left = 0;
+		document.getElementById('drag').style.animation = 'board_5 0.1s';
+		setTimeout(function () {
+			document.getElementById('drag').style.width = 100 + "%";
+			document.getElementById('drag').style.height = 100 + "%";
+		}, 100);
+		document.getElementById('boxmaxview').style.display = "none";
+		document.getElementById('boxrevertview').style.display = "block";
+		winviewstatemax = true;
+	};
+	//还原按钮
+	function windowbutton3() {
+		document.getElementById('menu_max_window').innerHTML = "窗口最大化";
+		if (zh_choose == "t") {
+			zh_tran('t');
+		}
+		document.getElementById('drag').style.animation = 'board_6 0.1s';
+		document.getElementById('winrevertview').innerHTML = '<div class="window_min_3"</div>';
+		document.getElementById('winrevertview').title = '最小化';
+		setTimeout(function () {
+			document.getElementById('drag').style.width = dragMinWidth + "px";
+			document.getElementById('drag').style.height = dragMinHeight + "px";
+		}, 100);
+		document.getElementById('drag').style.left = (document.documentElement.clientWidth - document.getElementById("drag").offsetWidth) / 2 + "px";
+		document.getElementById('drag').style.top = (document.documentElement.clientHeight - document.getElementById("drag").offsetHeight) / 2 + "px";
+		document.getElementById('boxrevertview').style.display = "none";
+		document.getElementById('boxmaxview').style.display = "block";
+		winviewstatemax = false;
+	};
+	//关闭按钮
+	function windowbutton4() {
+		winviewstate = false;
+		document.getElementsByClassName('warning_6')[0].style.display = 'none';
+		document.getElementById('drag').style.animation = 'board_4 0.1s';
+		setTimeout(function () {
+			document.getElementById('drag').style.display = "none";
+		}, 100);
+	};
+	//最小化按钮
+	function windowbutton1() {
+		winviewstate = false;
+		document.getElementById('winrevertview').innerHTML = '<div class="window_min_2"></div><div class="window_min_1"</div>';
+		document.getElementById('winrevertview').title = '还原';
+		document.getElementById('drag').style.animation = 'board_4 0.1s';
+		setTimeout(function () {
+			document.getElementById('drag').style.display = "none";
+		}, 100);
+	};
+	//脚本来源于 https://www.jb51.net/article/73157.htm
+	/*-------------------------- +
+	 获取id, class, tagName
+	 +-------------------------- */
+	var get = {
+		byId: function (id) {
+			return typeof id === "string" ? document.getElementById(id) : id
+		},
+		byClass: function (sClass, oParent) {
+			var aClass = [];
+			var reClass = new RegExp("(^| )" + sClass + "( |$)");
+			var aElem = this.byTagName("*", oParent);
+			for (var i = 0; i < aElem.length; i++) reClass.test(aElem[i].className) && aClass.push(aElem[i]);
+			return aClass
+		},
+		byTagName: function (elem, obj) {
+			return (obj || document).getElementsByTagName(elem)
+		}
+	};
+	var dragMinWidth = 260;
+	var dragMinHeight = 260;
+	/*-------------------------- +
+	 拖拽函数
+	 +-------------------------- */
+	function drag(oDrag, handle) {
+		var disX = dixY = 0;
+		var oMin = get.byClass("boxmin", oDrag)[0];
+		var oMax = get.byId("boxmaxview", oDrag);
+		var oRevert = get.byId("boxrevertview", oDrag);
+		var oClose = get.byClass("boxoff", oDrag)[0];
+		handle = handle || oDrag;
+		handle.style.cursor = "move";
+		handle.onmousedown = function (event) {
+			var event = event || window.event;
+			disX = event.clientX - oDrag.offsetLeft;
+			disY = event.clientY - oDrag.offsetTop;
+			document.onmousemove = function (event) {
+				var event = event || window.event;
+				iL = event.clientX - disX;
+				iT = event.clientY - disY;
+				var maxL = document.documentElement.clientWidth - oDrag.offsetWidth;
+				var maxT = document.documentElement.clientHeight - oDrag.offsetHeight;
+				iL <= 0 && (iL = 0);
+				iT <= 0 && (iT = 0);
+				iL >= maxL && (iL = maxL);
+				iT >= maxT && (iT = maxT);
+				if (winviewstatemax == true && event.clientY > 30) {
+					winviewstatemax = false;
+					oDrag.style.width = dragMinWidth + "px";
+					oDrag.style.height = dragMinHeight + "px";
+					oRevert.style.display = "none";
+					oMax.style.display = "block";
+				}
+				if (iT <= 15) {
+					document.getElementById('view_window_mask').style.animation = 'view_window_mask_on 0.5s';
+					document.getElementById('view_window_mask').style.display = "inline";
+				} else {
+					document.getElementById('view_window_mask').style.animation = 'view_window_mask_off 0.5s';
+					setTimeout(function () {
+						document.getElementById('view_window_mask').style.display = "none";
+					}, 500);
+				}
+				oDrag.style.left = iL + "px";
+				oDrag.style.top = iT + "px";
+				return false
+			};
+			document.onmouseup = function () {
+				document.onmousemove = null;
+				document.onmouseup = null;
+				if (typeof (iT) == "undefined") {
+					iT = event.clientY;
+				}
+				if (iT <= 15) {
+					document.getElementById('view_window_mask').style.display = "none";
+					view_window_size();
+				}
+			};
+			return false
+		};
+		handle.ontouchstart = function (event) {
+			var event = event || window.event;
+			disX = event.touches[0].clientX - oDrag.offsetLeft;
+			disY = event.touches[0].clientY - oDrag.offsetTop;
+			document.ontouchmove = function (event) {
+				var event = event || window.event;
+				iL = event.touches[0].clientX - disX;
+				iT = event.touches[0].clientY - disY;
+				var maxL = document.documentElement.clientWidth - oDrag.offsetWidth;
+				var maxT = document.documentElement.clientHeight - oDrag.offsetHeight;
+				iL <= 0 && (iL = 0);
+				iT <= 0 && (iT = 0);
+				iL >= maxL && (iL = maxL);
+				iT >= maxT && (iT = maxT);
+				if (winviewstatemax == true && event.touches[0].clientY > 30) {
+					winviewstatemax = false;
+					oDrag.style.width = dragMinWidth + "px";
+					oDrag.style.height = dragMinHeight + "px";
+					oRevert.style.display = "none";
+					oMax.style.display = "block";
+				}
+				if (iT <= 15) {
+					document.getElementById('view_window_mask').style.animation = 'view_window_mask_on 0.5s';
+					document.getElementById('view_window_mask').style.display = "inline";
+				} else {
+					document.getElementById('view_window_mask').style.animation = 'view_window_mask_off 0.5s';
+					setTimeout(function () {
+						document.getElementById('view_window_mask').style.display = "none";
+					}, 500);
+				}
+				oDrag.style.left = iL + "px";
+				oDrag.style.top = iT + "px";
+				return false
+			};
+			document.ontouchend = function () {
+				document.ontouchmove = null;
+				document.ontouchend = null;
+				if (typeof (iT) == "undefined") {
+					iT = event.clientY;
+				}
+				if (iT <= 15) {
+					document.getElementById('view_window_mask').style.display = "none";
+					view_window_size();
+				}
+			};
+			return false
+		};
+	}
+	/*-------------------------- +
+	 改变大小函数
+	 +-------------------------- */
+	function resize(oParent, handle, isLeft, isTop, lockX, lockY) {
+		handle.onmousedown = function (event) {
+			if (winviewstatemax == true) {
+				windowbutton3();
+			}
+			var event = event || window.event;
+			var disX = event.clientX - handle.offsetLeft;
+			var disY = event.clientY - handle.offsetTop;
+			var iParentTop = oParent.offsetTop;
+			var iParentLeft = oParent.offsetLeft;
+			var iParentWidth = oParent.offsetWidth;
+			var iParentHeight = oParent.offsetHeight;
+			document.onmousemove = function (event) {
+				var event = event || window.event;
+				var iL = event.clientX - disX;
+				var iT = event.clientY - disY;
+				var maxW = document.documentElement.clientWidth - oParent.offsetLeft - 2;
+				var maxH = document.documentElement.clientHeight - oParent.offsetTop - 2; var iW = isLeft ? iParentWidth - iL : handle.offsetWidth + iL;
+				var iH = isTop ? iParentHeight - iT : handle.offsetHeight + iT;
+				isLeft && (oParent.style.left = iParentLeft + iL + "px");
+				isTop && (oParent.style.top = iParentTop + iT + "px");
+				iW < dragMinWidth && (iW = dragMinWidth);
+				iW > maxW && (iW = maxW);
+				lockX || (oParent.style.width = iW + "px");
+				iH < dragMinHeight && (iH = dragMinHeight);
+				iH > maxH && (iH = maxH);
+				lockY || (oParent.style.height = iH + "px");
+				if ((isLeft && iW == dragMinWidth) || (isTop && iH == dragMinHeight)) document.onmousemove = null;
+				return false;
+			};
+			document.onmouseup = function () {
+				document.onmousemove = null;
+				document.onmouseup = null;
+			};
+			return false;
+		}
+		handle.ontouchstart = function (event) {
+			if (winviewstatemax == true) {
+				windowbutton3();
+			}
+			var event = event || window.event;
+			var disX = event.touches[0].clientX - handle.offsetLeft;
+			var disY = event.touches[0].clientY - handle.offsetTop;
+			var iParentTop = oParent.offsetTop;
+			var iParentLeft = oParent.offsetLeft;
+			var iParentWidth = oParent.offsetWidth;
+			var iParentHeight = oParent.offsetHeight;
+			document.ontouchmove = function (event) {
+				var event = event || window.event;
+				var iL = event.touches[0].clientX - disX;
+				var iT = event.touches[0].clientY - disY;
+				var maxW = document.documentElement.clientWidth - oParent.offsetLeft - 2;
+				var maxH = document.documentElement.clientHeight - oParent.offsetTop - 2; var iW = isLeft ? iParentWidth - iL : handle.offsetWidth + iL;
+				var iH = isTop ? iParentHeight - iT : handle.offsetHeight + iT;
+				isLeft && (oParent.style.left = iParentLeft + iL + "px");
+				isTop && (oParent.style.top = iParentTop + iT + "px");
+				iW < dragMinWidth && (iW = dragMinWidth);
+				iW > maxW && (iW = maxW);
+				lockX || (oParent.style.width = iW + "px");
+				iH < dragMinHeight && (iH = dragMinHeight);
+				iH > maxH && (iH = maxH);
+				lockY || (oParent.style.height = iH + "px");
+				if ((isLeft && iW == dragMinWidth) || (isTop && iH == dragMinHeight)) document.ontouchmove = null;
+				return false;
+			};
+			document.ontouchend = function () {
+				document.ontouchmove = null;
+				document.ontouchend = null;
+			};
+			return false;
+		}
+	};
+	window.onload = window.onresize = function () {
+		var oDrag = document.getElementById("drag");
+		var oTitle = get.byClass("title", oDrag)[0];
+		var oL = get.byClass("resizeL", oDrag)[0];
+		var oT = get.byClass("resizeT", oDrag)[0];
+		var oR = get.byClass("resizeR", oDrag)[0];
+		var oB = get.byClass("resizeB", oDrag)[0];
+		var oLT = get.byClass("resizeLT", oDrag)[0];
+		var oTR = get.byClass("resizeTR", oDrag)[0];
+		var oBR = get.byClass("resizeBR", oDrag)[0];
+		var oLB = get.byClass("resizeLB", oDrag)[0];
+		drag(oDrag, oTitle);
+		//四角
+		resize(oDrag, oLT, true, true, false, false);
+		resize(oDrag, oTR, false, true, false, false);
+		resize(oDrag, oBR, false, false, false, false);
+		resize(oDrag, oLB, true, false, false, false);
+		//四边
+		resize(oDrag, oL, true, false, false, true);
+		resize(oDrag, oT, false, true, true, false);
+		resize(oDrag, oR, false, false, false, true);
+		resize(oDrag, oB, false, false, true, false);
+		oDrag.style.left = (document.documentElement.clientWidth - oDrag.offsetWidth) / 2 + "px";
+		oDrag.style.top = (document.documentElement.clientHeight - oDrag.offsetHeight) / 2 + "px";
+	}
+	function winviewrevert() {
+		if (winviewstate == true) {
+			winviewstate = false;
+			document.getElementById('winrevertview').innerHTML = '<div class="window_min_2"></div><div class="window_min_1"</div>';
+			document.getElementById('winrevertview').title = '还原';
+			document.getElementById('drag').style.animation = 'board_4 0.1s';
+			setTimeout(function () {
+				document.getElementById('drag').style.display = "none";
+			}, 100);
+		} else {
+			document.getElementById('winrevertview').innerHTML = '<div class="window_min_3"></div>';
+			document.getElementById('winrevertview').title = '最小化';
+			view_window();
+		}
+	}
+	function winviewoff() {
+		document.getElementsByClassName('warning_6')[0].style.display = 'none';
+		document.getElementById('drag').style.animation = 'board_4 0.1s';
+		setTimeout(function () {
+			document.getElementById("drag").style.display = "none";
+		}, 100);
+	}
 	function allowDrop(ev) {
 		ev.preventDefault();
 	}
@@ -1342,7 +1996,7 @@
 	document.getElementById('select').style.display = "none";
 	document.getElementById('next').style.display = "none";
 	document.getElementById('help_window').style.display = "none";
-	document.getElementById('view_window').style.display = "none";
+	document.getElementById('drag').style.display = "none";
 	var id2 = 1;
 	if (typeof FileReader === "undefined") {
 		alert('警告！此浏览器不支持FileReader接口，请更新或使用 Chrome、Chromium、Firefox、Edge、Safari、Opera、Brave 等现代浏览器打开HTML文件！已禁用此浏览器访问此脚本！');
@@ -1468,6 +2122,8 @@
 					file_j = file_f.baseBpm;
 					file_f = file_f.musics;
 					file_d = file_f.length;
+					hidder();
+					sound3();
 					continue_music();
 				}
 			}
@@ -1481,7 +2137,7 @@
 		o.id = "select_song_" + songselect2;
 		o.innerHTML = file_i[songselect2].name;
 		document.getElementById("songselect").appendChild(o);
-		o.setAttribute("onclick", 'file_f=file_i[' + songselect2 + '].content;file_j=file_f.baseBpm;file_f=file_f.musics;file_d=file_f.length;continue_music();');
+		o.setAttribute("onclick", 'file_f=file_i[' + songselect2 + '].content;file_j=file_f.baseBpm;file_f=file_f.musics;file_d=file_f.length;continue_music();hidder();sound3();');
 		o = null;
 	}
 	//主程序
@@ -1538,12 +2194,14 @@
 					bpm_b = bpm_b + bpm_a + ",";
 				}
 				document.getElementById("bpm").value = file_j + ";" + bpm_b;
-				setTimeout(function () {
-					warning.innerHTML = "<b>你的谱面文件没有定义完整的BPM值对象，程序使用第一个值全部填写。按下菜单键、返回键或点击此消息可解锁焦点。</b>";
-					if (zh_choose == "t") {
-						zh_tran('t');
-					}
-				}, 100);
+				if (document.getElementById("acc").value == "") {
+					setTimeout(function () {
+						warning.innerHTML = "<b>你的谱面文件没有定义完整的BPM值对象，程序使用第一个值全部填写。按下菜单键、返回键或点击此消息可解锁焦点。</b>";
+						if (zh_choose == "t") {
+							zh_tran('t');
+						}
+					}, 100);
+				}
 			} else {
 				lock();
 				setTimeout(function () {
@@ -1973,8 +2631,8 @@
 		baseBeats_value = document.getElementById('beats').value.split(",");
 		baseBPM_value = document.getElementById('bpm').value.split(";")[1];
 		baseBPM_value = baseBPM_value.split(",");
-		if(baseBPM_value[baseBPM_value.length-1]==""){
-			baseBPM_value.splice(baseBPM_value.length-1,1);
+		if (baseBPM_value[baseBPM_value.length - 1] == "") {
+			baseBPM_value.splice(baseBPM_value.length - 1, 1);
 		}
 		//BPM倒放
 		if (document.getElementById('reverse').checked == true) {
@@ -2040,13 +2698,13 @@
 							} else {
 								column_note_pos1();
 							}
-							switch (document.getElementById('games').value){
+							switch (document.getElementById('games').value) {
 								case "mak":
 									time[note_number] = { beat: beat, endbeat: endbeat, column: x };
-								break;
+									break;
 								case "mas":
-									time[note_number] = { beat: beat, x: x,w:64 };
-								break;
+									time[note_number] = { beat: beat, x: x, w: 64 };
+									break;
 							}
 						} else {
 							note_number++;
@@ -2760,54 +3418,53 @@
 				mode_ext = { bar_begin: 0 };
 				break;
 		}
-		if(typeof(json_music_name)=="undefined"){
-			json_music_name=document.getElementById("file").files[0].name;
+		if (typeof (json_music_name) == "undefined") {
+			json_music_name = document.getElementById("file").files[0].name;
 		}
 		//加速度检测并填写(加速度单位=块速度/秒)
-		if(document.getElementById("acc").value!==""){
-			ChallengeAcc=parseFloat(document.getElementById("acc").value);
-			ChallengeAcc=ChallengeAcc*60*parseFloat(document.getElementById("beats").value.split(",")[0]);
-			ChallengeBPM=time_BPM[0].bpm;
-			ChallengeBPMEnd=musictime_main_array[musictime_main_array.length-1][0][musictime_main_array[musictime_main_array.length-1][0].length-1]*ChallengeBPM;
-			var acc_num=1;
-			ChallengeAccDiv=1/ChallengeAcc;
+		if (document.getElementById("acc").value !== "") {
+			ChallengeAcc = parseFloat(document.getElementById("acc").value);
+			ChallengeAcc = ChallengeAcc * 60 * parseFloat(document.getElementById("beats").value.split(",")[0]);
+			ChallengeBPM = time_BPM[0].bpm;
+			ChallengeBPMEnd = musictime_main_array[musictime_main_array.length - 1][0][musictime_main_array[musictime_main_array.length - 1][0].length - 1] * ChallengeBPM;
+			var acc_num = 1;
+			ChallengeAccDiv = 1 / ChallengeAcc;
 			//对不同基础节拍的拍子速度控制
-			var NoteQualBeats=new Array(),NoteQualBeatsNum=0;
-			for(i=1;i<musictime_main_array.length;i++){
-				if(document.getElementById("beats").value.split(",")[i]!==document.getElementById("beats").value.split(",")[0]){
-					NoteQualBeats[NoteQualBeatsNum]=[musictime_main_array[i-1][0][musictime_main_array[i-1][0].length-1]*ChallengeBPM,musictime_main_array[i][0][musictime_main_array[i][0].length-1]*ChallengeBPM,parseFloat(document.getElementById("beats").value.split(",")[i])/parseFloat(document.getElementById("beats").value.split(",")[0])];
+			var NoteQualBeats = new Array(), NoteQualBeatsNum = 0;
+			for (i = 1; i < musictime_main_array.length; i++) {
+				if (document.getElementById("beats").value.split(",")[i] !== document.getElementById("beats").value.split(",")[0]) {
+					NoteQualBeats[NoteQualBeatsNum] = [musictime_main_array[i - 1][0][musictime_main_array[i - 1][0].length - 1] * ChallengeBPM, musictime_main_array[i][0][musictime_main_array[i][0].length - 1] * ChallengeBPM, parseFloat(document.getElementById("beats").value.split(",")[i]) / parseFloat(document.getElementById("beats").value.split(",")[0])];
 					NoteQualBeatsNum++;
 				}
 			}
-			var NoteQualBeatsNum=0;
-			do{
-				if(NoteQualBeats[0]){
-					if(NoteQualBeats[NoteQualBeatsNum][0]<=ChallengeBPM*32*ChallengeAccDiv*acc_num&&NoteQualBeats[NoteQualBeatsNum][1]>=ChallengeBPM*32*ChallengeAccDiv*acc_num){
-						time_BPM[acc_num]={beat:[0,Math.ceil(ChallengeBPM*32*ChallengeAccDiv*acc_num),32*ChallengeBPM],bpm:ChallengeBPM+ChallengeAcc*acc_num*NoteQualBeats[NoteQualBeatsNum][2]};
-					}else{
-						if(ChallengeBPM*32*ChallengeAccDiv*acc_num>=NoteQualBeats[NoteQualBeatsNum][1]){
+			var NoteQualBeatsNum = 0;
+			do {
+				if (NoteQualBeats.length !== 0) {
+					if (NoteQualBeats[NoteQualBeatsNum][0] <= ChallengeBPM * 32 * ChallengeAccDiv * acc_num && NoteQualBeats[NoteQualBeatsNum][1] >= ChallengeBPM * 32 * ChallengeAccDiv * acc_num) {
+						time_BPM[acc_num] = { beat: [0, Math.ceil(ChallengeBPM * 32 * ChallengeAccDiv * acc_num), 32 * ChallengeBPM], bpm: ChallengeBPM + ChallengeAcc * acc_num * NoteQualBeats[NoteQualBeatsNum][2] };
+					} else {
+						if (ChallengeBPM * 32 * ChallengeAccDiv * acc_num >= NoteQualBeats[NoteQualBeatsNum][1]) {
 							NoteQualBeatsNum++;
-							if(NoteQualBeatsNum>=NoteQualBeats.length){
-								NoteQualBeatsNum=NoteQualBeats.length-1;
+							if (NoteQualBeatsNum >= NoteQualBeats.length) {
+								NoteQualBeatsNum = NoteQualBeats.length - 1;
 							}
 						}
-						time_BPM[acc_num]={beat:[0,Math.ceil(ChallengeBPM*32*ChallengeAccDiv*acc_num),32*ChallengeBPM],bpm:ChallengeBPM+ChallengeAcc*acc_num};
+						time_BPM[acc_num] = { beat: [0, Math.ceil(ChallengeBPM * 32 * ChallengeAccDiv * acc_num), 32 * ChallengeBPM], bpm: ChallengeBPM + ChallengeAcc * acc_num };
 					}
-				}else{
-					time_BPM[acc_num]={beat:[0,Math.ceil(ChallengeBPM*32*ChallengeAccDiv*acc_num),32*ChallengeBPM],bpm:ChallengeBPM+ChallengeAcc*acc_num};
+				} else {
+					time_BPM[acc_num] = { beat: [0, Math.ceil(ChallengeBPM * 32 * ChallengeAccDiv * acc_num), 32 * ChallengeBPM], bpm: ChallengeBPM + ChallengeAcc * acc_num };
 				}
 				acc_num++
-			}while(ChallengeBPM*32*ChallengeAccDiv*acc_num<ChallengeBPMEnd);
-			console.log(NoteQualBeats[0][0]/1600)
-			time_BPM[0]={beat:[0,0,32*ChallengeBPM],bpm:ChallengeBPM};
-			for(i=0;i<time_BPM.length;i++){
-				if(time_BPM[i].beat[1]>=time_BPM[i].beat[2]){
-					time_BPM[i].beat[0]=Math.floor(time_BPM[i].beat[1]/time_BPM[i].beat[2]);
-					time_BPM[i].beat[1]=time_BPM[i].beat[1]-time_BPM[i].beat[0]*time_BPM[i].beat[2];
+			} while (ChallengeBPM * 32 * ChallengeAccDiv * acc_num < ChallengeBPMEnd);
+			time_BPM[0] = { beat: [0, 0, 32 * ChallengeBPM], bpm: ChallengeBPM };
+			for (i = 0; i < time_BPM.length; i++) {
+				if (time_BPM[i].beat[1] >= time_BPM[i].beat[2]) {
+					time_BPM[i].beat[0] = Math.floor(time_BPM[i].beat[1] / time_BPM[i].beat[2]);
+					time_BPM[i].beat[1] = time_BPM[i].beat[1] - time_BPM[i].beat[0] * time_BPM[i].beat[2];
 				}
 			}
 		}
-		malody_json_mc = { meta: { $ver: 0, creator: "Piano Tiles Chart Converter Tool", background: "", video: "", version: "Piano Tiles Chart Converter Tool", preview: 0, id: 0, mode: malody_mode, time: Date.now(), song: { title: json_music_name , artist: "Piano Tiles Chart Converter Tool", id: 0 }, mode_ext: mode_ext }, time: time_BPM, effect: [], note: time, extra: { test: { divide: 4, speed: 100, save: 0, lock: 0, edit_mode: 0 } } };
+		malody_json_mc = { meta: { $ver: 0, creator: "Piano Tiles Chart Converter Tool", background: "", video: "", version: "Piano Tiles Chart Converter Tool", preview: 0, id: 0, mode: malody_mode, time: Date.now(), song: { title: json_music_name, titleorg: json_music_name, artist: "Piano Tiles Chart Converter Tool", artistorg: "Piano Tiles Chart Converter Tool", id: 0 }, mode_ext: mode_ext }, time: time_BPM, effect: [], note: time, extra: { test: { divide: 4, speed: 100, save: 0, lock: 0, edit_mode: 0 } } };
 		document.getElementById('result').value = JSON.stringify(malody_json_mc);
 	}
 	function Function2() {
@@ -2986,7 +3643,7 @@
 													case "13":
 													case "14":
 														//一般控制器(0-4)
-
+	
 														break;
 													case "20":
 														//插口选择
@@ -3345,7 +4002,7 @@
 																MidiEventArrayNum++;
 																MidiEventDex += MidiTickEvent + 4;
 																break;
-
+	
 														}
 														break;
 													default:
@@ -3393,7 +4050,7 @@
 							file_f = file_a.json.musics;
 							file_j = file_a.json.baseBpm;
 							file_d = file_f.length;
-							json_music_name=file_a._name;
+							json_music_name = file_a._name;
 							continue_music();
 						} else {
 							//对于一整组的json的歌曲选择
@@ -3401,7 +4058,7 @@
 							songselect1 = file_a.json.length;
 							for (songselect2 = 0; songselect2 < songselect1; songselect2++) {
 								file_i = file_a.json;
-								json_music_name=file_a._name;
+								json_music_name = file_a._name;
 								test1();
 							}
 							fl2();
@@ -3411,15 +4068,15 @@
 						file_f = file_a.musics;
 						file_j = file_a.baseBpm;
 						file_d = file_f.length;
-						if(file_a.name){
-							json_music_name=file_a.name;
+						if (file_a.name) {
+							json_music_name = file_a.name;
 						}
 						continue_music();
 						//不支持魔法钢琴块3部分加密谱面文件，只支持该游戏的midi文件
-					} else if(file_a.type&&file_a.section){
+					} else if (file_a.type && file_a.section) {
 						//对于梦幻钢琴第三方钢琴游戏的兼容
 						console.log("test");
-					}else {
+					} else {
 						lock();
 						setTimeout(function () {
 							warning.innerHTML = "<b>你打开的文件不属于钢琴块游戏的json曲谱文件，请重新选择。如果是转换其他与别踩白块儿相关的钢琴游戏不受支持的请向作者反馈。按下菜单键、返回键或点击此消息可解锁焦点。</b>";
@@ -5304,7 +5961,10 @@
 			beat_c = beat_c * MusicArraySoundArray.length;
 			for (i = 0; i < MusicArraySoundArray.length; i++) {
 				var beat_d = beat_c + MusicArrayTestEnd[c] * i;
-				MusicArrayAdd[num] = { beat: [0, beat_d, 32 * MusicArraySoundArray.length], type: 1, vol: parseFloat(document.getElementById("vol").value), sound: MusicArraySoundArray[i] };
+				note_divide_base = 32 * MusicArraySoundArray.length;
+				note_rhythm = Math.floor(beat_d / note_divide_base);
+				note_divide = beat_d - note_divide_base * note_rhythm;
+				MusicArrayAdd[num] = { beat: [note_rhythm, note_divide, 32 * MusicArraySoundArray.length], type: 1, vol: parseFloat(document.getElementById("vol").value), sound: MusicArraySoundArray[i] };
 				num++;
 			}
 		}
@@ -5458,8 +6118,6 @@
 	document.addEventListener('touchmove', touch, false);
 	function touch(event) {
 		var distance, clientX_start, clientX_end;
-		this.callbackFun = function () {
-		}
 		switch (event.type) {
 			case "touchstart":
 				clientX_start = event.touches[0].clientX;
@@ -5526,13 +6184,49 @@
 	function next() {
 		if (document.getElementById("result").value != "") {
 			windowsopen = true;
-			document.getElementById("id20").style.backgroundColor = "#fb7299";
-			document.getElementById("id20").style.color = "#fff";
-			document.getElementById('mask').style.display = "";
-			document.getElementById("next").style.display = "";
-			document.getElementById('next').style.animation = 'board_3 0.1s';
-			document.getElementById('next').style.height = '80%';
-			document.getElementById('next').style.width = '80%';
+			if (document.getElementById("games").value == "mak" || document.getElementById("games").value == "mas") {
+				if (typeof (malody_json_mc) !== "undefined") {
+					document.getElementById("id20").style.backgroundColor = "#fb7299";
+					document.getElementById("id20").style.color = "#fff";
+					document.getElementById('mask').style.display = "";
+					document.getElementById("next").style.display = "";
+					document.getElementById('next').style.animation = 'board_3 0.1s';
+					document.getElementById('next').style.height = '80%';
+					document.getElementById('next').style.width = '80%';
+					if (document.getElementById('nextcreator').value == "") {
+						document.getElementById('nextcreator').value = malody_json_mc.meta.creator;
+					}
+					if (document.getElementById('nextartistname').value == "") {
+						document.getElementById('nextartistname').value = malody_json_mc.meta.song.artist;
+					}
+					if (document.getElementById('nexttitlename').value == "") {
+						document.getElementById('nexttitlename').value = malody_json_mc.meta.song.titleorg;
+					}
+					if (document.getElementById('nextsongname').value == "") {
+						document.getElementById('nextsongname').value = malody_json_mc.meta.song.title;
+					}
+					if (document.getElementById('nextartistorg').value == "") {
+						document.getElementById('nextartistorg').value = malody_json_mc.meta.song.artistorg;
+					}
+					if (document.getElementById('nextversion').value == "") {
+						document.getElementById('nextversion').value = malody_json_mc.meta.version;
+					}
+					if (document.getElementById('nextbg').value == "") {
+						document.getElementById('nextbg').value = malody_json_mc.meta.background;
+					}
+					if (document.getElementById('nextvideo').value == "") {
+						document.getElementById('nextvideo').value = malody_json_mc.meta.video;
+					}
+				} else {
+					lock();
+					setTimeout(function () {
+						warning.innerHTML = "<b>你没有转换文件，请转化后再尝试导出。按下菜单键、返回键或点击此消息可解锁焦点。</b>";
+						if (zh_choose == "t") {
+							zh_tran('t');
+						}
+					}, 100);
+				}
+			}
 		} else {
 			lock();
 			setTimeout(function () {
@@ -5551,161 +6245,13 @@
 		document.getElementById('help_window').style.width = '80%';
 	}
 	function view_window() {
-		windowsopen = true;
-		document.getElementById("id20").style.backgroundColor = "#fb7299";
-		document.getElementById("id20").style.color = "#fff";
-		document.getElementById("view_window").style.display = "";
-		document.getElementById('view_window').style.animation = 'board_3 0.1s';
-		document.getElementById('view_window').style.height = '80%';
-		document.getElementById('view_window').style.width = '80%';
-		if (windowmax == false) {
-			const box = document.getElementById('view_window');
-			var movex = 0;
-			var movey = 0;
-			var movel = 0;
-			var movet = 0;
-			var isDown = false;
-			//鼠标按下事件
-			box.onmousedown = function (movee) {
-				//获取x坐标和y坐标
-				movex = movee.clientX;
-				movey = movee.clientY;
-				//获取左部和顶部的偏移量
-				movel = box.offsetLeft;
-				movet = box.offsetTop;
-				//开关打开
-				isDown = true;
-				//设置样式
-				box.style.cursor = 'move';
-			}
-			//鼠标移动
-			window.onmousemove = function (movee) {
-				if (isDown == false) {
-					return;
-				}
-				//获取x和y
-				var movenx = movee.clientX;
-				var moveny = movee.clientY;
-				//计算移动后的左偏移量和顶部的偏移量
-				var movenl = movenx - (movex - movel);
-				var movent = moveny - (movey - movet);
-				box.style.left = movenl + 'px';
-				box.style.top = movent + 'px';
-				if (movee.clientY < 15) {
-					document.getElementById('view_window_mask').style.display = "inline";
-					document.getElementById('view_window_mask').style.animation = 'view_window_mask_on 0.2s';
-					document.getElementById('view_window_mask').style.left = "0%";
-					document.getElementById('view_window_mask').style.top = "0%";
-					document.getElementById('view_window_mask').style.height = "100%";
-					document.getElementById('view_window_mask').style.width = "100%";
-				} else {
-					document.getElementById('view_window_mask').style.animation = 'view_window_mask_off 0.2s';
-					setTimeout(function () {
-						document.getElementById('view_window_mask').style.left = "50%";
-						document.getElementById('view_window_mask').style.top = "50%";
-						document.getElementById('view_window_mask').style.height = "0%";
-						document.getElementById('view_window_mask').style.width = "0%";
-						document.getElementById('view_window_mask').style.display = "none";
-					}, 200);
-				}
-				//鼠标抬起事件
-				box.onmouseup = function () {
-					view_window();
-					if (movee.clientY < 15) {
-						windowmax = true;
-						view_window();
-						boxmax2.innerHTML = '<div class="window_min_1"></div><div class="window_min_2" ></div >';
-						document.getElementById('view_window').style.animation = 'view_window_max 0.2s';
-						document.getElementById('view_window').style.width = '100%';
-						document.getElementById('view_window').style.height = '100%';
-						document.getElementById('view_window').style.left = '0px';
-						document.getElementById('view_window').style.top = '0px';
-						document.getElementById('view_window').style.borderRadius = '0px 0px 0px 0px';
-						//开关关闭
-						isDown = false;
-						box.style.cursor = 'default';
-					}
-				}
-			}
-		} else {
-			const box = document.getElementById('view_window');
-			var movex = 0;
-			var movey = 0;
-			var movel = 0;
-			var movet = 0;
-			var isDown = false;
-			//鼠标按下事件
-			box.onmousedown = function (movee) {
-				//获取x坐标和y坐标
-				movex = movee.clientX;
-				movey = movee.clientY;
-				//获取左部和顶部的偏移量
-				movel = box.offsetLeft;
-				movet = box.offsetTop;
-				//开关打开
-				isDown = true;
-				//设置样式
-				box.style.cursor = 'move';
-			}
-			//鼠标移动
-			window.onmousemove = function (movee) {
-				if (isDown == false) {
-					return;
-				}
-				document.getElementById('view_window').style.animation = 'view_window_min 0.2s';
-				document.getElementById('view_window').style.width = '60%';
-				document.getElementById('view_window').style.height = '60%';
-				document.getElementById('view_window').style.borderRadius = '5px 5px 0px 0px';
-				//获取x和y
-				var movenx = movee.clientX;
-				var moveny = movee.clientY;
-				if (movee.clientY < 15) {
-					document.getElementById('view_window_mask').style.display = "inline";
-					document.getElementById('view_window_mask').style.animation = 'view_window_mask_on 0.2s';
-					document.getElementById('view_window_mask').style.left = "0%";
-					document.getElementById('view_window_mask').style.top = "0%";
-					document.getElementById('view_window_mask').style.height = "100%";
-					document.getElementById('view_window_mask').style.width = "100%";
-				} else {
-					document.getElementById('view_window_mask').style.animation = 'view_window_mask_off 0.2s';
-					setTimeout(function () {
-						document.getElementById('view_window_mask').style.left = "50%";
-						document.getElementById('view_window_mask').style.top = "50%";
-						document.getElementById('view_window_mask').style.height = "0%";
-						document.getElementById('view_window_mask').style.width = "0%";
-						document.getElementById('view_window_mask').style.display = "none";
-					}, 200);
-				}
-				box.onmouseup = function () {
-					windowmax = false;
-					view_window();
-					boxmax2.innerHTML = '<div class="window_max"></div>';
-					if (movee.clientY < 15) {
-						windowmax = true;
-						view_window();
-						boxmax2.innerHTML = ' <div class="window_min_1"></div><div class="window_min_2" ></div>';
-						document.getElementById('view_window').style.animation = 'view_window_max 0.2s';
-						document.getElementById('view_window').style.width = '100%';
-						document.getElementById('view_window').style.height = '100%';
-						document.getElementById('view_window').style.left = '0px';
-						document.getElementById('view_window').style.top = '0px';
-						document.getElementById('view_window').style.borderRadius = '0px 0px 0px 0px';
-					}
-				}
-				//计算移动后的左偏移量和顶部的偏移量
-				var movenl = movenx - (movex - movel) / 2;
-				var movent = moveny - (movey - movet) / 2;
-
-				box.style.left = movenl + 'px';
-				box.style.top = movent + 'px';
-			}
-			//鼠标抬起事件
-			box.onmouseup = function () {
-				//开关关闭
-				isDown = false;
-				box.style.cursor = 'default';
-			}
-		}
+		winviewstate = true;
+		windowbutton2();
+		document.getElementsByClassName('warning_6')[0].style.display = 'inline';
+		document.getElementById("drag").style.display = "";
+		document.getElementById('drag').style.animation = 'board_3 0.1s';
+		document.getElementById('drag').style.left = "0%";
+		document.getElementById('drag').style.top = "0%";
 	}
 	//窗口隐藏部分
 	function hidder() {
@@ -5757,7 +6303,6 @@
 		selectoff();
 		nextoff();
 		helpoff();
-		viewoff();
 		function aboutoff() {
 			setTimeout(function () { document.getElementById('box').style.display = "none"; }, 100);
 		}
@@ -5775,9 +6320,6 @@
 		}
 		function nextoff() {
 			setTimeout(function () { document.getElementById('next').style.display = "none"; }, 100);
-		}
-		function viewoff() {
-			setTimeout(function () { document.getElementById('view_window').style.display = "none"; }, 100);
 		}
 		setTimeout(function () { document.getElementById('mask').style.display = "none"; }, 100);
 	}
@@ -5830,6 +6372,55 @@
 	var fa1 = 0, fb1 = 0, fc1 = 1, fd1 = 1, fe1 = false, ff1 = false, fg1 = false, fh1 = 1, fi1 = 1, fj1 = 1, fk1 = false; fl1 = false;
 	document.onkeydown = keyDown;
 	function keyDown() {
+		if (event.keyCode == 18) {
+			if (winviewstate == true) {
+				document.getElementById("file_menu_view").innerHTML = document.getElementById("file_menu_view").innerHTML + "<span style='background:#66ccff;'>F</span>";
+				document.getElementById("play_menu_view").innerHTML = document.getElementById("play_menu_view").innerHTML + "<span style='background:#66ccff;'>P</span>";
+				document.getElementById("help_menu_view").innerHTML = document.getElementById("help_menu_view").innerHTML + "<span style='background:#66ccff;'>H</span>";
+				document.getElementsByClassName("file_open_menu")[0].innerHTML = document.getElementsByClassName("file_open_menu")[0].innerHTML + "<span style='background:#66ccff;'>O</span>";
+				document.getElementById("file_menu_view_1").innerHTML = document.getElementById("file_menu_view_1").innerHTML + "<span style='background:#66ccff;'>S</span>";
+				document.getElementById("file_menu_view_2").innerHTML = document.getElementById("file_menu_view_2").innerHTML + "<span style='background:#66ccff;'>L</span>";
+				document.getElementById("menu_max_window").innerHTML = document.getElementById("menu_max_window").innerHTML + "<span style='background:#66ccff;'>X</span>";
+				document.getElementById("file_menu_view_3").innerHTML = document.getElementById("file_menu_view_3").innerHTML + "<span style='background:#66ccff;'>F</span>";
+				document.getElementById("file_menu_view_4").innerHTML = document.getElementById("file_menu_view_4").innerHTML + "<span style='background:#66ccff;'>C</span>";
+				document.getElementById("play_menu_view_1").innerHTML = document.getElementById("play_menu_view_1").innerHTML + "<span style='background:#66ccff;'>P</span>";
+				document.getElementById("play_menu_view_2").innerHTML = document.getElementById("play_menu_view_2").innerHTML + "<span style='background:#66ccff;'>.</span>";
+				document.getElementById("play_menu_view_3").innerHTML = document.getElementById("play_menu_view_3").innerHTML + "<span style='background:#66ccff;'>,</span>";
+				document.getElementById("play_menu_view_4").innerHTML = document.getElementById("play_menu_view_4").innerHTML + "<span style='background:#66ccff;'>S</span>";
+				document.getElementById("play_menu_view_5").innerHTML = document.getElementById("play_menu_view_5").innerHTML + "<span style='background:#66ccff;'>B</span>";
+				document.getElementById("play_menu_view_6").innerHTML = document.getElementById("play_menu_view_6").innerHTML + "<span style='background:#66ccff;'>V</span>";
+				document.getElementById("help_menu_view_1").innerHTML = document.getElementById("help_menu_view_1").innerHTML + "<span style='background:#66ccff;'>H</span>";
+				document.getElementById("help_menu_view_2").innerHTML = document.getElementById("help_menu_view_2").innerHTML + "<span style='background:#66ccff;'>F</span>";
+				document.getElementById("help_menu_view_3").innerHTML = document.getElementById("help_menu_view_3").innerHTML + "<span style='background:#66ccff;'>A</span>";
+				document.onkeyup = keyUp;
+				function keyUp() {
+					if (event.keyCode == 18) {
+						document.getElementById("file_menu_view").innerHTML = "文件";
+						document.getElementById("play_menu_view").innerHTML = "播放";
+						document.getElementById("help_menu_view").innerHTML = "帮助";
+						document.getElementsByClassName("file_open_menu")[0].innerHTML = '<input type="file" id="file_menu" tabindex="-1" hidden="hidden" accept=".json,.mid,.midi,.kar,.sty,.krx,.rmi" onclick="file_menu_1()"> 打开文件';
+						document.getElementById("file_menu_view_1").innerHTML = "保存";
+						document.getElementById("file_menu_view_2").innerHTML = "语言";
+						document.getElementById("menu_max_window").innerHTML = "窗口还原";
+						document.getElementById("file_menu_view_3").innerHTML = "全屏";
+						document.getElementById("file_menu_view_4").innerHTML = "关闭";
+						document.getElementById("play_menu_view_1").innerHTML = "暂停";
+						document.getElementById("play_menu_view_2").innerHTML = "快放 10 秒";
+						document.getElementById("play_menu_view_3").innerHTML = "慢放 10 秒";
+						document.getElementById("play_menu_view_4").innerHTML = "停止播放";
+						document.getElementById("play_menu_view_5").innerHTML = "显示进度条";
+						document.getElementById("play_menu_view_6").innerHTML = "音量大小";
+						document.getElementById("help_menu_view_1").innerHTML = "使用指南";
+						document.getElementById("help_menu_view_2").innerHTML = "反馈漏洞";
+						document.getElementById("help_menu_view_3").innerHTML = "关于";
+						if (zh_choose == "t") {
+							zh_tran('t');
+						}
+					}
+				}
+
+			}
+		}
 		if (event.keyCode == 27) {
 			back();
 		}
@@ -7242,37 +7833,6 @@
 	};
 	windowmax = false;
 	function window_max() {
-		if (windowmax == false) {
-			windowmax = true;
-			view_window();
-			document.getElementById('view_window').style.animation = 'view_window_max 0.2s';
-			setTimeout(function () {
-				boxmax2.innerHTML = '<div class="window_min_1"></div><div class="window_min_2" ></div >';
-				document.getElementById('view_window').style.width = '100%';
-				document.getElementById('view_window').style.height = '100%';
-				document.getElementById('view_window').style.left = '0px';
-				document.getElementById('view_window').style.top = '0px';
-				document.getElementById('view_window').style.borderRadius = '0px 0px 0px 0px';
-			}, 200)
-		} else {
-			windowmax = false;
-			view_window();
-			boxmax2.innerHTML = '<div class="window_max"></div>';
-			document.getElementById('view_window_mask').style.animation = 'view_window_mask_off 0.2s';
-			document.getElementById('view_window').style.animation = 'view_window_min 0.2s';
-			setTimeout(function () {
-				document.getElementById('view_window_mask').style.left = "50%";
-				document.getElementById('view_window_mask').style.top = "50%";
-				document.getElementById('view_window_mask').style.height = "0%";
-				document.getElementById('view_window_mask').style.width = "0%";
-				document.getElementById('view_window_mask').style.display = "none";
-				document.getElementById('view_window').style.width = '60%';
-				document.getElementById('view_window').style.height = '60%';
-				document.getElementById('view_window').style.left = '20%';
-				document.getElementById('view_window').style.top = '20%';
-				document.getElementById('view_window').style.borderRadius = '5px 5px 0px 0px';
-			}, 200);
-		}
 	}
 	bodywidthtest();
 	function key_select() {
@@ -7322,6 +7882,17 @@
 	}
 	//适应不同设备或窗口规格
 	function bodywidthtest() {
+		if (winviewstatemax == false) {
+			document.getElementById("viewCanvas").width = parseFloat(document.getElementById("drag").style.width) - 2;
+			document.getElementById("viewCanvas").height = parseFloat(document.getElementById("drag").style.height) - 70;
+		} else {
+			document.getElementById("viewCanvas").width = window.innerWidth;
+			document.getElementById("viewCanvas").height = window.innerWidth - 150;
+		}
+		var windowviewCanvas = document.getElementById("viewCanvas");
+		var ctxfont = windowviewCanvas.getContext("2d");
+		ctxfont.font = "16px Arial";
+		ctxfont.fillText("前面的区域以后再来探索吧？", 10, 50);
 		var autowindowheight = document.documentElement.clientHeight * 0.8 - 68;
 		var songselectheight = document.documentElement.clientHeight * 0.8 - 118;
 		if (songselectheight < 0) {
