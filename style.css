@@ -1,0 +1,1022 @@
+#drag {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background: #fff;
+    box-shadow: 0 1px 3px 2px #888;
+    touch-action: none;
+}
+
+#drag .title {
+    position: relative;
+    height: 31px;
+}
+
+#drag .resizeBR {
+    position: absolute;
+    width: 14px;
+    height: 14px;
+    right: 0;
+    bottom: 0;
+    overflow: hidden;
+    cursor: nw-resize;
+}
+
+#drag .resizeL,
+#drag .resizeT,
+#drag .resizeR,
+#drag .resizeB,
+#drag .resizeLT,
+#drag .resizeTR,
+#drag .resizeLB {
+    position: absolute;
+    background: #000;
+    overflow: hidden;
+    opacity: 0;
+}
+
+#drag .resizeL,
+#drag .resizeR {
+    top: 0;
+    width: 5px;
+    height: 100%;
+    cursor: w-resize;
+}
+
+#drag .resizeR {
+    right: 0;
+}
+
+#drag .resizeT,
+#drag .resizeB {
+    width: 100%;
+    height: 5px;
+    cursor: n-resize;
+}
+
+#drag .resizeT {
+    top: 0;
+}
+
+#drag .resizeB {
+    bottom: 0;
+}
+
+#drag .resizeLT,
+#drag .resizeTR,
+#drag .resizeLB {
+    width: 8px;
+    height: 8px;
+}
+
+#drag .resizeLT {
+    top: 0;
+    left: 0;
+    cursor: nw-resize;
+}
+
+#drag .resizeTR {
+    top: 0;
+    right: 0;
+    cursor: ne-resize;
+}
+
+#drag .resizeLB {
+    left: 0;
+    bottom: 0;
+    cursor: ne-resize;
+}
+
+.window_menu_1 {
+    width: 100px;
+    background-color: #fff;
+    border-radius: 4px;
+    border: 1px solid #aaa;
+    display: none;
+}
+
+.window_menu_1 a {
+    display: block;
+    text-align: left;
+    text-decoration: none;
+    padding: 5px 10px;
+    transition: all 0.2s ease;
+}
+
+.window_menu_1 a:hover {
+    background-color: #fb7299;
+    color: #fff;
+}
+
+@keyframes window_menu_test_on {
+    0% {
+        height: 0px;
+        overflow: hidden;
+    }
+
+    100% {
+        height: 180px;
+        overflow: hidden;
+    }
+}
+
+@keyframes window_menu_test_off {
+    0% {
+        height: 180px;
+        overflow: hidden;
+    }
+
+    100% {
+        height: 0px;
+        overflow: hidden;
+    }
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #fff;
+    border-bottom: 1px solid #aaa;
+}
+
+li {
+    float: left;
+}
+
+.file_open_menu {
+    display: block;
+    color: #555;
+    text-align: center;
+    text-decoration: none;
+    padding: 5px 10px;
+    text-align: left;
+    transition: all 0.2s ease;
+}
+
+.file_open_menu:hover {
+    background-color: #FB7299;
+    color: #fff;
+}
+
+li a {
+    display: block;
+    color: #555;
+    text-align: center;
+    text-decoration: none;
+    padding: 5px 10px;
+    transition: all 0.2s ease;
+}
+
+li a:hover {
+    background-color: #FB7299;
+    color: #fff;
+}
+
+body {
+    font: 14px ubuntu, -apple-system, BlinkMacSystemFont, Helvetica Neue, Helvetica, Arial, PingFang SC, Hiragino Sans GB, Microsoft YaHei, sans-serif;
+}
+
+::selection {
+    background: #fb7299;
+}
+
+::-moz-selection {
+    background: #fb7299;
+}
+
+.view_windows_mask {
+    width: 100%;
+    height: 100%;
+    left: 0px;
+    top: 0px;
+    display: none;
+    opacity: 0.5;
+    background: #fb7299;
+    position: absolute;
+}
+
+@keyframes view_window_mask_on {
+    0% {
+        top: 50%;
+        left: 50%;
+        width: 0px;
+        height: 0px;
+    }
+
+    100% {
+        top: 0%;
+        left: 0%;
+        width: 100%;
+        height: 100%;
+    }
+}
+
+@keyframes view_window_mask_off {
+    0% {
+        top: 0%;
+        left: 0%;
+        width: 100%;
+        height: 100%;
+    }
+
+    100% {
+        top: 50%;
+        left: 50%;
+        width: 0px;
+        height: 0px;
+    }
+}
+
+@keyframes view_window_max {
+    0% {
+        top: 20%;
+        left: 25%;
+        width: 60%;
+        height: auto;
+    }
+
+    100% {
+        top: 0%;
+        left: 0%;
+        width: 100%;
+        height: 100%;
+    }
+}
+
+@keyframes view_window_min {
+    0% {
+        top: 0%;
+        left: 0%;
+        width: 100%;
+        height: 100%;
+    }
+
+    100% {
+        top: 20%;
+        left: 25%;
+        width: 60%;
+        height: auto;
+    }
+}
+
+.window_max {
+    position: absolute;
+    top: 10px;
+    left: 14px;
+    width: 8px;
+    height: 8px;
+    border: 2px solid #555;
+    background: #fff;
+}
+
+.window_min_1 {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    width: 6px;
+    height: 6px;
+    border: 2px solid #555;
+    background: #fff;
+}
+
+.window_min_2 {
+    position: absolute;
+    top: 9px;
+    left: 15px;
+    width: 6px;
+    height: 6px;
+    border: 2px solid #555;
+    background: #fff;
+}
+
+.window_min_3 {
+    position: absolute;
+    top: 17px;
+    left: 15px;
+    width: 8px;
+    height: 0px;
+    border: 1px solid #555;
+    background: #555;
+}
+
+.button {
+    resize: none;
+    background-color: #f4f5f7;
+    border: 1px solid #e9eaec;
+    overflow: auto;
+    border-radius: 4px;
+    color: #555;
+    padding: 5px 10px;
+    font-size: 12px;
+    font-family: ubuntu, -apple-system, BlinkMacSystemFont, Helvetica Neue, Helvetica, Arial, PingFang SC, Hiragino Sans GB, Microsoft YaHei, sans-serif;
+}
+
+.button8 {
+    resize: none;
+    background-color: #f4f5f7;
+    border: 1px solid #e9eaec;
+    overflow: auto;
+    border-radius: 4px;
+    color: #555;
+    padding: 5px 10px;
+    font-size: 12px;
+    height: 12px;
+    width: 160px;
+    font-family: ubuntu, -apple-system, BlinkMacSystemFont, Helvetica Neue, Helvetica, Arial, PingFang SC, Hiragino Sans GB, Microsoft YaHei, sans-serif;
+}
+
+.button9 {
+    resize: none;
+    background-color: #ddd;
+    border: 2px solid #999;
+    overflow: auto;
+    border-radius: 4px;
+    color: #555;
+    padding: 5px 10px;
+    font-size: 12px;
+    height: 12px;
+    width: 80%;
+    font-family: ubuntu, -apple-system, BlinkMacSystemFont, Helvetica Neue, Helvetica, Arial, PingFang SC, Hiragino Sans GB, Microsoft YaHei, sans-serif;
+}
+
+.button6 {
+    resize: none;
+    background-color: #f4f5f7;
+    border: 1px solid #e9eaec;
+    overflow: auto;
+    border-radius: 4px;
+    color: #555;
+    padding: 5px 10px;
+    font-size: 12px;
+    height: 12px;
+    width: 74px;
+    font-family: ubuntu, -apple-system, BlinkMacSystemFont, Helvetica Neue, Helvetica, Arial, PingFang SC, Hiragino Sans GB, Microsoft YaHei, sans-serif;
+}
+
+.button7 {
+    resize: none;
+    background-color: #f4f5f7;
+    border: 1px solid #e9eaec;
+    overflow: auto;
+    border-radius: 4px;
+    color: #555;
+    padding: 5px 10px;
+    font-size: 12px;
+    height: 12px;
+    width: 152px;
+    font-family: ubuntu, -apple-system, BlinkMacSystemFont, Helvetica Neue, Helvetica, Arial, PingFang SC, Hiragino Sans GB, Microsoft YaHei, sans-serif;
+}
+
+.button1 {
+    resize: none;
+    background-color: #FB7299;
+    border: 0px;
+    overflow: auto;
+    border-radius: 4px;
+    color: #fff;
+    padding: 5px 10px;
+    font-size: 12px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    font-family: ubuntu, -apple-system, BlinkMacSystemFont, Helvetica Neue, Helvetica, Arial, PingFang SC, Hiragino Sans GB, Microsoft YaHei, sans-serif;
+}
+.button1:hover {
+    background-color: #00a1d6;
+}
+.button2 {
+    resize: none;
+    background-color: #00a1d6;
+    border: 0px;
+    overflow: auto;
+    border-radius: 4px;
+    color: #fff;
+    padding: 5px 10px;
+    font-size: 12px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    font-family: ubuntu, -apple-system, BlinkMacSystemFont, Helvetica Neue, Helvetica, Arial, PingFang SC, Hiragino Sans GB, Microsoft YaHei, sans-serif;
+}
+.button2:hover {
+    background-color: #FB7299;
+}
+.container {
+    background: #76b9f8;
+}
+
+.button3 {
+    overflow: hidden;
+    resize: none;
+    background-color: #FB7299;
+    border: 1px solid #ffffff;
+    left: 0px;
+    top: 0px;
+    border-radius: 4px;
+    color: #fff;
+    padding: 5px 10px;
+    font-size: 32px;
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+    transition: all 0.2s ease;
+    font-family: ubuntu, -apple-system, BlinkMacSystemFont, Helvetica Neue, Helvetica, Arial, PingFang SC, Hiragino Sans GB, Microsoft YaHei, sans-serif;
+}
+
+.button3:hover {
+    background-color: #00a1d6;
+}
+
+.button10 {
+    overflow: hidden;
+    position: absolute;
+    resize: none;
+    background-color: #FB7299;
+    border: 1px solid #ffffff;
+    right: 0px;
+    top: 0px;
+    border-radius: 4px;
+    color: #fff;
+    padding: 5px 10px;
+    font-size: 25px;
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+    transition: all 0.2s ease;
+    font-family: ubuntu, -apple-system, BlinkMacSystemFont, Helvetica Neue, Helvetica, Arial, PingFang SC, Hiragino Sans GB, Microsoft YaHei, sans-serif;
+}
+
+.button10:hover {
+    background-color: #00a1d6;
+}
+
+.top {
+    text-align: left;
+    background: #FB7299;
+    top: 0;
+    position: fixed;
+    right: 0;
+    left: 0;
+}
+
+.slide {
+    position: fixed;
+    left: -250px;
+    width: 250px;
+    height: 100%;
+    background: #ffffff;
+}
+
+.slidemute {
+    position: fixed;
+    left: 250px;
+    width: 0px;
+    height: 100%;
+    background: #0008;
+    transition: width 0s;
+}
+
+.windowmenumute {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: width 0s;
+}
+@keyframes board_2 {
+    0% {
+        left: 0px;
+        background: #0000;
+    }
+
+    100% {
+        left: 250px;
+        background: #0008;
+    }
+}
+
+@keyframes board_7 {
+    0% {
+        left: 250px;
+        background: #0008;
+    }
+
+    100% {
+        left: 0px;
+        background: #0000;
+    }
+}
+@keyframes board_1 {
+    0% {
+        left: -250px;
+        top: 50px;
+    }
+
+    100% {
+        left: 0px;
+        top: 50px;
+    }
+}
+
+@keyframes board_0 {
+    0% {
+        left: 0px;
+        top: 50px;
+    }
+
+    100% {
+        left: -250px;
+        top: 50px;
+    }
+}
+
+.mute {
+    width: 0px;
+    height: 42px;
+}
+
+.mute1 {
+    background: #fff;
+    border-radius: 5px 5px 0px 0px;
+    height: 31px;
+}
+
+.diva {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.divb {
+    display: block;
+    color: #000;
+    padding: 8px 16px;
+    text-decoration: none;
+    border-radius: 5px;
+    border-bottom: 1px solid #fff;
+    border-top: 1px solid #fff;
+    background-color: #66ccff;
+    transition: all 0.2s ease;
+}
+
+.logo {
+    display: block;
+    color: #000;
+    padding: 8px 16px;
+    text-decoration: none;
+    border-radius: 5px;
+    border-bottom: 1px solid #fff;
+    border-top: 1px solid #fff;
+    background-color: #FB7299;
+}
+
+.divb:hover {
+    background-color: #aaddff;
+    color: #FB7299;
+}
+
+.box {
+    position: absolute;
+    background: #fff;
+    border-radius: 5px 5px 5px 5px;
+    border-bottom: 1px solid #aaa;
+}
+
+.box1 {
+    position: absolute;
+    background: #fff;
+    border-radius: 5px 5px 5px 5px;
+    border-bottom: 1px solid #aaa;
+}
+
+@keyframes board_3 {
+    0% {
+        width: 0%;
+        left: 50%;
+        top: 50%;
+    }
+
+    100% {
+        width: 80%;
+        left: 10%;
+        top: 10%;
+    }
+}
+
+@keyframes board_4 {
+    0% {
+        width: 80%;
+        left: 10%;
+        top: 10%;
+    }
+
+    100% {
+        width: 0%;
+        left: 50%;
+        top: 50%;
+    }
+}
+
+@keyframes board_5 {
+    0% {
+        width: 0%;
+        left: 50%;
+        top: 50%;
+    }
+
+    100% {
+        width: 80%;
+        left: 10%;
+        top: 10%;
+    }
+}
+
+@keyframes board_6 {
+    0% {
+        width: 80%;
+        left: 10%;
+        top: 10%;
+    }
+
+    100% {
+        width: 0%;
+        left: 50%;
+        top: 50%;
+    }
+}
+
+.mask {
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    background: #0008;
+    width: 100%;
+    height: 100%;
+}
+@keyframes board_8 {
+    0% {
+        background: #0000;
+    }
+
+    100% {
+        background: #0008;
+    }
+}
+
+@keyframes board_9 {
+    0% {
+        background: #0008;
+    }
+
+    100% {
+        background: #0000;
+    }
+}
+.container1 {
+    background-color: #fff;
+    width: 100%;
+    height: 1000%;
+    border-radius: 5px 5px 5px 5px;
+    color: #555;
+    cursor: default;
+}
+
+.boxoff {
+    text-decoration: none;
+    position: absolute;
+    width: 40px;
+    height: 30px;
+    border-radius: 0px 5px 0px 0px;
+    background: #fff;
+    color: #555;
+    right: 0px;
+    top: 0px;
+    text-align: center;
+    font-size: 25px;
+    transition: all 0.2s ease;
+    cursor: pointer;
+}
+
+.boxmin {
+    text-decoration: none;
+    position: absolute;
+    width: 40px;
+    height: 30px;
+    background: #fff;
+    color: #555;
+    right: 80px;
+    top: 0px;
+    text-align: center;
+    font-size: 25px;
+    transition: all 0.2s ease;
+    cursor: pointer;
+}
+
+.boxrevert,
+.boxmax {
+    position: absolute;
+    width: 40px;
+    height: 30px;
+    background: #fff;
+    color: #555;
+    right: 40px;
+    top: 0px;
+    text-align: center;
+    font-size: 25px;
+    transition: all 0.2s ease;
+    cursor: pointer;
+}
+
+.button4 {
+    background-color: #fff;
+    border-top: 1px solid #aaa;
+    overflow: auto;
+    border-radius: 0px 0px 5px 5px;
+    color: #555;
+    padding: 5px 10px;
+    font-size: 16px;
+    height: 26px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    font-family: ubuntu, -apple-system, BlinkMacSystemFont, Helvetica Neue, Helvetica, Arial, PingFang SC, Hiragino Sans GB, Microsoft YaHei, sans-serif;
+}
+
+.button4:hover {
+    background-color: #FB7299;
+    color: #fff;
+}
+
+.button5 {
+    background-color: #fff;
+    border-bottom: 1px solid #aaa;
+    border-left: 1px solid #aaa;
+    border-right: 1px solid #aaa;
+    border-radius: 5px;
+    color: #555;
+    font-size: 16px;
+    height: 30px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    font-family: ubuntu, -apple-system, BlinkMacSystemFont, Helvetica Neue, Helvetica, Arial, PingFang SC, Hiragino Sans GB, Microsoft YaHei, sans-serif;
+}
+
+.button5:hover {
+    background-color: #76b9f8;
+    color: #fff;
+}
+
+.boxoff:hover {
+    background-color: #FB7299;
+    color: #fff;
+}
+
+.boxmin:hover,
+.boxrevert:hover,
+.boxmax:hover {
+    background-color: #00a1d6;
+    color: #fff;
+}
+
+.icon {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border-radius: 50px;
+    background: #76b9f8;
+    color: #fff;
+    left: 5px;
+    top: 5px;
+    text-align: center;
+    font-size: 18px;
+}
+
+.icon1 {
+    position: absolute;
+    color: #555;
+    left: 27px;
+    top: 3px;
+    text-align: center;
+    font-size: 15px;
+}
+
+
+.checkbox {
+    position: relative;
+    height: 24px;
+}
+
+.checkbox input[type='checkbox'] {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 20px;
+    height: 20px;
+}
+
+.checkbox label {
+    position: absolute;
+    left: 30px;
+    top: 0;
+    height: 20px;
+    line-height: 20px;
+}
+
+.checkbox label:before {
+    content: '';
+    position: absolute;
+    left: -26px;
+    top: 3px;
+    width: 16px;
+    height: 16px;
+    border: 2px solid #555;
+    border-radius: 2px;
+    transition: all 0.1s ease;
+    -webkit-transition: all 0.1s ease;
+    -moz-transition: all 0.1s ease;
+}
+
+.checkbox label:after {
+    content: '';
+    position: absolute;
+    left: -20px;
+    top: 6px;
+    width: 5px;
+    height: 10px;
+    border: 0;
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transition: all 0.1s ease;
+    -webkit-transition: all 0.1s ease;
+    -moz-transition: all 0.1s ease;
+}
+
+.checkbox input[type='checkbox']:checked+label:before {
+    background: #FB7299;
+    border: 2px solid #555;
+}
+
+.checkbox input[type='checkbox']:checked+label:after {
+    background: #FB7299;
+    border-right: 3px solid #fff;
+    border-bottom: 3px solid #fff;
+}
+
+.warning {
+    display: none;
+    position: absolute;
+    background-color: #fffd;
+    border-radius: 5px;
+    color: #555;
+    padding: 5px 10px;
+    left: 50%;
+    bottom: 10%;
+    width: 0%;
+    height: 0px;
+}
+
+.warning_5 {
+    position: absolute;
+    background-color: #fffd;
+    border-radius: 5px;
+    color: #555;
+    padding: 5px 10px;
+    z-index: -1;
+    width: 50px;
+    right: 50%;
+    margin-right: 50px;
+    height: 16px;
+}
+
+.warning_6 {
+    position: absolute;
+    background-color: #fffd;
+    border-radius: 5px;
+    color: #555;
+    padding: 5px 10px;
+    width: 60px;
+    height: 20px;
+    border: 1px solid #aaa;
+    left: 50%;
+    margin-left: 66px;
+    display: none;
+}
+
+@keyframes warning_1 {
+    0% {
+        width: 0%;
+        height: 0px;
+        left: 50%;
+    }
+
+    100% {
+        width: 60%;
+        height: auto;
+        left: 20%;
+    }
+}
+
+@keyframes warning_2 {
+    0% {
+        width: 60%;
+        height: auto;
+        left: 20%;
+    }
+
+    100% {
+        width: 0%;
+        height: 0px;
+        left: 50%;
+    }
+}
+
+@keyframes warning_3 {
+    0% {
+        width: 60%;
+        height: 20px;
+        left: 20%;
+    }
+
+    100% {
+        width: 0%;
+        height: 0px;
+        left: 50%;
+    }
+}
+
+@keyframes warning_4 {
+    0% {
+        width: 0%;
+        height: 0px;
+        left: 50%;
+    }
+
+    100% {
+        width: 60%;
+        height: 20px;
+        left: 20%;
+    }
+}
+
+.vol[type="range"] {
+    height: 5px;
+    border-radius: 3px;
+    position: relative;
+    -webkit-appearance: none !important;
+    outline: none;
+    border: 1px solid #ddd;
+}
+
+.vol[type=range]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 10px;
+    height: 20px;
+    border-radius: 3px;
+    background: #fb7299;
+}
+
+.progress {
+    position: absolute;
+    display: none;
+    border-radius: 5px;
+    width: 60%;
+    bottom: 20%;
+    left: 20%;
+    height: 20px;
+    border: 2px solid #555;
+}
+
+.progress1 {
+    position: absolute;
+    display: none;
+    text-align: center;
+    bottom: 20%;
+    margin-left: -5%;
+    font-size: 14px;
+    color: #000;
+}
+
+/*针对chrome浏览器*/
+.progress::-webkit-progress-bar {
+    border-radius: 5px;
+    background-color: #fff;
+}
+
+.progress::-webkit-progress-value {
+    border-radius: 5px;
+    background-color: #fb7299;
+}
+
+/*针对firefox浏览器*/
+.progress::-moz-progress-bar {
+    border-radius: 5px;
+    background-color: #fb7299;
+}
+
+.vol[type=range]::-moz-range-thumb {
+    -webkit-appearance: none;
+    width: 10px;
+    height: 20px;
+    border-radius: 3px;
+    background: #fb7299;
+}
