@@ -110,25 +110,21 @@
 
 @keyframes window_menu_test_on {
     0% {
-        height: 0px;
-        overflow: hidden;
+        opacity:0;
     }
 
     100% {
-        height: 180px;
-        overflow: hidden;
+        opacity:1;
     }
 }
 
 @keyframes window_menu_test_off {
     0% {
-        height: 180px;
-        overflow: hidden;
+        opacity:1;
     }
 
     100% {
-        height: 0px;
-        overflow: hidden;
+        opacity:0;
     }
 }
 
@@ -537,6 +533,7 @@ body {
 .mute1 {
     background: #fff;
     border-radius: 5px 5px 0px 0px;
+    border-bottom: 1px solid #aaa;
     height: 31px;
 }
 
@@ -590,57 +587,41 @@ body {
 
 @keyframes board_3 {
     0% {
-        width: 0%;
-        left: 50%;
-        top: 50%;
+        opacity:0;
     }
 
     100% {
-        width: 80%;
-        left: 10%;
-        top: 10%;
+        opacity:1;
     }
 }
 
 @keyframes board_4 {
     0% {
-        width: 80%;
-        left: 10%;
-        top: 10%;
+        opacity:1;
     }
 
     100% {
-        width: 0%;
-        left: 50%;
-        top: 50%;
+        opacity:0;
     }
 }
 
 @keyframes board_5 {
     0% {
-        width: 0%;
-        left: 50%;
-        top: 50%;
+        opacity:0;
     }
 
     100% {
-        width: 80%;
-        left: 10%;
-        top: 10%;
+        opacity:1;
     }
 }
 
 @keyframes board_6 {
     0% {
-        width: 80%;
-        left: 10%;
-        top: 10%;
+        opacity:1;
     }
 
     100% {
-        width: 0%;
-        left: 50%;
-        top: 50%;
+        opacity:0;
     }
 }
 

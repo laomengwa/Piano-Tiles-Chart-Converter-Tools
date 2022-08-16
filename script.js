@@ -1,7 +1,12 @@
-
 winviewstatemax = false;
 winviewstate = false;
+winviewstatemenu = false;
 winviewmenustate = false;
+function WindowManage() {
+    document.getElementById("window_manage").style.display = "block";
+    document.getElementById("window_manage").style.left = event.clientX + "px";
+    document.getElementById("window_manage").style.top = event.clientY + "px";
+}
 function menuviewtouch() {
     document.getElementById("menuviewtouchdiv").style.display = "none";
     document.getElementById('menu_play').style.animation = 'window_menu_test_off 0.05s';
@@ -456,8 +461,8 @@ var zh_style_inactive = 'color:blue;';
 var zh_browserLang = '';
 var zh_langReg_t = /^zh-tw|zh-hk$/i;
 var zh_langReg_s = /^zh-cn$/i;
-var zh_s = '“”确于将号皑蔼碍爱翱袄奥坝罢摆败颁办绊帮绑镑谤剥饱宝报鲍辈贝钡狈备惫绷笔毕毙闭边编贬变辩辫鳖瘪濒滨宾摈饼拨钵铂驳卜补参蚕残惭惨灿苍舱仓沧厕侧册测层诧搀掺蝉馋谗缠铲产阐颤场尝长偿肠厂畅钞车彻尘陈衬撑称惩诚骋痴迟驰耻齿炽冲虫宠畴踌筹绸丑橱厨锄雏础储触处传疮闯创锤纯绰辞词赐聪葱囱从丛凑窜错达带贷担单郸掸胆惮诞弹当挡党荡档捣岛祷导盗灯邓敌涤递缔点垫电淀钓调迭谍叠钉顶锭订东动栋冻斗犊独读赌镀锻断缎兑队对吨顿钝夺鹅额讹恶饿儿尔饵贰罚阀珐矾钒烦范贩饭访纺飞废费纷坟奋愤粪丰枫锋风疯冯缝讽凤肤辐抚辅赋复负讣妇缚该钙盖干赶秆赣冈刚钢纲岗皋镐搁鸽阁铬个给龚宫巩贡钩沟构购够蛊顾剐关观馆惯贯广规硅归龟闺轨诡柜贵刽辊滚锅国过骇韩汉阂鹤贺横轰鸿红后壶护沪户哗华画划话怀坏欢环还缓换唤痪焕涣黄谎挥辉毁贿秽会烩汇讳诲绘荤浑伙获货祸击机积饥讥鸡绩缉极辑级挤几蓟剂济计记际继纪夹荚颊贾钾价驾歼监坚笺间艰缄茧检碱硷拣捡简俭减荐槛鉴践贱见键舰剑饯渐溅涧浆蒋桨奖讲酱胶浇骄娇搅铰矫侥脚饺缴绞轿较秸阶节茎惊经颈静镜径痉竞净纠厩旧驹举据锯惧剧鹃绢杰洁结诫届紧锦仅谨进晋烬尽劲荆觉决诀绝钧军骏开凯颗壳课垦恳抠库裤夸块侩宽矿旷况亏岿窥馈溃扩阔蜡腊莱来赖蓝栏拦篮阑兰澜谰揽览懒缆烂滥捞劳涝乐镭垒类泪篱离里鲤礼丽厉励砾历沥隶俩联莲连镰怜涟帘敛脸链恋炼练粮凉两辆谅疗辽镣猎临邻鳞凛赁龄铃凌灵岭领馏刘龙聋咙笼垄拢陇楼娄搂篓芦卢颅庐炉掳卤虏鲁赂禄录陆驴吕铝侣屡缕虑滤绿峦挛孪滦乱抡轮伦仑沦纶论萝罗逻锣箩骡骆络妈玛码蚂马骂吗买麦卖迈脉瞒馒蛮满谩猫锚铆贸么霉没镁门闷们锰梦谜弥觅绵缅庙灭悯闽鸣铭谬谋亩钠纳难挠脑恼闹馁腻撵捻酿鸟聂啮镊镍柠狞宁拧泞钮纽脓浓农疟诺欧鸥殴呕沤盘庞国爱赔喷鹏骗飘频贫苹凭评泼颇扑铺朴谱脐齐骑岂启气弃讫牵扦钎铅迁签谦钱钳潜浅谴堑枪呛墙蔷强抢锹桥乔侨翘窍窃钦亲轻氢倾顷请庆琼穷趋区躯驱龋颧权劝却鹊让饶扰绕热韧认纫荣绒软锐闰润洒萨鳃赛伞丧骚扫涩杀纱筛晒闪陕赡缮伤赏烧绍赊摄慑设绅审婶肾渗声绳胜圣师狮湿诗尸时蚀实识驶势释饰视试寿兽枢输书赎属术树竖数帅双谁税顺说硕烁丝饲耸怂颂讼诵擞苏诉肃虽绥岁孙损笋缩琐锁獭挞抬摊贪瘫滩坛谭谈叹汤烫涛绦腾誊锑题体屉条贴铁厅听烃铜统头图涂团颓蜕脱鸵驮驼椭洼袜弯湾顽万网韦违围为潍维苇伟伪纬谓卫温闻纹稳问瓮挝蜗涡窝呜钨乌诬无芜吴坞雾务误锡牺袭习铣戏细虾辖峡侠狭厦锨鲜纤咸贤衔闲显险现献县馅羡宪线厢镶乡详响项萧销晓啸蝎协挟携胁谐写泻谢锌衅兴汹锈绣虚嘘须许绪续轩悬选癣绚学勋询寻驯训讯逊压鸦鸭哑亚讶阉烟盐严颜阎艳厌砚彦谚验鸯杨扬疡阳痒养样瑶摇尧遥窑谣药爷页业叶医铱颐遗仪彝蚁艺亿忆义诣议谊译异绎荫阴银饮樱婴鹰应缨莹萤营荧蝇颖哟拥佣痈踊咏涌优忧邮铀犹游诱舆鱼渔娱与屿语吁御狱誉预驭鸳渊辕园员圆缘远愿约跃钥岳粤悦阅云郧匀陨运蕴酝晕韵杂灾载攒暂赞赃脏凿枣灶责择则泽贼赠扎札轧铡闸诈斋债毡盏斩辗崭栈战绽张涨帐账胀赵蛰辙锗这贞针侦诊镇阵挣睁狰帧郑证织职执纸挚掷帜质钟终种肿众诌轴皱昼骤猪诸诛烛瞩嘱贮铸筑驻专砖转赚桩庄装妆壮状锥赘坠缀谆浊兹资渍踪综总纵邹诅组钻致钟么为只凶准启板里雳余链泄';
-var zh_t = '「」確於將號皚藹礙愛翺襖奧壩罷擺敗頒辦絆幫綁鎊謗剝飽寶報鮑輩貝鋇狽備憊繃筆畢斃閉邊編貶變辯辮鼈癟瀕濱賓擯餅撥缽鉑駁蔔補參蠶殘慚慘燦蒼艙倉滄廁側冊測層詫攙摻蟬饞讒纏鏟産闡顫場嘗長償腸廠暢鈔車徹塵陳襯撐稱懲誠騁癡遲馳恥齒熾沖蟲寵疇躊籌綢醜櫥廚鋤雛礎儲觸處傳瘡闖創錘純綽辭詞賜聰蔥囪從叢湊竄錯達帶貸擔單鄲撣膽憚誕彈當擋黨蕩檔搗島禱導盜燈鄧敵滌遞締點墊電澱釣調叠諜疊釘頂錠訂東動棟凍鬥犢獨讀賭鍍鍛斷緞兌隊對噸頓鈍奪鵝額訛惡餓兒爾餌貳罰閥琺礬釩煩範販飯訪紡飛廢費紛墳奮憤糞豐楓鋒風瘋馮縫諷鳳膚輻撫輔賦複負訃婦縛該鈣蓋幹趕稈贛岡剛鋼綱崗臯鎬擱鴿閣鉻個給龔宮鞏貢鈎溝構購夠蠱顧剮關觀館慣貫廣規矽歸龜閨軌詭櫃貴劊輥滾鍋國過駭韓漢閡鶴賀橫轟鴻紅後壺護滬戶嘩華畫劃話懷壞歡環還緩換喚瘓煥渙黃謊揮輝毀賄穢會燴彙諱誨繪葷渾夥獲貨禍擊機積饑譏雞績緝極輯級擠幾薊劑濟計記際繼紀夾莢頰賈鉀價駕殲監堅箋間艱緘繭檢堿鹼揀撿簡儉減薦檻鑒踐賤見鍵艦劍餞漸濺澗漿蔣槳獎講醬膠澆驕嬌攪鉸矯僥腳餃繳絞轎較稭階節莖驚經頸靜鏡徑痙競淨糾廄舊駒舉據鋸懼劇鵑絹傑潔結誡屆緊錦僅謹進晉燼盡勁荊覺決訣絕鈞軍駿開凱顆殼課墾懇摳庫褲誇塊儈寬礦曠況虧巋窺饋潰擴闊蠟臘萊來賴藍欄攔籃闌蘭瀾讕攬覽懶纜爛濫撈勞澇樂鐳壘類淚籬離裏鯉禮麗厲勵礫曆瀝隸倆聯蓮連鐮憐漣簾斂臉鏈戀煉練糧涼兩輛諒療遼鐐獵臨鄰鱗凜賃齡鈴淩靈嶺領餾劉龍聾嚨籠壟攏隴樓婁摟簍蘆盧顱廬爐擄鹵虜魯賂祿錄陸驢呂鋁侶屢縷慮濾綠巒攣孿灤亂掄輪倫侖淪綸論蘿羅邏鑼籮騾駱絡媽瑪碼螞馬罵嗎買麥賣邁脈瞞饅蠻滿謾貓錨鉚貿麽黴沒鎂門悶們錳夢謎彌覓綿緬廟滅憫閩鳴銘謬謀畝鈉納難撓腦惱鬧餒膩攆撚釀鳥聶齧鑷鎳檸獰甯擰濘鈕紐膿濃農瘧諾歐鷗毆嘔漚盤龐國愛賠噴鵬騙飄頻貧蘋憑評潑頗撲鋪樸譜臍齊騎豈啓氣棄訖牽扡釺鉛遷簽謙錢鉗潛淺譴塹槍嗆牆薔強搶鍬橋喬僑翹竅竊欽親輕氫傾頃請慶瓊窮趨區軀驅齲顴權勸卻鵲讓饒擾繞熱韌認紉榮絨軟銳閏潤灑薩鰓賽傘喪騷掃澀殺紗篩曬閃陝贍繕傷賞燒紹賒攝懾設紳審嬸腎滲聲繩勝聖師獅濕詩屍時蝕實識駛勢釋飾視試壽獸樞輸書贖屬術樹豎數帥雙誰稅順說碩爍絲飼聳慫頌訟誦擻蘇訴肅雖綏歲孫損筍縮瑣鎖獺撻擡攤貪癱灘壇譚談歎湯燙濤縧騰謄銻題體屜條貼鐵廳聽烴銅統頭圖塗團頹蛻脫鴕馱駝橢窪襪彎灣頑萬網韋違圍為濰維葦偉僞緯謂衛溫聞紋穩問甕撾蝸渦窩嗚鎢烏誣無蕪吳塢霧務誤錫犧襲習銑戲細蝦轄峽俠狹廈鍁鮮纖鹹賢銜閑顯險現獻縣餡羨憲線廂鑲鄉詳響項蕭銷曉嘯蠍協挾攜脅諧寫瀉謝鋅釁興洶鏽繡虛噓須許緒續軒懸選癬絢學勳詢尋馴訓訊遜壓鴉鴨啞亞訝閹煙鹽嚴顔閻豔厭硯彥諺驗鴦楊揚瘍陽癢養樣瑤搖堯遙窯謠藥爺頁業葉醫銥頤遺儀彜蟻藝億憶義詣議誼譯異繹蔭陰銀飲櫻嬰鷹應纓瑩螢營熒蠅穎喲擁傭癰踴詠湧優憂郵鈾猶遊誘輿魚漁娛與嶼語籲禦獄譽預馭鴛淵轅園員圓緣遠願約躍鑰嶽粵悅閱雲鄖勻隕運蘊醞暈韻雜災載攢暫贊贓髒鑿棗竈責擇則澤賊贈紮劄軋鍘閘詐齋債氈盞斬輾嶄棧戰綻張漲帳賬脹趙蟄轍鍺這貞針偵診鎮陣掙睜猙幀鄭證織職執紙摯擲幟質鍾終種腫衆謅軸皺晝驟豬諸誅燭矚囑貯鑄築駐專磚轉賺樁莊裝妝壯狀錐贅墜綴諄濁茲資漬蹤綜總縱鄒詛組鑽緻鐘麼為隻兇準啟闆裡靂餘鍊洩';
+var zh_s = '确于将号皑蔼碍爱翱袄奥坝罢摆败颁办绊帮绑镑谤剥饱宝报鲍辈贝钡狈备惫绷笔毕毙闭边编贬变辩辫鳖瘪濒滨宾摈饼拨钵铂驳卜补参蚕残惭惨灿苍舱仓沧厕侧册测层诧搀掺蝉馋谗缠铲产阐颤场尝长偿肠厂畅钞车彻尘陈衬撑称惩诚骋痴迟驰耻齿炽冲虫宠畴踌筹绸丑橱厨锄雏础储触处传疮闯创锤纯绰辞词赐聪葱囱从丛凑窜错达带贷担单郸掸胆惮诞弹当挡党荡档捣岛祷导盗灯邓敌涤递缔点垫电淀钓调迭谍叠钉顶锭订东动栋冻斗犊独读赌镀锻断缎兑队对吨顿钝夺鹅额讹恶饿儿尔饵贰罚阀珐矾钒烦范贩饭访纺飞废费纷坟奋愤粪丰枫锋风疯冯缝讽凤肤辐抚辅赋复负讣妇缚该钙盖干赶秆赣冈刚钢纲岗皋镐搁鸽阁铬个给龚宫巩贡钩沟构购够蛊顾剐关观馆惯贯广规硅归龟闺轨诡柜贵刽辊滚锅国过骇韩汉阂鹤贺横轰鸿红后壶护沪户哗华画划话怀坏欢环还缓换唤痪焕涣黄谎挥辉毁贿秽会烩汇讳诲绘荤浑伙获货祸击机积饥讥鸡绩缉极辑级挤几蓟剂济计记际继纪夹荚颊贾钾价驾歼监坚笺间艰缄茧检碱硷拣捡简俭减荐槛鉴践贱见键舰剑饯渐溅涧浆蒋桨奖讲酱胶浇骄娇搅铰矫侥脚饺缴绞轿较秸阶节茎惊经颈静镜径痉竞净纠厩旧驹举据锯惧剧鹃绢杰洁结诫届紧锦仅谨进晋烬尽劲荆觉决诀绝钧军骏开凯颗壳课垦恳抠库裤夸块侩宽矿旷况亏岿窥馈溃扩阔蜡腊莱来赖蓝栏拦篮阑兰澜谰揽览懒缆烂滥捞劳涝乐镭垒类泪篱离里鲤礼丽厉励砾历沥隶俩联莲连镰怜涟帘敛脸链恋炼练粮凉两辆谅疗辽镣猎临邻鳞凛赁龄铃凌灵岭领馏刘龙聋咙笼垄拢陇楼娄搂篓芦卢颅庐炉掳卤虏鲁赂禄录陆驴吕铝侣屡缕虑滤绿峦挛孪滦乱抡轮伦仑沦纶论萝罗逻锣箩骡骆络妈玛码蚂马骂吗买麦卖迈脉瞒馒蛮满谩猫锚铆贸么霉没镁门闷们锰梦谜弥觅绵缅庙灭悯闽鸣铭谬谋亩钠纳难挠脑恼闹馁腻撵捻酿鸟聂啮镊镍柠狞宁拧泞钮纽脓浓农疟诺欧鸥殴呕沤盘庞国爱赔喷鹏骗飘频贫苹凭评泼颇扑铺朴谱脐齐骑岂启气弃讫牵扦钎铅迁签谦钱钳潜浅谴堑枪呛墙蔷强抢锹桥乔侨翘窍窃钦亲轻氢倾顷请庆琼穷趋区躯驱龋颧权劝却鹊让饶扰绕热韧认纫荣绒软锐闰润洒萨鳃赛伞丧骚扫涩杀纱筛晒闪陕赡缮伤赏烧绍赊摄慑设绅审婶肾渗声绳胜圣师狮湿诗尸时蚀实识驶势释饰视试寿兽枢输书赎属术树竖数帅双谁税顺说硕烁丝饲耸怂颂讼诵擞苏诉肃虽绥岁孙损笋缩琐锁獭挞抬摊贪瘫滩坛谭谈叹汤烫涛绦腾誊锑题体屉条贴铁厅听烃铜统头图涂团颓蜕脱鸵驮驼椭洼袜弯湾顽万网韦违围为潍维苇伟伪纬谓卫温闻纹稳问瓮挝蜗涡窝呜钨乌诬无芜吴坞雾务误锡牺袭习铣戏细虾辖峡侠狭厦锨鲜纤咸贤衔闲显险现献县馅羡宪线厢镶乡详响项萧销晓啸蝎协挟携胁谐写泻谢锌衅兴汹锈绣虚嘘须许绪续轩悬选癣绚学勋询寻驯训讯逊压鸦鸭哑亚讶阉烟盐严颜阎艳厌砚彦谚验鸯杨扬疡阳痒养样瑶摇尧遥窑谣药爷页业叶医铱颐遗仪彝蚁艺亿忆义诣议谊译异绎荫阴银饮樱婴鹰应缨莹萤营荧蝇颖哟拥佣痈踊咏涌优忧邮铀犹游诱舆鱼渔娱与屿语吁御狱誉预驭鸳渊辕园员圆缘远愿约跃钥岳粤悦阅云郧匀陨运蕴酝晕韵杂灾载攒暂赞赃脏凿枣灶责择则泽贼赠扎札轧铡闸诈斋债毡盏斩辗崭栈战绽张涨帐账胀赵蛰辙锗这贞针侦诊镇阵挣睁狰帧郑证织职执纸挚掷帜质钟终种肿众诌轴皱昼骤猪诸诛烛瞩嘱贮铸筑驻专砖转赚桩庄装妆壮状锥赘坠缀谆浊兹资渍踪综总纵邹诅组钻致钟么为只凶准启板里雳余链泄';
+var zh_t = '確於將號皚藹礙愛翺襖奧壩罷擺敗頒辦絆幫綁鎊謗剝飽寶報鮑輩貝鋇狽備憊繃筆畢斃閉邊編貶變辯辮鼈癟瀕濱賓擯餅撥缽鉑駁蔔補參蠶殘慚慘燦蒼艙倉滄廁側冊測層詫攙摻蟬饞讒纏鏟産闡顫場嘗長償腸廠暢鈔車徹塵陳襯撐稱懲誠騁癡遲馳恥齒熾沖蟲寵疇躊籌綢醜櫥廚鋤雛礎儲觸處傳瘡闖創錘純綽辭詞賜聰蔥囪從叢湊竄錯達帶貸擔單鄲撣膽憚誕彈當擋黨蕩檔搗島禱導盜燈鄧敵滌遞締點墊電澱釣調叠諜疊釘頂錠訂東動棟凍鬥犢獨讀賭鍍鍛斷緞兌隊對噸頓鈍奪鵝額訛惡餓兒爾餌貳罰閥琺礬釩煩範販飯訪紡飛廢費紛墳奮憤糞豐楓鋒風瘋馮縫諷鳳膚輻撫輔賦複負訃婦縛該鈣蓋幹趕稈贛岡剛鋼綱崗臯鎬擱鴿閣鉻個給龔宮鞏貢鈎溝構購夠蠱顧剮關觀館慣貫廣規矽歸龜閨軌詭櫃貴劊輥滾鍋國過駭韓漢閡鶴賀橫轟鴻紅後壺護滬戶嘩華畫劃話懷壞歡環還緩換喚瘓煥渙黃謊揮輝毀賄穢會燴彙諱誨繪葷渾夥獲貨禍擊機積饑譏雞績緝極輯級擠幾薊劑濟計記際繼紀夾莢頰賈鉀價駕殲監堅箋間艱緘繭檢堿鹼揀撿簡儉減薦檻鑒踐賤見鍵艦劍餞漸濺澗漿蔣槳獎講醬膠澆驕嬌攪鉸矯僥腳餃繳絞轎較稭階節莖驚經頸靜鏡徑痙競淨糾廄舊駒舉據鋸懼劇鵑絹傑潔結誡屆緊錦僅謹進晉燼盡勁荊覺決訣絕鈞軍駿開凱顆殼課墾懇摳庫褲誇塊儈寬礦曠況虧巋窺饋潰擴闊蠟臘萊來賴藍欄攔籃闌蘭瀾讕攬覽懶纜爛濫撈勞澇樂鐳壘類淚籬離裏鯉禮麗厲勵礫曆瀝隸倆聯蓮連鐮憐漣簾斂臉鏈戀煉練糧涼兩輛諒療遼鐐獵臨鄰鱗凜賃齡鈴淩靈嶺領餾劉龍聾嚨籠壟攏隴樓婁摟簍蘆盧顱廬爐擄鹵虜魯賂祿錄陸驢呂鋁侶屢縷慮濾綠巒攣孿灤亂掄輪倫侖淪綸論蘿羅邏鑼籮騾駱絡媽瑪碼螞馬罵嗎買麥賣邁脈瞞饅蠻滿謾貓錨鉚貿麽黴沒鎂門悶們錳夢謎彌覓綿緬廟滅憫閩鳴銘謬謀畝鈉納難撓腦惱鬧餒膩攆撚釀鳥聶齧鑷鎳檸獰甯擰濘鈕紐膿濃農瘧諾歐鷗毆嘔漚盤龐國愛賠噴鵬騙飄頻貧蘋憑評潑頗撲鋪樸譜臍齊騎豈啓氣棄訖牽扡釺鉛遷簽謙錢鉗潛淺譴塹槍嗆牆薔強搶鍬橋喬僑翹竅竊欽親輕氫傾頃請慶瓊窮趨區軀驅齲顴權勸卻鵲讓饒擾繞熱韌認紉榮絨軟銳閏潤灑薩鰓賽傘喪騷掃澀殺紗篩曬閃陝贍繕傷賞燒紹賒攝懾設紳審嬸腎滲聲繩勝聖師獅濕詩屍時蝕實識駛勢釋飾視試壽獸樞輸書贖屬術樹豎數帥雙誰稅順說碩爍絲飼聳慫頌訟誦擻蘇訴肅雖綏歲孫損筍縮瑣鎖獺撻擡攤貪癱灘壇譚談歎湯燙濤縧騰謄銻題體屜條貼鐵廳聽烴銅統頭圖塗團頹蛻脫鴕馱駝橢窪襪彎灣頑萬網韋違圍為濰維葦偉僞緯謂衛溫聞紋穩問甕撾蝸渦窩嗚鎢烏誣無蕪吳塢霧務誤錫犧襲習銑戲細蝦轄峽俠狹廈鍁鮮纖鹹賢銜閑顯險現獻縣餡羨憲線廂鑲鄉詳響項蕭銷曉嘯蠍協挾攜脅諧寫瀉謝鋅釁興洶鏽繡虛噓須許緒續軒懸選癬絢學勳詢尋馴訓訊遜壓鴉鴨啞亞訝閹煙鹽嚴顔閻豔厭硯彥諺驗鴦楊揚瘍陽癢養樣瑤搖堯遙窯謠藥爺頁業葉醫銥頤遺儀彜蟻藝億憶義詣議誼譯異繹蔭陰銀飲櫻嬰鷹應纓瑩螢營熒蠅穎喲擁傭癰踴詠湧優憂郵鈾猶遊誘輿魚漁娛與嶼語籲禦獄譽預馭鴛淵轅園員圓緣遠願約躍鑰嶽粵悅閱雲鄖勻隕運蘊醞暈韻雜災載攢暫贊贓髒鑿棗竈責擇則澤賊贈紮劄軋鍘閘詐齋債氈盞斬輾嶄棧戰綻張漲帳賬脹趙蟄轍鍺這貞針偵診鎮陣掙睜猙幀鄭證織職執紙摯擲幟質鍾終種腫衆謅軸皺晝驟豬諸誅燭矚囑貯鑄築駐專磚轉賺樁莊裝妝壯狀錐贅墜綴諄濁茲資漬蹤綜總縱鄒詛組鑽緻鐘麼為隻兇準啟闆裡靂餘鍊洩';
 String.prototype.tran = function () {
     var s1, s2;
     if (zh_choose == 't') {
@@ -554,7 +559,7 @@ document.getElementById('select').style.display = "none";
 document.getElementById('next').style.display = "none";
 document.getElementById('help_window').style.display = "none";
 document.getElementById('drag').style.display = "none";
-var id2 = 1;
+var id2 = true;
 if (typeof FileReader === "undefined") {
     alert('警告！此浏览器不支持FileReader接口，请更新或使用 Chrome、Chromium、Firefox、Edge、Safari、Opera、Brave 等现代浏览器打开HTML文件！已禁用此浏览器访问此脚本！');
     document.location("about:blank");
@@ -594,6 +599,9 @@ function column_note_pos1() {
             x = Math.random() * 256;
             x = Math.floor(x);
         } while (x < 32 || x > 223)
+    } else {
+        x = Math.random() * note_column;
+        x = Math.floor(x);
     }
 }
 function column_note_pos2() {
@@ -705,11 +713,156 @@ function test1() {
 function continue_music() {
     var file_h = "", b = "";
     //主音轨读取
+    var AdjustTrack = new Array();
     for (file_d_a = 0; file_d_a < file_d; file_d_a++) {
         file_g = file_f[file_d_a].bpm + ",";
         file_h = file_h + file_g;
         file_k = file_f[file_d_a].baseBeats + ",";
         b = b + file_k;
+        AdjustTrack[file_d_a] = file_f[file_d_a].scores.length;
+    }
+    var AdjustTrackMax = Math.max.apply(null, AdjustTrack);
+    for (file_d_a = 0; file_d_a < file_d; file_d_a++) {
+        if (file_f[file_d_a].scores.length < AdjustTrackMax) {
+            file_f[file_d_a].scores[0]
+            //检测休止符
+            var TrackLength = "";
+            AdjustTrackNote = file_f[file_d_a].scores[0].replace(/;/g, ",");
+            AdjustTrackNote = AdjustTrackNote.split(",");
+            for (TrackNote_i = 0; TrackNote_i < AdjustTrackNote.length; TrackNote_i++) {
+                if (AdjustTrackNote[TrackNote_i].indexOf('Q') > -1 || AdjustTrackNote[TrackNote_i].indexOf('R') > -1 || AdjustTrackNote[TrackNote_i].indexOf('S') > -1 || AdjustTrackNote[TrackNote_i].indexOf('T') > -1 || AdjustTrackNote[TrackNote_i].indexOf('U') > -1 || AdjustTrackNote[TrackNote_i].indexOf('V') > -1 || AdjustTrackNote[TrackNote_i].indexOf('W') > -1 || AdjustTrackNote[TrackNote_i].indexOf('X') > -1 || AdjustTrackNote[TrackNote_i].indexOf('Y') > -1 || AdjustTrackNote[TrackNote_i].indexOf('Z') > -1) {
+                    //检测括号内是否有休止符
+                    if (AdjustTrackNote[TrackNote_i].indexOf('(') > -1 && AdjustTrackNote.indexOf(')') > -1) {
+                        AdjustTrackNote[TrackNote_i] = AdjustTrackNote[TrackNote_i].replace(/Q/g, "mute");
+                        AdjustTrackNote[TrackNote_i] = AdjustTrackNote[TrackNote_i].replace(/R/g, "mute");
+                        AdjustTrackNote[TrackNote_i] = AdjustTrackNote[TrackNote_i].replace(/S/g, "mute");
+                        AdjustTrackNote[TrackNote_i] = AdjustTrackNote[TrackNote_i].replace(/T/g, "mute");
+                        AdjustTrackNote[TrackNote_i] = AdjustTrackNote[TrackNote_i].replace(/U/g, "mute");
+                        AdjustTrackNote[TrackNote_i] = AdjustTrackNote[TrackNote_i].replace(/V/g, "mute");
+                        AdjustTrackNote[TrackNote_i] = AdjustTrackNote[TrackNote_i].replace(/W/g, "mute");
+                        AdjustTrackNote[TrackNote_i] = AdjustTrackNote[TrackNote_i].replace(/X/g, "mute");
+                        AdjustTrackNote[TrackNote_i] = AdjustTrackNote[TrackNote_i].replace(/Y/g, "mute");
+                        AdjustTrackNote[TrackNote_i] = AdjustTrackNote[TrackNote_i].replace(/Z/g, "mute");
+                        var index_H = AdjustTrackNote[TrackNote_i].indexOf('H'), index_I = AdjustTrackNote[TrackNote_i].indexOf('I'), index_J = AdjustTrackNote[TrackNote_i].indexOf('J'), index_K = AdjustTrackNote[TrackNote_i].indexOf('K'), index_L = AdjustTrackNote[TrackNote_i].indexOf('L'), index_M = AdjustTrackNote[TrackNote_i].indexOf('M'), index_N = AdjustTrackNote[TrackNote_i].indexOf('N'), index_O = AdjustTrackNote[TrackNote_i].indexOf('O'), index_P = AdjustTrackNote[TrackNote_i].indexOf('P');
+                        while (index_H !== -1) {
+                            TrackLength = TrackLength + "Q";
+                            index_H = AdjustTrackNote[TrackNote_i].indexOf('H', index_H + 1);
+                        }
+                        while (index_I !== -1) {
+                            TrackLength = TrackLength + "R";
+                            index_I = AdjustTrackNote[TrackNote_i].indexOf('I', index_I + 1);
+                        }
+                        while (index_J !== -1) {
+                            TrackLength = TrackLength + "S";
+                            index_J = AdjustTrackNote[TrackNote_i].indexOf('J', index_J + 1);
+                        }
+                        while (index_K !== -1) {
+                            TrackLength = TrackLength + "T";
+                            index_K = AdjustTrackNote[TrackNote_i].indexOf('K', index_K + 1);
+                        }
+                        while (index_L !== -1) {
+                            TrackLength = TrackLength + "U";
+                            index_L = AdjustTrackNote[TrackNote_i].indexOf('L', index_L + 1);
+                        }
+                        while (index_M !== -1) {
+                            TrackLength = TrackLength + "V";
+                            index_M = AdjustTrackNote[TrackNote_i].indexOf('M', index_M + 1);
+                        }
+                        while (index_N !== -1) {
+                            TrackLength = TrackLength + "W";
+                            index_N = AdjustTrackNote[TrackNote_i].indexOf('N', index_N + 1);
+                        }
+                        while (index_O !== -1) {
+                            TrackLength = TrackLength + "X";
+                            index_O = AdjustTrackNote[TrackNote_i].indexOf('O', index_O + 1);
+                        }
+                        while (index_P !== -1) {
+                            TrackLength = TrackLength + "Y";
+                            index_P = AdjustTrackNote[TrackNote_i].indexOf('P', index_P + 1);
+                        }
+                    } else {
+                        var index_Q = AdjustTrackNote[TrackNote_i].indexOf('Q'), index_R = AdjustTrackNote[TrackNote_i].indexOf('R'), index_S = AdjustTrackNote[TrackNote_i].indexOf('S'), index_T = AdjustTrackNote[TrackNote_i].indexOf('T'), index_U = AdjustTrackNote[TrackNote_i].indexOf('U'), index_V = AdjustTrackNote[TrackNote_i].indexOf('V'), index_W = AdjustTrackNote[TrackNote_i].indexOf('W'), index_X = AdjustTrackNote[TrackNote_i].indexOf('X'), index_Y = AdjustTrackNote[TrackNote_i].indexOf('Y');
+                        while (index_Q !== -1) {
+                            TrackLength = TrackLength + "Q";
+                            index_Q = AdjustTrackNote[TrackNote_i].indexOf('Q', index_Q + 1);
+                        }
+                        while (index_R !== -1) {
+                            TrackLength = TrackLength + "R";
+                            index_R = AdjustTrackNote[TrackNote_i].indexOf('R', index_R + 1);
+                        }
+                        while (index_S !== -1) {
+                            TrackLength = TrackLength + "S";
+                            index_S = AdjustTrackNote[TrackNote_i].indexOf('S', index_S + 1);
+                        }
+                        while (index_T !== -1) {
+                            TrackLength = TrackLength + "T";
+                            index_T = AdjustTrackNote[TrackNote_i].indexOf('T', index_T + 1);
+                        }
+                        while (index_U !== -1) {
+                            TrackLength = TrackLength + "U";
+                            index_U = AdjustTrackNote[TrackNote_i].indexOf('U', index_U + 1);
+                        }
+                        while (index_V !== -1) {
+                            TrackLength = TrackLength + "V";
+                            index_V = AdjustTrackNote[TrackNote_i].indexOf('V', index_V + 1);
+                        }
+                        while (index_W !== -1) {
+                            TrackLength = TrackLength + "W";
+                            index_W = AdjustTrackNote[TrackNote_i].indexOf('W', index_W + 1);
+                        }
+                        while (index_X !== -1) {
+                            TrackLength = TrackLength + "X";
+                            index_X = AdjustTrackNote[TrackNote_i].indexOf('X', index_X + 1);
+                        }
+                        while (index_Y !== -1) {
+                            TrackLength = TrackLength + "Y";
+                            index_Y = AdjustTrackNote[TrackNote_i].indexOf('Y', index_Y + 1);
+                        }
+                    }
+                } else {
+                    var index_H = AdjustTrackNote[TrackNote_i].indexOf('H'), index_I = AdjustTrackNote[TrackNote_i].indexOf('I'), index_J = AdjustTrackNote[TrackNote_i].indexOf('J'), index_K = AdjustTrackNote[TrackNote_i].indexOf('K'), index_L = AdjustTrackNote[TrackNote_i].indexOf('L'), index_M = AdjustTrackNote[TrackNote_i].indexOf('M'), index_N = AdjustTrackNote[TrackNote_i].indexOf('N'), index_O = AdjustTrackNote[TrackNote_i].indexOf('O'), index_P = AdjustTrackNote[TrackNote_i].indexOf('P');
+                    while (index_H !== -1) {
+                        TrackLength = TrackLength + "Q";
+                        index_H = AdjustTrackNote[TrackNote_i].indexOf('H', index_H + 1);
+                    }
+                    while (index_I !== -1) {
+                        TrackLength = TrackLength + "R";
+                        index_I = AdjustTrackNote[TrackNote_i].indexOf('I', index_I + 1);
+                    }
+                    while (index_J !== -1) {
+                        TrackLength = TrackLength + "S";
+                        index_J = AdjustTrackNote[TrackNote_i].indexOf('J', index_J + 1);
+                    }
+                    while (index_K !== -1) {
+                        TrackLength = TrackLength + "T";
+                        index_K = AdjustTrackNote[TrackNote_i].indexOf('K', index_K + 1);
+                    }
+                    while (index_L !== -1) {
+                        TrackLength = TrackLength + "U";
+                        index_L = AdjustTrackNote[TrackNote_i].indexOf('L', index_L + 1);
+                    }
+                    while (index_M !== -1) {
+                        TrackLength = TrackLength + "V";
+                        index_M = AdjustTrackNote[TrackNote_i].indexOf('M', index_M + 1);
+                    }
+                    while (index_N !== -1) {
+                        TrackLength = TrackLength + "W";
+                        index_N = AdjustTrackNote[TrackNote_i].indexOf('N', index_N + 1);
+                    }
+                    while (index_O !== -1) {
+                        TrackLength = TrackLength + "X";
+                        index_O = AdjustTrackNote[TrackNote_i].indexOf('O', index_O + 1);
+                    }
+                    while (index_P !== -1) {
+                        TrackLength = TrackLength + "Y";
+                        index_P = AdjustTrackNote[TrackNote_i].indexOf('P', index_P + 1);
+                    }
+                }
+            }
+            for (TrackMax = file_f[file_d_a].scores.length; TrackMax < AdjustTrackMax; TrackMax++) {
+                file_f[file_d_a].scores[TrackMax] = TrackLength;
+            }
+        }
     }
     //自动填写BPM与基础节拍
     if (document.getElementById('manual').checked == false) {
@@ -816,9 +969,10 @@ function continue_music() {
     }
     musictime_main_array = new Array();
     musictype_main_array = new Array();
-    soundtest = new Array();
+    SoundArrayId = new Array();
     //id循环
     for (file_d_a = 0; file_d_a < file_d; file_d_a++) {
+        SoundArrayId[file_d_a] = new Array();
         //音轨循环
         //倒放选项
         if (document.getElementById('reverse').checked == true) {
@@ -844,14 +998,12 @@ function continue_music() {
             if (Fileinstruments == undefined) {
                 Fileinstruments = "piano";
             }
-            a = a.slice(0, a.length - 1);
+            if (a.lastIndexOf(",") == a.split('').length - 1 || a.lastIndexOf(";") == a.split('').length - 1) {
+                a = a.slice(0, a.length - 1);
+            }
             a = a.replace(/;/g, ",");
             a = a.split(',');
-            if (soundtest[file_d_b] == undefined) {
-                soundtest[file_d_b] = a;//测试
-            } else {
-                soundtest[file_d_b].push(a);
-            }
+            SoundArrayId[file_d_a][file_d_b] = a;
             //倒放选项
             if (document.getElementById('reverse').checked == true) {
                 a = a.reverse();
@@ -1158,34 +1310,86 @@ function continue_music() {
     var note_length = 0, note_rhythm = 0;
     note_number = -1;
     switch (document.getElementById("key").value) {
+        case "1k": {
+            note_column = 1;
+        }
+            break;
+        case "2k": {
+            note_column = 2;
+        }
+            break;
+        case "3k": {
+            note_column = 3;
+        }
+            break;
         case "4k": {
             note_column = 4;
         }
-            break
+            break;
         case "5k": {
             note_column = 5;
         }
-            break
+            break;
         case "6k": {
             note_column = 6;
         }
-            break
+            break;
         case "7k": {
             note_column = 7;
         }
-            break
+            break;
         case "8k": {
             note_column = 8;
         }
-            break
+            break;
         case "9k": {
             note_column = 9;
         }
-            break
+            break;
         case "10k": {
             note_column = 10;
         }
-            break
+            break;
+        case "11k": {
+            note_column = 11;
+        }
+            break;
+        case "12k": {
+            note_column = 12;
+        }
+            break;
+        case "13k": {
+            note_column = 13;
+        }
+            break;
+        case "14k": {
+            note_column = 14;
+        }
+            break;
+        case "15k": {
+            note_column = 15;
+        }
+            break;
+        case "16k": {
+            note_column = 16;
+        }
+            break;
+        case "17k": {
+            note_column = 17;
+        }
+            break;
+        case "18k": {
+            note_column = 18;
+        }
+            break;
+        case "19k": {
+            note_column = 19;
+        }
+            break;
+        case "20k": {
+            note_column = 20;
+        }
+            break;
     }
     if (document.getElementById('games').value == "mak") {
         column_initial = Math.random() * note_column;
@@ -1196,6 +1400,10 @@ function continue_music() {
         column_initial = Math.floor(column_initial);
         column_initial_double = column_initial;
         note_column = 256;
+    } else {
+        column_initial = Math.random() * note_column;
+        column_initial = Math.floor(column_initial);
+        column_initial_double = column_initial;
     }
     var type_2_enable = false, type_3_enable = false, type_5_enable = false, type_6_enable = false, type_7_enable = false, type_8_enable = false, type_9_enable = false, type_10_enable = false;
     //段落
@@ -2516,10 +2724,33 @@ function continue_music() {
             }
         }
     }
-    //测试
-    for (file_d_b = 0; file_d_b < soundtest.length; file_d_b++) {
-        filesound = soundtest[file_d_b].join(',');
-        filesound = filesound + ",";
+    //音键数组
+    //音轨循环
+    if (document.getElementById("games").value == "om") {
+        games_type = games.value;
+        osuFilesTextVersion = "osu file format v14\n";
+        //osu基本数据
+        osuFilesTextGeneral = "[General]\nAudioFilename:\nAudioLeadIn: 0\nPreviewTime: -1\nCountdown: 0\nSampleSet: Normal\nStackLeniency: 0.7\nMode: 3\nLetterboxInBreaks: 0\nSpecialStyle: 1\nWidescreenStoryboard: 0\nSkinPreference: Piano Tiles 2 Skin for osu!mania\nSamplesMatchPlaybackRate:1\n";
+        //osu编辑器设置
+        osuFilesTextEditor = "[Editor]\nDistanceSpacing: 1\nBeatDivisor: 1\nGridSize: 32\nTimelineZoom: 1\n"
+        //osu谱面元数据
+        osuFilesTextMetadata = "[Metadata]\nTitle:" + document.getElementById("file").files[0].name + "\nTitleUnicode:" + document.getElementById("file").files[0].name + "\nArtist:Piano Tiles Chart Converter Tool\nArtistUnicode:钢琴块谱面转换工具\nCreator:Piano Tiles Chart Converter Tool\nVersion:Easy\nSource:\nTags:\nBeatmapID:0\nBeatmapSetID:0\n"
+        //osu难度设置
+        osuFilesTextDifficulty = "[Difficulty]\nHPDrainRate:10\nCircleSize:10\nOverallDifficulty:10\nApproachRate:10\nSliderMultiplier:1\nSliderTickRate:1\n"
+        //osu时间点
+        osuFilesTextTimingPoints = "[TimingPoints]";
+        //osu事件
+        osuFilesTextEvents = "[Events]";
+        //osu物件
+        osuFilesTextHitObjects = "[HitObjects]";
+    }
+    for (file_d_b = 0; file_d_b < SoundArrayId[0].length; file_d_b++) {
+        //id循环
+        filesound = "";
+        for (file_d_a = 0; file_d_a < SoundArrayId.length; file_d_a++) {
+            filesound = filesound + SoundArrayId[file_d_a][file_d_b].join(',');
+            filesound = filesound + ",";
+        }
         Function1();
     }
     switch (document.getElementById("games").value) {
@@ -2578,8 +2809,13 @@ function continue_music() {
             }
         }
     }
-    malody_json_mc = { meta: { $ver: 0, creator: "Piano Tiles Chart Converter Tool", background: "", video: "", version: "Piano Tiles Chart Converter Tool", preview: 0, id: 0, mode: malody_mode, time: Date.now(), song: { title: json_music_name, titleorg: json_music_name, artist: "Piano Tiles Chart Converter Tool", artistorg: "Piano Tiles Chart Converter Tool", id: 0 }, mode_ext: mode_ext }, time: time_BPM, effect: [], note: time, extra: { test: { divide: 4, speed: 100, save: 0, lock: 0, edit_mode: 0 } } };
-    document.getElementById('result').value = JSON.stringify(malody_json_mc);
+    if (document.getElementById("games").value != "om") {
+        malody_json_mc = { meta: { $ver: 0, creator: "Piano Tiles Chart Converter Tool", background: "", video: "", version: "Piano Tiles Chart Converter Tool", preview: 0, id: 0, mode: malody_mode, time: Date.now(), song: { title: json_music_name, titleorg: json_music_name, artist: "Piano Tiles Chart Converter Tool", artistorg: "Piano Tiles Chart Converter Tool", id: 0 }, mode_ext: mode_ext }, time: time_BPM, effect: [], note: time, extra: { test: { divide: 4, speed: 100, save: 0, lock: 0, edit_mode: 0 } } };
+        document.getElementById('result').value = JSON.stringify(malody_json_mc);
+
+    } else {
+
+    }
 }
 function Function2() {
     if (document.getElementById('notewidth').value == "") {
@@ -3192,7 +3428,7 @@ function Function2() {
                     continue_music();
                     //不支持魔法钢琴块3部分加密谱面文件，只支持该游戏的midi文件
                 } else if (file_a.chapters) {
-                    //对于指尖上的钢琴第三方钢琴游戏的兼容
+                    //对于指尖上的钢琴第三方钢琴游戏的兼容，不保证100%完美转换
                     file_f = file_a.chapters;
                     var file_pt2json_main = new Array(), file_pt2json_second = new Array();
                     for (file_i = 0; file_i < file_f.length; file_i++) {
@@ -3233,11 +3469,138 @@ function Function2() {
                     console.log(pt2json);
                     continue_music();
                 } else if (file_a.type && file_a.section) {
-                    //对于梦幻钢琴第三方钢琴游戏的兼容
+                    //对于梦幻钢琴第三方钢琴游戏的兼容，不保证100%完美转换
                     file_f = file_a.section;
                     for (i = 0; i < file_f.length; i++) {
+                        var dream_tune = file_f[i].tune;
+                        function dreamreplace() {
+                            switch (dream_tune) {
+                                case "Bb": {
+                                }
+                                    break;
+                                case "B": {
+
+                                }
+                                    break;
+                                case "Cb": {
+
+                                }
+                                    break;
+                                case "C": {
+                                    if (file_f[i].instrument[file_i].play[file_while].indexOf(".") == -1 && file_f[i].instrument[file_i].play[file_while].indexOf("~") == -1) {
+                                        if (file_f[i].instrument[file_i].play[file_while]) {
+                                            evalvar = "dreampiano[3]." + file_f[i].instrument[file_i].play[file_while];
+                                            console.log(file_f[i].instrument[file_i].play[file_while])
+                                            console.log(eval(evalvar));
+
+                                        }
+                                    }
+                                }
+                                    break;
+                                case "C#": {
+
+                                }
+                                    break;
+                                case "Db": {
+
+                                }
+                                    break;
+                                case "D": {
+
+                                }
+                                    break;
+                                case "Eb": {
+
+                                }
+                                    break;
+                                case "E": {
+
+                                }
+                                    break;
+                                case "F": {
+
+                                }
+                                    break;
+                                case "F#": {
+
+                                }
+                                    break;
+                                case "Gb": {
+
+                                }
+                                    break;
+                                case "G": {
+
+                                }
+                                    break;
+                                case "Ab": {
+
+                                }
+                                    break;
+                                case "A": {
+
+                                }
+                                    break;
+                            }
+                        }
                         for (file_i = 0; file_i < file_f.length - 1; file_i++) {
-                            console.log(file_f[i].instrument[file_i]);
+                            switch (file_f[i].instrument[file_i].type) {
+                                case "piano": {
+                                    for (file_while = 0; file_while < file_f[i].instrument[file_i].play.length - 1; file_while++) {
+                                        file_f[i].instrument[file_i].play[file_while] = file_f[i].instrument[file_i].play[file_while].replace(/\|/g, ".");
+                                        file_f[i].instrument[file_i].play[file_while] = file_f[i].instrument[file_i].play[file_while].replace(/\,/g, "~");
+                                        file_f[i].instrument[file_i].play[file_while] = file_f[i].instrument[file_i].play[file_while].replace(/\+/g, "x");
+                                        file_f[i].instrument[file_i].play[file_while] = file_f[i].instrument[file_i].play[file_while].replace(/\-/g, "y");
+                                        file_f[i].instrument[file_i].play[file_while] = file_f[i].instrument[file_i].play[file_while].replace(/\#/g, "z");
+                                        switch (file_f[i].instrument[file_i].play[file_while]) {
+                                            case "0":
+                                                file_f[i].instrument[file_i].play[file_while] = "w";
+                                                break;
+                                            case "1":
+                                                file_f[i].instrument[file_i].play[file_while] = "w1";
+                                                break;
+                                            case "2":
+                                                file_f[i].instrument[file_i].play[file_while] = "w2";
+                                                break;
+                                            case "3":
+                                                file_f[i].instrument[file_i].play[file_while] = "w3";
+                                                break;
+                                            case "4":
+                                                file_f[i].instrument[file_i].play[file_while] = "w4";
+                                                break;
+                                            case "5":
+                                                file_f[i].instrument[file_i].play[file_while] = "w5";
+                                                break;
+                                            case "6":
+                                                file_f[i].instrument[file_i].play[file_while] = "w6";
+                                                break;
+                                            case "7":
+                                                file_f[i].instrument[file_i].play[file_while] = "w7";
+                                                break;
+                                            case "8":
+                                                file_f[i].instrument[file_i].play[file_while] = "w8";
+                                                break;
+                                            case "9":
+                                                file_f[i].instrument[file_i].play[file_while] = "w9";
+                                                break;
+                                        };
+                                        if (file_f[i].instrument[file_i].play[file_while].indexOf("<") > -1 || file_f[i].instrument[file_i].play[file_while].indexOf(">") > -1) {
+                                            file_f[i].instrument[file_i].play[file_while] = file_f[i].instrument[file_i].play[file_while].replace(file_f[i].instrument[file_i].play[file_while].match(/<.*?>/), "");
+                                        }
+                                        dreamreplace();
+                                        //console.log(file_f[i].instrument[file_i].play[file_while])
+                                    }
+                                }
+                                    break;
+                                case "guitar": {
+
+                                }
+                                    break;
+                                case "sound": {
+
+                                }
+                                    break;
+                            };
                         }
                     }
                 } else if (file_a.header && file_a.tracks) {
@@ -3268,1528 +3631,6 @@ function Function2() {
     document.getElementById('soundshow').style.color = '#555';
     document.getElementById("warning_sound").innerHTML = "♮正常";
     document.getElementById("warning_sound").style.color = '#555';
-}
-function startchange() {
-    document.getElementById('progress').value = "25"
-    progress1.innerHTML = "25"
-    //格式化
-    v = g;
-    o = g;
-    games_type = games.value;
-    switch (games_type) {
-        case "mak":
-        case "mas":
-            game_type1();
-            break;
-        case "om":
-            game_type3();
-            break;
-    }
-    function game_type3() {
-        a = document.getElementById("bpm").value.split(";")[1];
-        a = a.split(",")[file_d_a];
-        a = parseFloat(a);
-        g = g.split(",");
-        var g_d = "";
-        for (g_a = 0; g_a < g.length; g_a++) {
-            g_b = parseFloat(g[g_a]);
-            g_c = Math.floor(3750 * g_b / a * 0.5);
-            g_d = g_d + "," + g_c;
-        }
-        g_d = g_d.replace(",", "");
-        a = g_d;
-        a = a.split(",");
-        g_b = "";
-        for (g_a = 0; g_a < g.length - 1; g_a++) {
-            g_b = g_b + "\ncolumn,192,<" + a[g_a] + ">,note,0,endbeat:0:0:0:sound"
-        }
-        if (file_d_a == 0) {
-            g_b = g_b.replace("\n", "column,192,<0>,note,0,endbeat:0:0:0:sound\n");
-        } else {
-            g_b = g_b.replace("\n", "column,192,<" + bpm_pos_om_2 + ">,note,0,endbeat:0:0:0:sound\n");
-        }
-        bpm_pos_om = a[a.length - 1];
-        m = document.getElementById("beats").value;
-        m = parseFloat(m);
-        a = document.getElementById("bpm").value;
-        a = parseFloat(a);
-        n = Math.floor(3750 * m * 32 / a * 0.5);
-        g_d = g_d.split(",");
-        for (g_a = 0; g_a < g.length; g_a++) {
-            f_a = g_b.indexOf("<");
-            f_b = g_b.indexOf(">") + 1;
-            f_c = g_b.slice(f_a, f_b);
-            f_d = f_c.replace("<", "");
-            f_d = f_d.replace(">", "");
-            g_b = g_b.replace(f_c, f_d);
-            f_a = parseFloat(g_d[g_a]);
-            f_d = parseFloat(f_d);
-            f_b = f_a - f_d;
-            if (f_b > n + 1) {
-                f_c = f_a - n;
-                f_c = Math.floor(f_c);
-                g_b = g_b.replace("endbeat", f_c + ":0");
-                g_b = g_b.replace("note", "128");
-            } else {
-                g_b = g_b.replace("endbeat", "0");
-                g_b = g_b.replace("note", "1");
-            }
-        }
-        key_num = key.value;
-        switch (key_num) {
-            case "1k":
-                key_num_a = 1;
-                g_b = g_b.replace(/column/g, "256");
-                break;
-            case "2k":
-                key_num_a = 2;
-                if (document.getElementById("continue").checked == true) {
-                    while (g_b.indexOf("column") > -1) {
-
-                        x = Math.random() * 2;
-                        x = Math.floor(x);
-                        if (x == 0) {
-                            g_b = g_b.replace(/column/, "128");
-                        } else {
-                            g_b = g_b.replace(/column/, "384");
-                        }
-                    }
-                } else {
-                    var x = 0;
-                    while (g_b.indexOf("column") > -1) {
-
-                        x = x + 1;
-                        if (x % 2 == 0) {
-                            g_b = g_b.replace(/column/, "128");
-                        } else {
-                            g_b = g_b.replace(/column/, "384");
-                        }
-                    }
-                }
-                break;
-            case "3k":
-                key_num_a = 3;
-                if (document.getElementById("continue").checked == true) {
-                    while (g_b.indexOf("column") > -1) {
-
-                        x = Math.random() * 3;
-                        x = Math.floor(x);
-                        if (x == 0) {
-                            g_b = g_b.replace(/column/, "85");
-                        }
-                        if (x == 1) {
-                            g_b = g_b.replace(/column/, "256");
-                        }
-                        if (x == 2) {
-                            g_b = g_b.replace(/column/, "426");
-                        }
-                    }
-                } else {
-                    var y;
-                    while (g_b.indexOf("column") > -1) {
-
-                        x = Math.random() * 3;
-                        x = Math.floor(x);
-                        while (x == y) {
-
-                            x = Math.random() * 3;
-                            x = Math.floor(x);
-                        }
-                        y = x;
-                        if (x == 0) {
-                            g_b = g_b.replace(/column/, "85");
-                        }
-                        if (x == 1) {
-                            g_b = g_b.replace(/column/, "256");
-                        }
-                        if (x == 2) {
-                            g_b = g_b.replace(/column/, "426");
-                        }
-                    }
-                }
-                break;
-            case "4k":
-                key_num_a = 4;
-                if (document.getElementById("continue").checked == true) {
-                    while (g_b.indexOf("column") > -1) {
-
-                        x = Math.random() * 4;
-                        x = Math.floor(x);
-                        if (x == 0) {
-                            g_b = g_b.replace(/column/, "64");
-                        }
-                        if (x == 1) {
-                            g_b = g_b.replace(/column/, "192");
-                        }
-                        if (x == 2) {
-                            g_b = g_b.replace(/column/, "320");
-                        }
-                        if (x == 3) {
-                            g_b = g_b.replace(/column/, "448");
-                        }
-                    }
-                } else {
-                    var y;
-                    while (g_b.indexOf("column") > -1) {
-
-                        x = Math.random() * 4;
-                        x = Math.floor(x);
-                        while (x == y) {
-
-                            x = Math.random() * 4;
-                            x = Math.floor(x);
-                        }
-                        y = x;
-                        if (x == 0) {
-                            g_b = g_b.replace(/column/, "64");
-                        }
-                        if (x == 1) {
-                            g_b = g_b.replace(/column/, "192");
-                        }
-                        if (x == 2) {
-                            g_b = g_b.replace(/column/, "320");
-                        }
-                        if (x == 3) {
-                            g_b = g_b.replace(/column/, "448");
-                        }
-                    }
-                }
-                break;
-            case "5k":
-                key_num_a = 5;
-                if (document.getElementById("continue").checked == true) {
-                    while (g_b.indexOf("column") > -1) {
-
-                        x = Math.random() * 5;
-                        x = Math.floor(x);
-                        if (x == 0) {
-                            g_b = g_b.replace(/column/, "51");
-                        }
-                        if (x == 1) {
-                            g_b = g_b.replace(/column/, "153");
-                        }
-                        if (x == 2) {
-                            g_b = g_b.replace(/column/, "256");
-                        }
-                        if (x == 3) {
-                            g_b = g_b.replace(/column/, "358");
-                        }
-                        if (x == 4) {
-                            g_b = g_b.replace(/column/, "460");
-                        }
-                    }
-                } else {
-                    var y;
-                    while (g_b.indexOf("column") > -1) {
-
-                        x = Math.random() * 5;
-                        x = Math.floor(x);
-                        while (x == y) {
-
-                            x = Math.random() * 5;
-                            x = Math.floor(x);
-                        }
-                        y = x;
-                        if (x == 0) {
-                            g_b = g_b.replace(/column/, "51");
-                        }
-                        if (x == 1) {
-                            g_b = g_b.replace(/column/, "153");
-                        }
-                        if (x == 2) {
-                            g_b = g_b.replace(/column/, "256");
-                        }
-                        if (x == 3) {
-                            g_b = g_b.replace(/column/, "358");
-                        }
-                        if (x == 4) {
-                            g_b = g_b.replace(/column/, "460");
-                        }
-                    }
-                }
-                break;
-            case "6k":
-                key_num_a = 6;
-                if (document.getElementById("continue").checked == true) {
-                    while (g_b.indexOf("column") > -1) {
-
-                        x = Math.random() * 6;
-                        x = Math.floor(x);
-                        if (x == 0) {
-                            g_b = g_b.replace(/column/, "42");
-                        }
-                        if (x == 1) {
-                            g_b = g_b.replace(/column/, "128");
-                        }
-                        if (x == 2) {
-                            g_b = g_b.replace(/column/, "213");
-                        }
-                        if (x == 3) {
-                            g_b = g_b.replace(/column/, "298");
-                        }
-                        if (x == 4) {
-                            g_b = g_b.replace(/column/, "384");
-                        }
-                        if (x == 5) {
-                            g_b = g_b.replace(/column/, "469");
-                        }
-                    }
-                } else {
-                    var y;
-                    while (g_b.indexOf("column") > -1) {
-
-                        x = Math.random() * 6;
-                        x = Math.floor(x);
-                        while (x == y) {
-
-                            x = Math.random() * 6;
-                            x = Math.floor(x);
-                        }
-                        y = x;
-                        if (x == 0) {
-                            g_b = g_b.replace(/column/, "42");
-                        }
-                        if (x == 1) {
-                            g_b = g_b.replace(/column/, "128");
-                        }
-                        if (x == 2) {
-                            g_b = g_b.replace(/column/, "213");
-                        }
-                        if (x == 3) {
-                            g_b = g_b.replace(/column/, "298");
-                        }
-                        if (x == 4) {
-                            g_b = g_b.replace(/column/, "384");
-                        }
-                        if (x == 5) {
-                            g_b = g_b.replace(/column/, "469");
-                        }
-                    }
-                }
-                break;
-            case "7k":
-                key_num_a = 7;
-                if (document.getElementById("continue").checked == true) {
-                    while (g_b.indexOf("column") > -1) {
-
-                        x = Math.random() * 7;
-                        x = Math.floor(x);
-                        if (x == 0) {
-                            g_b = g_b.replace(/column/, "36");
-                        }
-                        if (x == 1) {
-                            g_b = g_b.replace(/column/, "109");
-                        }
-                        if (x == 2) {
-                            g_b = g_b.replace(/column/, "182");
-                        }
-                        if (x == 3) {
-                            g_b = g_b.replace(/column/, "256");
-                        }
-                        if (x == 4) {
-                            g_b = g_b.replace(/column/, "329");
-                        }
-                        if (x == 5) {
-                            g_b = g_b.replace(/column/, "402");
-                        }
-                        if (x == 6) {
-                            g_b = g_b.replace(/column/, "475");
-                        }
-                    }
-                } else {
-                    var y;
-                    while (g_b.indexOf("column") > -1) {
-
-                        x = Math.random() * 7;
-                        x = Math.floor(x);
-                        while (x == y) {
-
-                            x = Math.random() * 7;
-                            x = Math.floor(x);
-                        }
-                        y = x;
-                        if (x == 0) {
-                            g_b = g_b.replace(/column/, "36");
-                        }
-                        if (x == 1) {
-                            g_b = g_b.replace(/column/, "109");
-                        }
-                        if (x == 2) {
-                            g_b = g_b.replace(/column/, "182");
-                        }
-                        if (x == 3) {
-                            g_b = g_b.replace(/column/, "256");
-                        }
-                        if (x == 4) {
-                            g_b = g_b.replace(/column/, "329");
-                        }
-                        if (x == 5) {
-                            g_b = g_b.replace(/column/, "402");
-                        }
-                        if (x == 6) {
-                            g_b = g_b.replace(/column/, "475");
-                        }
-                    }
-                }
-                break;
-            case "8k":
-                key_num_a = 8;
-                if (document.getElementById("continue").checked == true) {
-                    while (g_b.indexOf("column") > -1) {
-
-                        x = Math.random() * 8;
-                        x = Math.floor(x);
-                        if (x == 0) {
-                            g_b = g_b.replace(/column/, "32");
-                        }
-                        if (x == 1) {
-                            g_b = g_b.replace(/column/, "96");
-                        }
-                        if (x == 2) {
-                            g_b = g_b.replace(/column/, "160");
-                        }
-                        if (x == 3) {
-                            g_b = g_b.replace(/column/, "224");
-                        }
-                        if (x == 4) {
-                            g_b = g_b.replace(/column/, "288");
-                        }
-                        if (x == 5) {
-                            g_b = g_b.replace(/column/, "352");
-                        }
-                        if (x == 6) {
-                            g_b = g_b.replace(/column/, "416");
-                        }
-                        if (x == 7) {
-                            g_b = g_b.replace(/column/, "480");
-                        }
-                    }
-                } else {
-                    var y;
-                    while (g_b.indexOf("column") > -1) {
-
-                        x = Math.random() * 8;
-                        x = Math.floor(x);
-                        while (x == y) {
-
-                            x = Math.random() * 8;
-                            x = Math.floor(x);
-                        }
-                        y = x;
-                        if (x == 0) {
-                            g_b = g_b.replace(/column/, "32");
-                        }
-                        if (x == 1) {
-                            g_b = g_b.replace(/column/, "96");
-                        }
-                        if (x == 2) {
-                            g_b = g_b.replace(/column/, "160");
-                        }
-                        if (x == 3) {
-                            g_b = g_b.replace(/column/, "224");
-                        }
-                        if (x == 4) {
-                            g_b = g_b.replace(/column/, "288");
-                        }
-                        if (x == 5) {
-                            g_b = g_b.replace(/column/, "352");
-                        }
-                        if (x == 6) {
-                            g_b = g_b.replace(/column/, "416");
-                        }
-                        if (x == 7) {
-                            g_b = g_b.replace(/column/, "480");
-                        }
-                    }
-                }
-                break;
-            case "9k":
-                key_num_a = 9;
-                if (document.getElementById("continue").checked == true) {
-                    while (g_b.indexOf("column") > -1) {
-
-                        x = Math.random() * 9;
-                        x = Math.floor(x);
-                        if (x == 0) {
-                            g_b = g_b.replace(/column/, "28");
-                        }
-                        if (x == 1) {
-                            g_b = g_b.replace(/column/, "85");
-                        }
-                        if (x == 2) {
-                            g_b = g_b.replace(/column/, "142");
-                        }
-                        if (x == 3) {
-                            g_b = g_b.replace(/column/, "199");
-                        }
-                        if (x == 4) {
-                            g_b = g_b.replace(/column/, "256");
-                        }
-                        if (x == 5) {
-                            g_b = g_b.replace(/column/, "312");
-                        }
-                        if (x == 6) {
-                            g_b = g_b.replace(/column/, "369");
-                        }
-                        if (x == 7) {
-                            g_b = g_b.replace(/column/, "426");
-                        }
-                        if (x == 8) {
-                            g_b = g_b.replace(/column/, "483");
-                        }
-                    }
-                } else {
-                    var y;
-                    while (g_b.indexOf("column") > -1) {
-
-                        x = Math.random() * 9;
-                        x = Math.floor(x);
-                        while (x == y) {
-
-                            x = Math.random() * 9;
-                            x = Math.floor(x);
-                        }
-                        y = x;
-                        if (x == 0) {
-                            g_b = g_b.replace(/column/, "28");
-                        }
-                        if (x == 1) {
-                            g_b = g_b.replace(/column/, "85");
-                        }
-                        if (x == 2) {
-                            g_b = g_b.replace(/column/, "142");
-                        }
-                        if (x == 3) {
-                            g_b = g_b.replace(/column/, "199");
-                        }
-                        if (x == 4) {
-                            g_b = g_b.replace(/column/, "256");
-                        }
-                        if (x == 5) {
-                            g_b = g_b.replace(/column/, "312");
-                        }
-                        if (x == 6) {
-                            g_b = g_b.replace(/column/, "369");
-                        }
-                        if (x == 7) {
-                            g_b = g_b.replace(/column/, "426");
-                        }
-                        if (x == 8) {
-                            g_b = g_b.replace(/column/, "483");
-                        }
-                    }
-                }
-                break;
-            case "10k":
-                key_num_a = 10;
-                if (document.getElementById("continue").checked == true) {
-                    while (g_b.indexOf("column") > -1) {
-
-                        x = Math.random() * 10;
-                        x = Math.floor(x);
-                        if (x == 0) {
-                            g_b = g_b.replace(/column/, "25");
-                        }
-                        if (x == 1) {
-                            g_b = g_b.replace(/column/, "76");
-                        }
-                        if (x == 2) {
-                            g_b = g_b.replace(/column/, "128");
-                        }
-                        if (x == 3) {
-                            g_b = g_b.replace(/column/, "179");
-                        }
-                        if (x == 4) {
-                            g_b = g_b.replace(/column/, "230");
-                        }
-                        if (x == 5) {
-                            g_b = g_b.replace(/column/, "281");
-                        }
-                        if (x == 6) {
-                            g_b = g_b.replace(/column/, "332");
-                        }
-                        if (x == 7) {
-                            g_b = g_b.replace(/column/, "384");
-                        }
-                        if (x == 8) {
-                            g_b = g_b.replace(/column/, "435");
-                        }
-                        if (x == 9) {
-                            g_b = g_b.replace(/column/, "486");
-                        }
-                    }
-                } else {
-                    var y;
-                    while (g_b.indexOf("column") > -1) {
-
-                        x = Math.random() * 10;
-                        x = Math.floor(x);
-                        while (x == y) {
-
-                            x = Math.random() * 10;
-                            x = Math.floor(x);
-                        }
-                        y = x;
-                        if (x == 0) {
-                            g_b = g_b.replace(/column/, "25");
-                        }
-                        if (x == 1) {
-                            g_b = g_b.replace(/column/, "76");
-                        }
-                        if (x == 2) {
-                            g_b = g_b.replace(/column/, "128");
-                        }
-                        if (x == 3) {
-                            g_b = g_b.replace(/column/, "179");
-                        }
-                        if (x == 4) {
-                            g_b = g_b.replace(/column/, "230");
-                        }
-                        if (x == 5) {
-                            g_b = g_b.replace(/column/, "281");
-                        }
-                        if (x == 6) {
-                            g_b = g_b.replace(/column/, "332");
-                        }
-                        if (x == 7) {
-                            g_b = g_b.replace(/column/, "384");
-                        }
-                        if (x == 8) {
-                            g_b = g_b.replace(/column/, "435");
-                        }
-                        if (x == 9) {
-                            g_b = g_b.replace(/column/, "486");
-                        }
-                    }
-                }
-                break;
-            case "11k":
-                key_num_a = 11;
-                if (document.getElementById("continue").checked == true) {
-                    while (g_b.indexOf("column") > -1) {
-
-                        x = Math.random() * 11;
-                        x = Math.floor(x);
-                        if (x == 0) {
-                            g_b = g_b.replace(/column/, "23");
-                        }
-                        if (x == 1) {
-                            g_b = g_b.replace(/column/, "69");
-                        }
-                        if (x == 2) {
-                            g_b = g_b.replace(/column/, "116");
-                        }
-                        if (x == 3) {
-                            g_b = g_b.replace(/column/, "162");
-                        }
-                        if (x == 4) {
-                            g_b = g_b.replace(/column/, "209");
-                        }
-                        if (x == 5) {
-                            g_b = g_b.replace(/column/, "256");
-                        }
-                        if (x == 6) {
-                            g_b = g_b.replace(/column/, "302");
-                        }
-                        if (x == 7) {
-                            g_b = g_b.replace(/column/, "349");
-                        }
-                        if (x == 8) {
-                            g_b = g_b.replace(/column/, "395");
-                        }
-                        if (x == 9) {
-                            g_b = g_b.replace(/column/, "442");
-                        }
-                        if (x == 10) {
-                            g_b = g_b.replace(/column/, "488");
-                        }
-                    }
-                } else {
-                    var y;
-                    while (g_b.indexOf("column") > -1) {
-
-                        x = Math.random() * 11;
-                        x = Math.floor(x);
-                        while (x == y) {
-
-                            x = Math.random() * 11;
-                            x = Math.floor(x);
-                        }
-                        y = x;
-                        if (x == 0) {
-                            g_b = g_b.replace(/column/, "23");
-                        }
-                        if (x == 1) {
-                            g_b = g_b.replace(/column/, "69");
-                        }
-                        if (x == 2) {
-                            g_b = g_b.replace(/column/, "116");
-                        }
-                        if (x == 3) {
-                            g_b = g_b.replace(/column/, "162");
-                        }
-                        if (x == 4) {
-                            g_b = g_b.replace(/column/, "209");
-                        }
-                        if (x == 5) {
-                            g_b = g_b.replace(/column/, "256");
-                        }
-                        if (x == 6) {
-                            g_b = g_b.replace(/column/, "302");
-                        }
-                        if (x == 7) {
-                            g_b = g_b.replace(/column/, "349");
-                        }
-                        if (x == 8) {
-                            g_b = g_b.replace(/column/, "395");
-                        }
-                        if (x == 9) {
-                            g_b = g_b.replace(/column/, "442");
-                        }
-                        if (x == 10) {
-                            g_b = g_b.replace(/column/, "488");
-                        }
-                    }
-                }
-                break;
-            case "12k":
-                key_num_a = 12;
-                if (document.getElementById("continue").checked == true) {
-                    while (g_b.indexOf("column") > -1) {
-
-                        x = Math.random() * 12;
-                        x = Math.floor(x);
-                        if (x == 0) {
-                            g_b = g_b.replace(/column/, "21");
-                        }
-                        if (x == 1) {
-                            g_b = g_b.replace(/column/, "64");
-                        }
-                        if (x == 2) {
-                            g_b = g_b.replace(/column/, "106");
-                        }
-                        if (x == 3) {
-                            g_b = g_b.replace(/column/, "149");
-                        }
-                        if (x == 4) {
-                            g_b = g_b.replace(/column/, "192");
-                        }
-                        if (x == 5) {
-                            g_b = g_b.replace(/column/, "234");
-                        }
-                        if (x == 6) {
-                            g_b = g_b.replace(/column/, "277");
-                        }
-                        if (x == 7) {
-                            g_b = g_b.replace(/column/, "320");
-                        }
-                        if (x == 8) {
-                            g_b = g_b.replace(/column/, "362");
-                        }
-                        if (x == 9) {
-                            g_b = g_b.replace(/column/, "405");
-                        }
-                        if (x == 10) {
-                            g_b = g_b.replace(/column/, "448");
-                        }
-                        if (x == 11) {
-                            g_b = g_b.replace(/column/, "490");
-                        }
-                    }
-                } else {
-                    var y;
-                    while (g_b.indexOf("column") > -1) {
-
-                        x = Math.random() * 12;
-                        x = Math.floor(x);
-                        while (x == y) {
-
-                            x = Math.random() * 12;
-                            x = Math.floor(x);
-                        }
-                        y = x;
-                        if (x == 0) {
-                            g_b = g_b.replace(/column/, "21");
-                        }
-                        if (x == 1) {
-                            g_b = g_b.replace(/column/, "64");
-                        }
-                        if (x == 2) {
-                            g_b = g_b.replace(/column/, "106");
-                        }
-                        if (x == 3) {
-                            g_b = g_b.replace(/column/, "149");
-                        }
-                        if (x == 4) {
-                            g_b = g_b.replace(/column/, "192");
-                        }
-                        if (x == 5) {
-                            g_b = g_b.replace(/column/, "234");
-                        }
-                        if (x == 6) {
-                            g_b = g_b.replace(/column/, "277");
-                        }
-                        if (x == 7) {
-                            g_b = g_b.replace(/column/, "320");
-                        }
-                        if (x == 8) {
-                            g_b = g_b.replace(/column/, "362");
-                        }
-                        if (x == 9) {
-                            g_b = g_b.replace(/column/, "405");
-                        }
-                        if (x == 10) {
-                            g_b = g_b.replace(/column/, "448");
-                        }
-                        if (x == 11) {
-                            g_b = g_b.replace(/column/, "490");
-                        }
-                    }
-                }
-                break;
-            case "13k":
-                key_num_a = 13;
-                if (document.getElementById("continue").checked == true) {
-                    while (g_b.indexOf("column") > -1) {
-
-                        x = Math.random() * 13;
-                        x = Math.floor(x);
-                        if (x == 0) {
-                            g_b = g_b.replace(/column/, "19");
-                        }
-                        if (x == 1) {
-                            g_b = g_b.replace(/column/, "59");
-                        }
-                        if (x == 2) {
-                            g_b = g_b.replace(/column/, "98");
-                        }
-                        if (x == 3) {
-                            g_b = g_b.replace(/column/, "137");
-                        }
-                        if (x == 4) {
-                            g_b = g_b.replace(/column/, "177");
-                        }
-                        if (x == 5) {
-                            g_b = g_b.replace(/column/, "216");
-                        }
-                        if (x == 6) {
-                            g_b = g_b.replace(/column/, "256");
-                        }
-                        if (x == 7) {
-                            g_b = g_b.replace(/column/, "295");
-                        }
-                        if (x == 8) {
-                            g_b = g_b.replace(/column/, "334");
-                        }
-                        if (x == 9) {
-                            g_b = g_b.replace(/column/, "374");
-                        }
-                        if (x == 10) {
-                            g_b = g_b.replace(/column/, "413");
-                        }
-                        if (x == 11) {
-                            g_b = g_b.replace(/column/, "452");
-                        }
-                        if (x == 12) {
-                            g_b = g_b.replace(/column/, "492");
-                        }
-                    }
-                } else {
-                    var y;
-                    while (g_b.indexOf("column") > -1) {
-
-                        x = Math.random() * 13;
-                        x = Math.floor(x);
-                        while (x == y) {
-
-                            x = Math.random() * 13;
-                            x = Math.floor(x);
-                        }
-                        y = x;
-                        if (x == 0) {
-                            g_b = g_b.replace(/column/, "19");
-                        }
-                        if (x == 1) {
-                            g_b = g_b.replace(/column/, "59");
-                        }
-                        if (x == 2) {
-                            g_b = g_b.replace(/column/, "98");
-                        }
-                        if (x == 3) {
-                            g_b = g_b.replace(/column/, "137");
-                        }
-                        if (x == 4) {
-                            g_b = g_b.replace(/column/, "177");
-                        }
-                        if (x == 5) {
-                            g_b = g_b.replace(/column/, "216");
-                        }
-                        if (x == 6) {
-                            g_b = g_b.replace(/column/, "256");
-                        }
-                        if (x == 7) {
-                            g_b = g_b.replace(/column/, "295");
-                        }
-                        if (x == 8) {
-                            g_b = g_b.replace(/column/, "334");
-                        }
-                        if (x == 9) {
-                            g_b = g_b.replace(/column/, "374");
-                        }
-                        if (x == 10) {
-                            g_b = g_b.replace(/column/, "413");
-                        }
-                        if (x == 11) {
-                            g_b = g_b.replace(/column/, "452");
-                        }
-                        if (x == 12) {
-                            g_b = g_b.replace(/column/, "492");
-                        }
-                    }
-                }
-                break;
-            case "14k":
-                key_num_a = 14;
-                if (document.getElementById("continue").checked == true) {
-                    while (g_b.indexOf("column") > -1) {
-
-                        x = Math.random() * 14;
-                        x = Math.floor(x);
-                        if (x == 0) {
-                            g_b = g_b.replace(/column/, "18");
-                        }
-                        if (x == 1) {
-                            g_b = g_b.replace(/column/, "54");
-                        }
-                        if (x == 2) {
-                            g_b = g_b.replace(/column/, "91");
-                        }
-                        if (x == 3) {
-                            g_b = g_b.replace(/column/, "128");
-                        }
-                        if (x == 4) {
-                            g_b = g_b.replace(/column/, "164");
-                        }
-                        if (x == 5) {
-                            g_b = g_b.replace(/column/, "201");
-                        }
-                        if (x == 6) {
-                            g_b = g_b.replace(/column/, "237");
-                        }
-                        if (x == 7) {
-                            g_b = g_b.replace(/column/, "274");
-                        }
-                        if (x == 8) {
-                            g_b = g_b.replace(/column/, "310");
-                        }
-                        if (x == 9) {
-                            g_b = g_b.replace(/column/, "347");
-                        }
-                        if (x == 10) {
-                            g_b = g_b.replace(/column/, "384");
-                        }
-                        if (x == 11) {
-                            g_b = g_b.replace(/column/, "420");
-                        }
-                        if (x == 12) {
-                            g_b = g_b.replace(/column/, "457");
-                        }
-                        if (x == 13) {
-                            g_b = g_b.replace(/column/, "493");
-                        }
-                    }
-                } else {
-                    var y;
-                    while (g_b.indexOf("column") > -1) {
-
-                        x = Math.random() * 14;
-                        x = Math.floor(x);
-                        while (x == y) {
-
-                            x = Math.random() * 14;
-                            x = Math.floor(x);
-                        }
-                        y = x;
-                        if (x == 0) {
-                            g_b = g_b.replace(/column/, "18");
-                        }
-                        if (x == 1) {
-                            g_b = g_b.replace(/column/, "54");
-                        }
-                        if (x == 2) {
-                            g_b = g_b.replace(/column/, "91");
-                        }
-                        if (x == 3) {
-                            g_b = g_b.replace(/column/, "128");
-                        }
-                        if (x == 4) {
-                            g_b = g_b.replace(/column/, "164");
-                        }
-                        if (x == 5) {
-                            g_b = g_b.replace(/column/, "201");
-                        }
-                        if (x == 6) {
-                            g_b = g_b.replace(/column/, "237");
-                        }
-                        if (x == 7) {
-                            g_b = g_b.replace(/column/, "274");
-                        }
-                        if (x == 8) {
-                            g_b = g_b.replace(/column/, "310");
-                        }
-                        if (x == 9) {
-                            g_b = g_b.replace(/column/, "347");
-                        }
-                        if (x == 10) {
-                            g_b = g_b.replace(/column/, "384");
-                        }
-                        if (x == 11) {
-                            g_b = g_b.replace(/column/, "420");
-                        }
-                        if (x == 12) {
-                            g_b = g_b.replace(/column/, "457");
-                        }
-                        if (x == 13) {
-                            g_b = g_b.replace(/column/, "493");
-                        }
-                    }
-                }
-                break;
-            case "15k":
-                key_num_a = 15;
-                if (document.getElementById("continue").checked == true) {
-                    while (g_b.indexOf("column") > -1) {
-
-                        x = Math.random() * 15;
-                        x = Math.floor(x);
-                        if (x == 0) {
-                            g_b = g_b.replace(/column/, "17");
-                        }
-                        if (x == 1) {
-                            g_b = g_b.replace(/column/, "51");
-                        }
-                        if (x == 2) {
-                            g_b = g_b.replace(/column/, "85");
-                        }
-                        if (x == 3) {
-                            g_b = g_b.replace(/column/, "119");
-                        }
-                        if (x == 4) {
-                            g_b = g_b.replace(/column/, "153");
-                        }
-                        if (x == 5) {
-                            g_b = g_b.replace(/column/, "187");
-                        }
-                        if (x == 6) {
-                            g_b = g_b.replace(/column/, "221");
-                        }
-                        if (x == 7) {
-                            g_b = g_b.replace(/column/, "256");
-                        }
-                        if (x == 8) {
-                            g_b = g_b.replace(/column/, "290");
-                        }
-                        if (x == 9) {
-                            g_b = g_b.replace(/column/, "324");
-                        }
-                        if (x == 10) {
-                            g_b = g_b.replace(/column/, "358");
-                        }
-                        if (x == 11) {
-                            g_b = g_b.replace(/column/, "392");
-                        }
-                        if (x == 12) {
-                            g_b = g_b.replace(/column/, "426");
-                        }
-                        if (x == 13) {
-                            g_b = g_b.replace(/column/, "460");
-                        }
-                        if (x == 14) {
-                            g_b = g_b.replace(/column/, "494");
-                        }
-                    }
-                } else {
-                    var y;
-                    while (g_b.indexOf("column") > -1) {
-
-                        x = Math.random() * 15;
-                        x = Math.floor(x);
-                        while (x == y) {
-
-                            x = Math.random() * 15;
-                            x = Math.floor(x);
-                        }
-                        y = x;
-                        if (x == 0) {
-                            g_b = g_b.replace(/column/, "17");
-                        }
-                        if (x == 1) {
-                            g_b = g_b.replace(/column/, "51");
-                        }
-                        if (x == 2) {
-                            g_b = g_b.replace(/column/, "85");
-                        }
-                        if (x == 3) {
-                            g_b = g_b.replace(/column/, "119");
-                        }
-                        if (x == 4) {
-                            g_b = g_b.replace(/column/, "153");
-                        }
-                        if (x == 5) {
-                            g_b = g_b.replace(/column/, "187");
-                        }
-                        if (x == 6) {
-                            g_b = g_b.replace(/column/, "221");
-                        }
-                        if (x == 7) {
-                            g_b = g_b.replace(/column/, "256");
-                        }
-                        if (x == 8) {
-                            g_b = g_b.replace(/column/, "290");
-                        }
-                        if (x == 9) {
-                            g_b = g_b.replace(/column/, "324");
-                        }
-                        if (x == 10) {
-                            g_b = g_b.replace(/column/, "358");
-                        }
-                        if (x == 11) {
-                            g_b = g_b.replace(/column/, "392");
-                        }
-                        if (x == 12) {
-                            g_b = g_b.replace(/column/, "426");
-                        }
-                        if (x == 13) {
-                            g_b = g_b.replace(/column/, "460");
-                        }
-                        if (x == 14) {
-                            g_b = g_b.replace(/column/, "494");
-                        }
-                    }
-                }
-                break;
-            case "16k":
-                key_num_a = 16;
-                if (document.getElementById("continue").checked == true) {
-                    while (g_b.indexOf("column") > -1) {
-
-                        x = Math.random() * 16;
-                        x = Math.floor(x);
-                        if (x == 0) {
-                            g_b = g_b.replace(/column/, "16");
-                        }
-                        if (x == 1) {
-                            g_b = g_b.replace(/column/, "48");
-                        }
-                        if (x == 2) {
-                            g_b = g_b.replace(/column/, "80");
-                        }
-                        if (x == 3) {
-                            g_b = g_b.replace(/column/, "112");
-                        }
-                        if (x == 4) {
-                            g_b = g_b.replace(/column/, "144");
-                        }
-                        if (x == 5) {
-                            g_b = g_b.replace(/column/, "176");
-                        }
-                        if (x == 6) {
-                            g_b = g_b.replace(/column/, "208");
-                        }
-                        if (x == 7) {
-                            g_b = g_b.replace(/column/, "240");
-                        }
-                        if (x == 8) {
-                            g_b = g_b.replace(/column/, "272");
-                        }
-                        if (x == 9) {
-                            g_b = g_b.replace(/column/, "304");
-                        }
-                        if (x == 10) {
-                            g_b = g_b.replace(/column/, "336");
-                        }
-                        if (x == 11) {
-                            g_b = g_b.replace(/column/, "368");
-                        }
-                        if (x == 12) {
-                            g_b = g_b.replace(/column/, "400");
-                        }
-                        if (x == 13) {
-                            g_b = g_b.replace(/column/, "432");
-                        }
-                        if (x == 14) {
-                            g_b = g_b.replace(/column/, "464");
-                        }
-                        if (x == 15) {
-                            g_b = g_b.replace(/column/, "496");
-                        }
-                    }
-                } else {
-                    var y;
-                    while (g_b.indexOf("column") > -1) {
-
-                        x = Math.random() * 16;
-                        x = Math.floor(x);
-                        while (x == y) {
-
-                            x = Math.random() * 16;
-                            x = Math.floor(x);
-                        }
-                        y = x;
-                        if (x == 0) {
-                            g_b = g_b.replace(/column/, "16");
-                        }
-                        if (x == 1) {
-                            g_b = g_b.replace(/column/, "48");
-                        }
-                        if (x == 2) {
-                            g_b = g_b.replace(/column/, "80");
-                        }
-                        if (x == 3) {
-                            g_b = g_b.replace(/column/, "112");
-                        }
-                        if (x == 4) {
-                            g_b = g_b.replace(/column/, "144");
-                        }
-                        if (x == 5) {
-                            g_b = g_b.replace(/column/, "176");
-                        }
-                        if (x == 6) {
-                            g_b = g_b.replace(/column/, "208");
-                        }
-                        if (x == 7) {
-                            g_b = g_b.replace(/column/, "240");
-                        }
-                        if (x == 8) {
-                            g_b = g_b.replace(/column/, "272");
-                        }
-                        if (x == 9) {
-                            g_b = g_b.replace(/column/, "304");
-                        }
-                        if (x == 10) {
-                            g_b = g_b.replace(/column/, "336");
-                        }
-                        if (x == 11) {
-                            g_b = g_b.replace(/column/, "368");
-                        }
-                        if (x == 12) {
-                            g_b = g_b.replace(/column/, "400");
-                        }
-                        if (x == 13) {
-                            g_b = g_b.replace(/column/, "432");
-                        }
-                        if (x == 14) {
-                            g_b = g_b.replace(/column/, "464");
-                        }
-                        if (x == 15) {
-                            g_b = g_b.replace(/column/, "496");
-                        }
-                    }
-                }
-                break;
-            case "17k":
-                key_num_a = 17;
-                if (document.getElementById("continue").checked == true) {
-                    while (g_b.indexOf("column") > -1) {
-
-                        x = Math.random() * 17;
-                        x = Math.floor(x);
-                        if (x == 0) {
-                            g_b = g_b.replace(/column/, "15");
-                        }
-                        if (x == 1) {
-                            g_b = g_b.replace(/column/, "45");
-                        }
-                        if (x == 2) {
-                            g_b = g_b.replace(/column/, "75");
-                        }
-                        if (x == 3) {
-                            g_b = g_b.replace(/column/, "105");
-                        }
-                        if (x == 4) {
-                            g_b = g_b.replace(/column/, "135");
-                        }
-                        if (x == 5) {
-                            g_b = g_b.replace(/column/, "165");
-                        }
-                        if (x == 6) {
-                            g_b = g_b.replace(/column/, "195");
-                        }
-                        if (x == 7) {
-                            g_b = g_b.replace(/column/, "225");
-                        }
-                        if (x == 8) {
-                            g_b = g_b.replace(/column/, "256");
-                        }
-                        if (x == 9) {
-                            g_b = g_b.replace(/column/, "286");
-                        }
-                        if (x == 10) {
-                            g_b = g_b.replace(/column/, "316");
-                        }
-                        if (x == 11) {
-                            g_b = g_b.replace(/column/, "346");
-                        }
-                        if (x == 12) {
-                            g_b = g_b.replace(/column/, "376");
-                        }
-                        if (x == 13) {
-                            g_b = g_b.replace(/column/, "406");
-                        }
-                        if (x == 14) {
-                            g_b = g_b.replace(/column/, "436");
-                        }
-                        if (x == 15) {
-                            g_b = g_b.replace(/column/, "466");
-                        }
-                        if (x == 16) {
-                            g_b = g_b.replace(/column/, "496");
-                        }
-                    }
-                } else {
-                    var y;
-                    while (g_b.indexOf("column") > -1) {
-
-                        x = Math.random() * 17;
-                        x = Math.floor(x);
-                        while (x == y) {
-
-                            x = Math.random() * 17;
-                            x = Math.floor(x);
-                        }
-                        y = x;
-                        if (x == 0) {
-                            g_b = g_b.replace(/column/, "15");
-                        }
-                        if (x == 1) {
-                            g_b = g_b.replace(/column/, "45");
-                        }
-                        if (x == 2) {
-                            g_b = g_b.replace(/column/, "75");
-                        }
-                        if (x == 3) {
-                            g_b = g_b.replace(/column/, "105");
-                        }
-                        if (x == 4) {
-                            g_b = g_b.replace(/column/, "135");
-                        }
-                        if (x == 5) {
-                            g_b = g_b.replace(/column/, "165");
-                        }
-                        if (x == 6) {
-                            g_b = g_b.replace(/column/, "195");
-                        }
-                        if (x == 7) {
-                            g_b = g_b.replace(/column/, "225");
-                        }
-                        if (x == 8) {
-                            g_b = g_b.replace(/column/, "256");
-                        }
-                        if (x == 9) {
-                            g_b = g_b.replace(/column/, "286");
-                        }
-                        if (x == 10) {
-                            g_b = g_b.replace(/column/, "316");
-                        }
-                        if (x == 11) {
-                            g_b = g_b.replace(/column/, "346");
-                        }
-                        if (x == 12) {
-                            g_b = g_b.replace(/column/, "376");
-                        }
-                        if (x == 13) {
-                            g_b = g_b.replace(/column/, "406");
-                        }
-                        if (x == 14) {
-                            g_b = g_b.replace(/column/, "436");
-                        }
-                        if (x == 15) {
-                            g_b = g_b.replace(/column/, "466");
-                        }
-                        if (x == 16) {
-                            g_b = g_b.replace(/column/, "496");
-                        }
-                    }
-                }
-                break;
-            case "18k":
-                key_num_a = 18;
-                if (document.getElementById("continue").checked == true) {
-                    while (g_b.indexOf("column") > -1) {
-
-                        x = Math.random() * 18;
-                        x = Math.floor(x);
-                        if (x == 0) {
-                            g_b = g_b.replace(/column/, "14");
-                        }
-                        if (x == 1) {
-                            g_b = g_b.replace(/column/, "42");
-                        }
-                        if (x == 2) {
-                            g_b = g_b.replace(/column/, "71");
-                        }
-                        if (x == 3) {
-                            g_b = g_b.replace(/column/, "99");
-                        }
-                        if (x == 4) {
-                            g_b = g_b.replace(/column/, "128");
-                        }
-                        if (x == 5) {
-                            g_b = g_b.replace(/column/, "156");
-                        }
-                        if (x == 6) {
-                            g_b = g_b.replace(/column/, "184");
-                        }
-                        if (x == 7) {
-                            g_b = g_b.replace(/column/, "213");
-                        }
-                        if (x == 8) {
-                            g_b = g_b.replace(/column/, "241");
-                        }
-                        if (x == 9) {
-                            g_b = g_b.replace(/column/, "270");
-                        }
-                        if (x == 10) {
-                            g_b = g_b.replace(/column/, "298");
-                        }
-                        if (x == 11) {
-                            g_b = g_b.replace(/column/, "327");
-                        }
-                        if (x == 12) {
-                            g_b = g_b.replace(/column/, "355");
-                        }
-                        if (x == 13) {
-                            g_b = g_b.replace(/column/, "384");
-                        }
-                        if (x == 14) {
-                            g_b = g_b.replace(/column/, "412");
-                        }
-                        if (x == 15) {
-                            g_b = g_b.replace(/column/, "440");
-                        }
-                        if (x == 16) {
-                            g_b = g_b.replace(/column/, "469");
-                        }
-                        if (x == 17) {
-                            g_b = g_b.replace(/column/, "497");
-                        }
-                    }
-                } else {
-                    var y;
-                    while (g_b.indexOf("column") > -1) {
-
-                        x = Math.random() * 18;
-                        x = Math.floor(x);
-                        while (x == y) {
-
-                            x = Math.random() * 18;
-                            x = Math.floor(x);
-                        }
-                        y = x;
-                        if (x == 0) {
-                            g_b = g_b.replace(/column/, "14");
-                        }
-                        if (x == 1) {
-                            g_b = g_b.replace(/column/, "42");
-                        }
-                        if (x == 2) {
-                            g_b = g_b.replace(/column/, "71");
-                        }
-                        if (x == 3) {
-                            g_b = g_b.replace(/column/, "99");
-                        }
-                        if (x == 4) {
-                            g_b = g_b.replace(/column/, "128");
-                        }
-                        if (x == 5) {
-                            g_b = g_b.replace(/column/, "156");
-                        }
-                        if (x == 6) {
-                            g_b = g_b.replace(/column/, "184");
-                        }
-                        if (x == 7) {
-                            g_b = g_b.replace(/column/, "213");
-                        }
-                        if (x == 8) {
-                            g_b = g_b.replace(/column/, "241");
-                        }
-                        if (x == 9) {
-                            g_b = g_b.replace(/column/, "270");
-                        }
-                        if (x == 10) {
-                            g_b = g_b.replace(/column/, "298");
-                        }
-                        if (x == 11) {
-                            g_b = g_b.replace(/column/, "327");
-                        }
-                        if (x == 12) {
-                            g_b = g_b.replace(/column/, "355");
-                        }
-                        if (x == 13) {
-                            g_b = g_b.replace(/column/, "384");
-                        }
-                        if (x == 14) {
-                            g_b = g_b.replace(/column/, "412");
-                        }
-                        if (x == 15) {
-                            g_b = g_b.replace(/column/, "440");
-                        }
-                        if (x == 16) {
-                            g_b = g_b.replace(/column/, "469");
-                        }
-                        if (x == 17) {
-                            g_b = g_b.replace(/column/, "497");
-                        }
-                    }
-                }
-                break;
-        }
-        Function1();
-        a = a.split(",");
-        var i_a = /\((.+?)\)/g;
-        var i_b = /\[(.+?)\]/g;
-        j_a = "";
-        for (g_a = 0; g_a < a.length - 1; g_a++) {
-            g_f = a[g_a].match(i_a);
-            if (g_f === null) {
-                g_b = g_b.replace("sound", "");
-                j_a = j_a + "," + a[g_a].match(i_b).toString();
-            } else {
-                g_f = g_f.toString();
-                if (g_f.indexOf(".") > -1 || g_f.indexOf("!") > -1 || g_f.indexOf("~") > -1 || g_f.indexOf("@") > -1 || g_f.indexOf("$") > -1 || g_f.indexOf("%") > -1 || g_f.indexOf("^") > -1 || g_f.indexOf("&") > -1) {
-                    if (g_f.indexOf("^") > -1 || g_f.indexOf("&") > -1) {
-                        g_b = g_b.replace("sound", "");
-                        j_a = j_a + "," + a[g_a].match(i_b).toString();
-                    } else {
-                        g_h = g_f;
-                        g_f = g_f.replace("(", "");
-                        g_f = g_f.replace(")", "");
-                        g_f = g_f.replace(".", ",");
-                        g_f = g_f.replace("~", ",");
-                        g_f = g_f.replace("!", ",");
-                        g_f = g_f.replace("@", ",");
-                        g_f = g_f.replace("$", ",");
-                        g_f = g_f.replace("%", ",");
-                        g_f = g_f.split(",");
-                        g_b = g_b.replace("sound", "midi_timbre_id/" + g_f[0]);
-                        g_h = g_h.replace(g_f[0], "mute");
-                        j_a = j_a + "," + g_h + a[g_a].match(i_b).toString();
-                    }
-                } else {
-                    g_f = g_f.replace("(", "");
-                    g_f = g_f.replace(")", "");
-                    g_b = g_b.replace("sound", "midi_timbre_id/" + g_f);
-                    j_a = j_a + "," + a[g_a].match(i_b).toString();
-                }
-            }
-        }
-        i_c = g_b;
-        j_a = j_a.replace(",", "");
-        a = j_a;
-        Function1_a();
-        j_a = a;
-        ha5 = i_c;
-    }
 }
 //声音转换部分
 function Function1() {
@@ -5002,201 +3843,608 @@ function Function1() {
         }
     }
     b = a;
-    var music_sound_array = new Array();
-    for (c = 0; c < b.length - 1; c++) {
-        music1_reg = /\((.*?)\)/;
-        music1_tmp = a[c].match(music1_reg);
-        if (c == 0) {
-            b[c] = 0;
-        } else {
-            b[c] = NoteTimeLength[c - 1];
+    if (games_type != "om") {
+        //malody
+        var music_sound_array = new Array();
+        for (c = 0; c < b.length - 1; c++) {
+            music1_reg = /\((.*?)\)/;
+            music1_tmp = a[c].match(music1_reg);
+            if (c == 0) {
+                b[c] = 0;
+            } else {
+                b[c] = NoteTimeLength[c - 1];
+            }
+            music_sound_array[c] = music1_tmp[1];
         }
-        music_sound_array[c] = music1_tmp[1];
-    }
-    a_music_array = new Array();
-    //合并相同功能的字符
-    for (c = 0; c < b.length - 1; c++) {
-        note_divide = b[c];
-        a_music_array[c] = { beat: [0, note_divide, 32], type: 1, vol: parseFloat(document.getElementById("vol").value), sound: music_sound_array[c] };
-        if (a_music_array[c].sound.indexOf("$") > -1) {
-            a_music_array[c].sound = a_music_array[c].sound.replace(/\$/g, '~');
+        a_music_array = new Array();
+        //合并相同功能的字符
+        for (c = 0; c < b.length - 1; c++) {
+            note_divide = b[c];
+            a_music_array[c] = { beat: [0, note_divide, 32], type: 1, vol: parseFloat(document.getElementById("vol").value), sound: music_sound_array[c] };
+            if (a_music_array[c].sound.indexOf("$") > -1) {
+                a_music_array[c].sound = a_music_array[c].sound.replace(/\$/g, '~');
+            }
+            if (a_music_array[c].sound.indexOf("&") > -1) {
+                a_music_array[c].sound = a_music_array[c].sound.replace(/\&/g, '^');
+            }
         }
-        if (a_music_array[c].sound.indexOf("&") > -1) {
-            a_music_array[c].sound = a_music_array[c].sound.replace(/\&/g, '^');
+        j = new Array();
+        for (c = 0; c < b.length - 1; c++) {
+            if (c == 0) {
+                j[c] = NoteTimeLength[c];
+            } else {
+                j[c] = NoteTimeLength[c] - NoteTimeLength[c - 1];
+            }
         }
-    }
-    j = new Array();
-    for (c = 0; c < b.length - 1; c++) {
-        if (c == 0) {
-            j[c] = NoteTimeLength[c];
-        } else {
-            j[c] = NoteTimeLength[c] - NoteTimeLength[c - 1];
+        a_music_array.sort();
+        MusicArrayTest = new Array();
+        MusicArrayTestEnd = new Array();
+        var MusicArrayTestNum = 0;
+        for (c = 0; c < a_music_array.length; c++) {
+            //不赞成使用 ^ 与 & 字符，故与原游戏的播放效果不同
+            if (typeof (a_music_array[c]) == "undefined") {
+                a_music_array.splice(c, 1);
+            } else if (a_music_array[c].sound.indexOf("^") > -1) {
+                MusicArrayAdd = j[c] + a_music_array[c].beat[1];
+                a_music_array[c].sound = a_music_array[c].sound.replace(/@/g, '^');
+                a_music_array[c].sound = a_music_array[c].sound.replace(/!/g, '^');
+                a_music_array[c].sound = a_music_array[c].sound.replace(/%/g, '^');
+                a_music_array[c].sound = a_music_array[c].sound.replace(/~/g, '^');
+                a_music_array[c].sound = a_music_array[c].sound + "^" + a_music_array[c].sound + "^" + a_music_array[c].sound;
+                a_music_array[c].sound = a_music_array[c].sound.replace(/\^/g, '*');
+                MusicArrayTest[MusicArrayTestNum] = a_music_array[c];
+                MusicArrayTestEnd[MusicArrayTestNum] = j[c];
+                MusicArrayTestNum++;
+            }
         }
-    }
-    a_music_array.sort();
-    MusicArrayTest = new Array();
-    MusicArrayTestEnd = new Array();
-    var MusicArrayTestNum = 0;
-    for (c = 0; c < a_music_array.length; c++) {
-        //不赞成使用 ^ 与 & 字符，故与原游戏的播放效果不同
-        if (typeof (a_music_array[c]) == "undefined") {
-            a_music_array.splice(c, 1);
-        } else if (a_music_array[c].sound.indexOf("^") > -1) {
-            MusicArrayAdd = j[c] + a_music_array[c].beat[1];
-            a_music_array[c].sound = a_music_array[c].sound.replace(/@/g, '^');
-            a_music_array[c].sound = a_music_array[c].sound.replace(/!/g, '^');
-            a_music_array[c].sound = a_music_array[c].sound.replace(/%/g, '^');
-            a_music_array[c].sound = a_music_array[c].sound.replace(/~/g, '^');
-            a_music_array[c].sound = a_music_array[c].sound + "^" + a_music_array[c].sound + "^" + a_music_array[c].sound;
-            a_music_array[c].sound = a_music_array[c].sound.replace(/\^/g, '*');
-            MusicArrayTest[MusicArrayTestNum] = a_music_array[c];
-            MusicArrayTestEnd[MusicArrayTestNum] = j[c];
-            MusicArrayTestNum++;
+        for (c = 0; c < a_music_array.length; c++) {
+            //不允许琶音与连音混装在一个括号内，在连音括号内的琶音音符会转换为连音
+            if (typeof (a_music_array[c]) == "undefined") {
+                a_music_array.splice(c, 1);
+            } else if (a_music_array[c].sound.indexOf("~") > -1) {
+                MusicArrayAdd = j[c] + a_music_array[c].beat[1];
+                a_music_array[c].sound = a_music_array[c].sound.replace(/@/g, '*');
+                a_music_array[c].sound = a_music_array[c].sound.replace(/!/g, '*');
+                a_music_array[c].sound = a_music_array[c].sound.replace(/%/g, '*');
+                MusicArrayTest[MusicArrayTestNum] = a_music_array[c];
+                a_music_array[c].sound = a_music_array[c].sound.replace(/\~/g, '*');
+                MusicArrayTestEnd[MusicArrayTestNum] = j[c];
+                MusicArrayTestNum++;
+            }
         }
-    }
-    for (c = 0; c < a_music_array.length; c++) {
-        //不允许琶音与连音混装在一个括号内，在连音括号内的琶音音符会转换为连音
-        if (typeof (a_music_array[c]) == "undefined") {
-            a_music_array.splice(c, 1);
-        } else if (a_music_array[c].sound.indexOf("~") > -1) {
-            MusicArrayAdd = j[c] + a_music_array[c].beat[1];
-            a_music_array[c].sound = a_music_array[c].sound.replace(/@/g, '*');
-            a_music_array[c].sound = a_music_array[c].sound.replace(/!/g, '*');
-            a_music_array[c].sound = a_music_array[c].sound.replace(/%/g, '*');
-            MusicArrayTest[MusicArrayTestNum] = a_music_array[c];
-            a_music_array[c].sound = a_music_array[c].sound.replace(/\~/g, '*');
-            MusicArrayTestEnd[MusicArrayTestNum] = j[c];
-            MusicArrayTestNum++;
+        for (c = 0; c < a_music_array.length; c++) {
+            //琶音转换
+            if (typeof (a_music_array[c]) == "undefined") {
+                a_music_array.splice(c, 1);
+            } else if (a_music_array[c].sound.indexOf("@") > -1) {
+                MusicArrayAdd = j[c] + a_music_array[c].beat[1];
+                //琶音不允许混用，按从短到长琶音的优先级处理
+                a_music_array[c].sound = a_music_array[c].sound.replace(/!/g, '@');
+                a_music_array[c].sound = a_music_array[c].sound.replace(/%/g, '@');
+                MusicArrayTest[MusicArrayTestNum] = a_music_array[c];
+                a_music_array[c].sound = a_music_array[c].sound.replace(/\@/g, '*');
+                MusicArrayTestEnd[MusicArrayTestNum] = Math.ceil(j[c] / 4);
+                MusicArrayTestNum++;
+            }
         }
-    }
-    for (c = 0; c < a_music_array.length; c++) {
-        //琶音转换
-        if (typeof (a_music_array[c]) == "undefined") {
-            a_music_array.splice(c, 1);
-        } else if (a_music_array[c].sound.indexOf("@") > -1) {
-            MusicArrayAdd = j[c] + a_music_array[c].beat[1];
-            //琶音不允许混用，按从短到长琶音的优先级处理
-            a_music_array[c].sound = a_music_array[c].sound.replace(/!/g, '@');
-            a_music_array[c].sound = a_music_array[c].sound.replace(/%/g, '@');
-            MusicArrayTest[MusicArrayTestNum] = a_music_array[c];
-            a_music_array[c].sound = a_music_array[c].sound.replace(/\@/g, '*');
-            MusicArrayTestEnd[MusicArrayTestNum] = Math.ceil(j[c] / 4);
-            MusicArrayTestNum++;
+        for (c = 0; c < a_music_array.length; c++) {
+            //琶音转换
+            if (typeof (a_music_array[c]) == "undefined") {
+                a_music_array.splice(c, 1);
+            } else if (a_music_array[c].sound.indexOf("%") > -1) {
+                MusicArrayAdd = j[c] + a_music_array[c].beat[1];
+                //琶音不允许混用，按从短到长琶音的优先级处理
+                a_music_array[c].sound = a_music_array[c].sound.replace(/!/g, '%');
+                MusicArrayTest[MusicArrayTestNum] = a_music_array[c];
+                a_music_array[c].sound = a_music_array[c].sound.replace(/\%/g, '*');
+                MusicArrayTestEnd[MusicArrayTestNum] = Math.ceil(j[c] / 3);
+                MusicArrayTestNum++;
+            }
         }
-    }
-    for (c = 0; c < a_music_array.length; c++) {
-        //琶音转换
-        if (typeof (a_music_array[c]) == "undefined") {
-            a_music_array.splice(c, 1);
-        } else if (a_music_array[c].sound.indexOf("%") > -1) {
-            MusicArrayAdd = j[c] + a_music_array[c].beat[1];
-            //琶音不允许混用，按从短到长琶音的优先级处理
-            a_music_array[c].sound = a_music_array[c].sound.replace(/!/g, '%');
-            MusicArrayTest[MusicArrayTestNum] = a_music_array[c];
-            a_music_array[c].sound = a_music_array[c].sound.replace(/\%/g, '*');
-            MusicArrayTestEnd[MusicArrayTestNum] = Math.ceil(j[c] / 3);
-            MusicArrayTestNum++;
+        for (c = 0; c < a_music_array.length; c++) {
+            //琶音转换
+            if (typeof (a_music_array[c]) == "undefined") {
+                a_music_array.splice(c, 1);
+            } else if (a_music_array[c].sound.indexOf("!") > -1) {
+                MusicArrayAdd = j[c] + a_music_array[c].beat[1];
+                MusicArrayTest[MusicArrayTestNum] = a_music_array[c];
+                a_music_array[c].sound = a_music_array[c].sound.replace(/\!/g, '*');
+                MusicArrayTestEnd[MusicArrayTestNum] = Math.ceil(j[c] / 2);
+                MusicArrayTestNum++;
+            }
         }
-    }
-    for (c = 0; c < a_music_array.length; c++) {
-        //琶音转换
-        if (typeof (a_music_array[c]) == "undefined") {
-            a_music_array.splice(c, 1);
-        } else if (a_music_array[c].sound.indexOf("!") > -1) {
-            MusicArrayAdd = j[c] + a_music_array[c].beat[1];
-            MusicArrayTest[MusicArrayTestNum] = a_music_array[c];
-            a_music_array[c].sound = a_music_array[c].sound.replace(/\!/g, '*');
-            MusicArrayTestEnd[MusicArrayTestNum] = Math.ceil(j[c] / 2);
-            MusicArrayTestNum++;
-        }
-    }
-    var MusicArrayAdd = new Array();
-    var num = 0;
-    for (c = 0; c < MusicArrayTest.length; c++) {
-        MusicArraySoundArray = MusicArrayTest[c].sound.split("*");
-        beat_c = MusicArrayTest[c].beat[1];
-        beat_c = beat_c * MusicArraySoundArray.length;
-        for (i = 0; i < MusicArraySoundArray.length; i++) {
-            var beat_d = beat_c + MusicArrayTestEnd[c] * i;
-            note_divide_base = 32 * MusicArraySoundArray.length;
-            note_rhythm = Math.floor(beat_d / note_divide_base);
-            note_divide = beat_d - note_divide_base * note_rhythm;
-            MusicArrayAdd[num] = { beat: [note_rhythm, note_divide, 32 * MusicArraySoundArray.length], type: 1, vol: parseFloat(document.getElementById("vol").value), sound: MusicArraySoundArray[i] };
-            num++;
-        }
-    }
-    //删除无用数组
-    for (c = 0; c < a_music_array.length; c++) {
-        if (a_music_array[c].sound.indexOf("*") > -1) {
-            a_music_array.splice(c, 1);
-            c = c - 1;
-        }
-    }
-    a_music_array.sort();
-    //合并
-    a_music_array = a_music_array.concat(MusicArrayAdd);
-    //整理音符位置
-    for (c = 0; c < a_music_array.length; c++) {
-        if (a_music_array[c].beat[1] >= a_music_array[c].beat[2]) {
-            note_rhythm = Math.floor((a_music_array[c].beat[1]) / a_music_array[c].beat[2]);
-            note_divide = a_music_array[c].beat[1] - 32 * note_rhythm;
-            a_music_array[c].beat[0] = note_rhythm;
-            a_music_array[c].beat[1] = note_divide;
-        }
-    }
-    //和弦处理
-    var MusicArrayAdd = new Array();
-    var num = 0;
-    for (c = 0; c < a_music_array.length; c++) {
-        if (a_music_array[c].sound.indexOf(".") > -1) {
-            MusicArraySoundArray = a_music_array[c].sound.split(".");
+        var MusicArrayAdd = new Array();
+        var num = 0;
+        for (c = 0; c < MusicArrayTest.length; c++) {
+            MusicArraySoundArray = MusicArrayTest[c].sound.split("*");
+            beat_c = MusicArrayTest[c].beat[1];
+            beat_c = beat_c * MusicArraySoundArray.length;
             for (i = 0; i < MusicArraySoundArray.length; i++) {
-                MusicArrayAdd[num] = { beat: [a_music_array[c].beat[0], a_music_array[c].beat[1], a_music_array[c].beat[2]], type: 1, vol: parseFloat(document.getElementById("vol").value), sound: MusicArraySoundArray[i] };
+                var beat_d = beat_c + MusicArrayTestEnd[c] * i;
+                note_divide_base = 32 * MusicArraySoundArray.length;
+                note_rhythm = Math.floor(beat_d / note_divide_base);
+                note_divide = beat_d - note_divide_base * note_rhythm;
+                MusicArrayAdd[num] = { beat: [note_rhythm, note_divide, 32 * MusicArraySoundArray.length], type: 1, vol: parseFloat(document.getElementById("vol").value), sound: MusicArraySoundArray[i] };
                 num++;
             }
-            a_music_array.splice(c, 1);
-            c = c - 1;
         }
-    }
-    a_music_array = a_music_array.concat(MusicArrayAdd);
-    //删除休止符
-    for (c = 0; c < a_music_array.length; c++) {
-        if (a_music_array[c].sound == "mute") {
-            a_music_array.splice(c, 1);
-            c = c - 1;
-        } else {
-            //音色读取
+        //删除无用数组
+        for (c = 0; c < a_music_array.length; c++) {
+            if (a_music_array[c].sound.indexOf("*") > -1) {
+                a_music_array.splice(c, 1);
+                c = c - 1;
+            }
+        }
+        a_music_array.sort();
+        //合并
+        a_music_array = a_music_array.concat(MusicArrayAdd);
+        //整理音符位置
+        for (c = 0; c < a_music_array.length; c++) {
+            if (a_music_array[c].beat[1] >= a_music_array[c].beat[2]) {
+                note_rhythm = Math.floor((a_music_array[c].beat[1]) / a_music_array[c].beat[2]);
+                note_divide = a_music_array[c].beat[1] - 32 * note_rhythm;
+                a_music_array[c].beat[0] = note_rhythm;
+                a_music_array[c].beat[1] = note_divide;
+            }
+        }
+        //和弦处理
+        var MusicArrayAdd = new Array();
+        var num = 0;
+        for (c = 0; c < a_music_array.length; c++) {
+            if (a_music_array[c].sound.indexOf(".") > -1) {
+                MusicArraySoundArray = a_music_array[c].sound.split(".");
+                for (i = 0; i < MusicArraySoundArray.length; i++) {
+                    MusicArrayAdd[num] = { beat: [a_music_array[c].beat[0], a_music_array[c].beat[1], a_music_array[c].beat[2]], type: 1, vol: parseFloat(document.getElementById("vol").value), sound: MusicArraySoundArray[i] };
+                    num++;
+                }
+                a_music_array.splice(c, 1);
+                c = c - 1;
+            }
+        }
+        a_music_array = a_music_array.concat(MusicArrayAdd);
+        //删除休止符
+        for (c = 0; c < a_music_array.length; c++) {
+            if (a_music_array[c].sound == "mute") {
+                a_music_array.splice(c, 1);
+                c = c - 1;
+            } else {
+                //音色读取
+                var InstrumentsOutput;
+                switch (Fileinstruments) {
+                    case "piano": {
+                        InstrumentsOutput = "0_0";
+                    }
+                        break;
+                    case "bass": {
+                        InstrumentsOutput = "0_20";
+                    }
+                        break;
+                    case "bass2": {
+                        InstrumentsOutput = "0_23";
+                    }
+                        break;
+                    case "drum": {
+                        InstrumentsOutput = "80_0";
+                    }
+                        break;
+                }
+                if (Fileinstruments !== "piano" && Fileinstruments !== "bass" && Fileinstruments !== "bass2" && Fileinstruments !== "drum") {
+                    InstrumentsOutput = Fileinstruments;
+                }
+                a_music_array[c].sound = "./" + InstrumentsOutput + "/" + a_music_array[c].sound + ".mp3";
+            }
+        }
+        time = time.concat(a_music_array);
+    } else {
+        //osu
+        //打击音检测
+        //id循环
+        for (SoundArrayId_i = 0; SoundArrayId_i < SoundArrayId.length; SoundArrayId_i++) {
+            for (tracks_i = 0; tracks_i < SoundArrayId[SoundArrayId_i].length; tracks_i++) {
+                for (notes_i = 0; notes_i < SoundArrayId[SoundArrayId_i][tracks_i].length; notes_i++) {
+                    //自动纠错音符错误
+                    SoundArrayId[SoundArrayId_i][tracks_i][notes_i] = SoundArrayId[SoundArrayId_i][tracks_i][notes_i].replace(/#e/g, "f");
+                    SoundArrayId[SoundArrayId_i][tracks_i][notes_i] = SoundArrayId[SoundArrayId_i][tracks_i][notes_i].replace(/#b/g, "c1");
+                    SoundArrayId[SoundArrayId_i][tracks_i][notes_i] = SoundArrayId[SoundArrayId_i][tracks_i][notes_i].replace(/#b1/g, "c2");
+                    SoundArrayId[SoundArrayId_i][tracks_i][notes_i] = SoundArrayId[SoundArrayId_i][tracks_i][notes_i].replace(/#b2/g, "c3");
+                    SoundArrayId[SoundArrayId_i][tracks_i][notes_i] = SoundArrayId[SoundArrayId_i][tracks_i][notes_i].replace(/#b3/g, "c4");
+                    SoundArrayId[SoundArrayId_i][tracks_i][notes_i] = SoundArrayId[SoundArrayId_i][tracks_i][notes_i].replace(/#b4/g, "c5");
+                    SoundArrayId[SoundArrayId_i][tracks_i][notes_i] = SoundArrayId[SoundArrayId_i][tracks_i][notes_i].replace(/#E/g, "F");
+                    SoundArrayId[SoundArrayId_i][tracks_i][notes_i] = SoundArrayId[SoundArrayId_i][tracks_i][notes_i].replace(/#B-1/g, "c");
+                    SoundArrayId[SoundArrayId_i][tracks_i][notes_i] = SoundArrayId[SoundArrayId_i][tracks_i][notes_i].replace(/#B-2/g, "C-1");
+                    SoundArrayId[SoundArrayId_i][tracks_i][notes_i] = SoundArrayId[SoundArrayId_i][tracks_i][notes_i].replace(/#B-3/g, "C-2");
+                    //删除串烧音效
+                    SoundArrayId[SoundArrayId_i][tracks_i][notes_i] = SoundArrayId[SoundArrayId_i][tracks_i][notes_i].replace(/chuanshao/g, "mute");
+                    //对钢琴块复制品的json的兼容
+                    if (SoundArrayId[SoundArrayId_i][tracks_i][notes_i].indexOf("zz") > -1) {
+                        SoundArrayId[SoundArrayId_i][tracks_i][notes_i] = SoundArrayId[SoundArrayId_i][tracks_i][notes_i].replace(/zz01/g, "A-3");
+                        SoundArrayId[SoundArrayId_i][tracks_i][notes_i] = SoundArrayId[SoundArrayId_i][tracks_i][notes_i].replace(/zz02/g, "#A-3");
+                        SoundArrayId[SoundArrayId_i][tracks_i][notes_i] = SoundArrayId[SoundArrayId_i][tracks_i][notes_i].replace(/zz03/g, "B-3");
+                        SoundArrayId[SoundArrayId_i][tracks_i][notes_i] = SoundArrayId[SoundArrayId_i][tracks_i][notes_i].replace(/zz04/g, "C-2");
+                        SoundArrayId[SoundArrayId_i][tracks_i][notes_i] = SoundArrayId[SoundArrayId_i][tracks_i][notes_i].replace(/zz05/g, "#C-2");
+                        SoundArrayId[SoundArrayId_i][tracks_i][notes_i] = SoundArrayId[SoundArrayId_i][tracks_i][notes_i].replace(/zz06/g, "D-2");
+                        SoundArrayId[SoundArrayId_i][tracks_i][notes_i] = SoundArrayId[SoundArrayId_i][tracks_i][notes_i].replace(/zz07/g, "#D-2");
+                        SoundArrayId[SoundArrayId_i][tracks_i][notes_i] = SoundArrayId[SoundArrayId_i][tracks_i][notes_i].replace(/zz08/g, "E-2");
+                        SoundArrayId[SoundArrayId_i][tracks_i][notes_i] = SoundArrayId[SoundArrayId_i][tracks_i][notes_i].replace(/zz09/g, "F-2");
+                        SoundArrayId[SoundArrayId_i][tracks_i][notes_i] = SoundArrayId[SoundArrayId_i][tracks_i][notes_i].replace(/zz10/g, "#F-2");
+                        SoundArrayId[SoundArrayId_i][tracks_i][notes_i] = SoundArrayId[SoundArrayId_i][tracks_i][notes_i].replace(/zz11/g, "G-2");
+                        SoundArrayId[SoundArrayId_i][tracks_i][notes_i] = SoundArrayId[SoundArrayId_i][tracks_i][notes_i].replace(/zz12/g, "#G-2");
+                        SoundArrayId[SoundArrayId_i][tracks_i][notes_i] = SoundArrayId[SoundArrayId_i][tracks_i][notes_i].replace(/zz13/g, "A-2");
+                        SoundArrayId[SoundArrayId_i][tracks_i][notes_i] = SoundArrayId[SoundArrayId_i][tracks_i][notes_i].replace(/zz14/g, "#A-2");
+                        SoundArrayId[SoundArrayId_i][tracks_i][notes_i] = SoundArrayId[SoundArrayId_i][tracks_i][notes_i].replace(/zz15/g, "B-2");
+                        SoundArrayId[SoundArrayId_i][tracks_i][notes_i] = SoundArrayId[SoundArrayId_i][tracks_i][notes_i].replace(/zz16/g, "C-1");
+                        SoundArrayId[SoundArrayId_i][tracks_i][notes_i] = SoundArrayId[SoundArrayId_i][tracks_i][notes_i].replace(/zz17/g, "#C-1");
+                        SoundArrayId[SoundArrayId_i][tracks_i][notes_i] = SoundArrayId[SoundArrayId_i][tracks_i][notes_i].replace(/zz18/g, "D-1");
+                        SoundArrayId[SoundArrayId_i][tracks_i][notes_i] = SoundArrayId[SoundArrayId_i][tracks_i][notes_i].replace(/zz19/g, "#D-1");
+                        SoundArrayId[SoundArrayId_i][tracks_i][notes_i] = SoundArrayId[SoundArrayId_i][tracks_i][notes_i].replace(/zz20/g, "E-1");
+                        SoundArrayId[SoundArrayId_i][tracks_i][notes_i] = SoundArrayId[SoundArrayId_i][tracks_i][notes_i].replace(/zz21/g, "F-1");
+                        SoundArrayId[SoundArrayId_i][tracks_i][notes_i] = SoundArrayId[SoundArrayId_i][tracks_i][notes_i].replace(/zz22/g, "#F-1");
+                        SoundArrayId[SoundArrayId_i][tracks_i][notes_i] = SoundArrayId[SoundArrayId_i][tracks_i][notes_i].replace(/zz23/g, "G-1");
+                        SoundArrayId[SoundArrayId_i][tracks_i][notes_i] = SoundArrayId[SoundArrayId_i][tracks_i][notes_i].replace(/zz24/g, "#G-1");
+                        SoundArrayId[SoundArrayId_i][tracks_i][notes_i] = SoundArrayId[SoundArrayId_i][tracks_i][notes_i].replace(/zz25/g, "A-1");
+                        SoundArrayId[SoundArrayId_i][tracks_i][notes_i] = SoundArrayId[SoundArrayId_i][tracks_i][notes_i].replace(/zz26/g, "#A-1");
+                        SoundArrayId[SoundArrayId_i][tracks_i][notes_i] = SoundArrayId[SoundArrayId_i][tracks_i][notes_i].replace(/zz27/g, "B-1");
+                        SoundArrayId[SoundArrayId_i][tracks_i][notes_i] = SoundArrayId[SoundArrayId_i][tracks_i][notes_i].replace(/zz28/g, "c");
+                        SoundArrayId[SoundArrayId_i][tracks_i][notes_i] = SoundArrayId[SoundArrayId_i][tracks_i][notes_i].replace(/zz29/g, "#c");
+                        SoundArrayId[SoundArrayId_i][tracks_i][notes_i] = SoundArrayId[SoundArrayId_i][tracks_i][notes_i].replace(/zz30/g, "d");
+                        SoundArrayId[SoundArrayId_i][tracks_i][notes_i] = SoundArrayId[SoundArrayId_i][tracks_i][notes_i].replace(/zz31/g, "#d");
+                        SoundArrayId[SoundArrayId_i][tracks_i][notes_i] = SoundArrayId[SoundArrayId_i][tracks_i][notes_i].replace(/zz32/g, "e");
+                        SoundArrayId[SoundArrayId_i][tracks_i][notes_i] = SoundArrayId[SoundArrayId_i][tracks_i][notes_i].replace(/zz33/g, "f");
+                        SoundArrayId[SoundArrayId_i][tracks_i][notes_i] = SoundArrayId[SoundArrayId_i][tracks_i][notes_i].replace(/zz34/g, "#f");
+                        SoundArrayId[SoundArrayId_i][tracks_i][notes_i] = SoundArrayId[SoundArrayId_i][tracks_i][notes_i].replace(/zz35/g, "g");
+                        SoundArrayId[SoundArrayId_i][tracks_i][notes_i] = SoundArrayId[SoundArrayId_i][tracks_i][notes_i].replace(/zz36/g, "#g");
+                        SoundArrayId[SoundArrayId_i][tracks_i][notes_i] = SoundArrayId[SoundArrayId_i][tracks_i][notes_i].replace(/zz37/g, "a");
+                        SoundArrayId[SoundArrayId_i][tracks_i][notes_i] = SoundArrayId[SoundArrayId_i][tracks_i][notes_i].replace(/zz38/g, "#a");
+                        SoundArrayId[SoundArrayId_i][tracks_i][notes_i] = SoundArrayId[SoundArrayId_i][tracks_i][notes_i].replace(/zz39/g, "b");
+                        SoundArrayId[SoundArrayId_i][tracks_i][notes_i] = SoundArrayId[SoundArrayId_i][tracks_i][notes_i].replace(/zz40/g, "c1");
+                        SoundArrayId[SoundArrayId_i][tracks_i][notes_i] = SoundArrayId[SoundArrayId_i][tracks_i][notes_i].replace(/zz41/g, "#c1");
+                        SoundArrayId[SoundArrayId_i][tracks_i][notes_i] = SoundArrayId[SoundArrayId_i][tracks_i][notes_i].replace(/zz42/g, "d1");
+                        SoundArrayId[SoundArrayId_i][tracks_i][notes_i] = SoundArrayId[SoundArrayId_i][tracks_i][notes_i].replace(/zz43/g, "#d1");
+                        SoundArrayId[SoundArrayId_i][tracks_i][notes_i] = SoundArrayId[SoundArrayId_i][tracks_i][notes_i].replace(/zz44/g, "e1");
+                        SoundArrayId[SoundArrayId_i][tracks_i][notes_i] = SoundArrayId[SoundArrayId_i][tracks_i][notes_i].replace(/zz45/g, "f1");
+                        SoundArrayId[SoundArrayId_i][tracks_i][notes_i] = SoundArrayId[SoundArrayId_i][tracks_i][notes_i].replace(/zz46/g, "#f1");
+                        SoundArrayId[SoundArrayId_i][tracks_i][notes_i] = SoundArrayId[SoundArrayId_i][tracks_i][notes_i].replace(/zz47/g, "g1");
+                        SoundArrayId[SoundArrayId_i][tracks_i][notes_i] = SoundArrayId[SoundArrayId_i][tracks_i][notes_i].replace(/zz48/g, "#g1");
+                        SoundArrayId[SoundArrayId_i][tracks_i][notes_i] = SoundArrayId[SoundArrayId_i][tracks_i][notes_i].replace(/zz49/g, "a1");
+                        SoundArrayId[SoundArrayId_i][tracks_i][notes_i] = SoundArrayId[SoundArrayId_i][tracks_i][notes_i].replace(/zz50/g, "#a1");
+                        SoundArrayId[SoundArrayId_i][tracks_i][notes_i] = SoundArrayId[SoundArrayId_i][tracks_i][notes_i].replace(/zz51/g, "b1");
+                        SoundArrayId[SoundArrayId_i][tracks_i][notes_i] = SoundArrayId[SoundArrayId_i][tracks_i][notes_i].replace(/zz52/g, "c2");
+                        SoundArrayId[SoundArrayId_i][tracks_i][notes_i] = SoundArrayId[SoundArrayId_i][tracks_i][notes_i].replace(/zz53/g, "#c2");
+                        SoundArrayId[SoundArrayId_i][tracks_i][notes_i] = SoundArrayId[SoundArrayId_i][tracks_i][notes_i].replace(/zz54/g, "d2");
+                        SoundArrayId[SoundArrayId_i][tracks_i][notes_i] = SoundArrayId[SoundArrayId_i][tracks_i][notes_i].replace(/zz55/g, "#d2");
+                        SoundArrayId[SoundArrayId_i][tracks_i][notes_i] = SoundArrayId[SoundArrayId_i][tracks_i][notes_i].replace(/zz56/g, "e2");
+                        SoundArrayId[SoundArrayId_i][tracks_i][notes_i] = SoundArrayId[SoundArrayId_i][tracks_i][notes_i].replace(/zz57/g, "f2");
+                        SoundArrayId[SoundArrayId_i][tracks_i][notes_i] = SoundArrayId[SoundArrayId_i][tracks_i][notes_i].replace(/zz58/g, "#f2");
+                        SoundArrayId[SoundArrayId_i][tracks_i][notes_i] = SoundArrayId[SoundArrayId_i][tracks_i][notes_i].replace(/zz59/g, "g2");
+                        SoundArrayId[SoundArrayId_i][tracks_i][notes_i] = SoundArrayId[SoundArrayId_i][tracks_i][notes_i].replace(/zz60/g, "#g2");
+                        SoundArrayId[SoundArrayId_i][tracks_i][notes_i] = SoundArrayId[SoundArrayId_i][tracks_i][notes_i].replace(/zz61/g, "a2");
+                        SoundArrayId[SoundArrayId_i][tracks_i][notes_i] = SoundArrayId[SoundArrayId_i][tracks_i][notes_i].replace(/zz62/g, "#a2");
+                        SoundArrayId[SoundArrayId_i][tracks_i][notes_i] = SoundArrayId[SoundArrayId_i][tracks_i][notes_i].replace(/zz63/g, "b2");
+                        SoundArrayId[SoundArrayId_i][tracks_i][notes_i] = SoundArrayId[SoundArrayId_i][tracks_i][notes_i].replace(/zz64/g, "c3");
+                        SoundArrayId[SoundArrayId_i][tracks_i][notes_i] = SoundArrayId[SoundArrayId_i][tracks_i][notes_i].replace(/zz65/g, "#c3");
+                        SoundArrayId[SoundArrayId_i][tracks_i][notes_i] = SoundArrayId[SoundArrayId_i][tracks_i][notes_i].replace(/zz66/g, "d3");
+                        SoundArrayId[SoundArrayId_i][tracks_i][notes_i] = SoundArrayId[SoundArrayId_i][tracks_i][notes_i].replace(/zz67/g, "#d3");
+                        SoundArrayId[SoundArrayId_i][tracks_i][notes_i] = SoundArrayId[SoundArrayId_i][tracks_i][notes_i].replace(/zz68/g, "e3");
+                        SoundArrayId[SoundArrayId_i][tracks_i][notes_i] = SoundArrayId[SoundArrayId_i][tracks_i][notes_i].replace(/zz69/g, "f3");
+                        SoundArrayId[SoundArrayId_i][tracks_i][notes_i] = SoundArrayId[SoundArrayId_i][tracks_i][notes_i].replace(/zz70/g, "#f3");
+                        SoundArrayId[SoundArrayId_i][tracks_i][notes_i] = SoundArrayId[SoundArrayId_i][tracks_i][notes_i].replace(/zz71/g, "g3");
+                        SoundArrayId[SoundArrayId_i][tracks_i][notes_i] = SoundArrayId[SoundArrayId_i][tracks_i][notes_i].replace(/zz72/g, "#g3");
+                        SoundArrayId[SoundArrayId_i][tracks_i][notes_i] = SoundArrayId[SoundArrayId_i][tracks_i][notes_i].replace(/zz73/g, "a3");
+                        SoundArrayId[SoundArrayId_i][tracks_i][notes_i] = SoundArrayId[SoundArrayId_i][tracks_i][notes_i].replace(/zz74/g, "#a3");
+                        SoundArrayId[SoundArrayId_i][tracks_i][notes_i] = SoundArrayId[SoundArrayId_i][tracks_i][notes_i].replace(/zz75/g, "b3");
+                        SoundArrayId[SoundArrayId_i][tracks_i][notes_i] = SoundArrayId[SoundArrayId_i][tracks_i][notes_i].replace(/zz76/g, "c4");
+                        SoundArrayId[SoundArrayId_i][tracks_i][notes_i] = SoundArrayId[SoundArrayId_i][tracks_i][notes_i].replace(/zz77/g, "#c4");
+                        SoundArrayId[SoundArrayId_i][tracks_i][notes_i] = SoundArrayId[SoundArrayId_i][tracks_i][notes_i].replace(/zz78/g, "d4");
+                        SoundArrayId[SoundArrayId_i][tracks_i][notes_i] = SoundArrayId[SoundArrayId_i][tracks_i][notes_i].replace(/zz79/g, "#d4");
+                        SoundArrayId[SoundArrayId_i][tracks_i][notes_i] = SoundArrayId[SoundArrayId_i][tracks_i][notes_i].replace(/zz80/g, "e4");
+                        SoundArrayId[SoundArrayId_i][tracks_i][notes_i] = SoundArrayId[SoundArrayId_i][tracks_i][notes_i].replace(/zz81/g, "f4");
+                        SoundArrayId[SoundArrayId_i][tracks_i][notes_i] = SoundArrayId[SoundArrayId_i][tracks_i][notes_i].replace(/zz82/g, "#f4");
+                        SoundArrayId[SoundArrayId_i][tracks_i][notes_i] = SoundArrayId[SoundArrayId_i][tracks_i][notes_i].replace(/zz83/g, "g4");
+                        SoundArrayId[SoundArrayId_i][tracks_i][notes_i] = SoundArrayId[SoundArrayId_i][tracks_i][notes_i].replace(/zz84/g, "#g4");
+                        SoundArrayId[SoundArrayId_i][tracks_i][notes_i] = SoundArrayId[SoundArrayId_i][tracks_i][notes_i].replace(/zz85/g, "a4");
+                        SoundArrayId[SoundArrayId_i][tracks_i][notes_i] = SoundArrayId[SoundArrayId_i][tracks_i][notes_i].replace(/zz86/g, "#a4");
+                        SoundArrayId[SoundArrayId_i][tracks_i][notes_i] = SoundArrayId[SoundArrayId_i][tracks_i][notes_i].replace(/zz87/g, "b4");
+                        SoundArrayId[SoundArrayId_i][tracks_i][notes_i] = SoundArrayId[SoundArrayId_i][tracks_i][notes_i].replace(/zz88/g, "c5");
+                    }
+                    SoundArrayId[SoundArrayId_i][tracks_i][notes_i] = SoundArrayId[SoundArrayId_i][tracks_i][notes_i].replace(/1</g, "");
+                    SoundArrayId[SoundArrayId_i][tracks_i][notes_i] = SoundArrayId[SoundArrayId_i][tracks_i][notes_i].replace(/2</g, "");
+                    SoundArrayId[SoundArrayId_i][tracks_i][notes_i] = SoundArrayId[SoundArrayId_i][tracks_i][notes_i].replace(/3</g, "");
+                    SoundArrayId[SoundArrayId_i][tracks_i][notes_i] = SoundArrayId[SoundArrayId_i][tracks_i][notes_i].replace(/5</g, "");
+                    SoundArrayId[SoundArrayId_i][tracks_i][notes_i] = SoundArrayId[SoundArrayId_i][tracks_i][notes_i].replace(/6</g, "");
+                    SoundArrayId[SoundArrayId_i][tracks_i][notes_i] = SoundArrayId[SoundArrayId_i][tracks_i][notes_i].replace(/7</g, "");
+                    SoundArrayId[SoundArrayId_i][tracks_i][notes_i] = SoundArrayId[SoundArrayId_i][tracks_i][notes_i].replace(/8</g, "");
+                    SoundArrayId[SoundArrayId_i][tracks_i][notes_i] = SoundArrayId[SoundArrayId_i][tracks_i][notes_i].replace(/9</g, "");
+                    SoundArrayId[SoundArrayId_i][tracks_i][notes_i] = SoundArrayId[SoundArrayId_i][tracks_i][notes_i].replace(/chuanshao/g, "mute");
+                    SoundArrayId[SoundArrayId_i][tracks_i][notes_i] = SoundArrayId[SoundArrayId_i][tracks_i][notes_i].replace(/Z/g, "mute");
+                    if (SoundArrayId[SoundArrayId_i][tracks_i][notes_i].indexOf("Q") > -1 || SoundArrayId[SoundArrayId_i][tracks_i][notes_i].indexOf("R") > -1 || SoundArrayId[SoundArrayId_i][tracks_i][notes_i].indexOf("S") > -1 || SoundArrayId[SoundArrayId_i][tracks_i][notes_i].indexOf("T") > -1 || SoundArrayId[SoundArrayId_i][tracks_i][notes_i].indexOf("U") > -1 || SoundArrayId[SoundArrayId_i][tracks_i][notes_i].indexOf("V") > -1 || SoundArrayId[SoundArrayId_i][tracks_i][notes_i].indexOf("W") > -1 || SoundArrayId[SoundArrayId_i][tracks_i][notes_i].indexOf("X") > -1 || SoundArrayId[SoundArrayId_i][tracks_i][notes_i].indexOf("Y") > -1) {
+                        if (SoundArrayId[SoundArrayId_i][tracks_i][notes_i].indexOf("(") > -1 || SoundArrayId[SoundArrayId_i][tracks_i][notes_i].indexOf(")") > -1) {
+                            SoundArrayId[SoundArrayId_i][tracks_i][notes_i] = SoundArrayId[SoundArrayId_i][tracks_i][notes_i].replace(/Q/g, "mute");
+                            SoundArrayId[SoundArrayId_i][tracks_i][notes_i] = SoundArrayId[SoundArrayId_i][tracks_i][notes_i].replace(/R/g, "mute");
+                            SoundArrayId[SoundArrayId_i][tracks_i][notes_i] = SoundArrayId[SoundArrayId_i][tracks_i][notes_i].replace(/S/g, "mute");
+                            SoundArrayId[SoundArrayId_i][tracks_i][notes_i] = SoundArrayId[SoundArrayId_i][tracks_i][notes_i].replace(/T/g, "mute");
+                            SoundArrayId[SoundArrayId_i][tracks_i][notes_i] = SoundArrayId[SoundArrayId_i][tracks_i][notes_i].replace(/U/g, "mute");
+                            SoundArrayId[SoundArrayId_i][tracks_i][notes_i] = SoundArrayId[SoundArrayId_i][tracks_i][notes_i].replace(/V/g, "mute");
+                            SoundArrayId[SoundArrayId_i][tracks_i][notes_i] = SoundArrayId[SoundArrayId_i][tracks_i][notes_i].replace(/W/g, "mute");
+                            SoundArrayId[SoundArrayId_i][tracks_i][notes_i] = SoundArrayId[SoundArrayId_i][tracks_i][notes_i].replace(/X/g, "mute");
+                            SoundArrayId[SoundArrayId_i][tracks_i][notes_i] = SoundArrayId[SoundArrayId_i][tracks_i][notes_i].replace(/Y/g, "mute");
+                        } else {
+                            SoundArrayId[SoundArrayId_i][tracks_i][notes_i] = "mute";
+                        }
+                    }
+                    SoundArrayId[SoundArrayId_i][tracks_i][notes_i] = SoundArrayId[SoundArrayId_i][tracks_i][notes_i].replace(/10</g, "");
+                    SoundArrayId[SoundArrayId_i][tracks_i][notes_i] = SoundArrayId[SoundArrayId_i][tracks_i][notes_i].replace(/>/g, "");
+                    if (SoundArrayId[SoundArrayId_i][tracks_i][notes_i].indexOf("[") > -1) {
+                        SoundArrayId[SoundArrayId_i][tracks_i][notes_i] = SoundArrayId[SoundArrayId_i][tracks_i][notes_i].replace(SoundArrayId[SoundArrayId_i][tracks_i][notes_i].slice(SoundArrayId[SoundArrayId_i][tracks_i][notes_i].indexOf("["), SoundArrayId[SoundArrayId_i][tracks_i][notes_i].length), "");
+                    }
+                }
+            }
+        }
+        //调整时间位置
+        for (file_ID = 0; file_ID < musictime_main_array.length; file_ID++) {
+            for (SoundEventsFor = 0; SoundEventsFor < musictime_main_array[file_ID][file_d_b].length; SoundEventsFor++) {
+                if (SoundEventsFor == 0) {
+                    if (file_ID == 0) {
+                        MusicSoundTimeAdjust = musictime_main_array[file_ID][file_d_b][SoundEventsFor];
+                        musictime_main_array[file_ID][file_d_b][0] = 0;
+                    } else {
+                        MusicSoundTimeAdjust = musictime_main_array[file_ID][file_d_b][SoundEventsFor];
+                        musictime_main_array[file_ID][file_d_b][0] = musictime_main_array[file_ID - 1][file_d_b][musictime_main_array[file_ID - 1][file_d_b].length - 1];
+                    }
+                } else {
+                    MusicSoundTimeAdjust1 = musictime_main_array[file_ID][file_d_b][SoundEventsFor];
+                    musictime_main_array[file_ID][file_d_b][SoundEventsFor] = MusicSoundTimeAdjust;
+                    MusicSoundTimeAdjust = MusicSoundTimeAdjust1;
+                }
+            }
+        }
+        for (file_ID = 0; file_ID < musictime_main_array.length; file_ID++) {
+            //非第一星段的音轨作为归零处理（便于bpm调整）
+            for (SoundEventsFor = 0; SoundEventsFor < musictime_main_array[file_ID][file_d_b].length; SoundEventsFor++) {
+                if (file_ID != 0) {
+                    if (SoundEventsFor == 0) {
+                        OsuMusicTimeEnd = musictime_main_array[file_ID][file_d_b][0];
+                    }
+                    musictime_main_array[file_ID][file_d_b][SoundEventsFor] = musictime_main_array[file_ID][file_d_b][SoundEventsFor] - OsuMusicTimeEnd;
+                }
+            }
             var InstrumentsOutput;
             switch (Fileinstruments) {
                 case "piano": {
-                    InstrumentsOutput = "0,0";
+                    InstrumentsOutput = "0_0";
                 }
                     break;
                 case "bass": {
-                    InstrumentsOutput = "0,20";
+                    InstrumentsOutput = "0_20";
                 }
                     break;
                 case "bass2": {
-                    InstrumentsOutput = "0,23";
+                    InstrumentsOutput = "0_23";
                 }
                     break;
                 case "drum": {
-                    InstrumentsOutput = "80,0";
+                    InstrumentsOutput = "80_0";
                 }
                     break;
             }
             if (Fileinstruments !== "piano" && Fileinstruments !== "bass" && Fileinstruments !== "bass2" && Fileinstruments !== "drum") {
                 InstrumentsOutput = Fileinstruments;
             }
-            a_music_array[c].sound = "../../skin/audio/" + InstrumentsOutput + "/" + a_music_array[c].sound + ".mp3";
+            SoundTextReplace = new Array();
+            var osuSoundEvents = new Array();
+            var osuSoundEventsNew = new Array(), osuSoundEventsNew_i = 0;
+            osuBpmValue = document.getElementById("bpm").value.split(";")[1];
+            PT2BaseBeatsValue = document.getElementById("beats").value.split(",");
+            PT2BaseBeatsID = parseFloat(PT2BaseBeatsValue[file_d_b]);
+            osuBpmValueID = osuBpmValue.split(",")[file_ID];
+            osuBpmValueID = parseFloat(osuBpmValueID);
+            //复位
+            if (file_ID == 0) {
+                OsuTimeEventEnd = 0;
+            } else {
+                OsuTimeEventEnd = OsuTimeEventEnd + Math.floor(60000 / parseFloat(osuBpmValue.split(",")[file_ID - 1]) * musictime_main_array[file_ID - 1][file_d_b][musictime_main_array[file_ID - 1][file_d_b].length - 1] / 32);
+            }
+            if (file_d_b == 0) {
+                osuFilesTextTimingPointsEvent = OsuTimeEventEnd.toString() + "," + Math.floor(60000 / osuBpmValueID) + ",4,0,1," + document.getElementById("vol").value + ",0,1";
+                osuFilesTextTimingPoints = osuFilesTextTimingPoints + "\n" + osuFilesTextTimingPointsEvent;
+            }
+            for (SoundTextFirst = 0; SoundTextFirst < musictime_main_array[file_ID][file_d_b].length - 1; SoundTextFirst++) {
+                //合并相同功能的字符
+                if (SoundArrayId[file_ID][file_d_b][SoundTextFirst].indexOf("$") > -1) {
+                    SoundArrayId[file_ID][file_d_b][SoundTextFirst] = SoundArrayId[file_ID][file_d_b][SoundTextFirst].replace(/\$/g, '~');
+                }
+                if (SoundArrayId[file_ID][file_d_b][SoundTextFirst].indexOf("&") > -1) {
+                    SoundArrayId[file_ID][file_d_b][SoundTextFirst] = SoundArrayId[file_ID][file_d_b][SoundTextFirst].replace(/\&/g, '^');
+                }
+                //和弦
+                if (SoundArrayId[file_ID][file_d_b][SoundTextFirst].indexOf(".") > -1) {
+                    SoundTextTest = SoundArrayId[file_ID][file_d_b][SoundTextFirst].split(".")[0];
+                    if (SoundTextTest.indexOf("~") > -1 || SoundTextTest.indexOf("!") > -1 || SoundTextTest.indexOf("@") > -1 || SoundTextTest.indexOf("^") > -1 || SoundTextTest.indexOf("%") > -1) {
+                        SoundTextReplace[SoundTextFirst] = "mute";
+                    } else {
+                        SoundTextReplace[SoundTextFirst] = SoundTextTest;
+                        for (Chord_i = 0; Chord_i < SoundArrayId[file_ID][file_d_b][SoundTextFirst].split(".").length; Chord_i++) {
+                            SoundArrayId[file_ID][file_d_b][SoundTextFirst] = SoundArrayId[file_ID][file_d_b][SoundTextFirst].replace(/\(/g, '');
+                            SoundArrayId[file_ID][file_d_b][SoundTextFirst] = SoundArrayId[file_ID][file_d_b][SoundTextFirst].replace(/\)/g, '');
+                            if (file_d_b == 0 && Chord_i != 0 || file_d_b != 0) {
+                                osuSoundEventsNew[osuSoundEventsNew_i] = 'Sample,' + (Math.floor(60000 / osuBpmValueID * musictime_main_array[file_ID][file_d_b][SoundTextFirst] / 32) + OsuTimeEventEnd).toString() + ',0,' + './' + InstrumentsOutput + '/' + SoundArrayId[file_ID][file_d_b][SoundTextFirst].split(".")[Chord_i] + ',' + document.getElementById("vol").value;
+                                osuSoundEventsNew_i++;
+                            }
+                        }
+                        SoundArrayId[file_ID][file_d_b][SoundTextFirst].split(".")[0] = "mute";
+                        SoundTextReplace[SoundTextFirst] = SoundTextReplace[SoundTextFirst].replace(/\(/g, '');
+                        SoundTextReplace[SoundTextFirst] = SoundTextReplace[SoundTextFirst].replace(/\)/g, '');
+                    }
+                } else if (SoundArrayId[file_ID][file_d_b][SoundTextFirst].indexOf("~") > -1 || SoundArrayId[file_ID][file_d_b][SoundTextFirst].indexOf("!") > -1 || SoundArrayId[file_ID][file_d_b][SoundTextFirst].indexOf("@") > -1 || SoundArrayId[file_ID][file_d_b][SoundTextFirst].indexOf("^") > -1 || SoundArrayId[file_ID][file_d_b][SoundTextFirst].indexOf("%") > -1) {
+                    if (SoundArrayId[file_ID][file_d_b][SoundTextFirst].indexOf("~") > -1) {
+                        SoundTextTest = SoundArrayId[file_ID][file_d_b][SoundTextFirst].split("~")[0];
+                        SoundTextReplace[SoundTextFirst] = SoundTextTest;
+                        SoundArrayId[file_ID][file_d_b][SoundTextFirst].split("~")[0] = "mute";
+                        SoundTextReplace[SoundTextFirst] = SoundTextReplace[SoundTextFirst].replace(/\(/g, '');
+                        SoundTextReplace[SoundTextFirst] = SoundTextReplace[SoundTextFirst].replace(/\)/g, '');
+                    }
+                    SoundTextReplace[SoundTextFirst] = "mute";
+                    SoundTextReplace[SoundTextFirst] = SoundTextReplace[SoundTextFirst].replace(/\(/g, '');
+                    SoundTextReplace[SoundTextFirst] = SoundTextReplace[SoundTextFirst].replace(/\)/g, '');
+                } else {
+                    SoundTextReplace[SoundTextFirst] = SoundArrayId[file_ID][file_d_b][SoundTextFirst];
+                    SoundArrayId[file_ID][file_d_b][SoundTextFirst] = "mute";
+                    SoundTextReplace[SoundTextFirst] = SoundTextReplace[SoundTextFirst].replace(/\(/g, '');
+                    SoundTextReplace[SoundTextFirst] = SoundTextReplace[SoundTextFirst].replace(/\)/g, '');
+                };
+            }
+            for (SoundEventsFor = 0; SoundEventsFor < SoundTextReplace.length; SoundEventsFor++) {
+                //不赞成使用 ^ 与 & 字符，故与原游戏的播放效果不同
+                if (SoundArrayId[file_ID][file_d_b][SoundEventsFor].indexOf("^") > -1) {
+                    SoundArrayId[file_ID][file_d_b][SoundEventsFor] = SoundArrayId[file_ID][file_d_b][SoundEventsFor].replace(/@/g, '^');
+                    SoundArrayId[file_ID][file_d_b][SoundEventsFor] = SoundArrayId[file_ID][file_d_b][SoundEventsFor].replace(/!/g, '^');
+                    SoundArrayId[file_ID][file_d_b][SoundEventsFor] = SoundArrayId[file_ID][file_d_b][SoundEventsFor].replace(/%/g, '^');
+                    SoundArrayId[file_ID][file_d_b][SoundEventsFor] = SoundArrayId[file_ID][file_d_b][SoundEventsFor].replace(/~/g, '^');
+                    SoundArrayId[file_ID][file_d_b][SoundEventsFor] = SoundArrayId[file_ID][file_d_b][SoundEventsFor] + "^" + SoundArrayId[file_ID][file_d_b][SoundEventsFor] + "^" + SoundArrayId[file_ID][file_d_b][SoundEventsFor];
+                    SoundTextReplaceConvert = SoundArrayId[file_ID][file_d_b][SoundEventsFor].split("^");
+                    if (SoundEventsFor == 0) {
+                        SoundTextReplaceLength = musictime_main_array[file_ID][file_d_b][SoundEventsFor];
+                    } else {
+                        SoundTextReplaceLength = musictime_main_array[file_ID][file_d_b][SoundEventsFor + 1] - musictime_main_array[file_ID][file_d_b][SoundEventsFor];
+                    }
+                    var SoundTextReplace_i = new Array();
+                    for (i = 0; i < SoundTextReplaceConvert.length; i++) {
+                        SoundTextReplaceConvert[i] = SoundTextReplaceConvert[i].replace(/\)/g, '');
+                        SoundTextReplaceConvert[i] = SoundTextReplaceConvert[i].replace(/\(/g, '');
+                        SoundTextReplace_i[i] = SoundTextReplaceLength / (SoundTextReplaceConvert.length + 1) * i + musictime_main_array[file_ID][file_d_b][SoundEventsFor];
+                        //和弦
+                        if (SoundTextReplaceConvert[i].indexOf(".") > -1) {
+                            SoundTextReplaceChord = SoundTextReplaceConvert[i].split(".");
+                            for (Chord_i = 0; Chord_i < SoundTextReplaceChord.length; Chord_i++) {
+                                osuSoundEventsNew[osuSoundEventsNew_i] = 'Sample,' + (Math.floor(60000 / osuBpmValueID * SoundTextReplace_i[i] / 32) + OsuTimeEventEnd).toString() + ',0,' + './' + InstrumentsOutput + '/' + SoundTextReplaceChord[Chord_i] + ',' + document.getElementById("vol").value;
+                                osuSoundEventsNew_i++;
+                            }
+                        } else {
+                            osuSoundEventsNew[osuSoundEventsNew_i] = 'Sample,' + (Math.floor(60000 / osuBpmValueID * SoundTextReplace_i[i] / 32) + OsuTimeEventEnd).toString() + ',0,' + './' + InstrumentsOutput + '/' + SoundTextReplaceConvert[i] + ',' + document.getElementById("vol").value;
+                            osuSoundEventsNew_i++;
+                        }
+                    }
+                } else if (SoundArrayId[file_ID][file_d_b][SoundEventsFor].indexOf("~") > -1) {
+                    //不允许琶音与连音混装在一个括号内，在连音括号内的琶音音符会转换为连音
+                    SoundArrayId[file_ID][file_d_b][SoundEventsFor] = SoundArrayId[file_ID][file_d_b][SoundEventsFor].replace(/@/g, '~');
+                    SoundArrayId[file_ID][file_d_b][SoundEventsFor] = SoundArrayId[file_ID][file_d_b][SoundEventsFor].replace(/!/g, '~');
+                    SoundArrayId[file_ID][file_d_b][SoundEventsFor] = SoundArrayId[file_ID][file_d_b][SoundEventsFor].replace(/%/g, '~');
+                    SoundTextReplaceConvert = SoundArrayId[file_ID][file_d_b][SoundEventsFor].split("~");
+                    if (SoundEventsFor == 0) {
+                        SoundTextReplaceLength = musictime_main_array[file_ID][file_d_b][SoundEventsFor];
+                    } else {
+                        SoundTextReplaceLength = musictime_main_array[file_ID][file_d_b][SoundEventsFor + 1] - musictime_main_array[file_ID][file_d_b][SoundEventsFor];
+                    }
+                    var SoundTextReplace_i = new Array();
+                    for (i = 0; i < SoundTextReplaceConvert.length; i++) {
+                        SoundTextReplaceConvert[i] = SoundTextReplaceConvert[i].replace(/\)/g, '');
+                        SoundTextReplaceConvert[i] = SoundTextReplaceConvert[i].replace(/\(/g, '');
+                        SoundTextReplace_i[i] = SoundTextReplaceLength / (SoundTextReplaceConvert.length + 1) * i + musictime_main_array[file_ID][file_d_b][SoundEventsFor];
+                        //和弦
+                        if (SoundTextReplaceConvert[i].indexOf(".") > -1) {
+                            SoundTextReplaceChord = SoundTextReplaceConvert[i].split(".");
+                            for (Chord_i = 0; Chord_i < SoundTextReplaceChord.length; Chord_i++) {
+                                osuSoundEventsNew[osuSoundEventsNew_i] = 'Sample,' + (Math.floor(60000 / osuBpmValueID * SoundTextReplace_i[i] / 32) + OsuTimeEventEnd).toString() + ',0,' + './' + InstrumentsOutput + '/' + SoundTextReplaceChord[Chord_i] + ',' + document.getElementById("vol").value;
+                                osuSoundEventsNew_i++;
+                            }
+                        } else {
+                            osuSoundEventsNew[osuSoundEventsNew_i] = 'Sample,' + (Math.floor(60000 / osuBpmValueID * SoundTextReplace_i[i] / 32) + OsuTimeEventEnd).toString() + ',0,' + './' + InstrumentsOutput + '/' + SoundTextReplaceConvert[i] + ',' + document.getElementById("vol").value;
+                            osuSoundEventsNew_i++;
+                        }
+                    }
+                } else if (SoundArrayId[file_ID][file_d_b][SoundEventsFor].indexOf("@") > -1) {
+                    //琶音转换
+                    SoundArrayId[file_ID][file_d_b][SoundEventsFor] = SoundArrayId[file_ID][file_d_b][SoundEventsFor].replace(/!/g, '@');
+                    SoundArrayId[file_ID][file_d_b][SoundEventsFor] = SoundArrayId[file_ID][file_d_b][SoundEventsFor].replace(/%/g, '@');
+                    SoundTextReplaceConvert = SoundArrayId[file_ID][file_d_b][SoundEventsFor].split("@");
+                    if (SoundEventsFor == 0) {
+                        SoundTextReplaceLength = musictime_main_array[file_ID][file_d_b][SoundEventsFor] / 4;
+                    } else {
+                        SoundTextReplaceLength = musictime_main_array[file_ID][file_d_b][SoundEventsFor + 1] - musictime_main_array[file_ID][file_d_b][SoundEventsFor] / 4;
+                    }
+                    var SoundTextReplace_i = new Array();
+                    for (i = 0; i < SoundTextReplaceConvert.length; i++) {
+                        SoundTextReplaceConvert[i] = SoundTextReplaceConvert[i].replace(/\)/g, '');
+                        SoundTextReplaceConvert[i] = SoundTextReplaceConvert[i].replace(/\(/g, '');
+                        SoundTextReplace_i[i] = SoundTextReplaceLength / (SoundTextReplaceConvert.length + 1) * i + musictime_main_array[file_ID][file_d_b][SoundEventsFor];
+                        //和弦
+                        if (SoundTextReplaceConvert[i].indexOf(".") > -1) {
+                            SoundTextReplaceChord = SoundTextReplaceConvert[i].split(".");
+                            for (Chord_i = 0; Chord_i < SoundTextReplaceChord.length; Chord_i++) {
+                                osuSoundEventsNew[osuSoundEventsNew_i] = 'Sample,' + (Math.floor(60000 / osuBpmValueID * SoundTextReplace_i[i] / 32) + OsuTimeEventEnd).toString() + ',0,' + './' + InstrumentsOutput + '/' + SoundTextReplaceChord[Chord_i] + ',' + document.getElementById("vol").value;
+                                osuSoundEventsNew_i++;
+                            }
+                        } else {
+                            osuSoundEventsNew[osuSoundEventsNew_i] = 'Sample,' + (Math.floor(60000 / osuBpmValueID * SoundTextReplace_i[i] / 32) + OsuTimeEventEnd).toString() + ',0,' + './' + InstrumentsOutput + '/' + SoundTextReplaceConvert[i] + ',' + document.getElementById("vol").value;
+                            osuSoundEventsNew_i++;
+                        }
+                    }
+                } else if (SoundArrayId[file_ID][file_d_b][SoundEventsFor].indexOf("%") > -1) {
+                    //琶音转换
+                    SoundArrayId[file_ID][file_d_b][SoundEventsFor] = SoundArrayId[file_ID][file_d_b][SoundEventsFor].replace(/!/g, '%');
+                    SoundTextReplaceConvert = SoundArrayId[file_ID][file_d_b][SoundEventsFor].split("%");
+                    if (SoundEventsFor == 0) {
+                        SoundTextReplaceLength = musictime_main_array[file_ID][file_d_b][SoundEventsFor] / 3;
+                    } else {
+                        SoundTextReplaceLength = musictime_main_array[file_ID][file_d_b][SoundEventsFor + 1] - musictime_main_array[file_ID][file_d_b][SoundEventsFor] / 3;
+                    }
+                    var SoundTextReplace_i = new Array();
+                    for (i = 0; i < SoundTextReplaceConvert.length; i++) {
+                        SoundTextReplaceConvert[i] = SoundTextReplaceConvert[i].replace(/\)/g, '');
+                        SoundTextReplaceConvert[i] = SoundTextReplaceConvert[i].replace(/\(/g, '');
+                        SoundTextReplace_i[i] = SoundTextReplaceLength / (SoundTextReplaceConvert.length + 1) * i + musictime_main_array[file_ID][file_d_b][SoundEventsFor];
+                        //和弦
+                        if (SoundTextReplaceConvert[i].indexOf(".") > -1) {
+                            SoundTextReplaceChord = SoundTextReplaceConvert[i].split(".");
+                            for (Chord_i = 0; Chord_i < SoundTextReplaceChord.length; Chord_i++) {
+                                osuSoundEventsNew[osuSoundEventsNew_i] = 'Sample,' + (Math.floor(60000 / osuBpmValueID * SoundTextReplace_i[i] / 32) + OsuTimeEventEnd).toString() + ',0,' + './' + InstrumentsOutput + '/' + SoundTextReplaceChord[Chord_i] + ',' + document.getElementById("vol").value;
+                                osuSoundEventsNew_i++;
+                            }
+                        } else {
+                            osuSoundEventsNew[osuSoundEventsNew_i] = 'Sample,' + (Math.floor(60000 / osuBpmValueID * SoundTextReplace_i[i] / 32) + OsuTimeEventEnd).toString() + ',0,' + './' + InstrumentsOutput + '/' + SoundTextReplaceConvert[i] + ',' + document.getElementById("vol").value;
+                            osuSoundEventsNew_i++;
+                        }
+                    }
+                } else if (SoundArrayId[file_ID][file_d_b][SoundEventsFor].indexOf("!") > -1) {
+                    //琶音转换
+                    SoundTextReplaceConvert = SoundArrayId[file_ID][file_d_b][SoundEventsFor].split("!");
+                    if (SoundEventsFor == 0) {
+                        SoundTextReplaceLength = musictime_main_array[file_ID][file_d_b][SoundEventsFor] / 2;
+                    } else {
+                        SoundTextReplaceLength = musictime_main_array[file_ID][file_d_b][SoundEventsFor + 1] - musictime_main_array[file_ID][file_d_b][SoundEventsFor] / 2;
+                    }
+                    var SoundTextReplace_i = new Array();
+                    for (i = 0; i < SoundTextReplaceConvert.length; i++) {
+                        SoundTextReplaceConvert[i] = SoundTextReplaceConvert[i].replace(/\)/g, '');
+                        SoundTextReplaceConvert[i] = SoundTextReplaceConvert[i].replace(/\(/g, '');
+                        SoundTextReplace_i[i] = SoundTextReplaceLength / (SoundTextReplaceConvert.length + 1) * i + musictime_main_array[file_ID][file_d_b][SoundEventsFor];
+                        //和弦
+                        if (SoundTextReplaceConvert[i].indexOf(".") > -1) {
+                            SoundTextReplaceChord = SoundTextReplaceConvert[i].split(".");
+                            for (Chord_i = 0; Chord_i < SoundTextReplaceChord.length; Chord_i++) {
+                                osuSoundEventsNew[osuSoundEventsNew_i] = 'Sample,' + (Math.floor(60000 / osuBpmValueID * SoundTextReplace_i[i] / 32) + OsuTimeEventEnd).toString() + ',0,' + './' + InstrumentsOutput + '/' + SoundTextReplaceChord[Chord_i] + ',' + document.getElementById("vol").value;
+                                osuSoundEventsNew_i++;
+                            }
+                        } else {
+                            osuSoundEventsNew[osuSoundEventsNew_i] = 'Sample,' + (Math.floor(60000 / osuBpmValueID * SoundTextReplace_i[i] / 32) + OsuTimeEventEnd).toString() + ',0,' + './' + InstrumentsOutput + '/' + SoundTextReplaceConvert[i] + ',' + document.getElementById("vol").value;
+                            osuSoundEventsNew_i++;
+                        }
+                    }
+                }
+                osuEventSoundTime = Math.floor(60000 / osuBpmValueID * musictime_main_array[file_ID][file_d_b][SoundEventsFor] / 32);
+                osuSoundEvents[SoundEventsFor] = 'Sample,' + (osuEventSoundTime + OsuTimeEventEnd).toString() + ',0,' + './' + InstrumentsOutput + '/' + SoundTextReplace[SoundEventsFor] + ',' + document.getElementById("vol").value;
+            }
+            osuSoundEvents = osuSoundEvents.concat(osuSoundEventsNew);
+            for (osuSoundEvents_i = 0; osuSoundEvents_i < osuSoundEvents.length; osuSoundEvents_i++) {
+                if (osuSoundEvents[osuSoundEvents_i].indexOf("mute") > -1) {
+                    osuSoundEvents.splice(osuSoundEvents_i, 1);
+                    osuSoundEvents_i--;
+                }
+            }
+            osuFilesTextEvents = osuFilesTextEvents + "\n" + osuSoundEvents.join("\n");
+
         }
-    }
-    time = time.concat(a_music_array);
-    //osu
-    games_type = games.value;
-    if (games_type == "om") {
-        a = a.replace(/},/g, "};");
-        a = a.split(";");
+        document.getElementById('result').value = osuFilesTextVersion + "\n" + osuFilesTextGeneral + "\n" + osuFilesTextMetadata + "\n" + osuFilesTextDifficulty + "\n" + osuFilesTextTimingPoints + "\n\n" + osuFilesTextEvents;
+        /*
         d_a = '\nSample,notepos,0,"notesound",volnum';
         d_sound = "";
         for (g_b = 0; g_b < a.length - 1; g_b++) {
@@ -5228,6 +4476,1512 @@ function Function1() {
             d_sound = d_sound.replace("notepos", d_g);
         }
         a = d_sound;
+        */
+        function game_type3() {
+            a = document.getElementById("bpm").value.split(";")[1];
+            a = a.split(",")[file_d_a];
+            a = parseFloat(a);
+            g = g.split(",");
+            var g_d = "";
+            for (g_a = 0; g_a < g.length; g_a++) {
+                g_b = parseFloat(g[g_a]);
+                g_c = Math.floor(3750 * g_b / a * 0.5);
+                g_d = g_d + "," + g_c;
+            }
+            g_d = g_d.replace(",", "");
+            a = g_d;
+            a = a.split(",");
+            g_b = "";
+            for (g_a = 0; g_a < g.length - 1; g_a++) {
+                g_b = g_b + "\ncolumn,192,<" + a[g_a] + ">,note,0,endbeat:0:0:0:sound"
+            }
+            if (file_d_a == 0) {
+                g_b = g_b.replace("\n", "column,192,<0>,note,0,endbeat:0:0:0:sound\n");
+            } else {
+                g_b = g_b.replace("\n", "column,192,<" + bpm_pos_om_2 + ">,note,0,endbeat:0:0:0:sound\n");
+            }
+            bpm_pos_om = a[a.length - 1];
+            m = document.getElementById("beats").value;
+            m = parseFloat(m);
+            a = document.getElementById("bpm").value;
+            a = parseFloat(a);
+            n = Math.floor(3750 * m * 32 / a * 0.5);
+            g_d = g_d.split(",");
+            for (g_a = 0; g_a < g.length; g_a++) {
+                f_a = g_b.indexOf("<");
+                f_b = g_b.indexOf(">") + 1;
+                f_c = g_b.slice(f_a, f_b);
+                f_d = f_c.replace("<", "");
+                f_d = f_d.replace(">", "");
+                g_b = g_b.replace(f_c, f_d);
+                f_a = parseFloat(g_d[g_a]);
+                f_d = parseFloat(f_d);
+                f_b = f_a - f_d;
+                if (f_b > n + 1) {
+                    f_c = f_a - n;
+                    f_c = Math.floor(f_c);
+                    g_b = g_b.replace("endbeat", f_c + ":0");
+                    g_b = g_b.replace("note", "128");
+                } else {
+                    g_b = g_b.replace("endbeat", "0");
+                    g_b = g_b.replace("note", "1");
+                }
+            }
+            key_num = key.value;
+            switch (key_num) {
+                case "1k":
+                    key_num_a = 1;
+                    g_b = g_b.replace(/column/g, "256");
+                    break;
+                case "2k":
+                    key_num_a = 2;
+                    if (document.getElementById("continue").checked == true) {
+                        while (g_b.indexOf("column") > -1) {
+
+                            x = Math.random() * 2;
+                            x = Math.floor(x);
+                            if (x == 0) {
+                                g_b = g_b.replace(/column/, "128");
+                            } else {
+                                g_b = g_b.replace(/column/, "384");
+                            }
+                        }
+                    } else {
+                        var x = 0;
+                        while (g_b.indexOf("column") > -1) {
+
+                            x = x + 1;
+                            if (x % 2 == 0) {
+                                g_b = g_b.replace(/column/, "128");
+                            } else {
+                                g_b = g_b.replace(/column/, "384");
+                            }
+                        }
+                    }
+                    break;
+                case "3k":
+                    key_num_a = 3;
+                    if (document.getElementById("continue").checked == true) {
+                        while (g_b.indexOf("column") > -1) {
+
+                            x = Math.random() * 3;
+                            x = Math.floor(x);
+                            if (x == 0) {
+                                g_b = g_b.replace(/column/, "85");
+                            }
+                            if (x == 1) {
+                                g_b = g_b.replace(/column/, "256");
+                            }
+                            if (x == 2) {
+                                g_b = g_b.replace(/column/, "426");
+                            }
+                        }
+                    } else {
+                        var y;
+                        while (g_b.indexOf("column") > -1) {
+
+                            x = Math.random() * 3;
+                            x = Math.floor(x);
+                            while (x == y) {
+
+                                x = Math.random() * 3;
+                                x = Math.floor(x);
+                            }
+                            y = x;
+                            if (x == 0) {
+                                g_b = g_b.replace(/column/, "85");
+                            }
+                            if (x == 1) {
+                                g_b = g_b.replace(/column/, "256");
+                            }
+                            if (x == 2) {
+                                g_b = g_b.replace(/column/, "426");
+                            }
+                        }
+                    }
+                    break;
+                case "4k":
+                    key_num_a = 4;
+                    if (document.getElementById("continue").checked == true) {
+                        while (g_b.indexOf("column") > -1) {
+
+                            x = Math.random() * 4;
+                            x = Math.floor(x);
+                            if (x == 0) {
+                                g_b = g_b.replace(/column/, "64");
+                            }
+                            if (x == 1) {
+                                g_b = g_b.replace(/column/, "192");
+                            }
+                            if (x == 2) {
+                                g_b = g_b.replace(/column/, "320");
+                            }
+                            if (x == 3) {
+                                g_b = g_b.replace(/column/, "448");
+                            }
+                        }
+                    } else {
+                        var y;
+                        while (g_b.indexOf("column") > -1) {
+
+                            x = Math.random() * 4;
+                            x = Math.floor(x);
+                            while (x == y) {
+
+                                x = Math.random() * 4;
+                                x = Math.floor(x);
+                            }
+                            y = x;
+                            if (x == 0) {
+                                g_b = g_b.replace(/column/, "64");
+                            }
+                            if (x == 1) {
+                                g_b = g_b.replace(/column/, "192");
+                            }
+                            if (x == 2) {
+                                g_b = g_b.replace(/column/, "320");
+                            }
+                            if (x == 3) {
+                                g_b = g_b.replace(/column/, "448");
+                            }
+                        }
+                    }
+                    break;
+                case "5k":
+                    key_num_a = 5;
+                    if (document.getElementById("continue").checked == true) {
+                        while (g_b.indexOf("column") > -1) {
+
+                            x = Math.random() * 5;
+                            x = Math.floor(x);
+                            if (x == 0) {
+                                g_b = g_b.replace(/column/, "51");
+                            }
+                            if (x == 1) {
+                                g_b = g_b.replace(/column/, "153");
+                            }
+                            if (x == 2) {
+                                g_b = g_b.replace(/column/, "256");
+                            }
+                            if (x == 3) {
+                                g_b = g_b.replace(/column/, "358");
+                            }
+                            if (x == 4) {
+                                g_b = g_b.replace(/column/, "460");
+                            }
+                        }
+                    } else {
+                        var y;
+                        while (g_b.indexOf("column") > -1) {
+
+                            x = Math.random() * 5;
+                            x = Math.floor(x);
+                            while (x == y) {
+
+                                x = Math.random() * 5;
+                                x = Math.floor(x);
+                            }
+                            y = x;
+                            if (x == 0) {
+                                g_b = g_b.replace(/column/, "51");
+                            }
+                            if (x == 1) {
+                                g_b = g_b.replace(/column/, "153");
+                            }
+                            if (x == 2) {
+                                g_b = g_b.replace(/column/, "256");
+                            }
+                            if (x == 3) {
+                                g_b = g_b.replace(/column/, "358");
+                            }
+                            if (x == 4) {
+                                g_b = g_b.replace(/column/, "460");
+                            }
+                        }
+                    }
+                    break;
+                case "6k":
+                    key_num_a = 6;
+                    if (document.getElementById("continue").checked == true) {
+                        while (g_b.indexOf("column") > -1) {
+
+                            x = Math.random() * 6;
+                            x = Math.floor(x);
+                            if (x == 0) {
+                                g_b = g_b.replace(/column/, "42");
+                            }
+                            if (x == 1) {
+                                g_b = g_b.replace(/column/, "128");
+                            }
+                            if (x == 2) {
+                                g_b = g_b.replace(/column/, "213");
+                            }
+                            if (x == 3) {
+                                g_b = g_b.replace(/column/, "298");
+                            }
+                            if (x == 4) {
+                                g_b = g_b.replace(/column/, "384");
+                            }
+                            if (x == 5) {
+                                g_b = g_b.replace(/column/, "469");
+                            }
+                        }
+                    } else {
+                        var y;
+                        while (g_b.indexOf("column") > -1) {
+
+                            x = Math.random() * 6;
+                            x = Math.floor(x);
+                            while (x == y) {
+
+                                x = Math.random() * 6;
+                                x = Math.floor(x);
+                            }
+                            y = x;
+                            if (x == 0) {
+                                g_b = g_b.replace(/column/, "42");
+                            }
+                            if (x == 1) {
+                                g_b = g_b.replace(/column/, "128");
+                            }
+                            if (x == 2) {
+                                g_b = g_b.replace(/column/, "213");
+                            }
+                            if (x == 3) {
+                                g_b = g_b.replace(/column/, "298");
+                            }
+                            if (x == 4) {
+                                g_b = g_b.replace(/column/, "384");
+                            }
+                            if (x == 5) {
+                                g_b = g_b.replace(/column/, "469");
+                            }
+                        }
+                    }
+                    break;
+                case "7k":
+                    key_num_a = 7;
+                    if (document.getElementById("continue").checked == true) {
+                        while (g_b.indexOf("column") > -1) {
+
+                            x = Math.random() * 7;
+                            x = Math.floor(x);
+                            if (x == 0) {
+                                g_b = g_b.replace(/column/, "36");
+                            }
+                            if (x == 1) {
+                                g_b = g_b.replace(/column/, "109");
+                            }
+                            if (x == 2) {
+                                g_b = g_b.replace(/column/, "182");
+                            }
+                            if (x == 3) {
+                                g_b = g_b.replace(/column/, "256");
+                            }
+                            if (x == 4) {
+                                g_b = g_b.replace(/column/, "329");
+                            }
+                            if (x == 5) {
+                                g_b = g_b.replace(/column/, "402");
+                            }
+                            if (x == 6) {
+                                g_b = g_b.replace(/column/, "475");
+                            }
+                        }
+                    } else {
+                        var y;
+                        while (g_b.indexOf("column") > -1) {
+
+                            x = Math.random() * 7;
+                            x = Math.floor(x);
+                            while (x == y) {
+
+                                x = Math.random() * 7;
+                                x = Math.floor(x);
+                            }
+                            y = x;
+                            if (x == 0) {
+                                g_b = g_b.replace(/column/, "36");
+                            }
+                            if (x == 1) {
+                                g_b = g_b.replace(/column/, "109");
+                            }
+                            if (x == 2) {
+                                g_b = g_b.replace(/column/, "182");
+                            }
+                            if (x == 3) {
+                                g_b = g_b.replace(/column/, "256");
+                            }
+                            if (x == 4) {
+                                g_b = g_b.replace(/column/, "329");
+                            }
+                            if (x == 5) {
+                                g_b = g_b.replace(/column/, "402");
+                            }
+                            if (x == 6) {
+                                g_b = g_b.replace(/column/, "475");
+                            }
+                        }
+                    }
+                    break;
+                case "8k":
+                    key_num_a = 8;
+                    if (document.getElementById("continue").checked == true) {
+                        while (g_b.indexOf("column") > -1) {
+
+                            x = Math.random() * 8;
+                            x = Math.floor(x);
+                            if (x == 0) {
+                                g_b = g_b.replace(/column/, "32");
+                            }
+                            if (x == 1) {
+                                g_b = g_b.replace(/column/, "96");
+                            }
+                            if (x == 2) {
+                                g_b = g_b.replace(/column/, "160");
+                            }
+                            if (x == 3) {
+                                g_b = g_b.replace(/column/, "224");
+                            }
+                            if (x == 4) {
+                                g_b = g_b.replace(/column/, "288");
+                            }
+                            if (x == 5) {
+                                g_b = g_b.replace(/column/, "352");
+                            }
+                            if (x == 6) {
+                                g_b = g_b.replace(/column/, "416");
+                            }
+                            if (x == 7) {
+                                g_b = g_b.replace(/column/, "480");
+                            }
+                        }
+                    } else {
+                        var y;
+                        while (g_b.indexOf("column") > -1) {
+
+                            x = Math.random() * 8;
+                            x = Math.floor(x);
+                            while (x == y) {
+
+                                x = Math.random() * 8;
+                                x = Math.floor(x);
+                            }
+                            y = x;
+                            if (x == 0) {
+                                g_b = g_b.replace(/column/, "32");
+                            }
+                            if (x == 1) {
+                                g_b = g_b.replace(/column/, "96");
+                            }
+                            if (x == 2) {
+                                g_b = g_b.replace(/column/, "160");
+                            }
+                            if (x == 3) {
+                                g_b = g_b.replace(/column/, "224");
+                            }
+                            if (x == 4) {
+                                g_b = g_b.replace(/column/, "288");
+                            }
+                            if (x == 5) {
+                                g_b = g_b.replace(/column/, "352");
+                            }
+                            if (x == 6) {
+                                g_b = g_b.replace(/column/, "416");
+                            }
+                            if (x == 7) {
+                                g_b = g_b.replace(/column/, "480");
+                            }
+                        }
+                    }
+                    break;
+                case "9k":
+                    key_num_a = 9;
+                    if (document.getElementById("continue").checked == true) {
+                        while (g_b.indexOf("column") > -1) {
+
+                            x = Math.random() * 9;
+                            x = Math.floor(x);
+                            if (x == 0) {
+                                g_b = g_b.replace(/column/, "28");
+                            }
+                            if (x == 1) {
+                                g_b = g_b.replace(/column/, "85");
+                            }
+                            if (x == 2) {
+                                g_b = g_b.replace(/column/, "142");
+                            }
+                            if (x == 3) {
+                                g_b = g_b.replace(/column/, "199");
+                            }
+                            if (x == 4) {
+                                g_b = g_b.replace(/column/, "256");
+                            }
+                            if (x == 5) {
+                                g_b = g_b.replace(/column/, "312");
+                            }
+                            if (x == 6) {
+                                g_b = g_b.replace(/column/, "369");
+                            }
+                            if (x == 7) {
+                                g_b = g_b.replace(/column/, "426");
+                            }
+                            if (x == 8) {
+                                g_b = g_b.replace(/column/, "483");
+                            }
+                        }
+                    } else {
+                        var y;
+                        while (g_b.indexOf("column") > -1) {
+
+                            x = Math.random() * 9;
+                            x = Math.floor(x);
+                            while (x == y) {
+
+                                x = Math.random() * 9;
+                                x = Math.floor(x);
+                            }
+                            y = x;
+                            if (x == 0) {
+                                g_b = g_b.replace(/column/, "28");
+                            }
+                            if (x == 1) {
+                                g_b = g_b.replace(/column/, "85");
+                            }
+                            if (x == 2) {
+                                g_b = g_b.replace(/column/, "142");
+                            }
+                            if (x == 3) {
+                                g_b = g_b.replace(/column/, "199");
+                            }
+                            if (x == 4) {
+                                g_b = g_b.replace(/column/, "256");
+                            }
+                            if (x == 5) {
+                                g_b = g_b.replace(/column/, "312");
+                            }
+                            if (x == 6) {
+                                g_b = g_b.replace(/column/, "369");
+                            }
+                            if (x == 7) {
+                                g_b = g_b.replace(/column/, "426");
+                            }
+                            if (x == 8) {
+                                g_b = g_b.replace(/column/, "483");
+                            }
+                        }
+                    }
+                    break;
+                case "10k":
+                    key_num_a = 10;
+                    if (document.getElementById("continue").checked == true) {
+                        while (g_b.indexOf("column") > -1) {
+
+                            x = Math.random() * 10;
+                            x = Math.floor(x);
+                            if (x == 0) {
+                                g_b = g_b.replace(/column/, "25");
+                            }
+                            if (x == 1) {
+                                g_b = g_b.replace(/column/, "76");
+                            }
+                            if (x == 2) {
+                                g_b = g_b.replace(/column/, "128");
+                            }
+                            if (x == 3) {
+                                g_b = g_b.replace(/column/, "179");
+                            }
+                            if (x == 4) {
+                                g_b = g_b.replace(/column/, "230");
+                            }
+                            if (x == 5) {
+                                g_b = g_b.replace(/column/, "281");
+                            }
+                            if (x == 6) {
+                                g_b = g_b.replace(/column/, "332");
+                            }
+                            if (x == 7) {
+                                g_b = g_b.replace(/column/, "384");
+                            }
+                            if (x == 8) {
+                                g_b = g_b.replace(/column/, "435");
+                            }
+                            if (x == 9) {
+                                g_b = g_b.replace(/column/, "486");
+                            }
+                        }
+                    } else {
+                        var y;
+                        while (g_b.indexOf("column") > -1) {
+
+                            x = Math.random() * 10;
+                            x = Math.floor(x);
+                            while (x == y) {
+
+                                x = Math.random() * 10;
+                                x = Math.floor(x);
+                            }
+                            y = x;
+                            if (x == 0) {
+                                g_b = g_b.replace(/column/, "25");
+                            }
+                            if (x == 1) {
+                                g_b = g_b.replace(/column/, "76");
+                            }
+                            if (x == 2) {
+                                g_b = g_b.replace(/column/, "128");
+                            }
+                            if (x == 3) {
+                                g_b = g_b.replace(/column/, "179");
+                            }
+                            if (x == 4) {
+                                g_b = g_b.replace(/column/, "230");
+                            }
+                            if (x == 5) {
+                                g_b = g_b.replace(/column/, "281");
+                            }
+                            if (x == 6) {
+                                g_b = g_b.replace(/column/, "332");
+                            }
+                            if (x == 7) {
+                                g_b = g_b.replace(/column/, "384");
+                            }
+                            if (x == 8) {
+                                g_b = g_b.replace(/column/, "435");
+                            }
+                            if (x == 9) {
+                                g_b = g_b.replace(/column/, "486");
+                            }
+                        }
+                    }
+                    break;
+                case "11k":
+                    key_num_a = 11;
+                    if (document.getElementById("continue").checked == true) {
+                        while (g_b.indexOf("column") > -1) {
+
+                            x = Math.random() * 11;
+                            x = Math.floor(x);
+                            if (x == 0) {
+                                g_b = g_b.replace(/column/, "23");
+                            }
+                            if (x == 1) {
+                                g_b = g_b.replace(/column/, "69");
+                            }
+                            if (x == 2) {
+                                g_b = g_b.replace(/column/, "116");
+                            }
+                            if (x == 3) {
+                                g_b = g_b.replace(/column/, "162");
+                            }
+                            if (x == 4) {
+                                g_b = g_b.replace(/column/, "209");
+                            }
+                            if (x == 5) {
+                                g_b = g_b.replace(/column/, "256");
+                            }
+                            if (x == 6) {
+                                g_b = g_b.replace(/column/, "302");
+                            }
+                            if (x == 7) {
+                                g_b = g_b.replace(/column/, "349");
+                            }
+                            if (x == 8) {
+                                g_b = g_b.replace(/column/, "395");
+                            }
+                            if (x == 9) {
+                                g_b = g_b.replace(/column/, "442");
+                            }
+                            if (x == 10) {
+                                g_b = g_b.replace(/column/, "488");
+                            }
+                        }
+                    } else {
+                        var y;
+                        while (g_b.indexOf("column") > -1) {
+
+                            x = Math.random() * 11;
+                            x = Math.floor(x);
+                            while (x == y) {
+
+                                x = Math.random() * 11;
+                                x = Math.floor(x);
+                            }
+                            y = x;
+                            if (x == 0) {
+                                g_b = g_b.replace(/column/, "23");
+                            }
+                            if (x == 1) {
+                                g_b = g_b.replace(/column/, "69");
+                            }
+                            if (x == 2) {
+                                g_b = g_b.replace(/column/, "116");
+                            }
+                            if (x == 3) {
+                                g_b = g_b.replace(/column/, "162");
+                            }
+                            if (x == 4) {
+                                g_b = g_b.replace(/column/, "209");
+                            }
+                            if (x == 5) {
+                                g_b = g_b.replace(/column/, "256");
+                            }
+                            if (x == 6) {
+                                g_b = g_b.replace(/column/, "302");
+                            }
+                            if (x == 7) {
+                                g_b = g_b.replace(/column/, "349");
+                            }
+                            if (x == 8) {
+                                g_b = g_b.replace(/column/, "395");
+                            }
+                            if (x == 9) {
+                                g_b = g_b.replace(/column/, "442");
+                            }
+                            if (x == 10) {
+                                g_b = g_b.replace(/column/, "488");
+                            }
+                        }
+                    }
+                    break;
+                case "12k":
+                    key_num_a = 12;
+                    if (document.getElementById("continue").checked == true) {
+                        while (g_b.indexOf("column") > -1) {
+
+                            x = Math.random() * 12;
+                            x = Math.floor(x);
+                            if (x == 0) {
+                                g_b = g_b.replace(/column/, "21");
+                            }
+                            if (x == 1) {
+                                g_b = g_b.replace(/column/, "64");
+                            }
+                            if (x == 2) {
+                                g_b = g_b.replace(/column/, "106");
+                            }
+                            if (x == 3) {
+                                g_b = g_b.replace(/column/, "149");
+                            }
+                            if (x == 4) {
+                                g_b = g_b.replace(/column/, "192");
+                            }
+                            if (x == 5) {
+                                g_b = g_b.replace(/column/, "234");
+                            }
+                            if (x == 6) {
+                                g_b = g_b.replace(/column/, "277");
+                            }
+                            if (x == 7) {
+                                g_b = g_b.replace(/column/, "320");
+                            }
+                            if (x == 8) {
+                                g_b = g_b.replace(/column/, "362");
+                            }
+                            if (x == 9) {
+                                g_b = g_b.replace(/column/, "405");
+                            }
+                            if (x == 10) {
+                                g_b = g_b.replace(/column/, "448");
+                            }
+                            if (x == 11) {
+                                g_b = g_b.replace(/column/, "490");
+                            }
+                        }
+                    } else {
+                        var y;
+                        while (g_b.indexOf("column") > -1) {
+
+                            x = Math.random() * 12;
+                            x = Math.floor(x);
+                            while (x == y) {
+
+                                x = Math.random() * 12;
+                                x = Math.floor(x);
+                            }
+                            y = x;
+                            if (x == 0) {
+                                g_b = g_b.replace(/column/, "21");
+                            }
+                            if (x == 1) {
+                                g_b = g_b.replace(/column/, "64");
+                            }
+                            if (x == 2) {
+                                g_b = g_b.replace(/column/, "106");
+                            }
+                            if (x == 3) {
+                                g_b = g_b.replace(/column/, "149");
+                            }
+                            if (x == 4) {
+                                g_b = g_b.replace(/column/, "192");
+                            }
+                            if (x == 5) {
+                                g_b = g_b.replace(/column/, "234");
+                            }
+                            if (x == 6) {
+                                g_b = g_b.replace(/column/, "277");
+                            }
+                            if (x == 7) {
+                                g_b = g_b.replace(/column/, "320");
+                            }
+                            if (x == 8) {
+                                g_b = g_b.replace(/column/, "362");
+                            }
+                            if (x == 9) {
+                                g_b = g_b.replace(/column/, "405");
+                            }
+                            if (x == 10) {
+                                g_b = g_b.replace(/column/, "448");
+                            }
+                            if (x == 11) {
+                                g_b = g_b.replace(/column/, "490");
+                            }
+                        }
+                    }
+                    break;
+                case "13k":
+                    key_num_a = 13;
+                    if (document.getElementById("continue").checked == true) {
+                        while (g_b.indexOf("column") > -1) {
+
+                            x = Math.random() * 13;
+                            x = Math.floor(x);
+                            if (x == 0) {
+                                g_b = g_b.replace(/column/, "19");
+                            }
+                            if (x == 1) {
+                                g_b = g_b.replace(/column/, "59");
+                            }
+                            if (x == 2) {
+                                g_b = g_b.replace(/column/, "98");
+                            }
+                            if (x == 3) {
+                                g_b = g_b.replace(/column/, "137");
+                            }
+                            if (x == 4) {
+                                g_b = g_b.replace(/column/, "177");
+                            }
+                            if (x == 5) {
+                                g_b = g_b.replace(/column/, "216");
+                            }
+                            if (x == 6) {
+                                g_b = g_b.replace(/column/, "256");
+                            }
+                            if (x == 7) {
+                                g_b = g_b.replace(/column/, "295");
+                            }
+                            if (x == 8) {
+                                g_b = g_b.replace(/column/, "334");
+                            }
+                            if (x == 9) {
+                                g_b = g_b.replace(/column/, "374");
+                            }
+                            if (x == 10) {
+                                g_b = g_b.replace(/column/, "413");
+                            }
+                            if (x == 11) {
+                                g_b = g_b.replace(/column/, "452");
+                            }
+                            if (x == 12) {
+                                g_b = g_b.replace(/column/, "492");
+                            }
+                        }
+                    } else {
+                        var y;
+                        while (g_b.indexOf("column") > -1) {
+
+                            x = Math.random() * 13;
+                            x = Math.floor(x);
+                            while (x == y) {
+
+                                x = Math.random() * 13;
+                                x = Math.floor(x);
+                            }
+                            y = x;
+                            if (x == 0) {
+                                g_b = g_b.replace(/column/, "19");
+                            }
+                            if (x == 1) {
+                                g_b = g_b.replace(/column/, "59");
+                            }
+                            if (x == 2) {
+                                g_b = g_b.replace(/column/, "98");
+                            }
+                            if (x == 3) {
+                                g_b = g_b.replace(/column/, "137");
+                            }
+                            if (x == 4) {
+                                g_b = g_b.replace(/column/, "177");
+                            }
+                            if (x == 5) {
+                                g_b = g_b.replace(/column/, "216");
+                            }
+                            if (x == 6) {
+                                g_b = g_b.replace(/column/, "256");
+                            }
+                            if (x == 7) {
+                                g_b = g_b.replace(/column/, "295");
+                            }
+                            if (x == 8) {
+                                g_b = g_b.replace(/column/, "334");
+                            }
+                            if (x == 9) {
+                                g_b = g_b.replace(/column/, "374");
+                            }
+                            if (x == 10) {
+                                g_b = g_b.replace(/column/, "413");
+                            }
+                            if (x == 11) {
+                                g_b = g_b.replace(/column/, "452");
+                            }
+                            if (x == 12) {
+                                g_b = g_b.replace(/column/, "492");
+                            }
+                        }
+                    }
+                    break;
+                case "14k":
+                    key_num_a = 14;
+                    if (document.getElementById("continue").checked == true) {
+                        while (g_b.indexOf("column") > -1) {
+
+                            x = Math.random() * 14;
+                            x = Math.floor(x);
+                            if (x == 0) {
+                                g_b = g_b.replace(/column/, "18");
+                            }
+                            if (x == 1) {
+                                g_b = g_b.replace(/column/, "54");
+                            }
+                            if (x == 2) {
+                                g_b = g_b.replace(/column/, "91");
+                            }
+                            if (x == 3) {
+                                g_b = g_b.replace(/column/, "128");
+                            }
+                            if (x == 4) {
+                                g_b = g_b.replace(/column/, "164");
+                            }
+                            if (x == 5) {
+                                g_b = g_b.replace(/column/, "201");
+                            }
+                            if (x == 6) {
+                                g_b = g_b.replace(/column/, "237");
+                            }
+                            if (x == 7) {
+                                g_b = g_b.replace(/column/, "274");
+                            }
+                            if (x == 8) {
+                                g_b = g_b.replace(/column/, "310");
+                            }
+                            if (x == 9) {
+                                g_b = g_b.replace(/column/, "347");
+                            }
+                            if (x == 10) {
+                                g_b = g_b.replace(/column/, "384");
+                            }
+                            if (x == 11) {
+                                g_b = g_b.replace(/column/, "420");
+                            }
+                            if (x == 12) {
+                                g_b = g_b.replace(/column/, "457");
+                            }
+                            if (x == 13) {
+                                g_b = g_b.replace(/column/, "493");
+                            }
+                        }
+                    } else {
+                        var y;
+                        while (g_b.indexOf("column") > -1) {
+
+                            x = Math.random() * 14;
+                            x = Math.floor(x);
+                            while (x == y) {
+
+                                x = Math.random() * 14;
+                                x = Math.floor(x);
+                            }
+                            y = x;
+                            if (x == 0) {
+                                g_b = g_b.replace(/column/, "18");
+                            }
+                            if (x == 1) {
+                                g_b = g_b.replace(/column/, "54");
+                            }
+                            if (x == 2) {
+                                g_b = g_b.replace(/column/, "91");
+                            }
+                            if (x == 3) {
+                                g_b = g_b.replace(/column/, "128");
+                            }
+                            if (x == 4) {
+                                g_b = g_b.replace(/column/, "164");
+                            }
+                            if (x == 5) {
+                                g_b = g_b.replace(/column/, "201");
+                            }
+                            if (x == 6) {
+                                g_b = g_b.replace(/column/, "237");
+                            }
+                            if (x == 7) {
+                                g_b = g_b.replace(/column/, "274");
+                            }
+                            if (x == 8) {
+                                g_b = g_b.replace(/column/, "310");
+                            }
+                            if (x == 9) {
+                                g_b = g_b.replace(/column/, "347");
+                            }
+                            if (x == 10) {
+                                g_b = g_b.replace(/column/, "384");
+                            }
+                            if (x == 11) {
+                                g_b = g_b.replace(/column/, "420");
+                            }
+                            if (x == 12) {
+                                g_b = g_b.replace(/column/, "457");
+                            }
+                            if (x == 13) {
+                                g_b = g_b.replace(/column/, "493");
+                            }
+                        }
+                    }
+                    break;
+                case "15k":
+                    key_num_a = 15;
+                    if (document.getElementById("continue").checked == true) {
+                        while (g_b.indexOf("column") > -1) {
+
+                            x = Math.random() * 15;
+                            x = Math.floor(x);
+                            if (x == 0) {
+                                g_b = g_b.replace(/column/, "17");
+                            }
+                            if (x == 1) {
+                                g_b = g_b.replace(/column/, "51");
+                            }
+                            if (x == 2) {
+                                g_b = g_b.replace(/column/, "85");
+                            }
+                            if (x == 3) {
+                                g_b = g_b.replace(/column/, "119");
+                            }
+                            if (x == 4) {
+                                g_b = g_b.replace(/column/, "153");
+                            }
+                            if (x == 5) {
+                                g_b = g_b.replace(/column/, "187");
+                            }
+                            if (x == 6) {
+                                g_b = g_b.replace(/column/, "221");
+                            }
+                            if (x == 7) {
+                                g_b = g_b.replace(/column/, "256");
+                            }
+                            if (x == 8) {
+                                g_b = g_b.replace(/column/, "290");
+                            }
+                            if (x == 9) {
+                                g_b = g_b.replace(/column/, "324");
+                            }
+                            if (x == 10) {
+                                g_b = g_b.replace(/column/, "358");
+                            }
+                            if (x == 11) {
+                                g_b = g_b.replace(/column/, "392");
+                            }
+                            if (x == 12) {
+                                g_b = g_b.replace(/column/, "426");
+                            }
+                            if (x == 13) {
+                                g_b = g_b.replace(/column/, "460");
+                            }
+                            if (x == 14) {
+                                g_b = g_b.replace(/column/, "494");
+                            }
+                        }
+                    } else {
+                        var y;
+                        while (g_b.indexOf("column") > -1) {
+
+                            x = Math.random() * 15;
+                            x = Math.floor(x);
+                            while (x == y) {
+
+                                x = Math.random() * 15;
+                                x = Math.floor(x);
+                            }
+                            y = x;
+                            if (x == 0) {
+                                g_b = g_b.replace(/column/, "17");
+                            }
+                            if (x == 1) {
+                                g_b = g_b.replace(/column/, "51");
+                            }
+                            if (x == 2) {
+                                g_b = g_b.replace(/column/, "85");
+                            }
+                            if (x == 3) {
+                                g_b = g_b.replace(/column/, "119");
+                            }
+                            if (x == 4) {
+                                g_b = g_b.replace(/column/, "153");
+                            }
+                            if (x == 5) {
+                                g_b = g_b.replace(/column/, "187");
+                            }
+                            if (x == 6) {
+                                g_b = g_b.replace(/column/, "221");
+                            }
+                            if (x == 7) {
+                                g_b = g_b.replace(/column/, "256");
+                            }
+                            if (x == 8) {
+                                g_b = g_b.replace(/column/, "290");
+                            }
+                            if (x == 9) {
+                                g_b = g_b.replace(/column/, "324");
+                            }
+                            if (x == 10) {
+                                g_b = g_b.replace(/column/, "358");
+                            }
+                            if (x == 11) {
+                                g_b = g_b.replace(/column/, "392");
+                            }
+                            if (x == 12) {
+                                g_b = g_b.replace(/column/, "426");
+                            }
+                            if (x == 13) {
+                                g_b = g_b.replace(/column/, "460");
+                            }
+                            if (x == 14) {
+                                g_b = g_b.replace(/column/, "494");
+                            }
+                        }
+                    }
+                    break;
+                case "16k":
+                    key_num_a = 16;
+                    if (document.getElementById("continue").checked == true) {
+                        while (g_b.indexOf("column") > -1) {
+
+                            x = Math.random() * 16;
+                            x = Math.floor(x);
+                            if (x == 0) {
+                                g_b = g_b.replace(/column/, "16");
+                            }
+                            if (x == 1) {
+                                g_b = g_b.replace(/column/, "48");
+                            }
+                            if (x == 2) {
+                                g_b = g_b.replace(/column/, "80");
+                            }
+                            if (x == 3) {
+                                g_b = g_b.replace(/column/, "112");
+                            }
+                            if (x == 4) {
+                                g_b = g_b.replace(/column/, "144");
+                            }
+                            if (x == 5) {
+                                g_b = g_b.replace(/column/, "176");
+                            }
+                            if (x == 6) {
+                                g_b = g_b.replace(/column/, "208");
+                            }
+                            if (x == 7) {
+                                g_b = g_b.replace(/column/, "240");
+                            }
+                            if (x == 8) {
+                                g_b = g_b.replace(/column/, "272");
+                            }
+                            if (x == 9) {
+                                g_b = g_b.replace(/column/, "304");
+                            }
+                            if (x == 10) {
+                                g_b = g_b.replace(/column/, "336");
+                            }
+                            if (x == 11) {
+                                g_b = g_b.replace(/column/, "368");
+                            }
+                            if (x == 12) {
+                                g_b = g_b.replace(/column/, "400");
+                            }
+                            if (x == 13) {
+                                g_b = g_b.replace(/column/, "432");
+                            }
+                            if (x == 14) {
+                                g_b = g_b.replace(/column/, "464");
+                            }
+                            if (x == 15) {
+                                g_b = g_b.replace(/column/, "496");
+                            }
+                        }
+                    } else {
+                        var y;
+                        while (g_b.indexOf("column") > -1) {
+
+                            x = Math.random() * 16;
+                            x = Math.floor(x);
+                            while (x == y) {
+
+                                x = Math.random() * 16;
+                                x = Math.floor(x);
+                            }
+                            y = x;
+                            if (x == 0) {
+                                g_b = g_b.replace(/column/, "16");
+                            }
+                            if (x == 1) {
+                                g_b = g_b.replace(/column/, "48");
+                            }
+                            if (x == 2) {
+                                g_b = g_b.replace(/column/, "80");
+                            }
+                            if (x == 3) {
+                                g_b = g_b.replace(/column/, "112");
+                            }
+                            if (x == 4) {
+                                g_b = g_b.replace(/column/, "144");
+                            }
+                            if (x == 5) {
+                                g_b = g_b.replace(/column/, "176");
+                            }
+                            if (x == 6) {
+                                g_b = g_b.replace(/column/, "208");
+                            }
+                            if (x == 7) {
+                                g_b = g_b.replace(/column/, "240");
+                            }
+                            if (x == 8) {
+                                g_b = g_b.replace(/column/, "272");
+                            }
+                            if (x == 9) {
+                                g_b = g_b.replace(/column/, "304");
+                            }
+                            if (x == 10) {
+                                g_b = g_b.replace(/column/, "336");
+                            }
+                            if (x == 11) {
+                                g_b = g_b.replace(/column/, "368");
+                            }
+                            if (x == 12) {
+                                g_b = g_b.replace(/column/, "400");
+                            }
+                            if (x == 13) {
+                                g_b = g_b.replace(/column/, "432");
+                            }
+                            if (x == 14) {
+                                g_b = g_b.replace(/column/, "464");
+                            }
+                            if (x == 15) {
+                                g_b = g_b.replace(/column/, "496");
+                            }
+                        }
+                    }
+                    break;
+                case "17k":
+                    key_num_a = 17;
+                    if (document.getElementById("continue").checked == true) {
+                        while (g_b.indexOf("column") > -1) {
+
+                            x = Math.random() * 17;
+                            x = Math.floor(x);
+                            if (x == 0) {
+                                g_b = g_b.replace(/column/, "15");
+                            }
+                            if (x == 1) {
+                                g_b = g_b.replace(/column/, "45");
+                            }
+                            if (x == 2) {
+                                g_b = g_b.replace(/column/, "75");
+                            }
+                            if (x == 3) {
+                                g_b = g_b.replace(/column/, "105");
+                            }
+                            if (x == 4) {
+                                g_b = g_b.replace(/column/, "135");
+                            }
+                            if (x == 5) {
+                                g_b = g_b.replace(/column/, "165");
+                            }
+                            if (x == 6) {
+                                g_b = g_b.replace(/column/, "195");
+                            }
+                            if (x == 7) {
+                                g_b = g_b.replace(/column/, "225");
+                            }
+                            if (x == 8) {
+                                g_b = g_b.replace(/column/, "256");
+                            }
+                            if (x == 9) {
+                                g_b = g_b.replace(/column/, "286");
+                            }
+                            if (x == 10) {
+                                g_b = g_b.replace(/column/, "316");
+                            }
+                            if (x == 11) {
+                                g_b = g_b.replace(/column/, "346");
+                            }
+                            if (x == 12) {
+                                g_b = g_b.replace(/column/, "376");
+                            }
+                            if (x == 13) {
+                                g_b = g_b.replace(/column/, "406");
+                            }
+                            if (x == 14) {
+                                g_b = g_b.replace(/column/, "436");
+                            }
+                            if (x == 15) {
+                                g_b = g_b.replace(/column/, "466");
+                            }
+                            if (x == 16) {
+                                g_b = g_b.replace(/column/, "496");
+                            }
+                        }
+                    } else {
+                        var y;
+                        while (g_b.indexOf("column") > -1) {
+
+                            x = Math.random() * 17;
+                            x = Math.floor(x);
+                            while (x == y) {
+
+                                x = Math.random() * 17;
+                                x = Math.floor(x);
+                            }
+                            y = x;
+                            if (x == 0) {
+                                g_b = g_b.replace(/column/, "15");
+                            }
+                            if (x == 1) {
+                                g_b = g_b.replace(/column/, "45");
+                            }
+                            if (x == 2) {
+                                g_b = g_b.replace(/column/, "75");
+                            }
+                            if (x == 3) {
+                                g_b = g_b.replace(/column/, "105");
+                            }
+                            if (x == 4) {
+                                g_b = g_b.replace(/column/, "135");
+                            }
+                            if (x == 5) {
+                                g_b = g_b.replace(/column/, "165");
+                            }
+                            if (x == 6) {
+                                g_b = g_b.replace(/column/, "195");
+                            }
+                            if (x == 7) {
+                                g_b = g_b.replace(/column/, "225");
+                            }
+                            if (x == 8) {
+                                g_b = g_b.replace(/column/, "256");
+                            }
+                            if (x == 9) {
+                                g_b = g_b.replace(/column/, "286");
+                            }
+                            if (x == 10) {
+                                g_b = g_b.replace(/column/, "316");
+                            }
+                            if (x == 11) {
+                                g_b = g_b.replace(/column/, "346");
+                            }
+                            if (x == 12) {
+                                g_b = g_b.replace(/column/, "376");
+                            }
+                            if (x == 13) {
+                                g_b = g_b.replace(/column/, "406");
+                            }
+                            if (x == 14) {
+                                g_b = g_b.replace(/column/, "436");
+                            }
+                            if (x == 15) {
+                                g_b = g_b.replace(/column/, "466");
+                            }
+                            if (x == 16) {
+                                g_b = g_b.replace(/column/, "496");
+                            }
+                        }
+                    }
+                    break;
+                case "18k":
+                    key_num_a = 18;
+                    if (document.getElementById("continue").checked == true) {
+                        while (g_b.indexOf("column") > -1) {
+
+                            x = Math.random() * 18;
+                            x = Math.floor(x);
+                            if (x == 0) {
+                                g_b = g_b.replace(/column/, "14");
+                            }
+                            if (x == 1) {
+                                g_b = g_b.replace(/column/, "42");
+                            }
+                            if (x == 2) {
+                                g_b = g_b.replace(/column/, "71");
+                            }
+                            if (x == 3) {
+                                g_b = g_b.replace(/column/, "99");
+                            }
+                            if (x == 4) {
+                                g_b = g_b.replace(/column/, "128");
+                            }
+                            if (x == 5) {
+                                g_b = g_b.replace(/column/, "156");
+                            }
+                            if (x == 6) {
+                                g_b = g_b.replace(/column/, "184");
+                            }
+                            if (x == 7) {
+                                g_b = g_b.replace(/column/, "213");
+                            }
+                            if (x == 8) {
+                                g_b = g_b.replace(/column/, "241");
+                            }
+                            if (x == 9) {
+                                g_b = g_b.replace(/column/, "270");
+                            }
+                            if (x == 10) {
+                                g_b = g_b.replace(/column/, "298");
+                            }
+                            if (x == 11) {
+                                g_b = g_b.replace(/column/, "327");
+                            }
+                            if (x == 12) {
+                                g_b = g_b.replace(/column/, "355");
+                            }
+                            if (x == 13) {
+                                g_b = g_b.replace(/column/, "384");
+                            }
+                            if (x == 14) {
+                                g_b = g_b.replace(/column/, "412");
+                            }
+                            if (x == 15) {
+                                g_b = g_b.replace(/column/, "440");
+                            }
+                            if (x == 16) {
+                                g_b = g_b.replace(/column/, "469");
+                            }
+                            if (x == 17) {
+                                g_b = g_b.replace(/column/, "497");
+                            }
+                        }
+                    } else {
+                        var y;
+                        while (g_b.indexOf("column") > -1) {
+
+                            x = Math.random() * 18;
+                            x = Math.floor(x);
+                            while (x == y) {
+
+                                x = Math.random() * 18;
+                                x = Math.floor(x);
+                            }
+                            y = x;
+                            if (x == 0) {
+                                g_b = g_b.replace(/column/, "14");
+                            }
+                            if (x == 1) {
+                                g_b = g_b.replace(/column/, "42");
+                            }
+                            if (x == 2) {
+                                g_b = g_b.replace(/column/, "71");
+                            }
+                            if (x == 3) {
+                                g_b = g_b.replace(/column/, "99");
+                            }
+                            if (x == 4) {
+                                g_b = g_b.replace(/column/, "128");
+                            }
+                            if (x == 5) {
+                                g_b = g_b.replace(/column/, "156");
+                            }
+                            if (x == 6) {
+                                g_b = g_b.replace(/column/, "184");
+                            }
+                            if (x == 7) {
+                                g_b = g_b.replace(/column/, "213");
+                            }
+                            if (x == 8) {
+                                g_b = g_b.replace(/column/, "241");
+                            }
+                            if (x == 9) {
+                                g_b = g_b.replace(/column/, "270");
+                            }
+                            if (x == 10) {
+                                g_b = g_b.replace(/column/, "298");
+                            }
+                            if (x == 11) {
+                                g_b = g_b.replace(/column/, "327");
+                            }
+                            if (x == 12) {
+                                g_b = g_b.replace(/column/, "355");
+                            }
+                            if (x == 13) {
+                                g_b = g_b.replace(/column/, "384");
+                            }
+                            if (x == 14) {
+                                g_b = g_b.replace(/column/, "412");
+                            }
+                            if (x == 15) {
+                                g_b = g_b.replace(/column/, "440");
+                            }
+                            if (x == 16) {
+                                g_b = g_b.replace(/column/, "469");
+                            }
+                            if (x == 17) {
+                                g_b = g_b.replace(/column/, "497");
+                            }
+                        }
+                    }
+                    break;
+            }
+            Function1();
+            a = a.split(",");
+            var i_a = /\((.+?)\)/g;
+            var i_b = /\[(.+?)\]/g;
+            j_a = "";
+            for (g_a = 0; g_a < a.length - 1; g_a++) {
+                g_f = a[g_a].match(i_a);
+                if (g_f === null) {
+                    g_b = g_b.replace("sound", "");
+                    j_a = j_a + "," + a[g_a].match(i_b).toString();
+                } else {
+                    g_f = g_f.toString();
+                    if (g_f.indexOf(".") > -1 || g_f.indexOf("!") > -1 || g_f.indexOf("~") > -1 || g_f.indexOf("@") > -1 || g_f.indexOf("$") > -1 || g_f.indexOf("%") > -1 || g_f.indexOf("^") > -1 || g_f.indexOf("&") > -1) {
+                        if (g_f.indexOf("^") > -1 || g_f.indexOf("&") > -1) {
+                            g_b = g_b.replace("sound", "");
+                            j_a = j_a + "," + a[g_a].match(i_b).toString();
+                        } else {
+                            g_h = g_f;
+                            g_f = g_f.replace("(", "");
+                            g_f = g_f.replace(")", "");
+                            g_f = g_f.replace(".", ",");
+                            g_f = g_f.replace("~", ",");
+                            g_f = g_f.replace("!", ",");
+                            g_f = g_f.replace("@", ",");
+                            g_f = g_f.replace("$", ",");
+                            g_f = g_f.replace("%", ",");
+                            g_f = g_f.split(",");
+                            g_b = g_b.replace("sound", "midi_timbre_id/" + g_f[0]);
+                            g_h = g_h.replace(g_f[0], "mute");
+                            j_a = j_a + "," + g_h + a[g_a].match(i_b).toString();
+                        }
+                    } else {
+                        g_f = g_f.replace("(", "");
+                        g_f = g_f.replace(")", "");
+                        g_b = g_b.replace("sound", "midi_timbre_id/" + g_f);
+                        j_a = j_a + "," + a[g_a].match(i_b).toString();
+                    }
+                }
+            }
+            i_c = g_b;
+            j_a = j_a.replace(",", "");
+            a = j_a;
+            Function1_a();
+            j_a = a;
+            ha5 = i_c;
+        }
     }
     timerstart = false;
     clock = 0;
@@ -5273,6 +6027,8 @@ var windowsopen = false;
 //触摸部分，为手机、平板、导航和手表等拥有触控的设备使用
 document.addEventListener('touchstart', touch, false);
 document.addEventListener('touchmove', touch, false);
+document.addEventListener('touchend', touch, false);
+menuslidetype = 30;
 function touch(event) {
     var distance, clientX_start, clientX_end;
     switch (event.type) {
@@ -5283,17 +6039,45 @@ function touch(event) {
         case "touchmove":
             if (windowsopen == false) {
                 clientX_end = event.changedTouches[0].clientX;
-                if (this.clientX_start + 50 < clientX_end) {
-                    id2 = 0;
-                    document.getElementById('id1').style.animation = 'board_1 1s';
-                    document.getElementById('id1').style.left = '0px';
+                if (this.clientX_start < menuslidetype) {
+                    if (clientX_end - this.clientX_start - 250 < 0 && id2 == true && event.changedTouches[0].clientY > 50) {
+                        document.getElementById('id1').style.left = clientX_end - this.clientX_start - 250 + 'px';
+                        document.getElementById('id3').style.display = 'inline';
+                        document.getElementById('id3').style.left = clientX_end - this.clientX_start + 'px';
+                    }
+                    if (clientX_end - this.clientX_start < 0 && id2 == false && event.changedTouches[0].clientY > 50) {
+                        document.getElementById('id1').style.left = clientX_end - this.clientX_start + 'px';
+                        document.getElementById('id3').style.left = clientX_end - this.clientX_start + 250 + 'px';
+                    }
                     document.getElementById('id3').style.width = '100%';
                 }
-                if (this.clientX_start - 50 > clientX_end) {
-                    id2 = 1;
-                    document.getElementById('id1').style.animation = 'board_0 1s';
-                    document.getElementById('id1').style.left = '-250px';
-                    document.getElementById('id3').style.width = '0%';
+            }
+            break;
+        case "touchend":
+            if (parseFloat(document.getElementById('id1').style.left) > -125 && event.changedTouches[0].clientY > 50 && event.changedTouches[0].clientX < 250) {
+                menuslidetype = 250;
+                document.styleSheets[1].insertRule('@keyframes board_a {0% {left: ' + parseFloat(document.getElementById('id1').style.left) + 'px;top: 50px; width:100%;}100% {left: 0px;top: 50px;width:100%;}}', 0);
+                document.styleSheets[1].insertRule('@keyframes board_b {0% {left: ' + parseFloat(document.getElementById('id1').style.left) + 'px; }100% {left: 0px;}}', 0);
+                document.getElementById('id1').style.animation = 'board_a 0.05s';
+                document.getElementById('id3').style.animation = 'board_b 0.05s';
+                setTimeout(function () {
+                    document.getElementById('id1').style.left = "0px";
+                    document.styleSheets[1].deleteRule(0);
+                    id2 = false;
+                }, 50);
+            }
+            else {
+                if (event.changedTouches[0].clientY > 50 && event.changedTouches[0].clientX < 250) {
+                    document.styleSheets[1].insertRule('@keyframes board_a {0% {left: ' + parseFloat(document.getElementById('id1').style.left) + 'px;top: 50px; width:100%;}100% {left: -250px;top: 50px;width:100%;}}', 0);
+                    document.styleSheets[1].insertRule('@keyframes board_b {0% {left: ' + parseFloat(document.getElementById('id1').style.left) + 'px;}100% {left: -250px;}}', 0);
+                    document.getElementById('id1').style.animation = 'board_a 0.05s';
+                    document.getElementById('id3').style.animation = 'board_b 0.05s';
+                    setTimeout(function () {
+                        document.getElementById('id1').style.left = "-250px";
+                        document.getElementById('id3').style.display = 'none'
+                        document.styleSheets[1].deleteRule(0);
+                        id2 = true;
+                    }, 50);
                 }
             }
             break;
@@ -5431,35 +6215,11 @@ function hidder() {
     document.getElementById('vol').style.border = '1px solid #ddd';
     document.getElementById('songselect').innerHTML = "";
     document.getElementById('box').style.animation = 'board_4 0.1s';
-    document.getElementById('box').style.height = '0%';
-    document.getElementById('box').style.width = '0%';
     document.getElementById('lang').style.animation = 'board_4 0.1s';
-    document.getElementById('lang').style.height = '0%';
-    document.getElementById('lang').style.width = '0%';
     document.getElementById('select').style.animation = 'board_4 0.1s';
-    document.getElementById('select').style.height = '0%';
-    document.getElementById('select').style.width = '0%';
     document.getElementById('note').style.animation = 'board_6 0.1s';
-    document.getElementById('note').style.height = '0%';
-    document.getElementById('note').style.width = '0%';
-    document.getElementById('note').style.left = "10%";
-    document.getElementById('note').style.top = "10%";
-    document.getElementById('lang').style.left = "10%";
-    document.getElementById('lang').style.top = "10%";
-    document.getElementById('box').style.left = "10%";
-    document.getElementById('box').style.top = "10%";
-    document.getElementById('select').style.left = "10%";
-    document.getElementById('select').style.top = "10%";
     document.getElementById('next').style.animation = 'board_4 0.1s';
-    document.getElementById('next').style.height = '0%';
-    document.getElementById('next').style.width = '0%';
-    document.getElementById('next').style.left = "10%";
-    document.getElementById('next').style.top = "10%";
     document.getElementById('help_window').style.animation = 'board_4 0.1s';
-    document.getElementById('help_window').style.height = '0%';
-    document.getElementById('help_window').style.width = '0%';
-    document.getElementById('help_window').style.left = "10%";
-    document.getElementById('help_window').style.top = "10%";
     aboutoff();
     langoff();
     noteoff();
@@ -5467,36 +6227,72 @@ function hidder() {
     nextoff();
     helpoff();
     function aboutoff() {
-        setTimeout(function () { document.getElementById('box').style.display = "none"; }, 100);
+        setTimeout(function () {
+            document.getElementById('box').style.display = "none";
+            document.getElementById('box').style.height = '0%';
+            document.getElementById('box').style.width = '0%';
+            document.getElementById('box').style.left = "10%";
+            document.getElementById('box').style.top = "10%";
+        }, 100);
     }
     function langoff() {
-        setTimeout(function () { document.getElementById('lang').style.display = "none"; }, 100);
+        setTimeout(function () {
+            document.getElementById('lang').style.display = "none";
+            document.getElementById('lang').style.height = '0%';
+            document.getElementById('lang').style.width = '0%';
+            document.getElementById('lang').style.left = "10%";
+            document.getElementById('lang').style.top = "10%";
+        }, 100);
     }
     function noteoff() {
-        setTimeout(function () { document.getElementById('note').style.display = "none"; }, 100);
+        setTimeout(function () {
+            document.getElementById('note').style.display = "none";
+            document.getElementById('note').style.height = '0%';
+            document.getElementById('note').style.width = '0%';
+            document.getElementById('note').style.left = "10%";
+            document.getElementById('note').style.top = "10%";
+        }, 100);
     }
     function selectoff() {
-        setTimeout(function () { document.getElementById('select').style.display = "none"; }, 100);
+        setTimeout(function () {
+            document.getElementById('select').style.display = "none";
+            document.getElementById('select').style.height = '0%';
+            document.getElementById('select').style.width = '0%';
+            document.getElementById('select').style.left = "10%";
+            document.getElementById('select').style.top = "10%";
+        }, 100);
     }
     function helpoff() {
-        setTimeout(function () { document.getElementById('help_window').style.display = "none"; }, 100);
+        setTimeout(function () {
+            document.getElementById('help_window').style.display = "none";
+            document.getElementById('help_window').style.height = '0%';
+            document.getElementById('help_window').style.width = '0%';
+            document.getElementById('help_window').style.left = "10%";
+            document.getElementById('help_window').style.top = "10%";
+        }, 100);
     }
     function nextoff() {
-        setTimeout(function () { document.getElementById('next').style.display = "none"; }, 100);
+        setTimeout(function () {
+            document.getElementById('next').style.display = "none";
+            document.getElementById('next').style.height = '0%';
+            document.getElementById('next').style.width = '0%';
+            document.getElementById('next').style.left = "10%";
+            document.getElementById('next').style.top = "10%";
+        }, 100);
     }
     document.getElementById('mask').style.animation = 'board_9 0.1s';
     setTimeout(function () { document.getElementById('mask').style.display = "none"; }, 100);
 }
 //菜单部分
 function menu() {
-    if (id2 % 2 == 0) {
-        id2 = 1;
+    if (id2 == false) {
+        id2 = true;
         document.getElementById('id1').style.animation = 'board_0 0.2s';
         document.getElementById('id3').style.animation = 'board_7 0.2s';
         document.getElementById('id1').style.left = '-250px';
         setTimeout(function () { document.getElementById('id3').style.display = 'none'; }, 200);
     } else {
-        id2 = 0;
+        id2 = false;
         document.getElementById('id3').style.display = 'inline';
         document.getElementById('id3').style.width = '100%';
         document.getElementById('id1').style.animation = 'board_1 0.2s';
@@ -5510,7 +6306,7 @@ function back() {
     if (windowsopen == true) {
         hidder();
     } else {
-        id2 = 1;
+        id2 = true;
         progressoff();
         document.getElementById('id1').style.animation = 'board_0 1s';
         document.getElementById('id1').style.left = '-250px';
@@ -5540,7 +6336,7 @@ var fa1 = 0, fb1 = 0, fc1 = 1, fd1 = 1, fe1 = false, ff1 = false, fg1 = false, f
 document.onkeydown = keyDown;
 function keyDown() {
     if (event.keyCode == 18) {
-        if (winviewstate == true) {
+        if (winviewstatemenu == false) {
             document.getElementById("file_menu_view").innerHTML = document.getElementById("file_menu_view").innerHTML + "<span style='background:#66ccff;'>F</span>";
             document.getElementById("play_menu_view").innerHTML = document.getElementById("play_menu_view").innerHTML + "<span style='background:#66ccff;'>P</span>";
             document.getElementById("help_menu_view").innerHTML = document.getElementById("help_menu_view").innerHTML + "<span style='background:#66ccff;'>H</span>";
@@ -5559,33 +6355,30 @@ function keyDown() {
             document.getElementById("help_menu_view_1").innerHTML = document.getElementById("help_menu_view_1").innerHTML + "<span style='background:#66ccff;'>H</span>";
             document.getElementById("help_menu_view_2").innerHTML = document.getElementById("help_menu_view_2").innerHTML + "<span style='background:#66ccff;'>F</span>";
             document.getElementById("help_menu_view_3").innerHTML = document.getElementById("help_menu_view_3").innerHTML + "<span style='background:#66ccff;'>A</span>";
-            document.onkeyup = keyUp;
-            function keyUp() {
-                if (event.keyCode == 18) {
-                    document.getElementById("file_menu_view").innerHTML = "文件";
-                    document.getElementById("play_menu_view").innerHTML = "播放";
-                    document.getElementById("help_menu_view").innerHTML = "帮助";
-                    document.getElementsByClassName("file_open_menu")[0].innerHTML = '<input type="file" id="file_menu" tabindex="-1" hidden="hidden" accept=".json,.mid,.midi,.kar,.sty,.krx,.rmi" onclick="file_menu_1()"> 打开文件';
-                    document.getElementById("file_menu_view_1").innerHTML = "保存";
-                    document.getElementById("file_menu_view_2").innerHTML = "语言";
-                    document.getElementById("menu_max_window").innerHTML = "窗口还原";
-                    document.getElementById("file_menu_view_3").innerHTML = "全屏";
-                    document.getElementById("file_menu_view_4").innerHTML = "关闭";
-                    document.getElementById("play_menu_view_1").innerHTML = "暂停";
-                    document.getElementById("play_menu_view_2").innerHTML = "快放 10 秒";
-                    document.getElementById("play_menu_view_3").innerHTML = "慢放 10 秒";
-                    document.getElementById("play_menu_view_4").innerHTML = "停止播放";
-                    document.getElementById("play_menu_view_5").innerHTML = "显示进度条";
-                    document.getElementById("play_menu_view_6").innerHTML = "音量大小";
-                    document.getElementById("help_menu_view_1").innerHTML = "使用指南";
-                    document.getElementById("help_menu_view_2").innerHTML = "反馈漏洞";
-                    document.getElementById("help_menu_view_3").innerHTML = "关于";
-                    if (zh_choose == "t") {
-                        zh_tran('t');
-                    }
-                }
+            winviewstatemenu = true;
+        } else {
+            document.getElementById("file_menu_view").innerHTML = "文件";
+            document.getElementById("play_menu_view").innerHTML = "播放";
+            document.getElementById("help_menu_view").innerHTML = "帮助";
+            document.getElementsByClassName("file_open_menu")[0].innerHTML = '<input type="file" id="file_menu" tabindex="-1" hidden="hidden" accept=".json,.mid,.midi,.kar,.sty,.krx,.rmi" onclick="file_menu_1()"> 打开文件';
+            document.getElementById("file_menu_view_1").innerHTML = "保存";
+            document.getElementById("file_menu_view_2").innerHTML = "语言";
+            document.getElementById("menu_max_window").innerHTML = "窗口还原";
+            document.getElementById("file_menu_view_3").innerHTML = "全屏";
+            document.getElementById("file_menu_view_4").innerHTML = "关闭";
+            document.getElementById("play_menu_view_1").innerHTML = "暂停";
+            document.getElementById("play_menu_view_2").innerHTML = "快放 10 秒";
+            document.getElementById("play_menu_view_3").innerHTML = "慢放 10 秒";
+            document.getElementById("play_menu_view_4").innerHTML = "停止播放";
+            document.getElementById("play_menu_view_5").innerHTML = "显示进度条";
+            document.getElementById("play_menu_view_6").innerHTML = "音量大小";
+            document.getElementById("help_menu_view_1").innerHTML = "使用指南";
+            document.getElementById("help_menu_view_2").innerHTML = "反馈漏洞";
+            document.getElementById("help_menu_view_3").innerHTML = "关于";
+            winviewstatemenu = false;
+            if (zh_choose == "t") {
+                zh_tran('t');
             }
-
         }
     }
     if (event.keyCode == 27) {
@@ -6879,10 +7672,10 @@ var bIsMint = sUserAgent.toLowerCase().match(/mint/i) == "mint";
 var bIsMageia = sUserAgent.toLowerCase().match(/mageia/i) == "mageia";
 var bIsManjaro = sUserAgent.toLowerCase().match(/manjaro/i) == "manjaro";
 var bIsGentoo = sUserAgent.toLowerCase().match(/gentoo/i) == "gentoo";
-var bIsKylin = sUserAgent.toLowerCase().match(/kylin/i) == "kylin";
 if (isLinux) {
     if (bIsAndroid) {
         detectos.innerHTML = "Android";
+        detectosAbout.innerHTML = "Android";
     }
     else if (bIsUbuntu) detectos.innerHTML = "Ubuntu";
     else if (bIsDebian) detectos.innerHTML = "Debian";
@@ -6898,37 +7691,66 @@ if (isLinux) {
     else if (bIsMageia) detectos.innerHTML = "Mageia";
     else if (bIsManjaro) detectos.innerHTML = "Manjaro";
     else if (bIsGentoo) detectos.innerHTML = "Gentoo";
-    else if (bIsUOS) detectos.innerHTML = "China Unity Operating System";
-    else if (bIsDeepin) detectos.innerHTML = "China Deepin";
-    else if (bIsKylin) detectos.innerHTML = "China Kylin";
     else if (bIsiPhone) {
-        detectos.innerHTML = "Apple iPhone Operating System";
+        detectos.innerHTML = "Apple iPhone OS";
+        detectosAbout.innerHTML = "iOS";
     }
     else if (bIsiPod) {
-        detectos.innerHTML = "Apple iPhone Operating System";
+        detectos.innerHTML = "Apple iPhone OS";
+        detectosAbout.innerHTML = "iOS";
     }
     else if (bIsiPad) {
-        detectos.innerHTML = "Apple iPad Operating System";
+        detectos.innerHTML = "Apple iPad OS";
+        detectosAbout.innerHTML = "iOS";
     }
     else if (bIsWatch) {
-        detectos.innerHTML = "Apple Watch Operating System";
+        detectos.innerHTML = "Apple Watch OS";
+        detectosAbout.innerHTML = "iOS";
     }
     else if (bIsTV) {
-        detectos.innerHTML = "Apple TV Operating System";
+        detectos.innerHTML = "Apple TV OS";
+        detectosAbout.innerHTML = "iOS";
     }
-    else if (bIsMac) detectos.innerHTML = "Apple Mac OS X";
-    else detectos.innerHTML = "GNU/Linux";
+    else if (bIsMac) {
+        detectosAbout.innerHTML = "Mac";
+        detectos.innerHTML = "Apple Mac OS X";
+    }
+    else {
+        detectos.innerHTML = "GNU/Linux";
+        detectosAbout.innerHTML = "Linux";
+    }
 }
-else detectos.innerHTML = "Unknown Unix";
-if (String(navigator.userAgent).indexOf("Windows") > -1) detectos.innerHTML = "Microsoft Windows";
-if (String(navigator.userAgent).indexOf("Harmony") > -1) detectos.innerHTML = "Huawei Harmony";
-if (String(navigator.userAgent).indexOf("Fuchsia") > -1) detectos.innerHTML = "Google Fuchsia";
-if (String(navigator.userAgent).indexOf("CrOS") > -1) detectos.innerHTML = "Google Chrome Operating System";
-if (String(navigator.platform).indexOf("FreeBSD") > -1) detectos.innerHTML = "FreeBSD";
-if (String(navigator.platform).indexOf("OpenBSD") > -1) detectos.innerHTML = "OpenBSD";
-if (String(navigator.platform).indexOf("NetBSD") > -1) detectos.innerHTML = "NetBSD";
-if (String(navigator.platform).indexOf("Haiku") > -1) {
-    detectos.innerHTML = "Haiku"
+else {
+    detectos.innerHTML = "Unknown Unix";
+    detectosAbout.innerHTML = "Linux";
+}
+if (String(navigator.userAgent).indexOf("Windows") > -1) {
+    detectosAbout.innerHTML = "Win";
+    detectos.innerHTML = "Microsoft Windows";
+}
+if (String(navigator.userAgent).indexOf("Fuchsia") > -1) {
+    detectos.innerHTML = "Google Fuchsia";
+    detectosAbout.innerHTML = "Android";
+}
+if (String(navigator.userAgent).indexOf("CrOS") > -1) {
+    detectos.innerHTML = "Google Chrome OS";
+    detectosAbout.innerHTML = "CrOS";
+}
+if (String(navigator.userAgent).indexOf("FreeBSD") > -1) {
+    detectos.innerHTML = "FreeBSD";
+    detectosAbout.innerHTML = "BSD";
+}
+if (String(navigator.userAgent).indexOf("OpenBSD") > -1) {
+    detectos.innerHTML = "OpenBSD";
+    detectosAbout.innerHTML = "BSD";
+}
+if (String(navigator.userAgent).indexOf("NetBSD") > -1) {
+    detectos.innerHTML = "NetBSD";
+    detectosAbout.innerHTML = "BSD";
+}
+if (String(navigator.userAgent).indexOf("Haiku") > -1) {
+    detectos.innerHTML = "Haiku";
+    detectosAbout.innerHTML = "BeOS";
     alert("警告！此操作系统使用时不稳定！建议使用 Windows,Linux各类发行版,Andoid 等其他操作系统使用此程序。");
 };
 if (/Firefox\/(\S+)/.test(navigator.userAgent)) {
@@ -6949,6 +7771,11 @@ if (!/OPR/.test(navigator.userAgent)) {
 } else {
     explorer.innerHTML = "Opera";
 }
+if (String(navigator.userAgent).indexOf("Harmony") > -1) {
+    explorer.innerHTML = "华为浏览器";
+    detectos.innerHTML = "Huawei Harmony";
+    detectosAbout.innerHTML = "Android";
+}
 var agent = navigator.userAgent.toLowerCase();
 //禁止Windows10以下的系统访问此脚本
 if (String(navigator.userAgent).indexOf("Win95") > -1 || String(navigator.userAgent).indexOf("Win98") > -1 || String(navigator.userAgent).indexOf("Win 9x 4.90") > -1 || String(navigator.userAgent).indexOf("Windows NT 5") > -1) {
@@ -6957,6 +7784,7 @@ if (String(navigator.userAgent).indexOf("Win95") > -1 || String(navigator.userAg
 }
 if (String(navigator.userAgent).indexOf("Windows NT 6") > -1) {
     alert("建议升级你的 Windows 操作系统至 Windows 10 以上使用此程序。");
+    detectos.innerHTML = "<b style='color:red;' title='请升级你的操作系统！'>Microsoft Windows</b>";
 }
 if (String(navigator.userAgent).indexOf("Symbian") > -1) {
     document.body.innerHTML = '<b style="color:red">此程序不支持 Symbian 操作系统，请使用其他操作平台使用此程序。</b>';
@@ -6973,6 +7801,7 @@ if (String(navigator.userAgent).indexOf("Android 1.") > -1 || String(navigator.u
 }
 if (String(navigator.userAgent).indexOf("Android 5.") > -1 || String(navigator.userAgent).indexOf("Android 6.") > -1 || String(navigator.userAgent).indexOf("Android 7.") > -1) {
     alert("建议升级你的 Android 操作系统至 Android 8 以上使用此程序。");
+    detectos.innerHTML = "<b style='color:red;' title='请升级你的操作系统！'>Android</b>";
 }
 //禁止iOS10以下的系统访问此脚本
 if (String(navigator.userAgent).indexOf("OS 1_") > -1 || String(navigator.userAgent).indexOf("OS 2_") > -1 || String(navigator.userAgent).indexOf("OS 3_") > -1 || String(navigator.userAgent).indexOf("OS 4_") > -1 || String(navigator.userAgent).indexOf("OS 5_") > -1 || String(navigator.userAgent).indexOf("OS 6_") > -1 || String(navigator.userAgent).indexOf("OS 7_") > -1 || String(navigator.userAgent).indexOf("OS 8_") > -1 || String(navigator.userAgent).indexOf("OS 9_") > -1 && String(navigator.userAgent).indexOf("iPhone") > -1 && String(navigator.userAgent).indexOf("iPad") > -1) {
@@ -6987,9 +7816,9 @@ if (String(navigator.userAgent).indexOf("10_0_") > -1 || String(navigator.userAg
     }
 }
 //禁用IE浏览器
-if (String(navigator.userAgent).indexOf("Trident") > -1) {
+if (String(navigator.userAgent).indexOf("Trident") > -1 || String(navigator.userAgent).indexOf("MSIE") > -1) {
     alert("警告！请使用 Chrome、Chromium、Firefox、Edge、Safari、Opera、Brave 等现代浏览器打开HTML文件！已禁用 Internet Explorer 浏览器访问此脚本！");
-    document.location("about:blank");
+    document.body.innerHTML = '<b style="color:red">警告！请使用 Chrome、Chromium、Firefox、Edge、Safari、Opera、Brave 等现代浏览器打开HTML文件！已禁用 Internet Explorer 浏览器访问此脚本！</b>';
 };
 windowmax = false;
 bodywidthtest();
@@ -7004,7 +7833,7 @@ function key_select() {
             document.getElementById('key').innerHTML = '<option class="button2">轨道选择不适用</option >'
             break;
         case "om":
-            document.getElementById('key').innerHTML = '<option value="1k" class="button1">1键位</option ><option value="2k" class="button2">2键位</option ><option value="3k" class="button1">3键位</option ><option value="4k" class="button2"selected>4键位</option ><option value="5k" class="button1"> 5键位</option><option value="6k" class="button2"> 6键位</option><option value="7k" class="button1">7键位</option><option value="8k" class="button2">8键位</option><option value="9k" class="button1">9键位</option><option value="10k" class="button2">10键位（合作模式）</option><option value="11k" class="button1">11键位（合作模式）</option><option value="12k" class="button2">12键位（合作模式）</option><option value="13k" class="button1">13键位（合作模式）</option><option value="14k" class="button2">14键位（合作模式）</option><option value="15k" class="button1">15键位（合作模式）</option><option value="16k" class="button2">16键位（合作模式）</option><option value="17k" class="button1">17键位（合作模式）</option><option value="18k" class="button2">18键位（合作模式）</option>'
+            document.getElementById('key').innerHTML = '<option value="1k" class="button1">1键位</option ><option value="2k" class="button2">2键位</option ><option value="3k" class="button1">3键位</option ><option value="4k" class="button2"selected>4键位</option ><option value="5k" class="button1"> 5键位</option><option value="6k" class="button2"> 6键位</option><option value="7k" class="button1">7键位</option><option value="8k" class="button2">8键位</option><option value="9k" class="button1">9键位</option><option value="10k" class="button2">10键位</option><option value="11k" class="button1">11键位（合作模式）</option><option value="12k" class="button2">12键位（合作模式）</option><option value="13k" class="button1">13键位（合作模式）</option><option value="14k" class="button2">14键位（合作模式）</option><option value="15k" class="button1">15键位（合作模式）</option><option value="16k" class="button2">16键位（合作模式）</option><option value="17k" class="button1">17键位（合作模式）</option><option value="18k" class="button2">18键位（合作模式）</option><option value="19k" class="button1">19键位（osu!lazer 合作模式）</option><option value="20k" class="button2">20键位（osu!lazer 合作模式）</option>'
             break;
     }
 }
@@ -7102,7 +7931,11 @@ function bodywidthtest() {
     }
     setTimeout(function () { bodywidthtest(); }, 200);
 }
-explore.innerHTML = navigator.userAgent;
+if (String(navigator.userAgent).indexOf("Android 5.") > -1 || String(navigator.userAgent).indexOf("Android 6.") > -1 || String(navigator.userAgent).indexOf("Android 7.") > -1 || String(navigator.userAgent).indexOf("Windows NT 6") > -1) {
+    explore.innerHTML = "<a style='color:red;' title='请升级你的操作系统！'>" + navigator.userAgent + "</a>";
+} else {
+    explore.innerHTML = navigator.userAgent;
+}
 
 //感谢https://www.zhangxinxu.com/wordpress/2017/06/html5-web-audio-api-js-ux-voice/网站给声音加载代码带来了参考
 //以后会使用这段代码进行midi音频播放
@@ -7169,12 +8002,12 @@ function outputfile() {
         case "mas":
             saveAs(new Blob([document.getElementById('result').value], {
                 type: 'text/plain;charset=utf-8'
-            }), `${Date.now()}.mc`)
+            }), '${Date.now()}.mc')
             break;
         case "om":
             saveAs(new Blob([document.getElementById('result').value], {
                 type: 'text/plain;charset=utf-8'
-            }), `${Date.now()}.osu`)
+            }), '${Date.now()}.osu')
             break;
     }
 

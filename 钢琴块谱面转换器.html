@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html oncontextmenu="return false" ; onselectstart="return false" id="esc" ondrop="drop(event)"
+	ondragover="allowDrop(event)">
+<link rel="shortcut icon" href="./favicon.png">
+
+<head>
+	<meta charset="utf-8" name="viewport"
+		content="width=device-width,initial-scale=1,maximum-scale=1.0,minimum-scale=1,user-scalable=no">
+
+	<title>钢琴块谱面转换器</title>
+
+</head>
+<link href="style.css" rel="stylesheet">
+<body style="text-align:center;cursor:default;width:100%;overflow:hidden;" class="container" id="bodyid">
+	<div style="width: 100%;height: 100%;position: absolute;top:0px;left:0px;display:none;" id="menuviewtouchdiv"
+		onclick="menuviewtouch()"></div>
+	<progress class="progress" id="progress" value="0" max="100" onclick="progressoff()"></progress>
+	<b class="progress1" id="progress3" onclick="progressoff()">
+		已完成 <b id="progress1">0</b> %，用时 <b id="progress2">0</b>
+		秒。
+	</b>
+	<div class="top">
+		<button onclick="menu()" id="id16" class="button3" tabindex="-1" title="菜单">
+			☰
+		</button>
+		<b id="title">谱面转换器 0.3.2-Alpha (<b id="detectos"></b>,<b id="explorer"></b>)</b>
+		<button class="button10" onclick="if(document.getElementById('result').value==''){Function2();}else{next();}"
+			id="id22" tabindex="-1" title="下一步操作">
+			▶
+		</button>
+	</div>
+	<div class="mute"></div>
+	<div class="slidemute" id="id3" onclick="menu()"></div>
+	<div class="slide" style="overflow-y:auto" id="id1">
+		<div class="diva" style="text-align:left">
+			<div class="logo">
+				<h1 style="text-align:center;color:#000000">钢琴块谱面转换</h1>
+			</div>
+			<div class="divb" tabindex="-1" id="move1">
+				每分钟的拍子数（BPM）
+				<textarea onkeydown="if(event.keyCode==13){return false;}" class="button8" tabindex="-1" id="bpm"
+					autofocus="autofocus" placeholder="120;120,120,120" onclick="lock();fb1=1;"></textarea>
+			</div>
+			<div class="divb" onkeydown="if(event.keyCode==13){return false;}" tabindex="-1" id="move2">
+				基础节拍
+				<textarea class="button6" tabindex="-1" id="beats" autofocus="autofocus" placeholder="0.5,0.5,0.5"
+					onclick="lock();fb1=2;"></textarea>
+				<button class="button1" onclick="" tabindex="-1" title="保持一张谱面的所有基础音符为同一长度而不强行变速">对齐</button>
+			</div>
+			<div class="divb" onkeydown="if(event.keyCode==13){return false;}" tabindex="-1" id="move3">
+				滑动模式音符宽度<textarea autofocus="autofocus" class="button7" id="notewidth" onclick="lock();fb1=3;"
+					placeholder="格式例如：64-128">64</textarea>
+			</div>
+			<div class="divb" tabindex="-1" id="move4">
+				要转换的目标游戏
+				<select id="games" class="button2" tabindex="-1" onchange="key_select()">
+
+					<option value="mak" class="button2">
+						Malody Key
+
+					</option>
+
+					<option value="mas" class="button1">
+						Malody Slide
+
+					</option>
+
+					<option value="om" class="button2">
+						osu!mania
+
+					</option>
+
+				</select>
+
+			</div>
+
+			<div class="divb" tabindex="-1" id="move5">
+
+				轨道数量
+
+				<select id="key" class="button2" tabindex="-1">
+				</select>
+			</div>
+			<div class="divb" tabindex="-1" id="move6">
+				<div class='checkbox'>
+					<input type="checkbox" id="continue" tabindex="-1">
+					<label for='continue'>纵连</label>
+				</div>
+			</div>
+			<div class="divb" tabindex="-1" id="move7">
+				<div class='checkbox'>
+					<input type="checkbox" id="manual" tabindex="-1">
+					<label for='manual'>手动填写BPM和基础节拍</label>
+				</div>
+			</div>
+			<div class="divb" onclick="note()" style="cursor:pointer" tabindex="-1" id="move8">
+				音符按键玩法设置
+			</div>
+			<a class="divb" id="move9" target="_blank" href="https://space.bilibili.com/46345895"
+				tabindex="-1">程序有缺陷（BUG）？反馈</a>
+			<div class="divb" id="move10" style="cursor:pointer" onclick="about()" tabindex="-1">关于</div>
+			<div class="divb" style="cursor:pointer" id="isFull" onclick="isFull()" tabindex="-1">全屏</div>
+			<div style="text-align:left;cursor:pointer" id="move11" class="divb" onclick="id0()" tabindex="-1">
+				语言设置
+			</div>
+			<a class="divb" tabindex="-1" id="move12" style="text-align:left;" target="_blank"
+				href="https://github.com/laomengwa/mengwa113">皮肤下载</a>
+			<div class="divb" onclick="help_window();" style="cursor:pointer" tabindex="-1" id="move13">
+				使用指南
+			</div>
+			<br><br><br>
+		</div>
+	</div>
+	<p>
+		<input class="button1" type="file" id="file" tabindex="-1" accept=".json,.mid,.midi,.kar,.sty,.krx,.rmi"
+			onclick="Windows_mask()">
+
+		<button class="button1" onclick="Function2()" id="id20" tabindex="-1">转换</button>
+
+	</p>
+
+	<textarea onkeydown="if(event.keyCode==13){return false;}" class="button" rows="10" cols="30" id="input"
+		onclick="lock();fa1=1;fc1=2;" placeholder="选择文件转换后以显示……" tabindex="-1"></textarea>
+
+	<textarea onkeydown="if(event.keyCode==13){return false;}" class="button" rows="10" cols="30" id="result"
+		onclick="lock();fa1=2;fd1=2;" placeholder="输出结果将在此显示……" tabindex="-1"></textarea>
+
+	<p>
+	<div class="warning_5"><b id="warning_sound">♮正常</b></div>
+	<div class="warning_6">
+		<div id="winrevertview" class="boxmax" title="还原" style="border-radius: 5px 0px 0px 5px;"
+			onclick="winviewrevert()">
+			<div class="window_min_2"></div>
+			<div class="window_min_1"></div>
+		</div>
+		<div id="winoffview" class="boxoff" style="border-radius: 0px 5px 5px 0px;" title="关闭" onclick="winviewoff()">
+			×
+		</div>
+	</div>
+	<button class="button1" onclick="next()" id="id21" tabindex="-1">下一步操作</button>
+	</p>
+	<noscript>
+		<strong style="color:red">
+			警告：此浏览器不支持JavaScript，该脚本无法运行！请检查当前浏览器是否启用JavaScript，然后重试！
+		</strong>
+	</noscript>
+	<div class="view_windows_mask" id="view_window_mask"></div>
+	<div id="drag" class="box">
+		<div class="title" ondblclick="view_window_size();" oncontextmenu="WindowManage()">
+			<div class="icon">⚙</div>
+			<div class="icon1" style="text-align: left;"><b>谱面预览</b></div>
+		</div>
+		<div>
+			<a class="boxmin" onclick="windowbutton1()" title="最小化">
+				<div class="window_min_3"></div>
+			</a>
+			<a class="boxmax" id="boxmaxview" onclick="windowbutton2()" title="最大化">
+				<div class="window_max">
+				</div>
+			</a>
+			<a class="boxrevert" id="boxrevertview" onclick="windowbutton3()" title="还原">
+				<div class="window_min_2"></div>
+				<div class="window_min_1"></div>
+			</a>
+			<a class="boxoff" onclick="windowbutton4()" title="关闭">×</a>
+		</div>
+		<div class="resizeL"></div>
+		<div class="resizeT"></div>
+		<div class="resizeR"></div>
+		<div class="resizeB"></div>
+		<div class="resizeLT"></div>
+		<div class="resizeTR"></div>
+		<div class="resizeBR"></div>
+		<div class="resizeLB"></div>
+		<div class="content">
+			<div class="container1" style="text-align: left;overflow-y:auto;border-radius: 0%;">
+				<ul>
+					<li><a onclick="file_menu_view_fun()" id="file_menu_view">文件</a></li>
+					<li><a onclick="play_menu_view_fun()" id="play_menu_view">播放</a></li>
+					<li><a onclick="help_menu_view_fun()" id="help_menu_view">帮助</a></li>
+				</ul>
+				<div class="windowmenumute" id=""></div>
+				<div class="window_menu_1" id="menu_file" style="position: absolute;left:0px;top:64px;">
+					<label class="file_open_menu">
+						<input type="file" id="file_menu" tabindex="-1" hidden="hidden"
+							accept=".json,.mid,.midi,.kar,.sty,.krx,.rmi" onclick="file_menu_1()">
+						打开文件
+					</label>
+					<a onclick="outputfile()" id="file_menu_view_1">保存</a>
+					<a style="border-top: 1px solid #aaa;" onclick="id0()" id="file_menu_view_2">语言</a>
+					<a style="border-top: 1px solid #aaa;" id="menu_max_window" onclick="view_window_size()">窗口还原</a>
+					<a onclick="isFull()" id="file_menu_view_3">全屏</a>
+					<a style="border-top: 1px solid #aaa;" onclick="windowbutton4()" id="file_menu_view_4">关闭</a>
+				</div>
+				<div class="window_menu_1 left:100px" id="menu_play" style="position: absolute;left:46px;top:64px;">
+					<a id="play_menu_view_1">暂停</a>
+					<a id="play_menu_view_2">快放 10 秒</a>
+					<a id="play_menu_view_3">慢放 10 秒</a>
+					<a id="play_menu_view_4">停止播放</a>
+					<a style="border-top: 1px solid #aaa;" id="play_menu_view_5">显示进度条</a>
+					<a id="play_menu_view_6">音量大小</a>
+				</div>
+				<div class="window_menu_1 left:100px" id="menu_help" style="position: absolute;left:95px;top:64px;">
+					<a onclick="help_window();" id="help_menu_view_1">使用指南</a>
+					<a onclick="window.open('https://space.bilibili.com/46345895')" id="help_menu_view_2">反馈漏洞</a>
+					<a onclick="about();" id="help_menu_view_3">关于</a>
+				</div>
+				<canvas id="viewCanvas" width="250" height="190" style="border:1px solid #d3d3d3;"
+					onclick="menuviewtouch()"></canvas>
+			</div>
+		</div>
+	</div>
+	<div class="mask" id='mask'></div>
+	<div class="box1" id='note' style="left: 10%; top: 10%;text-align: left;">
+		<div class="mute1">
+			<div class="icon">⚙</div>
+			<div class="icon1">
+				<b>音符按键玩法设置</b>
+			</div>
+			<div class="boxoff" id="boxoff1" onclick="hidder()" tabindex="-1" title="关闭">×</div>
+		</div>
+		<div class="autowindowsize" style="text-align:left;overflow-y:auto;cursor:default;color:#555;padding:10px">
+			<div class='checkbox'>
+				<input type="checkbox" id="note1" checked="checked" tabindex="-1"><label for='note1'>长按（代号：6）</label>
+			</div>
+			<div class='checkbox'>
+				<input type="checkbox" id="note2" checked="checked" tabindex="-1"><label for='note2'>双黑（代号：5）</label>
+			</div>
+			<div class='checkbox'>
+				<input type="checkbox" id="note3" checked="checked" tabindex="-1"><label for='note3'>滑动（代号：8）</label>
+			</div>
+			<div class='checkbox'>
+				<input type="checkbox" id="note4" checked="checked" tabindex="-1"><label for='note4'>滑动（代号：7）</label>
+			</div>
+			<div class='checkbox'>
+				<input type="checkbox" id="note5" checked="checked" tabindex="-1"><label for='note5'>长按+黑块（代号：9）</label>
+			</div>
+			<div class='checkbox'>
+				<input type="checkbox" id="note6" checked="checked" tabindex="-1"><label
+					for='note6'>双长按+橙色块/黑块（代号：10）</label>
+			</div>
+			<div class='checkbox'>
+				<input type="checkbox" id="note7" checked="checked" tabindex="-1"><label for='note7'>橙色块（代号：3）</label>
+			</div>
+			竞技模式加速度（如果可用）
+			<br>
+			<textarea onkeydown="if(event.keyCode==13){return false;}" class="button9" tabindex="-1"
+				id="acc"></textarea>
+			<p>
+			歌曲循环次数
+			<br>
+			<input type="number" min="1" max="9" onkeydown="if(event.keyCode==13){return false;}" class="button9" tabindex="-1"></input>
+			<p>
+			<div class='checkbox'>
+				<input type="checkbox" id="sound" checked="checked" tabindex="-1"><label for='sound'>启用音符音频输出</label>
+			</div>
+			<br>
+			<div class='checkbox'>
+				<input type="checkbox" id="reverse" tabindex="-1"><label for='reverse'>歌曲逆向播放</label>
+			</div>
+			<button class="button1" id="soundup" onclick="soundup()" tabindex="-1">升调</button>
+			<button class="button1" id="sounddown" onclick="sounddown()" tabindex="-1">降调</button>
+			<b id="soundshow">正常</b><br>
+			输出的音量大小<input tabindex="-1" id="vol" class="vol" type="range" min="0" max="100" value="100"
+				oninput="vol2()"><b id="volshow"></b>
+			<br>
+			<div class='checkbox'>
+				<input type="checkbox" id="note8" tabindex="-1"><label for='note8'>双黑音符位置随机摆放</label>
+			</div>
+			<div class='checkbox'>
+				<input type="checkbox" id="note9" tabindex="-1"><label for='note9'>取消双黑楼梯式摆放</label>
+			</div>
+			<p style="color:#555">
+				注：代号为8的玩法在原游戏中为折叠滑块，仅对 Malody Slide 模式有效；代号为10的玩法在原游戏为爆裂块；代号为7的玩法在原游戏为单向斜滑块，在非 Malody Slide
+				模式下为长按玩法；代号为3的玩法在原游戏中为狂戳块，仅对 Malody Slide 模式有效。注意，对游戏无效的音符玩法一律不启用。<br>
+		</div>
+		<div class="button4" id="ok1" onclick="hidder()" style="text-align: center;" tabindex="-1">确定</div>
+	</div>
+	<div class="box" id='lang' style="left: 10%; top: 10%;">
+		<div class="mute1">
+			<div class="icon">⚙</div>
+			<div class="icon1"><b>语言设置</b></div>
+			<div class="boxoff" id="boxoff3" onclick="hidder()" tabindex="-1" title="关闭">×</div>
+		</div>
+		<div class="autowindowsize" style="text-align:left;overflow-y:auto;cursor:default;color:#555;">
+			<div id="zh_cn" class="button5" onclick="zh_tran('s')" style="text-align: left;" tabindex="-1">
+				🇨🇳简体中文(中国大陆)
+			</div>
+			<div id="zh_tw" class="button5" onclick="zh_tran('t')"
+				style="text-align: left;border-radius: 5px 5px 0px 0px;" tabindex="-1">
+				🇨🇳繁體中文(中國臺灣)
+			</div>
+		</div>
+		<div class="button4" id="ok3" onclick="hidder()" style="text-align: center; bottom: 0%;" tabindex="-1">确定</div>
+	</div>
+	<div class="box" id='select' style="left: 10%; top: 10%">
+		<div class="icon">?</div>
+		<div class="icon1"><b>小程序歌曲选择</b></div>
+		<div class="boxoff" id="boxoff4" onclick="hidder()" tabindex="-1" title="关闭">×</div>
+		<div class="mute1"></div>
+		<div class="autowindowsize" style="text-align:left;overflow-y:auto;cursor:default;color:#555;">
+			<p style="color:#555">选择你想转换的歌曲（选择完毕后关闭窗口即可）：</p>
+			<div id="songselect"></div>
+		</div>
+		<div class="button4" onclick="hidder()" style="text-align: center;" id="boxoff6">关闭</div>
+	</div>
+	<div class="box1" id='next' style="left: 10%; top: 10%;">
+		<div class="icon">⚙</div>
+		<div class="icon1"><b>下一步的操作</b></div>
+		<div class="boxoff" id="boxoff5" onclick="hidder()" title="关闭">×</div>
+		<div class="mute1"></div>
+		<div class="autowindowsize" style="text-align: left;overflow-y:auto;border-radius: 0%;padding:10px">
+			<p style="color:#555"><b>完善谱面信息（可以不用全部填写）：</b></p>
+			<p style="color:#555">
+				歌曲名：
+				<br>
+				<textarea onkeydown="if(event.keyCode==13){return false;}" class="button9" id="nextsongname"
+					autofocus="autofocus" placeholder="请输入："></textarea>
+			</p>
+			<p style="color:#555">
+				歌曲名原文：
+				<br>
+				<textarea onkeydown="if(event.keyCode==13){return false;}" class="button9" id="nexttitlename"
+					autofocus="autofocus" placeholder="请输入："></textarea>
+			</p>
+			<p style="color:#555">
+				艺术家：
+				<br>
+				<textarea onkeydown="if(event.keyCode==13){return false;}" class="button9" id="nextartistname"
+					autofocus="autofocus" placeholder="请输入："></textarea>
+			</p>
+			<p style="color:#555">
+				艺术家原文：
+				<br>
+				<textarea onkeydown="if(event.keyCode==13){return false;}" class="button9" id="nextartistorg"
+					autofocus="autofocus" placeholder="请输入："></textarea>
+			</p>
+			<p style="color:#555">
+				谱面作者：
+				<br>
+				<textarea onkeydown="if(event.keyCode==13){return false;}" class="button9" id="nextcreator"
+					autofocus="autofocus" placeholder="请输入："></textarea>
+			</p>
+			<p style="color:#555">
+				谱面版本/难度：
+				<br>
+				<textarea onkeydown="if(event.keyCode==13){return false;}" class="button9" id="nextversion"
+					autofocus="autofocus" placeholder="请输入："></textarea>
+			</p>
+			<p style="color:#555">
+				osu!歌曲标签：
+				<br>
+				<textarea onkeydown="if(event.keyCode==13){return false;}" class="button9" id="nexttag"
+					autofocus="autofocus" placeholder="请输入："></textarea>
+			</p>
+			<p style="color:#555">
+				背景图片：
+				<br>
+				<textarea onkeydown="if(event.keyCode==13){return false;}" class="button9" id="nextbg"
+					autofocus="autofocus" placeholder="输入图片文件名就行，非必填："></textarea>
+			</p>
+			<p style="color:#555">
+				背景音乐：
+				<br>
+				<textarea onkeydown="if(event.keyCode==13){return false;}" class="button9" id="nextbgm"
+					autofocus="autofocus" placeholder="输入音频文件名就行，非必填："></textarea>
+			</p>
+			<p style="color:#555">
+				视频背景：
+				<br>
+				<textarea onkeydown="if(event.keyCode==13){return false;}" class="button9" id="nextvideo"
+					autofocus="autofocus" placeholder="输入视频文件名就行，非必填："></textarea>
+			</p>
+		</div>
+		<div style="display: flex;">
+			<div class="button4" id="ok5" onclick="hidder();setTimeout(function(){view_window();},100);"
+				style="text-align: center;width: 50%;">谱面预览</div>
+			<div class="button4" id="ok5" onclick="outputfile()"
+				style="text-align: center;width: 50%;border-left: 1px solid #aaa;">保存</div>
+		</div>
+	</div>
+	<div class="box" id='help_window' style="left: 10%; top: 10%;">
+		<div class="mute1">
+			<div class="icon">?</div>
+			<div class="icon1"><b>使用指南</b></div>
+			<div class="boxoff" id="boxoff7" onclick="hidder()" tabindex="-1" title="关闭">×</div>
+		</div>
+		<div class="autowindowsize" style="text-align:left;overflow-y:auto;cursor:default;color:#555;padding:10px">
+			<b style="font-size:16px;">关于「钢琴块谱面转换」程序</b>
+			<br>
+			<div onclick="about()" style="color: #fb7299;">关于本程序的信息，请点击此文本。</div>
+			制作此程序的期望是以其他的可自定义的音乐游戏（以下简称 "osu!"与 "Malody"）代替传统的 「钢琴块 2」 程序，以在 osu! 与 Malody
+			游玩别踩白块儿游戏内的音乐，以及别踩白块儿玩家自定义编写的谱面文件（以下简称「自制谱」）。
+			<br>
+			<br>
+			<b style="font-size:16px;">程序如何使用？</b>
+			<br>
+			首先，你得拥有钢琴块 Android 安装包的 json 歌曲文件<a onclick="window.open('https://www.bilibili.com/read/cv2294882')"
+				style="color:#fb7299" target="_blank">（获取教程请</a><a
+				onclick="window.open('https://www.bilibili.com/video/BV1yq4y177u4')" target="_blank"
+				style="color:#fb7299">点击此文本）</a>，然后用此程序选择好你的钢琴块 json
+			文件，点击「转换」即可。如果想要求谱面的多样转化，请在菜单与「音符玩法设置」里设置与音符功能有关的选项即可。
+			<br>
+			<br>
+			<b style="font-size:16px;">谱面、BPM、基础节拍、纵连、轨道数量、竞技玩法加速度是什么？</b>
+			<br>
+			谱面是音游界的专用术语之一，是指音符摆放的阵容与位置，音符在什么地方出现、在哪出现都是已经规定好的。
+			BPM 是每分钟节拍数的单位，相当于一分钟有几个长度均等的节拍，本程序以这个数值确定歌曲的速度。即使你不知道这个数值，一般情况下 json 里都会记载有关歌曲的节拍速度。<br>
+			基础节拍( baseBeats ),是指游戏可游玩时可能遇到的最短的音符的阈值，一般此程序会以这个数值判定长按方块的最小长度。如果是手动调整这个数值请注意：数值越大则音符降落速度越慢，反之则就越快。<br>
+			纵连是音游界的专用术语之一，指一条轨道上出现两个或以上的音符连续出现。在 别踩白块儿 2 中基本是不会遇见上这样的情况（在最初始的别踩白块儿中是经常出现的），打开此选项你将会看到最初始的别踩白块儿的谱面阵容。<br>
+			轨道数量是固定下落式音乐游戏必须存在的要素，在 别踩白块儿 2 的阵容是以 4x4 的方式展示的，选择其他数量的轨道选项，你将会看到 5x5 、 6x6 甚至更多的谱面阵容。<br>
+			竞技玩法加速度目前还没有制作，暂不说明。
+			<br>
+			<br>
+			<b style="font-size:16px;">文件转化完毕后，导出后的文件应该放到哪里？</b>
+			<br>
+			<b>Malody</b>
+			<br>
+			如果你的设备是 Android ，请在 /sdcard/data/malody/beatmap （ sdcard 是你的手机文件目录）创建一个新的文件夹，把文件复制到新创建的文件夹里。<br>
+			如果你的设备是 Windows ，请在你的游戏安装目录里的 beatmap 文件夹（./beatmap）里创建一个新的文件夹，把文件复制到新创建的文件夹里。<br>
+			如果你的设备是 Linux , FreeBSD 或其他操作系统 ，同 Windows，不同的是需要 wine 运行。<br>
+			iOS 和 MacOS 的未知，自行摸索。<br>
+			<b>osu!</b>
+			<br>
+			如果是 Windows ( Stable 版)，请在你的游戏安装目录里的 Songs 文件夹（./Skins）里创建一个新的文件夹，把压缩包解压到新创建的文件夹里。<br>
+			如果是 osu!lazer ，请把转化完成的文件与音频文件一起压缩为 *.osz 后缀名的 zip 文件，然后拖拽文件至该游戏窗口内部进行导入，仅在 Windows , MacOS , Linux , FreeBSD 等桌面端操作系统上可用。Android 设备需要使用文件管理器把你想要导入的 *.osz 文件以 osu! 程序打开即可导入（目前 Android 设备拖拽文件无法导入谱面）。<br>
+			<br>
+			<b style="font-size:16px;">为什么我玩游戏时没有钢琴块的外观、声音？以及在手机上玩游戏时是横屏不是竖屏？</b>
+			<br>
+			如没有游戏外观的情况下，需要下载 「钢琴块」 的皮肤 <a onclick="window.open('https://github.com/laomengwa/mengwa113')"
+				style="color:#fb7299" target="_blank">（下载请点击此文本）</a>。</br>
+			<b>Malody</b>
+			<br>
+			如果你的设备是 Android ，请在 /sdcard/data/malody/skin （ sdcard 是你的手机文件目录）创建一个新的文件夹，把压缩包解压到新创建的文件夹里。<br>
+			如果你的设备是 Windows ，请在你的游戏安装目录里的 skin 文件夹（./skin）里创建一个新的文件夹，把压缩包解压到新创建的文件夹里。<br>
+			如果你的设备是 Linux , FreeBSD 或其他操作系统 ，同 Windows，不同的是需要 wine 运行。<br>
+			iOS 和 MacOS 的未知，自行摸索。<br>
+			如果你在手机的 Malody 上玩游戏是横屏，请在游戏的设置 -> 系统 里打开「使用竖屏模式」选项。如果是 6key 模式以上的问题，请在手机设置里找到开发者选项把最小宽度改为 600dp 以上即可。<br>
+			<b>osu!</b>
+			<br>
+			如果是 Windows ( Stable 版)，请在你的游戏安装目录里的 Skins 文件夹里解压皮肤文件，或者拖拽皮肤文件至游戏窗口内导入即可。<br>
+			如果是 osu!lazer ，请拖拽皮肤文件至游戏窗口内导入，仅在 Windows , MacOS , Linux , FreeBSD 等桌面端操作系统上可用。Android 设备需要使用文件管理器把你想要导入的 *.osk 文件以 osu! 程序打开即可导入（目前 Android 设备拖拽文件无法导入皮肤）。<br>
+			对于谱面音频目前还没制作。<br>
+			<br>
+			<b style="font-size:16px;">此工具能否使 osu! 与 Malody 的谱面相互转换？</b>
+			<br>
+			不可以，此工具专门为「钢琴块」的 *.json 文件进行相对应的游戏谱面转换。若你有这个需求，请关注 <a onclick="window.open('https://lrfasd.github.io/rmstZ/')"style="color:#fb7299" target="_blank">rmstZ</a> 项目。<br>
+			<br>
+			<b style="font-size:16px;">我可以使用此程序的源代码吗?</b>
+			<br>
+			web 前端代码开源，可以使用源代码，但使用的前提是必须标注<a onclick="window.open('https://space.bilibili.com/46345895')"
+				style="color:#fb7299" target="_blank">原作者</a>的信息！
+			<br>
+			待补充……
+		</div>
+		<div class="button4" id="ok6" onclick="hidder()" tabindex="-1" style="text-align: center;">确定</div>
+	</div>
+	<div class="box" id='box' style="left: 10%; top: 10%;">
+		<div class="mute1">
+			<div class="icon">?</div>
+			<div class="icon1"><b>关于</b></div>
+			<div class="boxoff" id="boxoff2" onclick="hidder()" tabindex="-1" title="关闭">×</div>
+		</div>
+		<div class="autowindowsize" style="text-align:left;overflow-y:auto;cursor:default;color:#555;padding:10px">
+				该脚本可使 Piano Tiles 的音乐曲谱文件转换成其他音乐游戏可以读取的曲谱格式。<br />程序使用 HTML5 + CSS3 + JavaScript 制作。<br />脚本适用的音乐游戏有：
+				OSU!Mania,Malody<br />Script Version:
+				<a id="detectosAbout"></a>_0.3.2_Alpha <br />Copyright by mengwa.（<a onclick="window.open('https://space.bilibili.com/46345895')"
+					style="color:#fb7299" target="_blank">萌娃是条咸鱼</a>）<br />
+				<b>用户代理字符串：</b><b id=explore></b>
+			</p>
+			<noscript>
+				<strong style="color:red">
+					警告：此浏览器不支持JavaScript，该脚本无法运行！请检查当前浏览器是否启用JavaScript，然后重试！
+				</strong>
+			</noscript>
+		</div>
+		<div class="button4" id="ok2" onclick="hidder()" tabindex="-1" style="text-align: center;">确定</div>
+	</div>
+	<div class="warning" id="warning"
+		onclick="document.getElementById('warning').style.animation='warning_2 0.1s';document.getElementById('warning').style.width='0%';document.getElementById('warning').style.height='0px';document.getElementById('warning').style.left='50%';warning.innerHTML = '';warnoff();fk1=false;">
+	</div>
+	<div id="window_manage" class="window_menu_1 left:100px" style="position: absolute;left:46px;top:64px;color:#555">
+		<a onclick="" >还原</a>
+		<a onclick="" >移动窗口</a>
+		<a onclick="" >改变大小</a>
+		<a onclick="" >最大化</a>
+		<a onclick="" >最小化</a>
+		<a onclick="" >关闭</a>
+	</div>
+</body>
+
+</html>
+<script type="text/javascript" src="dreampiano.js"></script>
+<script type="text/javascript" src="script.js"></script>
+<style>
+</style>
